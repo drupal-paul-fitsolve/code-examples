@@ -1,0 +1,266 @@
+/* Price */
+.price--box {
+  text-align: center;
+  .border-radius(3px);
+  background-color: @price-background;
+  font-family: @font-foco;
+  margin-top: 10px;
+}
+
+/* Font Fall back for windows machine excluding >= IE9 */
+.font-fallback {
+  .price--box {
+    font-family: @font-helvetica;
+  }
+}
+.price {
+  border-bottom: 1px solid #fff;
+  margin: 0px 15px;
+  padding: 17px 0px;
+}
+.price:last-of-type { 
+  border-bottom: 0px; 
+}
+.price--title-1line .price--title { 
+  padding-top: 25px; 
+  height: 35px; 
+}
+.price--title-2line .price--title { 
+  padding-top: 12px; 
+  height: 48px; 
+}
+
+.price--title {
+  text-align: center;
+  .font-size(18);
+  background-color: @price-title-background;
+  .border-top-radius(3px);
+}
+.price--large {
+  font-weight: bold;
+  .font-size(30);
+}
+.price--normal {
+  .font-size(17);
+}
+.price--bold {
+  font-weight: bold;
+  .font-size(15);
+}
+.price--large, 
+.price--normal, 
+.price--bold { 
+  display: block; 
+  padding: 5px 0px; 
+}
+
+.price:after, 
+.price--title:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.price-4rows {
+  .price { 
+    padding: 10px 0px 13px 0px;
+  }
+  .price--large, 
+  .price--normal, 
+  .price--bold { 
+    padding: 4px 0px; 
+  }
+}
+
+.price-1row {
+  .price { height: 118px;}
+}
+
+.price-separater {
+  height: 10px;
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  margin-top: -1px; 
+}
+
+.price--olympic-park { 
+    margin-top: 15px; 
+    margin-bottom: 20px; 
+}
+
+// Responsive tweak
+.responsive-layout-wide {  
+  .grid-3.price--olympic-park {
+    width: 155px;
+  }
+  .grid-4.price--olympic-park {
+    width: 100%;
+  }
+}
+
+.price--media {
+  h2.pane-title {
+      display: none;
+  }
+}
+
+.responsive-layout-wide,
+.responsive-layout-normal, {
+  .price--media { padding: 10px 0px 10px 0px; }
+}
+
+.responsive-layout-normal {
+  .price--box { margin-bottom: 10px; }
+  .grid-3.price--olympic-park {
+    width: 48%;
+  }
+  .grid-4.price--olympic-park {
+    width: 100%;
+  }
+  .grid-4.price--olympic-park { 
+    .price {
+      padding: 15px 0px 10px 0px;
+    }
+  } 
+  .price-4rows.price--olympic-park { 
+    .price {
+      padding: 6px 0px;
+    }
+  }  
+  .price-1row {
+    .price {
+      height: 101px;
+    }
+  }
+}
+
+.responsive-layout-narrow {
+  .price--title-2line .price--title { 
+    padding-top: 25px; 
+    height: 35px; 
+  }
+  .narrow-grid-12.price--box {
+    margin-bottom: 10px; 
+  }
+  .price--olympic-park  {
+    .price--title {
+      .font-size(15);
+    }
+    .price--large {
+      .font-size(25);
+    }
+    .price {
+      margin: 0px 10px;
+    }
+  }
+  .grid-4.price--olympic-park {
+    width: 100%;
+  }
+  .grid-3.price--olympic-park {
+    width: 47%;
+    .price {
+      padding: 5.5px 0px;
+    }
+  } 
+  .grid-3.price-1row {
+    .price {
+      padding: 21px 0px;
+    }
+  }   
+}
+
+.responsive-layout-normal,
+.responsive-layout-mobile {
+  .price { padding: 5px 0px 6px 0px; }
+  .price--title-1line .price--title { padding-top: 20px; }
+  .price--title-2line .price--title { height: 43px; }
+  .price--title {
+    .font-size(16);
+    font-weight: bold;
+  }
+  .price--large {
+    .font-size(29);
+  }
+  .price--bold {
+    .font-size(14);
+  }
+  .price--large, 
+  .price--normal, 
+  .price--bold { 
+    padding: 3px 0px; 
+  }
+}
+
+// Responsive Mobile
+.responsive-layout-mobile {
+  .price-separater {
+    width: auto;
+  }
+  .grid-4.price--box { 
+    float: left; 
+    width: 46%;
+    margin-left: 3%;
+    margin-bottom: 10px; 
+  }
+  .grid-4.price--box + .grid-4.price--box {
+    margin-left: 10px; 
+  }
+  .price--olympic-park.price--box {    
+      width: 100%; 
+      margin-left: 0px;    
+  }
+
+  .price-1row {
+    .price {
+      height: 95px;
+    }
+  }
+
+}
+
+/* iPads (landscape) ----------- */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width : 1024px) and (orientation : landscape) {
+  .responsive-layout-normal  {
+    .pane-event-olympic-park-cycle {
+      .price {
+        padding-bottom: 2px;
+      }
+      .price-1row {
+        .price {
+          padding-bottom: 8px; 
+        }
+      }
+    }
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width : 1024px) and (orientation : portrait) {
+  .responsive-layout-narrow  {
+    .pane-event-olympic-park-cycle {
+      .price--large, .price--normal, .price--bold {
+        padding-top: 0px;
+      }
+      .price-1row {
+        .price {
+          padding: 20px 0px; 
+        }
+      }    
+      .grid-3.price--olympic-park {
+        .price {
+          padding: 9px 0px;
+        }
+        .price-1row {
+          .price {
+            padding: 20px 0px !important;
+          }
+        }
+      } 
+    }
+  }
+}
+
+

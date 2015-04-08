@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the sr14_menu feature.
+ */
+
+include_once 'sr14_menu.features.inc';

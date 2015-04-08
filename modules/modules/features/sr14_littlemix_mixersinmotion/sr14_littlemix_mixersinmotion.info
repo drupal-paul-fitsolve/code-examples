@@ -1,0 +1,11 @@
+name = SR14 Little Mix Mixers in Motion
+core = 7.x
+package = "SR14"
+version = 7.x-1.0
+project = sr14_littlemix_mixersinmotion
+features[context][] = sr14_littlemix_mixersinmotion
+features[ctools][] = context:context:3
+features[features_api][] = api:1
+features_exclude[dependencies][context] = context
+features_exclude[dependencies][ctools] = ctools
+project path = sites/sportrelief.com/modules/features

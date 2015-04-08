@@ -1,0 +1,331 @@
+ /**
+  * @file
+  * Footer component
+  */
+
+
+.footer-zone-wrapper {
+  background-color:#333333;
+  min-height:133px;
+  overflow:hidden;
+  padding-top:27px;
+  padding-bottom:27px;
+
+  .container-24 {
+    position:relative;
+  }
+
+  .menu {
+
+    li {
+      float:left;
+
+      a {
+        color:white;
+        padding-left:4px;
+        float:left;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #999999;
+      }
+
+      a:after {
+        content:"|";
+        color:#666666;
+        padding-left:8px;
+      }
+
+    }
+
+    li.first a {
+      padding-left:0;
+    }
+
+  }
+
+  #block-menu-menu-footer-menu {
+    float:left;
+  }
+
+  .footer-follow-links {
+    float:left;
+    clear:right;
+    padding-left:8px;
+
+    p {
+      float:left;
+      height: 21px;
+      line-height: 21px;
+      color: #999;
+      font-family: @font-foco;
+    }
+
+    ul.social-links-list {
+      float:left;
+
+      a { text-decoration: none; }
+
+    }
+
+  }
+
+  .footer-copyright {
+    clear:both;
+    color: #999;
+  }
+
+  .footer--cr-logo {
+    position:absolute;
+    top:0;
+    right:0;
+    height:62px;
+    width:63px;
+
+    a.cr-logo {
+      height:62px;
+      width:63px;
+      display: block;
+      text-decoration: none;
+    }
+
+    a {
+      position: relative;
+      float: left;
+      text-decoration: none;
+
+      span {
+        background:url(../images/components/header-footer/header-and-footer-sprite-new.png) no-repeat -314px -4px transparent;
+        display:block;
+        height:100%;
+        width:100%;
+        position: absolute;
+        top:0;
+        left:0;
+      }
+    }
+
+    .sainsburys-footer-logo {
+      display: none;
+    }
+
+  }
+
+}
+
+
+@media all and @normalAndGreater {
+  .sainsburys-footer-logo {
+    display: none;
+  }
+}
+
+
+
+@media all and @normalOnly {
+
+  .footer-zone-wrapper {
+
+    .footer-follow-links {
+      margin:10px 0 20px;
+      padding-left:0;
+    }
+
+  }
+
+}
+
+@media all and @narrowOnly {
+
+  &.ssrg {
+    .footer-zone-wrapper {
+      .footer--cr-logo {
+        width: 220px;
+      }
+      .sainsburys-footer-logo {
+        display: block;
+        height: 51px;
+        width: 138px;
+        margin-left: 19px;
+        margin-top: 5px;
+        span {
+          background: url(../images/components/header-footer/ssrg-header-and-footer-sprite.png) no-repeat -341px -149px transparent;
+        }
+      }
+    }
+  }
+
+  .footer-zone-wrapper {
+
+    .footer--cr-logo {
+      position: relative;
+      clear: both;
+      top: auto;
+      left: auto;
+      margin: 0 auto 30px;
+    }
+
+    #block-menu-menu-footer-menu {float: none;}
+
+    .container-24 {
+      zoom:1;
+    }
+
+    .footer-follow-links {
+      padding-left: 0;
+      margin: 10px auto 20px;
+      clear: both;
+      float: none;
+      width: 305px;
+
+      p {line-height: 61px;}
+    }
+
+    ul.social-links-list {
+      margin-top: 20px;
+      margin-bottom: 40px;
+
+      a {
+        .font-size(38);
+        height: 28px;
+        width: 33px;
+      }
+    }
+
+    ul.menu {
+      width:520px;
+      margin: 0 auto;
+      text-align: center;
+
+      li {
+        float: none;
+      }
+
+      li.menu-privacy-policy a:after,
+      li:last-child a:after {
+        content:"";
+      }
+
+    }
+
+    .footer-copyright {text-align: center;}
+
+  }
+
+}
+
+
+@media all and @fluidOnly {
+
+  &.ssrg {
+    .footer-zone-wrapper {
+      .footer--cr-logo {
+        width: 166px;
+      }
+      a.sainsburys-footer-logo {
+        height: 40px;
+        width: 106px;
+        display: block;
+        margin-top: 3px;
+        margin-left: 12px;
+
+        span {
+          background: url(../images/components/header-footer/ssrg-header-and-footer-sprite.png) no-repeat -212px -160px transparent;
+        }
+      }
+    }
+  }
+
+  .footer-zone-wrapper {
+    min-height:250px;
+    height:auto;
+    overflow:hidden;
+    padding-bottom:20px;
+
+    #block-menu-menu-footer-menu {
+      float: none;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+
+      .menu {
+        padding:0 20px;
+
+        li {
+          float:none;
+
+          a {.font-size(12);}
+        }
+
+        li:last-child a:after {
+          content:"";
+        }
+
+      }
+
+    }
+
+    .footer-follow-links {
+      float:none;
+      margin:10px auto 20px;
+      padding-left:0;
+      width:230px;
+      min-height: 22px;
+      overflow:hidden;
+      clear: both;
+
+      p {
+        text-align: center;
+        width: 100%;
+        clear: both;
+        float: none;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+
+    }
+
+    .footer--cr-logo {
+      position: relative;
+      margin: 10px auto;
+      height: 48px;
+      width: 48px;
+
+      a.cr-logo {
+        height: 48px;
+        width: 48px;
+
+        span {
+          background-position: -386px -5px;
+
+        }
+
+      }
+
+    }
+
+    .footer-copyright {
+      width: 300px;
+      text-align: center;
+      margin:0 auto;
+
+      p {
+        padding:0 20px;
+        text-align: center;
+        .font-size(10);
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+/* Rollover overlay state for popups */
+.icon-hover-link{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  padding: 0;
+}
+.icon-hover-link-after{
+  font-family: 'sr-icons';
+  content: "\e00f";
+  position: absolute;
+  padding-top: 19px;
+  padding-left: 14px;
+  display: block;
+  font-size: 2.5em;
+  width: 60px;
+  height: 60px;
+  background: url('@{image-path}components/icon-hover/icon-hover-sprite.png') 0 0 no-repeat;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.icon-hover-link-hover-after {
+  background-position: -110px 0;
+}
+
+/* Arrow logo for icon hover */
+.icon-hover-link-arrow{
+  content: "\e020";
+}
+/* Instagram logo for icon hover */
+.icon-hover-link-instagram{
+  content: "\e00f";
+}
+/* Magnifying glass logo for icon hover */
+.icon-hover-link-magnifying{
+  content: "\e028";
+}
+/* Video logo for icon hover */
+.icon-hover-link-video{
+  content: "\e016";
+}

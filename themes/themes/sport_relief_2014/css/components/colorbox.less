@@ -1,0 +1,262 @@
+#colorbox {
+  .colorbox-container	 {
+    background: #292929;
+    color: #eee;
+    h2, h3, h4 {
+      color: #eee;
+    }
+    .colorbox--top {}
+    .colorbox--bottom {
+      padding: 0 0 20px;
+
+      h4,
+      .field-name-body,
+      .sharelinks--colorbox {
+        margin: 20px;
+      }
+      .cta {
+        color: @white;
+      }
+      .sharelinks--colorbox {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        ul {
+          clear: right;
+          float: left;
+
+          li {
+            margin-right: 10px;
+            margin-left:0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Sponsorship form overlay */
+.ssrg {
+  #colorbox {
+    #cboxWrapper {
+      background-color: #292929;
+      .border-radius(3px);
+      #cboxLoadedContent {
+        overflow: hidden !important;
+      }
+      /* layout override */
+      .row.grid-24 {
+        max-width: 485px;
+      }
+      .node {
+        padding: 0px 35px;
+      }
+      .node-title,
+      .subpod-wrapper {
+        display: none;
+      }
+      .views-row .views-column {
+        display: inline-block;
+      }
+      .curtain {
+        background-color: #fff;
+        .border-radius(3px);
+        width: 230px;
+        min-height: 30px;
+          .inner-wrap {
+            padding: 15px;
+          }
+          h2.title,
+          .download-ref {
+            font-weight: bold;
+            font-size: 18px;
+          }
+          .title,
+          .desc,
+          .download-ref {
+            text-align: center;
+          }
+          .icon {
+            margin-left: -10%;
+          }
+          .download-ref {
+            margin-top: 10px;
+          }
+      }
+      .views-column {
+        margin-right: 15px;
+      }
+      .views-column-2 {
+        margin-right: 0px;
+      }
+      .sponsorship-forms-header {
+        .font-size(24);
+        line-height: 30px;
+        color: #fff;
+        text-align: center;
+      }
+
+    }
+  }
+}
+
+/* Error Pages */
+.context-error-404, .context-error-403{
+ .ssrg;
+}
+
+/**
+ * Colorbox Core Style:
+ * The following CSS is consistent between example themes and should not be altered.
+ */
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: visible;
+}
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left;
+}
+#cboxContent {
+  position: relative;
+}
+#cboxLoadedContent {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+#cboxTitle {
+  margin: 0;
+}
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/**
+ * These elements are buttons, and may need to have additional
+ * styles reset to avoid unwanted base styles.
+ */
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  width: auto;
+  background: none;
+  cursor: pointer;
+}
+/**
+ * Avoid outlines on :active (mouseclick),
+ * but preserve outlines on :focus (tabbed navigating)
+ */
+#cboxPrevious:active, #cboxNext:active, #cboxClose:active, #cboxSlideshow:active {
+  outline: 0;
+}
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+}
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+/* Reset box sizing to content-box if theme is using border-box. */
+#colorbox, #cboxContent, #cboxLoadedContent {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/**
+ * Colorbox module plain style:
+ * The styles are ordered & tabbed in a way that represents
+ * the nesting of the generated HTML.
+ */
+#cboxOverlay {
+  background: #292929;
+}
+#colorbox {
+  outline: 0;
+}
+  #cboxWrapper {}
+    #cboxContent {
+      overflow: visible;
+    }
+      #cboxContent, .cboxPhoto {
+      }
+      #cboxError {
+        padding: 50px;
+        border: 1px solid #ccc;
+      }
+      #cboxTitle {
+      }
+
+      #cboxLoadingOverlay {
+        background: #fff;
+      }
+
+      #cboxLoadingGraphic {
+      }
+      #cboxClose {
+        top:-14px;
+        right:-14px;
+        z-index: 10000;
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        border-radius: 13px;
+        display: block;
+        background: @blue;
+        text-indent: -9999px;
+      }
+      #cboxClose:after {
+        .icon-multiply;
+        display: block;
+        width: 26px;
+        height: 26px;
+        color: #fff;
+        font-size: 18px;
+        top: 3px;
+        text-indent: 0;
+        position: absolute;
+        text-align: center;
+      }
+      #cboxClose:hover:after {
+        color:#000;
+      }
+
+#colorboxNodeLoading {
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+position: relative;
+height: 100%;
+ background:url(../images/loader_white_on_black.gif) no-repeat center center #292929;
+}
+
+
+@media all and @fluidOnly {
+  #cboxClose{
+    top:0px;
+    right:0px;
+  }
+}

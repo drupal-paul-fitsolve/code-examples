@@ -1,0 +1,65 @@
+
+@import "utilities/variables.less";
+
+ /**
+  * @file
+  * Styles for the SR layout overrides
+  */
+
+.schools-landing .promo-wrapper {
+  padding-bottom: 0;
+}
+
+/* Homepage promo pod fix */
+.front-a .leader-double { position: relative; }
+.front-a.promo-bg .promo-wrapper .row {margin-top:0;}
+.responsive-layout-normal {
+  &.front-a.promo-bg .promo-wrapper .row {margin-top:40px;}
+  &.front-a.promo-bg .promo-wrapper .pane-bundle-image {
+    bottom: -40px;
+    position: relative;
+  }
+}
+
+.responsive-layout-mobile {
+  &.front-a.promo-bg .promo-wrapper .pane-bundle-text {
+    padding: 0 20px;
+  }
+  &.front-a.promo-bg .promo-wrapper .row {margin: 0 10px 20px;}
+  &.front-a.promo-bg .promo-wrapper .pod {
+    border: 1px solid transparent;
+
+    .pane-bundle-text {
+      padding: 0;
+    }
+  }
+
+}
+
+/* Homepage */
+.front .promo-wrapper { padding-bottom: 0; }
+
+/* Olympic Park page override */
+.context-sainsburys-sport-relief-games-queen-elizabeth-olympic-park {
+  .promo-wrapper {
+    .leader-double {
+      margin-top: 25px;
+    }
+  }
+  &.responsive-layout-mobile {
+    .promo-wrapper {
+      .leader-double {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+/* SRCR-313: Decrease the size of fluid images to reduce file size */
+@media all and @fluidImg {
+  span[data-picture=''] {
+    img {
+        width: 100%;
+      }
+  }
+}

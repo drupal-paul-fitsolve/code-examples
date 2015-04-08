@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="72px" height="72px" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path fill="#FDD05F" d="M39,36v3v12c3.314,0,6-2.686,6-6v-9H39z"/>
+			<path opacity="0.5" fill="#FF9300" d="M39,36v3v12c3.314,0,6-2.686,6-6v-9H39z"/>
+			<g>
+				<path opacity="0.5" fill="#FDE5A3" d="M39,47v3c1.094,0,2.117-0.298,3-0.809V47H39z"/>
+			</g>
+			<rect x="39" y="21" fill="#FDE5A3" width="11" height="6"/>
+			<rect x="46" y="39" fill="#FDE5A3" width="3" height="6"/>
+			<rect x="32" y="27" fill="#FDE5A3" width="19" height="6"/>
+			<rect x="34" y="33" fill="#FDE5A3" width="17" height="6"/>
+			<circle fill="#FDE5A3" cx="48" cy="42" r="3"/>
+			<g>
+				<rect x="42" y="42" fill="#FDD05F" width="6.533" height="3"/>
+				<path fill="#FDD05F" d="M45,42c0,1.657,1.343,3,3,3s3-1.343,3-3"/>
+				<path fill="#FDD05F" d="M42,42c0,1.657,1.343,3,3,3s3-1.343,3-3"/>
+			</g>
+			<circle fill="#FDE5A3" cx="51" cy="36" r="3"/>
+			<circle fill="#FDE5A3" cx="51" cy="30" r="3"/>
+			<circle fill="#FDE5A3" cx="50" cy="24" r="3"/>
+			<g>
+				<rect x="44" y="24" fill="#FDD05F" width="6" height="3"/>
+				<rect x="42" y="30" fill="#FDD05F" width="9" height="3"/>
+				<rect x="42" y="36" fill="#FDD05F" width="9" height="3"/>
+				<path fill="#FDD05F" d="M48,36c0,1.657,1.343,3,3,3s3-1.343,3-3"/>
+				<path fill="#FDD05F" d="M48,30c0,1.657,1.343,3,3,3s3-1.343,3-3"/>
+				<path fill="#FDD05F" d="M47,24c0,1.657,1.343,3,3,3s3-1.343,3-3"/>
+				<path fill="#FDD05F" d="M44,24c0,1.657,1.343,3,3,3s3-1.343,3-3"/>
+				<path fill="#FDD05F" d="M44,30c0,1.657,1.343,3,3,3s3-1.343,3-3"/>
+				<path fill="#FDD05F" d="M44,36c0,1.657,1.343,3,3,3s3-1.343,3-3"/>
+			</g>
+			<g>
+				<path fill="#FDD05F" d="M22,21c0,13.255,10.745,24,24,24V21H22z"/>
+			</g>
+			<g>
+				<path fill="#FDD05F" d="M25,21c0,11.598,9.402,21,21,21V21H25z"/>
+			</g>
+			<rect x="32" y="21" fill="#FDD05F" width="13" height="5"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="20" cy="23" r="2"/>
+			<circle fill="#E33038" cx="20" cy="39" r="2"/>
+			<rect x="18" y="23" fill="#E33038" width="14" height="16"/>
+			<rect x="20" y="21" fill="#E33038" width="12" height="20"/>
+			<g>
+				<g>
+					<circle fill="#FDD05F" cx="24" cy="28" r="2"/>
+				</g>
+				<path opacity="0.5" fill="#FF9300" d="M25.414,29.414c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828"/>
+			</g>
+		</g>
+	</g>
+	<rect x="46" y="21" fill="#FDD05F" width="3" height="24"/>
+</g>
+</svg>

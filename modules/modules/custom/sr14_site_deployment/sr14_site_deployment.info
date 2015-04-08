@@ -1,0 +1,5 @@
+name = SR14 Deployment
+description = Deployment module, used to automated changes to this site.
+package = "SR14"
+core = 7.x
+version = "7.x-0.02"

@@ -1,0 +1,530 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal
+ *  and widescreen CSS files as appropriate. */
+
+/*
+ * ==========================================================
+ * Grid
+ * ==========================================================
+ */
+
+/*
+ * ==========================================================
+ * Alpha - Omega
+ * ==========================================================
+ */
+
+.narrow--alpha {
+  margin-left: 0;
+}
+
+.narrow--omega {
+  margin-right: 0;
+}
+
+/*
+ * ==========================================================
+ * Container
+ * ==========================================================
+ */
+
+.narrow--container-24 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
+}
+
+/*
+ * ==========================================================
+ * Columns
+ * ==========================================================
+ */
+
+.narrow--container-24 .narrow--grid-1 {
+  width: 10px;
+}
+
+.narrow--container-24 .narrow--grid-2 {
+  width: 40px;
+}
+
+.narrow--container-24 .narrow--grid-3 {
+  width: 70px;
+}
+
+.narrow--container-24 .narrow--grid-4 {
+  width: 100px;
+}
+
+.narrow--container-24 .narrow--grid-5 {
+  width: 130px;
+}
+
+.narrow--container-24 .narrow--grid-6 {
+  width: 160px;
+}
+
+.narrow--container-24 .narrow--grid-7 {
+  width: 190px;
+}
+
+.narrow--container-24 .narrow--grid-8 {
+  width: 220px;
+}
+
+.narrow--container-24 .narrow--grid-9 {
+  width: 250px;
+}
+
+.narrow--container-24 .narrow--grid-10 {
+  width: 280px;
+}
+
+.narrow--container-24 .narrow--grid-11 {
+  width: 310px;
+}
+
+.narrow--container-24 .narrow--grid-12 {
+  width: 340px;
+}
+
+.narrow--container-24 .narrow--grid-13 {
+  width: 370px;
+}
+
+.narrow--container-24 .narrow--grid-14 {
+  width: 400px;
+}
+
+.narrow--container-24 .narrow--grid-15 {
+  width: 430px;
+}
+
+.narrow--container-24 .narrow--grid-16 {
+  width: 460px;
+}
+
+.narrow--container-24 .narrow--grid-17 {
+  width: 490px;
+}
+
+.narrow--container-24 .narrow--grid-18 {
+  width: 520px;
+}
+
+.narrow--container-24 .narrow--grid-19 {
+  width: 550px;
+}
+
+.narrow--container-24 .narrow--grid-20 {
+  width: 580px;
+}
+
+.narrow--container-24 .narrow--grid-21 {
+  width: 610px;
+}
+
+.narrow--container-24 .narrow--grid-22 {
+  width: 640px;
+}
+
+.narrow--container-24 .narrow--grid-23 {
+  width: 670px;
+}
+
+.narrow--container-24 .narrow--grid-24 {
+  width: 700px;
+}
+
+/*
+ * ==========================================================
+ * Prefix
+ * ==========================================================
+ */
+
+.narrow--container-24 .narrow--prefix-1 {
+  padding-left: 30px;
+}
+
+.narrow--container-24 .narrow--prefix-2 {
+  padding-left: 60px;
+}
+
+.narrow--container-24 .narrow--prefix-3 {
+  padding-left: 90px;
+}
+
+.narrow--container-24 .narrow--prefix-4 {
+  padding-left: 120px;
+}
+
+.narrow--container-24 .narrow--prefix-5 {
+  padding-left: 150px;
+}
+
+.narrow--container-24 .narrow--prefix-6 {
+  padding-left: 180px;
+}
+
+.narrow--container-24 .narrow--prefix-7 {
+  padding-left: 210px;
+}
+
+.narrow--container-24 .narrow--prefix-8 {
+  padding-left: 240px;
+}
+
+.narrow--container-24 .narrow--prefix-9 {
+  padding-left: 270px;
+}
+
+.narrow--container-24 .narrow--prefix-10 {
+  padding-left: 300px;
+}
+
+.narrow--container-24 .narrow--prefix-11 {
+  padding-left: 330px;
+}
+
+.narrow--container-24 .narrow--prefix-12 {
+  padding-left: 360px;
+}
+
+.narrow--container-24 .narrow--prefix-13 {
+  padding-left: 390px;
+}
+
+.narrow--container-24 .narrow--prefix-14 {
+  padding-left: 420px;
+}
+
+.narrow--container-24 .narrow--prefix-15 {
+  padding-left: 450px;
+}
+
+.narrow--container-24 .narrow--prefix-16 {
+  padding-left: 480px;
+}
+
+.narrow--container-24 .narrow--prefix-17 {
+  padding-left: 510px;
+}
+
+.narrow--container-24 .narrow--prefix-18 {
+  padding-left: 540px;
+}
+
+.narrow--container-24 .narrow--prefix-19 {
+  padding-left: 570px;
+}
+
+.narrow--container-24 .narrow--prefix-20 {
+  padding-left: 600px;
+}
+
+.narrow--container-24 .narrow--prefix-21 {
+  padding-left: 630px;
+}
+
+.narrow--container-24 .narrow--prefix-22 {
+  padding-left: 660px;
+}
+
+.narrow--container-24 .narrow--prefix-23 {
+  padding-left: 690px;
+}
+
+/*
+ * ==========================================================
+ * Suffix
+ * ==========================================================
+ */
+
+.narrow--container-24 .narrow--suffix-1 {
+  padding-right: 30px;
+}
+
+.narrow--container-24 .narrow--suffix-2 {
+  padding-right: 60px;
+}
+
+.narrow--container-24 .narrow--suffix-3 {
+  padding-right: 90px;
+}
+
+.narrow--container-24 .narrow--suffix-4 {
+  padding-right: 120px;
+}
+
+.narrow--container-24 .narrow--suffix-5 {
+  padding-right: 150px;
+}
+
+.narrow--container-24 .narrow--suffix-6 {
+  padding-right: 180px;
+}
+
+.narrow--container-24 .narrow--suffix-7 {
+  padding-right: 210px;
+}
+
+.narrow--container-24 .narrow--suffix-8 {
+  padding-right: 240px;
+}
+
+.narrow--container-24 .narrow--suffix-9 {
+  padding-right: 270px;
+}
+
+.narrow--container-24 .narrow--suffix-10 {
+  padding-right: 300px;
+}
+
+.narrow--container-24 .narrow--suffix-11 {
+  padding-right: 330px;
+}
+
+.narrow--container-24 .narrow--suffix-12 {
+  padding-right: 360px;
+}
+
+.narrow--container-24 .narrow--suffix-13 {
+  padding-right: 390px;
+}
+
+.narrow--container-24 .narrow--suffix-14 {
+  padding-right: 420px;
+}
+
+.narrow--container-24 .narrow--suffix-15 {
+  padding-right: 450px;
+}
+
+.narrow--container-24 .narrow--suffix-16 {
+  padding-right: 480px;
+}
+
+.narrow--container-24 .narrow--suffix-17 {
+  padding-right: 510px;
+}
+
+.narrow--container-24 .narrow--suffix-18 {
+  padding-right: 540px;
+}
+
+.narrow--container-24 .narrow--suffix-19 {
+  padding-right: 570px;
+}
+
+.narrow--container-24 .narrow--suffix-20 {
+  padding-right: 600px;
+}
+
+.narrow--container-24 .narrow--suffix-21 {
+  padding-right: 630px;
+}
+
+.narrow--container-24 .narrow--suffix-22 {
+  padding-right: 660px;
+}
+
+.narrow--container-24 .narrow--suffix-23 {
+  padding-right: 690px;
+}
+
+/*
+ * ==========================================================
+ * Push
+ * ==========================================================
+ */
+
+.narrow--container-24 .narrow--push-1 {
+  left: 30px;
+}
+
+.narrow--container-24 .narrow--push-2 {
+  left: 60px;
+}
+
+.narrow--container-24 .narrow--push-3 {
+  left: 90px;
+}
+
+.narrow--container-24 .narrow--push-4 {
+  left: 120px;
+}
+
+.narrow--container-24 .narrow--push-5 {
+  left: 150px;
+}
+
+.narrow--container-24 .narrow--push-6 {
+  left: 180px;
+}
+
+.narrow--container-24 .narrow--push-7 {
+  left: 210px;
+}
+
+.narrow--container-24 .narrow--push-8 {
+  left: 240px;
+}
+
+.narrow--container-24 .narrow--push-9 {
+  left: 270px;
+}
+
+.narrow--container-24 .narrow--push-10 {
+  left: 300px;
+}
+
+.narrow--container-24 .narrow--push-11 {
+  left: 330px;
+}
+
+.narrow--container-24 .narrow--push-12 {
+  left: 360px;
+}
+
+.narrow--container-24 .narrow--push-13 {
+  left: 390px;
+}
+
+.narrow--container-24 .narrow--push-14 {
+  left: 420px;
+}
+
+.narrow--container-24 .narrow--push-15 {
+  left: 450px;
+}
+
+.narrow--container-24 .narrow--push-16 {
+  left: 480px;
+}
+
+.narrow--container-24 .narrow--push-17 {
+  left: 510px;
+}
+
+.narrow--container-24 .narrow--push-18 {
+  left: 540px;
+}
+
+.narrow--container-24 .narrow--push-19 {
+  left: 570px;
+}
+
+.narrow--container-24 .narrow--push-20 {
+  left: 600px;
+}
+
+.narrow--container-24 .narrow--push-21 {
+  left: 630px;
+}
+
+.narrow--container-24 .narrow--push-22 {
+  left: 660px;
+}
+
+.narrow--container-24 .narrow--push-23 {
+  left: 690px;
+}
+
+/*
+ * ==========================================================
+ * Pull
+ * ==========================================================
+ */
+
+.narrow--container-24 .narrow--pull-1 {
+  left: -30px;
+}
+
+.narrow--container-24 .narrow--pull-2 {
+  left: -60px;
+}
+
+.narrow--container-24 .narrow--pull-3 {
+  left: -90px;
+}
+
+.narrow--container-24 .narrow--pull-4 {
+  left: -120px;
+}
+
+.narrow--container-24 .narrow--pull-5 {
+  left: -150px;
+}
+
+.narrow--container-24 .narrow--pull-6 {
+  left: -180px;
+}
+
+.narrow--container-24 .narrow--pull-7 {
+  left: -210px;
+}
+
+.narrow--container-24 .narrow--pull-8 {
+  left: -240px;
+}
+
+.narrow--container-24 .narrow--pull-9 {
+  left: -270px;
+}
+
+.narrow--container-24 .narrow--pull-10 {
+  left: -300px;
+}
+
+.narrow--container-24 .narrow--pull-11 {
+  left: -330px;
+}
+
+.narrow--container-24 .narrow--pull-12 {
+  left: -360px;
+}
+
+.narrow--container-24 .narrow--pull-13 {
+  left: -390px;
+}
+
+.narrow--container-24 .narrow--pull-14 {
+  left: -420px;
+}
+
+.narrow--container-24 .narrow--pull-15 {
+  left: -450px;
+}
+
+.narrow--container-24 .narrow--pull-16 {
+  left: -480px;
+}
+
+.narrow--container-24 .narrow--pull-17 {
+  left: -510px;
+}
+
+.narrow--container-24 .narrow--pull-18 {
+  left: -540px;
+}
+
+.narrow--container-24 .narrow--pull-19 {
+  left: -570px;
+}
+
+.narrow--container-24 .narrow--pull-20 {
+  left: -600px;
+}
+
+.narrow--container-24 .narrow--pull-21 {
+  left: -630px;
+}
+
+.narrow--container-24 .narrow--pull-22 {
+  left: -660px;
+}
+
+.narrow--container-24 .narrow--pull-23 {
+  left: -690px;
+}

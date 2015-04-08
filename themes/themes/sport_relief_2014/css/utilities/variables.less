@@ -1,0 +1,185 @@
+/**
+ * @file
+ * Contains reuseable variables, page numbers reference the style guide v2.2.
+ */
+
+/* Generic Vertical spacing units */
+@minor-vertical-unit--desktop: 15px;
+@major-vertical-unit--desktop: 25px;
+@minor-vertical-unit--mobile: 10px;
+@major-vertical-unit--mobile: 20px;
+
+/* Base Media Queries for Landscape and Super Wide */
+@fluidLandscape: ~"(min-width: 0) and (min-device-width: 0), (max-device-width: 739px) and (min-width: 0) and (orientation:landscape)";
+@narrowAndGreater: ~"(min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)";
+@normalAndGreater: ~"(min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)";
+@wideAndGreater: ~"(min-width: 1220px)";
+
+/* Base Media Queries for Portrait and Wide */
+@fluidOnly: ~"(min-width: 0) and (max-width: 739px)";
+@narrowOnly: ~"(min-width: 740px) and (max-width: 979px)";
+@normalOnly: ~"(min-width: 980px) and (max-width: 1219px)";
+@wideOnly: ~"(min-width: 1220px)";
+
+/* Special purpose Media Queries */
+@fluidImg: ~"(min-width: 500px) and (max-width: 739px)";
+@retinaEnabled: ~"(-webkit-min-device-pixel-ratio: 2)";
+@retinaDisabled: ~"(-webkit-min-device-pixel-ratio: 1)";
+
+/* Colour palette - Primary. Page 18 */
+@red: #E42932;
+@black: #292929;
+@white: #FFF;
+@blue: #0F9FCF;
+@green: #D3DE43;
+
+/* Colour palette - Secondary. Page 18 */
+@dark-red: #9C171D;
+@darkest-grey: #333;
+@darker-grey: #444;
+@dark-grey: #666;
+@medium-grey: #DDD;
+@light-grey: #F2F2F2;
+@lightest-grey: #E9E8E5;
+@med-grey: #929292;
+
+/* Colour palette - Events. Page 19 */
+@swim-background: #0F9FCF;
+@swim-text: @white;
+@run-background: #E42932;
+@run-text: @white;
+@run-headings-text: #911a0f;
+@cycle-background: #D3DE43;
+@cycle-text: #48763A;
+@cycle-headings-text: #48763A;
+
+@swim-on-white: #004E6A;
+@run-on-white: #911a0f;
+@cycle-on-white: #48763A;
+
+@circle-yellow: #f9ebba;
+@circle-dark-yellow: #fad771;
+
+@half-price-badge: #3a1c07;
+@half-price-badge-background: #ffd26e;
+
+@price-title: #333;
+@price-background: #f1f1f1;
+@price-title-background: #d8d8d8;
+
+@tab-main-list-background: #d6d4d0;
+
+/* Font stacks. Page 25 */
+@font-foco: Foco, Helvetica, Arial, Sans-serif;
+@font-helvetica: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+
+// Rounded corners
+@ir_radius: 3px;
+
+// Font icon characters
+@exit: "\e000";
+@pin: "\e001";
+@car: "\e002";
+@bus: "\e003";
+@train: "\e004";
+@hanger: "\e005";
+@parking-disabled: "\e006";
+@toilet-disabled: "\e007";
+@parking: "\e008";
+@toilet: "\e009";
+@disabled: "\e00a";
+@dog: "\e00b";
+@suitcase: "\e00c";
+@linkedin: "\e00d";
+@tumblr: "\e00e";
+@instagram: "\e00f";
+@youtube: "\e010";
+@google-plus: "\e011";
+@twitter: "\e012";
+@twitter-tweet: "\e041";
+@twitter-retweet: "\e042";
+@twitter-fav: "\e03e";
+@facebook: "\e013";
+@pause: "\e014";
+@stop: "\e015";
+@play: "\e016";
+@cal: "\e017";
+@home: "\e018";
+@user: "\e019";
+@envelope: "\e01a";
+@question: "\e01b";
+@bullet: "\e01c";
+@bang: "\e01d";
+@down: "\e01e";
+@up: "\e01f";
+@right: "\e020";
+@left: "\e021";
+@down-light: "\e031";
+@up-light: "\e030";
+@right-light: "\e033";
+@left-light: "\e032";
+@arrow-up: "\e022";
+@arrow-down: "\e023";
+@hamburger: "\e024";
+@plus: "\e025";
+@multiply: "\e026";
+@tick: "\e027";
+@search: "\e028";
+@zoom: "\e029";
+@headphones: "\e02a";
+@document: "\e02b";
+@pdf: "\e02c";
+@word-doc: "\e02d";
+@news-article: "\e02e";
+@play2: "\e037";
+@cycle: "\e034";
+@swim: "\e035";
+@heart: "\e03c";
+@direct: "\e03a";
+@share: "\e039";
+@flag-fill: "\e038";
+@circle: "\e036";
+
+
+@basket: "\e03b";
+@flag: "\e040";
+@minus: "\e03d";
+@star: "\e03e";
+@picture: "\e03f";
+@flag-line: "\e040";
+@reply: "\e041";
+@retweet: "\e042";
+@edit: "\e043";
+@challenge: "\e044";
+@merch: "\e045";
+@tv: "\e046";
+@schools: "\e047";
+@mobile: "\e048";
+@lightbulb: "\e049";
+@tools: "\e04a";
+@handytools: "\e04b";
+@music: "\e04c";
+@sponsorship: "\e04d";
+@sun: "\e04e";
+@sunnycloud: "\e04f";
+@moonnight: "\e040";
+@nightcloud: "\e051";
+@cloud: "\e052";
+@heavycloud: "\e053";
+@lightning: "\e054";
+@lightningheavycloud: "\e055";
+@rain: "\e056";
+@heavyrain: "\e057";
+@windy: "\e058";
+@windycloud: "\e059";
+@windycloudrain: "\e05a";
+@snowcloud: "\e05b";
+@heavysnowcloud: "\e05c";
+@hailcloud: "\e05d";
+@happy: "\e05e";
+@sad: "\e05f";
+@neutral: "\e060";
+@searchh: "\e061";
+
+/* image path for .less file which required by both of context_addassets and all-components.less */
+@image-path: "/sites/sportrelief.com/themes/sport_relief_2014/images/";

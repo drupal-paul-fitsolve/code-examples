@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SR14 Media Wall Instagram feature.
+ */
+
+include_once 'sr14_media_wall_instagram.features.inc';

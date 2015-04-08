@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * Code for the sr14_fundraiser_showcases feature.
+ */
+
+include_once 'sr14_fundraiser_showcases.features.inc';
+
+function sr14_fundraiser_showcases_init() {
+		$path_alias = drupal_get_path_alias(current_path());
+		if (strpos($path_alias,'fundraise/fundraiser-showcase') !== false) {			
+			drupal_add_css(drupal_get_path('module', 'sr14_fundraiser_showcases') . '/css/sr14-fundraiser-showcases.css');				
+			drupal_add_js(drupal_get_path('module', 'sr14_fundraiser_showcases') . '/js/jquery.infinitescroll.min.js');
+			//drupal_add_js(drupal_get_path('module', 'sr14_fundraiser_showcases') . '/js/imagesloaded.pkgd.js');			
+			drupal_add_js(drupal_get_path('module', 'sr14_fundraiser_showcases') . '/js/sr14-fundraiser-showcases.js');
+			// add this again as we change coloxbox node ajax from $_POST to $_GET	
+			drupal_add_js('sites/all/libraries/flexslider/jquery.flexslider.js'); 
+			drupal_add_js(drupal_get_path('module', 'youtube_uploader') . '/js/yu.js');
+			drupal_add_css(drupal_get_path('module', 'youtube_uploader') . '/css/yu.css');
+		}
+		if (strpos($path_alias,'node/add/fundraiser-showcase') !== false || 
+			strpos($path_alias,'fundraise/fundraiser-showcase') !== false) {
+			drupal_add_js(drupal_get_path('module', 'sr14_fundraiser_showcases') . '/js/formSteps.js');
+		}	
+
+}

@@ -1,0 +1,83 @@
+/*
+ * Star Fundraiser CSS - See Latest Page for example
+ */
+
+
+.pod--star-fundraiser {
+	background-color: #292929;
+
+	.pane-bundle-image {
+		min-height: 340px;
+		width: 340px;
+		margin: 0 auto;
+	}
+
+	.star-fundraiser-cover {
+		width: 340px;
+		height: 325px;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -170px;
+		background: url('../images/components/fundraise/starfundraiser-fluid.png') no-repeat 0 0 transparent;
+		z-index: 10;
+	}
+
+	.pod-text .pod__body {
+		padding-top: 0px!important;
+		padding-bottom: 70px;
+		background: url('../images/components/fundraise/three-star.png') no-repeat center bottom transparent;
+		margin-bottom: 20px;
+		text-align: center;
+		color: #fff;
+	}
+
+}
+
+@media all and @narrowAndGreater {
+	.pod--star-fundraiser {
+		.star-fundraiser-cover {
+			left: 0;
+			margin: 0;
+			width: 100%;
+		}
+		.pane-bundle-image { width: 100%; }
+	}
+}
+
+@media all and @wideOnly {
+	.pod--star-fundraiser {
+		.star-fundraiser-cover {
+			background-image: url('../images/components/fundraise/starfundraiser-wide.png');
+			height: 363px;
+		}
+		.pane-bundle-image { min-height: 383px; }
+	}
+}
+
+@media all and @normalOnly {
+	.pod--star-fundraiser {
+		.star-fundraiser-cover {
+			background-image: url('../images/components/fundraise/starfundraiser-normal.png');
+			height: 287px;
+		}
+		.pane-bundle-image { min-height: 307px; }
+	}
+}
+
+@media all and @narrowOnly {
+	.pod--star-fundraiser {
+		.star-fundraiser-cover {
+			background-image: url('../images/components/fundraise/starfundraiser-narrow.png');
+			height: 210px;
+		}
+		.pane-bundle-image { min-height: 230px; }
+	}
+}
+
+/* Fix for ipe */
+.panels-ipe-editing .star-fundraiser-cover { top: 54px; }
+.admin-menu .pod--star-fundraiser .pane-bundle-text-media { position: relative; }
+/* Force contexual link to be on top of cover */
+.pod--star-fundraiser	a.contextual-links-trigger { display: block; }

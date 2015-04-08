@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<g id="original" display="none">
+	
+		<rect x="10.208" y="6.83" display="inline" fill="#E42A33" stroke="#E42A33" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="12.334" height="14.754"/>
+	<circle display="inline" fill="#FFFFFF" cx="11.444" cy="19.928" r="1.245"/>
+	<circle display="inline" fill="#FFFFFF" cx="21.306" cy="19.928" r="1.245"/>
+	
+		<line display="inline" fill="none" stroke="#FFFFFF" stroke-width="1.65" stroke-linecap="round" stroke-miterlimit="10" x1="13.273" y1="7.661" x2="19.435" y2="7.661"/>
+	
+		<line display="inline" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-miterlimit="10" x1="12.063" y1="11.845" x2="20.645" y2="11.845"/>
+	
+		<line display="inline" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-miterlimit="10" x1="12.063" y1="15.778" x2="20.645" y2="15.778"/>
+	<rect x="10.958" y="11.845" display="inline" fill="#FFFFFF" width="10.792" height="3.932"/>
+	
+		<line display="inline" fill="none" stroke="#E42A33" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="11.886" y1="23.121" x2="11.886" y2="25.17"/>
+	
+		<line display="inline" fill="none" stroke="#E42A33" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="20.799" y1="23.121" x2="20.799" y2="25.17"/>
+</g>
+<g id="expanded">
+	<g>
+		<path fill="#E42A33" d="M22.542,5.18H10.208c-0.911,0-1.65,0.739-1.65,1.65v14.754c0,0.911,0.739,1.65,1.65,1.65h0.028v1.936
+			c0,0.911,0.739,1.65,1.65,1.65s1.65-0.739,1.65-1.65v-1.936h5.613v1.936c0,0.911,0.739,1.65,1.65,1.65s1.65-0.739,1.65-1.65
+			v-1.936h0.093c0.911,0,1.65-0.739,1.65-1.65V6.83C24.192,5.919,23.453,5.18,22.542,5.18z M13.273,6.836h6.162
+			c0.456,0,0.825,0.369,0.825,0.825s-0.37,0.825-0.825,0.825h-6.162c-0.456,0-0.825-0.369-0.825-0.825S12.818,6.836,13.273,6.836z
+			 M11.444,21.174c-0.688,0-1.245-0.557-1.245-1.245c0-0.688,0.557-1.245,1.245-1.245c0.688,0,1.245,0.557,1.245,1.245
+			C12.689,20.616,12.132,21.174,11.444,21.174z M12.063,16.877c-0.607,0-1.1-0.492-1.1-1.099h-0.005v-3.932h0.005
+			c0-0.607,0.493-1.099,1.1-1.099h8.582c0.607,0,1.1,0.492,1.1,1.099h0.005v3.932h-0.005c0,0.607-0.493,1.099-1.1,1.099H12.063z
+			 M21.306,21.174c-0.688,0-1.245-0.557-1.245-1.245c0-0.688,0.557-1.245,1.245-1.245c0.688,0,1.245,0.557,1.245,1.245
+			C22.551,20.616,21.994,21.174,21.306,21.174z"/>
+	</g>
+</g>
+</svg>

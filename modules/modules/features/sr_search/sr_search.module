@@ -1,0 +1,42 @@
+<?php
+/**
+ * @file
+ * Code for the sr_search feature.
+ */
+
+include_once 'sr_search.features.inc';
+
+
+/**
+ * Preprocess search view.
+ */
+function sr_search_preprocess_views_view(&$vars) {
+  if ($vars['view']->name == 'search') {
+    $tabs = array(
+      'search' => 'All',
+      'search/pages' => 'Pages',
+      // 'search/downloads' => 'Downloads',
+      'search/videos' => 'Videos',
+      'search/news' => 'News',
+      'search/shop' => 'Stuff to order',
+    );
+
+    foreach ($tabs as $path => &$tab) {
+      $options = array();
+      $options['attributes']['class'][] = 'tab-link';
+      if (request_path() == $path) {
+        $options['attributes']['class'][] = 'tabs-active';
+      }
+
+      if (!empty($_GET['query'])) {
+        $options['query']['query'] = $_GET['query'];
+      }
+
+      // Generate tab link.
+      $tab = l($tab, $path, $options);
+    }
+
+    // Generate list element.
+    $vars['tabs'] = '<ul><li>' . implode('</li><li>', $tabs) . '</li></ul>';
+  }
+}

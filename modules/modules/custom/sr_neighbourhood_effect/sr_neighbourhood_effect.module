@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * Implements hook_help().
+ */
+function sr_neighbourhood_effect_help($path, $arg) {
+  switch ($path) {
+    case 'admin/config/system/neighbourhoodeffect':
+      return t('Neighbourhood effect is a piece of tracking code used for our door drop experiment (owned by Liz Curry)');
+  }
+}
+
+
+
+/**
+ * Implements hook_permission().
+ */
+function sr_neighbourhood_effect_permission() {
+  return array(
+    'administer neighbourhood effect' => array(
+      'title' => t('Administer Neighbourhood Effect'),
+      'description' => t('Perform maintenance tasks for Neighbourhood Effect.'),
+    ),
+  );
+}
+
+
+
+/**
+ * Implements hook_menu().
+ */
+function sr_neighbourhood_effect_menu() {
+  $items['admin/config/system/neighbourhoodeffect'] = array(
+    'title' => 'Neighbourhood Effect',
+    'description' => 'Configure tracking behavior for the Neighbourhood Effect door drop experiment',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('sr_neighbourhood_effect_admin_settings_form'),
+    'access arguments' => array('administer neighbourhood effect'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'sr_neighbourhood_effect.admin.inc',
+  );
+
+  return $items;
+}
+
+
+
+/**
+ * Implements hook_page_alter()
+ */
+function sr_neighbourhood_effect_page_alter(&$page) {
+  $script_enabled = variable_get('sr_neighbourhood_effect_enable', 0);
+  $script_url = variable_get('sr_neighbourhood_effect_url', 'https://hotspot.datatalk.co.uk/frgyh/HSD.js');
+  if($script_enabled){
+    drupal_add_js($script_url, array('type' => 'external', 'scope' => 'header'));
+  }
+}

@@ -1,0 +1,52 @@
+<?php
+/**
+ * @file
+ * Code for the RND Project feature.
+ */
+
+include_once 'sr_project.features.inc';
+
+
+function sr_project_form_alter(&$form, &$form_state, $form_id) {
+
+  // Change -Any- exposed filter option to All
+  if(isset($form_state['view']) && $form_state['view']->name == 'project') {
+    $form['field_project_region_tid']['#default_value'] = t('Select a region');
+    $form['field_project_region_tid']['#options']['All'] = t('Select a region');
+  }
+
+}
+
+function sr_project_views_pre_render(&$view) {
+  // Create an AJAX dom ID based on the view name and display to prevent
+  // errors that occur when caching views.
+  if($view->name == 'project') {
+    $view->dom_id = $view->name . '-' . $view->current_display;
+    // Add the geolocation JS
+    drupal_add_library('sr_project', 'views-filter-geo');
+  }
+}
+
+function sr_project_library() {
+  // Library One.
+  $libraries['inview'] = array(
+    'title' => 'jQuery Inview',
+    'website' => 'https://github.com/protonet/jquery.inview',
+    'version' => '1',
+    'js' => array(
+      drupal_get_path('module', 'sr_project') . '/javascripts/jquery.inview.js' => array(),
+    ),
+  );
+  // Library Two.
+  $libraries['views-filter-geo'] = array(
+    'title' => 'Views Filter Geo',
+    'version' => '1',
+    'js' => array(
+    drupal_get_path('module', 'sr_project') . '/javascripts/views-filter-geo.js' => array(),
+    ),
+    'dependencies' => array(
+      array('sr_project', 'inview'),
+    ),
+  );
+  return $libraries;
+}

@@ -1,0 +1,155 @@
+@import "../utilities/all-utilities.less";
+
+.BattleOfTheBacksides {
+
+  // Override Background
+  &.bg {
+    background: #EEEEEE;
+  }
+
+  .breadcrumb li a {
+    color: #FFF;
+  }
+
+  .breadcrumb li:after {
+    color: #FFF;
+  }
+
+  .promo-wrapper {
+
+    h2 {
+      color: #FFF;
+    }
+
+    p {
+      color: #FFF;
+    }
+
+  }
+
+  .botb-competition-enter-prizes-pod {
+    background: url("../../images/components/backgrounds/BattleOfTheBacksidesTopPrizes.png") #FFF no-repeat top right;
+
+    .BOTB__competition-prizes {
+
+      p {
+        background: url("../../images/components/backgrounds/BattleOfTheBacksidesPrizesList.png") transparent no-repeat top left;
+        margin: 0 0 15px 0;
+        padding-left: 80px;
+        padding-right: 100px;
+        min-height: 50px;
+        font-family: @font-foco;
+        font-size: 18px;
+        color: #333;
+        line-height: 20px;
+      }
+
+    }
+  }
+
+  .Battle__board {
+
+    h2 {
+      // hide h2 as these are intended for content editors only
+      display: none;
+    }
+
+    img {
+      // hide images as default and show relevant one using media queries
+      display: none;
+    }
+
+  }
+
+  .Battle__fundraiser {
+    h5 {
+      color: #FFF;
+      text-align: center;
+
+      strong {
+        color: #D3DC50;
+      }
+    }
+
+    p {
+      color: #FFF;
+      text-align: center;
+    }
+  }
+
+}
+
+@media all and @fluidOnly {
+  .Battle__board {
+    .Battle__boardimage--mobile img {
+      display: block;
+    }
+  }
+
+  .promo-wrapper {
+
+    background: #000;
+
+    .Battle__promo-logo img {
+      width: 80%;
+      margin: 0 auto 20px auto;
+    }
+
+    .Battle__promo-video-text {
+
+      h2,p {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      h2 {
+        margin: 0px 0px 20px 0px;
+      }
+
+    }
+
+    .botb-video {
+      padding-top: 20px;
+    }
+
+  }
+
+  .subpod-wrapper img {
+    display: block;
+  }
+}
+
+@media all and @narrowAndGreater {
+  .Battle__board {
+    .Battle__boardimage--other img {
+      display: block;
+    }
+  }
+
+  .promo-wrapper {
+
+    background: url("../../images/components/backgrounds/BattleOfTheBacksidesPromoWrapper.jpg") #000 no-repeat center 180px;
+
+    .Battle__promo-video-text {
+
+      h2,p {
+        padding-left: 20px;
+      }
+
+      h2 {
+        margin: 0px 0px 20px 0px;
+      }
+
+    }
+
+  }
+
+  // This is a template limitation.
+  .botb-competition-enter-promo-cta {
+    width: 110%;
+  }
+
+  .BOTB__competition-prizes {
+    margin-left: -30px;
+  }
+}

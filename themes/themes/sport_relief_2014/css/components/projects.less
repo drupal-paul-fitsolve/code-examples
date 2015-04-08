@@ -1,0 +1,128 @@
+.projects .views-exposed-form {
+  position: absolute;
+  bottom: -70px;
+  width: 100%;
+  left: -25px;
+  .responsive-layout-mobile & {
+    width: 90%;
+    left: 0;
+    bottom: -80px;
+  }
+}
+.projects-region-title {
+  margin-top: 0;
+  margin-left: -10px;
+  &:before {
+    .icon-pin;
+    color: @red;
+    .font-size(40, 28);
+    line-height: 0;
+    vertical-align: -7px;
+  }
+}
+.project__title,
+.project-title {
+  font-family: @font-helvetica;
+}
+.project__body {
+  .responsive-layout-wide & {
+    min-height: 220px;
+  }
+  .responsive-layout-normal & {
+    min-height: 160px;
+  }
+}
+.projects-region-background {
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  padding: 15px 15px 5px;
+  .responsive-layout-mobile & {
+    background-size: 120%;
+    padding: 50% 0 0 0;
+    background-position: right -20%;
+  }
+}
+.projects-region-background--18 {
+  background-image: url(../images/components/projects/region-east.png);
+}
+.projects-region-background--19 {
+  background-image: url(../images/components/projects/region-east.png);
+}
+.projects-region-background--20 {
+  background-image: url(../images/components/projects/region-east-yorkshire.png);
+}
+.projects-region-background--21 {
+  background-image: url(../images/components/projects/region-london.png);
+}
+.projects-region-background--22 {
+  background-image: url(../images/components/projects/region-north-east.png);
+}
+.projects-region-background--23 {
+  background-image: url(../images/components/projects/region-north-west.png);
+}
+.projects-region-background--24 {
+  background-image: url(../images/components/projects/region-northern-ireland.png);
+}
+.projects-region-background--25 {
+  background-image: url(../images/components/projects/region-scotland.png);
+}
+.projects-region-background--26 {
+  background-image: url(../images/components/projects/region-south.png);
+}
+.projects-region-background--27 {
+  background-image: url(../images/components/projects/region-south-east.png);
+}
+.projects-region-background--28 {
+  background-image: url(../images/components/projects/region-south-west.png);
+}
+.projects-region-background--29 {
+  background-image: url(../images/components/projects/region-wales.png);
+}
+.projects-region-background--30 {
+  background-image: url(../images/components/projects/region-west.png);
+}
+.projects-region-background--31 {
+  background-image: url(../images/components/projects/region-west-midlands.png);
+}
+.projects-region-background--32 {
+  background-image: url(../images/components/projects/region-yorkshire.png);
+}
+
+.responsive-layout-mobile .projects {
+  background: @white;
+  padding: 10px;
+}
+
+.responsive-layout-narrow,
+.responsive-layout-normal,
+.responsive-layout-wide {
+  // It's a pain to modify the exposed form widget html
+  .projects .views-exposed-form label {
+    color: @white;
+    width: 50%;
+    float: left;
+  }
+  .projects .views-widget {
+    width: 50%;
+    float: left;
+  }
+}
+.responsive-layout-mobile {
+  .projects .views-exposed-form label {
+    color: @white;
+  }
+}
+
+// Flexslider override
+.projects .flex-control-nav {
+  position: static;
+  background-color: transparent;
+}
+.projects .flex-control-paging a {
+  background: @medium-grey;
+}
+.projects .flex-next,
+.projects .flex-prev {
+  color: @medium-grey;
+}

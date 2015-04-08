@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="72px" height="72px" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
+<g>
+	<path fill="#FDD05F" d="M12,9c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C10.656,6,12,7.343,12,9"/>
+	<rect x="6" y="9" fill="#FDD05F" width="6" height="33"/>
+	<path fill="#FDD05F" d="M65,9c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C63.656,6,65,7.343,65,9"/>
+	<rect x="60" y="9" fill="#FDD05F" width="6" height="33"/>
+	<rect x="9" y="6" fill="#FDD05F" width="53" height="40"/>
+	<path fill="#E33038" d="M12,29c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C10.656,26,12,27.343,12,29"/>
+	<path fill="#E33038" d="M12,63c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C10.656,60,12,61.343,12,63"/>
+	<rect x="6" y="26" fill="#A9242A" width="60" height="8"/>
+	<rect x="6" y="26" fill="#E33038" width="6" height="36"/>
+	<path fill="#E33038" d="M66,29c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C64.656,26,66,27.343,66,29"/>
+	<path fill="#E33038" d="M66,63c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C64.656,60,66,61.343,66,63"/>
+	<rect x="60" y="26" fill="#E33038" width="6" height="36"/>
+	<rect x="9" y="26" fill="#E33038" width="55" height="40"/>
+	<polyline fill="#FDD05F" points="66,26 36,46 6,26 	"/>
+	<g opacity="0.2">
+		<g>
+			<defs>
+				<rect id="SVGID_47_" x="38" y="26" width="28" height="40"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_47_"  overflow="visible"/>
+			</clipPath>
+			<polygon clip-path="url(#SVGID_2_)" points="66,66 38,45 66,26 			"/>
+		</g>
+	</g>
+	<g opacity="0.1">
+		<g>
+			<defs>
+				<rect id="SVGID_49_" x="6" y="26" width="28" height="40"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_49_"  overflow="visible"/>
+			</clipPath>
+			<polygon clip-path="url(#SVGID_4_)" points="6,66 34,45 6,26 			"/>
+		</g>
+	</g>
+	<path fill="#FF9300" d="M38,13c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C37.553,12,38,12.447,38,13"/>
+	<path fill="#FF9300" d="M60,13c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C59.553,12,60,12.447,60,13"/>
+	<rect x="37" y="12" fill="#FF9300" width="22" height="2"/>
+	<path fill="#FF9300" d="M38,19c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C37.553,18,38,18.447,38,19"/>
+	<path fill="#FF9300" d="M60,19c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C59.553,18,60,18.447,60,19"/>
+	<rect x="37" y="18" fill="#FF9300" width="22" height="2"/>
+	<path fill="#FF9300" d="M38,25c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C37.553,24,38,24.447,38,25"/>
+	<path fill="#FF9300" d="M60,25c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C59.553,24,60,24.447,60,25"/>
+	<rect x="37" y="24" fill="#FF9300" width="22" height="2"/>
+	<path fill="#FF9300" d="M38,31c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C37.553,30,38,30.447,38,31"/>
+	<path fill="#FF9300" d="M47,31c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C46.553,30,47,30.447,47,31"/>
+	<rect x="37" y="30" fill="#FF9300" width="9" height="2"/>
+	<path fill="#FF9300" d="M12,25c0,0.553,0.447,1,1,1h18c0.553,0,1-0.447,1-1V13c0-0.553-0.447-1-1-1H13c-0.553,0-1,0.447-1,1V25z"/>
+	<g opacity="0.5">
+		<g>
+			<defs>
+				<rect id="SVGID_51_" x="38" y="6" width="28" height="14"/>
+			</defs>
+			<clipPath id="SVGID_6_">
+				<use xlink:href="#SVGID_51_"  overflow="visible"/>
+			</clipPath>
+			<polygon clip-path="url(#SVGID_6_)" fill="#FF9300" points="52.1,20 66,20 52,6 38,6 			"/>
+		</g>
+	</g>
+	<path fill="#F8DA7B" d="M52,6v11c0,1.657,1.344,3,3,3h11L52,6z"/>
+	<path fill="#FFFFFF" d="M66,20V9c0-1.657-1.344-3-3-3H52L66,20z"/>
+</g>
+</svg>

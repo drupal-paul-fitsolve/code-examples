@@ -1,0 +1,29 @@
+.js .cr-mediaelement-video video{
+  display: none;
+  position: absolute;
+  z-index: -900;
+  top: 0;
+  left: 0;
+}
+.js .cr-mediaelement-video img{
+  cursor: pointer;
+  width:100%;
+}
+.js .cr-mediaelement-video{
+  position: relative;
+}
+
+.js .cr-mediaelement-video .mejs-overlay {
+  position: static;
+}
+
+.cr_video_layer{
+  display: block;
+  /*background-color: #000;*/
+}
+
+#colorbox .cr_video_layer img{
+  margin-left:auto;
+  margin-right:auto;
+}
+

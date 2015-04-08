@@ -1,0 +1,49 @@
+<?php
+/**
+ * @file
+ * Code for the sr_layout: base feature.
+ */
+
+include_once 'sr_layout_base.features.inc';
+
+function sr_layout_base_entity_info_alter(&$entity_info) {
+
+  /* Same as Text pane but with less restrictive permissions enabling less trusted Staff access to it */
+  $entity_info['fieldable_panels_pane']['bundles']['managed_text'] = array(
+    'label' => t('SR Managed Text'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'pane icon' => '/path/to/custom/icon/for/this/pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/managed_text',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  /* Same as Image pane but with less restrictive permissions enabling less trusted Staff access to it */
+  $entity_info['fieldable_panels_pane']['bundles']['managed_image'] = array(
+    'label' => t('SR Managed Image'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'pane icon' => '/path/to/custom/icon/for/this/pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/managed_image',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+/**
+ * Return a rendered entity
+ * @param $type
+ * @param $id
+ */
+function sr_layout_base_entity_view($type,$id) {
+  $ids = array($id);
+  // $entities = entity_load($type);
+  // return entity_view($type,$entities);
+}

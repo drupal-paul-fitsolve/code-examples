@@ -1,0 +1,77 @@
+/*
+ * Tabs dark style
+*/
+
+.tabs--dark {
+  .tab-wrapper--dark {
+    ul {
+      display: table;
+      table-layout: fixed;
+    }
+    [name=tab-top] {
+      display: none;
+    }
+    li {
+      display: table-cell;
+      width: 2%;
+      text-align: center;
+      padding-left: 20px;
+    }
+    li.first {
+      padding-left: 0px;
+    }
+  }
+  a.tab-link {
+    .border-top-radius(3px);
+    color: @darkest-grey;
+    font-family: @font-foco;
+    .font-size(20);
+    background-color: @white;
+    padding: 23px 0px 17px 0px;
+  }
+  .tab-contents,
+  .tab-link.tabs-active {
+    background-color: @black;
+    color: @white;
+  }
+  .tab-contents,
+  .tab-content {
+    .border-bottom-radius(3px);
+  }
+  .tab-content {
+    h2 { margin-top: 0px; }
+    .pod-media {
+      margin: 0px 25px 0px 30px;
+    }
+  }
+}
+
+// Responsive
+.responsive-layout-mobile {
+  .tabs--dark {
+    .tab-wrapper--dark {
+      li.first {
+        a.tab-link{
+          padding: 10px 15px;
+        }
+      }
+    }
+    a.tab-link{
+      .font-size(14);
+      font-weight: bold;
+      padding: 10px 30px;
+      line-height: 15px;
+      min-height: 30px;
+    }
+    .tab-content {
+      h2 { .font-size(24); }
+      padding: 0px;
+      .pod-media {
+        margin: 0px;
+      }
+      .pod-text {
+        padding: 30px;
+      }
+    }
+  }
+}

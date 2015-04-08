@@ -1,0 +1,15 @@
+name = CR Cookies
+description = Cookie compliance
+core = 7.x
+package = "SR14"
+php = 5.2.4
+dependencies[] = eu_cookie_compliance
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[user_permission][] = administer EU Cookie Compliance popup
+features[user_permission][] = display EU Cookie Compliance popup
+features[variable][] = eu_cookie_compliance_en
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][strongarm] = strongarm
+project path = sites/all/modules/features

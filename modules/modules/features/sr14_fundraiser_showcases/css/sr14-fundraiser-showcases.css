@@ -1,0 +1,22 @@
+/*
+ * General Style
+*/
+.masonry-brick {
+      margin-bottom: 10px;   
+      word-wrap: break-word;
+      text-align: center;
+      background-color: #222222;
+      color: #fff;
+}
+
+/* Responsive */
+.responsive-layout-wide .masonry-brick {
+  max-width: 280px; 
+}
+.responsive-layout-normal .masonry-brick,
+.responsive-layout-narrow .masonry-brick {
+  max-width: 220px; 
+}
+.responsive-layout-mobile .masonry-brick {
+  max-width: 145px; 
+}

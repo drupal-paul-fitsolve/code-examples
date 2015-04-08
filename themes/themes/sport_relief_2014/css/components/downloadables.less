@@ -1,0 +1,146 @@
+.pane-downloadables {
+  overflow: hidden;
+  .responsive-layout-normal & {
+    padding: 20px 15px 25px;
+  }
+
+  .responsive-layout-mobile & {
+    ul {
+      width: 270px;
+      margin: 0 auto;
+    }
+    li {
+      display: inline-block;
+    }
+
+    .left, .right{
+      display: inline-block;
+    }
+
+    .right {
+      vertical-align: top;
+      width: 180px;
+    }
+
+    h4 {
+      h3;
+      text-align: center;
+    }
+  }
+  .views-field {
+    width: 100px;
+    margin-left: 90px;
+    .responsive-layout-normal & {
+      margin-left: 70px;
+      width: 120px;
+    }
+  }
+}
+
+
+
+/* Styling for digitools */
+
+.digitools--intro {
+  
+  color: @white;
+  h2 { color: @white; }
+  img { margin:15px auto 0 auto;}
+}
+
+.digitools--main {
+  background-color:@white;
+  height: 400px;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  padding: 40px;
+}
+
+.digitool--colorbox {
+  .grid-24 {
+    margin-left:0;
+    margin-right:0;
+    margin-top:20px;
+  }
+}
+
+
+.addcode--wrapper {
+  text-align: left;
+  width:60%;
+  margin:0 auto;
+
+  #addcode--form{
+    width:70%;
+    float:left;
+    height:40px;
+  }
+
+  #addcode--button {
+    width: 30%;
+    float:left;
+    height:20px;
+    padding: 10px 0;
+    .border-right-radius(3px);
+  }
+}
+
+
+
+#addcode--textbox {
+  height: 40px;
+  width: 100%;
+  margin: 0;
+  background: @white;
+  color: @dark-grey;
+  .border-left-radius(3px);
+}
+
+.copycode--wrapper {
+
+  width:100%;
+
+  .textbox {
+  width:75%;
+  max-width: 75%;
+  margin-top: 20px;
+  height:100px;
+  overflow:hidden;
+  font-size:1em;
+  }
+
+  .button {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: @darker-grey;
+
+  }
+
+
+} 
+
+
+// landing page styling for tablets:
+.context-digitool-giving-page-banners, .context-digitool-facebook-cover, .context-digitool-intranet-banner {
+  .region-inner.region-content-inner {
+    background-color: @black !important;
+  }
+}
+
+/*.digitool--popup {
+
+  position: fixed;  
+  top: 0;
+  left: 0;
+  background-color: @white;
+  width: 90%;
+  height: 40%;
+  margin: 30% 5% 30% 5%;
+  border-radius: 5px;
+  z-index: 999;
+  border: 1px solid @darker-grey;
+
+}*/
+

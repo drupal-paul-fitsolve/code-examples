@@ -1,0 +1,388 @@
+@import "../utilities/all-utilities.less";
+
+.context-organise-sainsburys-sport-relief-mile .showcase-scroller--dark-row  {
+  margin-top: 40px;
+}
+
+// To style images before JS kicks in
+.views-field.views-field-field-fundrasier-showcase-images {
+float: left;
+}
+
+.simply-scroll-container { /* Container DIV - automatically generated */
+  position: relative;
+}
+
+  .simply-scroll-clip { /* Clip DIV - automatically generated */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .simply-scroll-list { /* UL/OL/DIV - the element that simplyScroll is inited on */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+    .simply-scroll-list li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+
+     .simply-scroll .simply-scroll-list li:before {
+        content:"";
+      }
+
+
+
+    .simply-scroll-list li img {
+      border: none;
+      display: block;
+    }
+
+  .simply-scroll-btn {
+    position: absolute;
+    background-image: url(buttons.png);
+    width: 42px;
+    height: 44px;
+    z-index:3;
+    cursor: pointer;
+  }
+
+  .simply-scroll-btn-left {
+    left: 6px;
+    bottom: 6px;
+    background-position: 0 -44px;
+  }
+  .simply-scroll-btn-left.disabled {
+    background-position: 0 0 !important;
+  }
+  .simply-scroll-btn-left:hover, .simply-scroll-btn-left:focus {
+    background-position: 0 -88px;
+  }
+
+  .simply-scroll-btn-right {
+    right: 6px;
+    bottom: 6px;
+    background-position: -84px -44px;
+  }
+  .simply-scroll-btn-right.disabled {
+    background-position: -84px 0 !important;
+  }
+  .simply-scroll-btn-right:hover, .simply-scroll-btn-right:focus {
+    background-position: -84px -88px;
+  }
+
+  .simply-scroll-btn-up {
+    right: 6px;
+    top: 6px;
+    background-position: -126px -44px;
+  }
+  .simply-scroll-btn-up.disabled {
+    background-position: -126px 0 !important;
+  }
+  .simply-scroll-btn-up:hover, .simply-scroll-btn-up:focus {
+    background-position: -126px -88px;
+  }
+
+  .simply-scroll-btn-down {
+    right: 6px;
+    bottom: 6px;
+    background-position: -42px -44px;
+  }
+  .simply-scroll-btn-down.disabled {
+    background-position: -42px 0 !important;
+  }
+  .simply-scroll-btn-down:hover, .simply-scroll-btn-down:focus {
+    background-position: -42px -88px;
+  }
+
+  .simply-scroll-btn-pause {
+    right: 6px;
+    bottom: 6px;
+    background-position: -168px -44px;
+  }
+  .simply-scroll-btn-pause:hover, .simply-scroll-btn-pause:focus {
+    background-position: -168px -88px;
+  }
+
+  .simply-scroll-btn-pause.active {
+    background-position: -84px -44px;
+  }
+  .simply-scroll-btn-pause.active:hover, .simply-scroll-btn-pause.active:focus {
+    background-position: -84px -88px;
+  }
+
+
+.simply-scroll { /* Customisable base class for style override DIV */
+  width: 100%;
+  height: auto;
+}
+
+  .simply-scroll .simply-scroll-clip {
+    width: 100%;
+    height: auto;
+  }
+
+    .simply-scroll .simply-scroll-list li {
+      float: left;
+      width: auto;
+      height: auto;
+      padding-left:0;
+      text-indent: 0;
+      margin: 0;
+    }
+
+    .simply-scroll {
+      // Until Upload functionality added on 21st Jan
+      padding-top: 10px;
+    }
+
+
+// Added to relevant row on page in the Row Classes field in the Landing Page UI
+  .showcase-scroller--dark-row {
+      background: @black;
+      padding-top: 10px;
+      padding-bottom: 60px;
+
+      // Until Upload functionality added on 21st Jan
+      padding-top: 20px;
+      padding-bottom: 70px;
+
+
+
+      h2.pane-title {
+        color: @white;
+      }
+
+      .showcase-scroller--cta {
+        margin-bottom: 2.0em;
+
+      // Until Upload functionality added on 21st Jan
+        display:none;
+      }
+
+      .scroller-cta {
+        font-family: 'sr-icons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+        font-size: inherit;
+        color: #11B2E8;
+        margin-right: 5px;
+      }
+
+      .scroller-cta:before {
+        content: "\e022";
+      }
+
+      #scroller-eye {
+        width:30px;
+        height:15px;
+        background-image: url('../../images/scroller--eye.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        margin:0 auto 10px;
+      }
+    }
+
+  .view-id-showcase_slider td {
+    padding:0;
+  }
+
+  .view-id-showcase_slider {
+    position:relative;
+
+    h4, h5, h6 { color: @white;}
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  #showcase-scroller--view-button {
+    //font-size: 18px;
+    color: @white;
+    font-family: @font-foco;
+    .font-size(19);
+    width:100px;
+    text-align:center;
+    margin:0 auto;
+    padding: 25px 10px 30px;
+    position: absolute;
+    top:40%;
+    left:50%;
+    margin-left: -60px;
+    z-index:1;
+    background-image: url('../../images/view-gallery--button.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    // Until Upload functionality added on 21st Jan
+    top: 23%;
+  }
+
+  .showcase-scroller--cta {
+    font-size:14px;
+    //color: @white;
+  }
+
+
+  .context-fundraise .content-row-2-wrapper {
+
+      .main-content { padding-bottom: 70px; }
+      h2.pane-title { padding-top:25px; }
+      p.fundraise--circles-intro {
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-bottom:40px;
+      }
+  }
+
+
+  @media all and @fluidOnly {
+
+    .context-fundraise .content-row-2-wrapper {
+
+      h2.pane-title { padding-top: 25px;}
+
+      .main-content { padding-bottom: 0px; }
+
+      p.fundraise--circles-intro {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom:10px;
+      }
+
+    }
+
+    .context-fundraise .content-row-3-wrapper {
+      padding-top: 10px;
+      padding-bottom: 35px;
+
+      .grid-24 {margin-bottom: 0px;}
+
+
+      h2.pane-title {
+        margin: 10px 25% 10px;
+      }
+    }
+
+    #showcase-scroller--view-button {
+      top:50%;
+      margin-top: -54px;
+    }
+
+
+    .showcase-scroller li{
+      width: 33%;
+      float:left;
+   }
+
+   #showcase-scroller--mobile-cta {
+    margin-bottom:0px;
+    margin-top: 10px;
+   }
+
+   #showcase-scroller--mobile-upload {
+    font-weight: bold;
+    margin-top: 5px;
+
+    // Until Upload functionality added on 21st Jan
+    display:none;
+
+  }
+
+  #showcase-scroller--mobile-share {margin-top: 20px; margin-bottom: 0;}
+
+
+  }
+
+.pane-fundraiser-circles .grid-24 { margin:0; }
+
+
+/* schools-showcase scroller */
+.context-schools {
+  @media all and @fluidOnly {
+    .pane-showcase-slider {
+      height: auto;
+    }
+  }
+  @media all and @narrowOnly {
+    .pane-showcase-slider {
+      height: 284px;
+      overflow: hidden;
+    }
+  }
+  @media all and @normalOnly {
+    .pane-showcase-slider {
+      height: 290px;
+      overflow: hidden;
+    }
+  }
+  @media all and @wideOnly {
+    .pane-showcase-slider {
+      height: 316px;
+      overflow: hidden;
+    }
+  }
+  .pane-showcase-slider h2 {
+    text-align: center;
+    padding: 30px 0 0 0;
+  }
+  .pane-showcase-slider h6 {
+    text-align: center;
+    text-indent: -9999px;
+    margin-bottom: 30px;
+  }
+
+  .pane-showcase-slider .scroller-cta {
+    font-family: 'sr-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    font-size: inherit;
+    color: #11B2E8;
+    margin-right: 5px;
+  }
+  .pane-showcase-slider .scroller-cta:before {
+    content: "\e022";
+  }
+
+  #showcase-scroller--view-button {
+    background-size: 100px;
+    line-height: 1.1em;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 23px 10px 30px 10px;
+    top: 32%;
+    #scroller-eye {
+      width:30px;
+      height:15px;
+      background-image: url('../../images/scroller--eye.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      margin:0 auto 10px;
+    }
+  }
+  @media all and @fluidOnly {
+    #showcase-scroller--view-button {
+      top: 50%;
+    }
+    #showcase-scroller--mobile-upload {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?php
+/**
+ * @file
+ * install file for sr14_site_deployment
+ *
+ * Holds hook_update_N implementations
+ */
+
+
+/**
+ * Example Usage 1st deployment
+ * Author: Jeremy Pitt
+ * Ticket: RED-40
+ * Disables and then enables modules/features to
+ * work with repo restructure.
+ */
+/*
+function sr14_site_deployment_update_7000() {
+
+  // Disable the cr_donate module
+  $disable_modules = array(
+    'cr_donate',
+  );
+  module_disable($disable_modules);
+
+  // Enable the cr_donate module
+  $enable_modules = array(
+    'cr_donate',
+  );
+  module_enable($enable_modules);
+}
+*/

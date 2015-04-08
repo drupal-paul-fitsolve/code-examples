@@ -1,0 +1,161 @@
+<?php
+/**
+ * @file
+ * Code for the Media Bar feature.
+ */
+
+include_once 'sr_media_bar.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function sr_media_bar_init() {
+  // Do not load sr_media_bar js during the Drupal installation process, e.g. if part
+  // of installation profiles.
+  if (!drupal_installation_attempted()) {
+    drupal_add_js(drupal_get_path('module', 'sr_media_bar') . '/js/sr_media_bar.js');
+    drupal_add_js(drupal_get_path('module', 'sr_media_bar') . '/js/auto-height.js');
+  }
+}
+
+/**
+ * Implements hook_bean_types_api_info().
+ */
+function sr_media_bar_bean_types_api_info() {
+  return array('api' => 4);
+}
+
+/**
+ * Implements hook_bean_types().
+ */
+function sr_media_bar_bean_types() {
+  $plugins = array();
+  $plugin_path = drupal_get_path('module', 'sr_media_bar') . '/plugins/bean';
+  $plugins['media_bar'] = array(
+    'label' => t('Media Bar: Media'),
+    'description' => t('A Media Bar Instance'),
+    'abstract' => FALSE,
+    'handler' => array(
+      'class' => 'MediabarBean',
+      'parent' => 'bean',
+    ),
+    'path' => $plugin_path,
+    'file' => 'sr.media_bar.inc',
+  );
+  $plugins['twitter_bar'] = array(
+    'label' => t('Media Bar: Twitter'),
+    'description' => t('A Twitter Media Bar Instance'),
+    'abstract' => FALSE,
+    'handler' => array(
+      'class' => 'TwitterMediabarBean',
+      'parent' => 'MediabarBean',
+    ),
+    'path' => $plugin_path,
+    'file' => 'sr.media_bar.inc',
+  );
+  return $plugins;
+}
+
+/*
+ * Twitter Formatters
+ * Grabbed directly from the twitter module
+ * https://drupal.org/project/twitter
+ */
+
+define ('TWITTER_HOST',         'http://twitter.com');
+define ('TWITTER_API',          'https://api.twitter.com');
+define ('TWITTER_SEARCH',       'http://search.twitter.com');
+define ('TWITTER_TINYURL',      'http://tinyurl.com');
+
+/**
+ * Implements hook_filter_info()
+ */
+function sr_media_bar_filter_info() {
+  $filters['twitter_username'] = array(
+    'title' => t('Twitter @username converter'),
+    'description' => t('Converts Twitter-style @usernames into links to Twitter account pages.'),
+    'process callback' => '_twitter_filter_username',
+    'tips callback' => '_twitter_filter_tip_username',
+  );
+  $filters['twitter_hashtag'] = array(
+    'title' => t('Twitter #hashtag converter'),
+    'description' => t('Converts Twitter-style #hashtags into links to hashtags.org.'),
+    'process callback' => '_twitter_filter_hashtag',
+    'tips callback' => '_twitter_filter_tip_hashtag',
+  );
+  $filters['twitter_links'] = array(
+    'title' => t('Twitter link converter'),
+    'description' => t('Makes links in Twitter messages to be opened in new windows and adds ' .
+                       'rel="nofollow" so these links do not penalize SEO.'),
+    'process callback' => '_twitter_filter_link',
+    'tips callback' => '_twitter_filter_tip_link',
+  );
+
+  return $filters;
+}
+
+/**
+ * Filter tips callback function for Twitter usernames.
+ */
+function _twitter_filter_tip_username($filter, $format, $long = FALSE) {
+  return t('Twitter-style @usernames are linked to their Twitter account pages.');
+}
+
+/**
+ * Filter tips callback function for Twitter hashtags.
+ */
+function _twitter_filter_tip_hashtag($format, $long = FALSE) {
+  return t('Twitter-style #hashtags are linked to !url.', array(
+    '!url' => '<a href="http://search.twitter.com/">search.twitter.com</a>')
+  );
+}
+
+/**
+ * Filter tips callback function for Twitter links.
+ */
+function _twitter_filter_tip_link($filter, $format, $long = FALSE) {
+  return t('Twitter message links are opened in new windows and rel="nofollow" is added.');
+}
+
+/**
+ * Callback for twitter @username converter.
+ */
+function _twitter_filter_username($text, $filter) {
+  $prefix = '@';
+  $destination = variable_get('twitter_host', TWITTER_HOST) . '/';
+  return _twitter_filter_text($text, $prefix, $destination);
+}
+
+/**
+ * Callback for twitter #hashtag converter.
+ */
+function _twitter_filter_hashtag($text, $filter) {
+  $prefix = '#';
+  $destination = variable_get('twitter_search', TWITTER_SEARCH) . '/search?q=%23';
+  return _twitter_filter_text($text, $prefix, $destination);
+}
+
+/**
+ * This helper function converts Twitter-style @usernames and #hashtags into
+ * actual links.
+ */
+function _twitter_filter_text($text, $prefix, $destination) {
+  $matches = array(
+    '/\>' . $prefix . '(\w+)/ui',
+    '/^' . $prefix . '(\w+)/ui',
+    '/(\s+)' . $prefix . '(\w+)/ui',
+  );
+  $replacements = array(
+    '><a href="' . $destination . '${1}">' . $prefix . '${1}</a>',
+    '<a href="' . $destination . '${1}">' . $prefix . '${1}</a>',
+    '${1}<a href="' . $destination . '${2}">' . $prefix . '${2}</a>',
+  );
+  return preg_replace($matches, $replacements, $text);
+}
+
+/**
+ * Callback for twitter link converter.
+ */
+function _twitter_filter_link($text, $filter) {
+  return str_replace("<a ", '<a target="_blank" rel="nofollow" ', $text);
+}

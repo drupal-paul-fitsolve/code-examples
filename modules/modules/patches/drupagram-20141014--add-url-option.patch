@@ -1,0 +1,50 @@
+From 7dbb1fa884f4f219e3c011de8bd82a35d3f70223 Mon Sep 17 00:00:00 2001
+From: farhanm <f.mohamed@comicrelief.com>
+Date: Mon, 10 Mar 2014 14:53:21 +0000
+Subject: [PATCH] Drupagram - Patch to extend the Image feature to return just
+ the image URL
+
+---
+ .../contrib/drupagram/drupagram_views_field_handlers.inc     | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/public/sites/all/modules/contrib/drupagram/drupagram_views_field_handlers.inc b/public/sites/all/modules/contrib/drupagram/drupagram_views_field_handlers.inc
+index 65ce716..db52c68 100644
+--- a/public/sites/all/modules/contrib/drupagram/drupagram_views_field_handlers.inc
++++ b/public/sites/all/modules/contrib/drupagram/drupagram_views_field_handlers.inc
+@@ -168,6 +168,7 @@ class drupagram_views_handler_field_images extends views_handler_field {
+     $options = parent::option_definition();
+     $options['source'] = array('default' => 'thumbnail');
+     $options['link_to_post'] = array('default' => FALSE);
++    $options['url_only'] = array('default' => FALSE);
+     $options['image_style'] = array('default' => '');
+     return $options;
+   }
+@@ -190,6 +191,12 @@ class drupagram_views_handler_field_images extends views_handler_field {
+       '#type' => 'checkbox',
+       '#default_value' => !empty($this->options['link_to_post']),
+     );
++    $form['url_only'] = array(
++      '#title' => t('Image URL only'),
++      '#description' => t('Only return the image URL'),
++      '#type' => 'checkbox',
++      '#default_value' => !empty($this->options['url_only']),
++    );
+     if (module_exists('image')) {
+       $styles = image_styles();
+       $style_options = array('' => t('Default'));
+@@ -230,6 +237,11 @@ class drupagram_views_handler_field_images extends views_handler_field {
+     if ($this->options['link_to_post'] && isset($values->drupagram_link) && !empty($values->drupagram_link)) {
+       return l($image, $values->drupagram_link, array('html' => TRUE, 'attributes' => array('target' => '_blank', 'rel' => 'nofollow')));
+     }
++    //Added by f.mohamed, no way of selecting image URL
++    if ($this->options['url_only'] && isset($images[$source]['url']) && !empty($images[$source]['url'])) {
++      return $images[$source]['url'];
++    }
++
+     return $image;
+   }
+ 
+-- 
+1.7.11.3
+

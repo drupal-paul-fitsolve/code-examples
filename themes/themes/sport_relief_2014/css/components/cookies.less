@@ -1,0 +1,39 @@
+.cookies {
+  color: @white;
+}
+.responsive-layout-mobile .cookies-wrapper {
+  background-color: #000;
+  padding: 10px;
+  .box-sizing(border-box);
+}
+.cookies a {
+  text-decoration: underline;
+  color: @white;
+}
+.cookies__close {
+  background-color: transparent;
+  background-image: url(../images/close.png);
+  background-repeat: no-repeat;
+  border: 0;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  text-indent: -999em;
+  height: 20px;
+  width: 20px;
+  .icon-close;
+  border: 0;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  text-indent: -999em;
+  height: 20px;
+  width: 20px;
+  .responsive-layout-mobile & {
+    top: 10px;
+  }
+  .cookies a {
+    text-decoration: underline;
+    color: #FFF;
+}
+}

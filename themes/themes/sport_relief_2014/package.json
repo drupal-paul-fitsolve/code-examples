@@ -1,0 +1,12 @@
+{
+  "name": "sport-relief",
+  "description": "Grunt tasks for the sportrelief theme",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.3",
+    "jshint-stylish": "~0.1.3",
+    "grunt-lesslint": "~0.15.0",
+    "grunt-pagespeed": "~0.0.7"
+  }
+}

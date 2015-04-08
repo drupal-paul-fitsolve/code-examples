@@ -1,0 +1,1089 @@
+/* Media wall CSS: This is for the media wall, breapoints are defined below including orientaion for tablets only */
+.media-wall .cr-loader{
+  height: 400px;
+}
+.bean-media-wall .cr-mediaelement-video{
+  display: table;
+}
+.bean-media-wall .cr-mediaelement-video .cr_video_layer{
+  height: auto;
+  overflow: hidden;
+}
+.bean-media-wall .cr-mediaelement-video .cr_video_layer img,
+.dynamic-slide.bean-media-wall .cr-mediaelement-video .cr_video_layer img{
+  width:auto;
+  display: inline-block;
+}
+
+.bean-media-wall .hide{
+  display:none;
+}
+
+
+/**
+ * Flexslider
+ */
+ .flexslider--blue{
+    margin:40px 0;
+    position: relative;
+    padding-bottom: 20px;
+ }
+
+ .flexslider--blue h2.pane-title{
+    color: #fff;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+  }
+
+ .flexslider--blue .flex-viewport{
+    margin:0;
+ }
+
+ .flexslider--blue .flex-control-paging li a.flex-active{
+   background: #0F9FCF;
+ }
+ .flexslider--blue .flex-next,
+ .flexslider--blue .flex-prev {
+   font-size: 7em;
+   line-height: 55px;
+ }
+
+ .flexslider--blue .flex-prev{
+   left: -29px;
+ }
+ .flexslider--blue .flex-next{
+   right: -26px;
+ }
+
+ .flexslider--blue .flex-control-paging{
+   bottom: -34px;
+   background-color: transparent;
+ }
+
+ .flexslider--blue .flex-direction-nav{
+   bottom: -80px;
+ }
+
+
+/**
+ * MediaElement.js
+ */
+ .bean-media-wall .mejs-overlay-button{
+   top: 40%;
+   background: none;
+  }
+
+
+/**
+ * Regions top/bottom
+ */
+
+.bean-media-wall .group_mw_top{
+  margin-bottom: 25px;
+}
+
+.bean-media-wall .media-wall-group__bottom{
+  margin-bottom: 35px;
+}
+
+/* All Promo field */
+.bean-media-wall .field{
+  width:auto;
+}
+
+/* Drupal contextual links interferring with Media wall. Hacking here to fix. Only when logged in */
+.bean-media-wall .media-wall-group__bottom .contextual-links-region,
+.dynamic-slide.bean-media-wall .media-wall__small-tile .contextual-links-region{
+  position: static;
+}
+
+
+/**
+ * Promos
+ */
+
+.bean-media-wall .field-name-field-media-wall-promo,
+.bean-media-wall .field-name-field-media-wall-promo-2,
+.bean-media-wall .field-name-field-media-wall-promo-3,
+.bean-media-wall .field-name-field-media-wall-promo-4{
+  position: relative;
+
+}
+
+.bean-media-wall .field-name-field-media-wall-promo{
+  float:left;
+}
+
+.bean-media-wall .field-name-field-media-wall-promo-2{
+  float: right;
+}
+
+.bean-media-wall .field-name-field-media-wall-promo-2 .cr-mediaelement-video .cr_video_layer{
+  height: 300px;
+}
+
+.bean-media-wall .field-name-field-media-wall-promo-3{
+  float: left;
+  /* cannot add alpha/omega or grid classes due to Display suite bug */
+  margin-right:10px;
+}
+
+.bean-media-wall .field-name-field-media-wall-promo-4{
+  float: right;
+}
+
+.bean-media-wall .field-name-field-media-wall-promo img,
+.bean-media-wall .field-name-field-media-wall-promo-2 img,
+.bean-media-wall .field-name-field-media-wall-promo-3 img,
+.bean-media-wall .field-name-field-media-wall-promo-4 img,
+.bean-media-wall .cr_video_layer,
+.bean-media-wall .field-name-field-video-url,
+.bean-media-wall .field img{
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.bean-media-wall .field-name-field-video-url{
+  overflow: hidden;
+}
+
+/* Bottom Promos */
+
+.bean-media-wall .media-wall-group__bottom > div,
+.bean-media-wall .media-wall-group__bottom  .view-mode-media_wall_promo_3,
+.media-wall__small-tile{
+  position:relative;
+  height: 222px;
+}
+
+/* Dynamic slide tiles (slide 2+3 added by JS)*/
+.media-wall__small-tile{
+  height: 218px;
+  margin-bottom: 20px;
+}
+
+/**
+ * Caption
+ */
+
+.bean-media-wall .media-wall__caption{
+  position: absolute;
+  width: 100%;
+  padding:20px 0px;
+  bottom: 0;
+  color:#fff;
+  background-color: #1d1d1d;
+  /*
+  background-color: rgba(0, 0, 0, 0.7);
+  -ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{60})";
+  */
+}
+.bean-media-wall .media-wall__caption > div{
+  padding:0px 20px;
+}
+
+.bean-media-wall .media-wall__type{
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.bean-media-wall .media-wall__caption h5{
+  color:#fff;
+}
+
+.bean-media-wall .group-mw-bottom .media-wall__caption h5{
+  font-size: 16px;
+}
+
+/* CTA */
+
+.bean-media-wall .field-name-field-cta a{
+  position: absolute;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  top:0;
+  text-indent:-999px;
+  overflow: hidden;
+  background: none;
+}
+ /* Video Pop up linkd */
+.bean-media-wall .field-name-field-video-url{
+  margin:0;
+}
+.bean-media-wall a.node-link{
+  left:auto;
+  padding: 0;
+}
+/* CTA styles now being owned by call-to-actions.less in SR css folder.  DECIDED TO USE THIS due to time */
+.bean-media-wall .field-name-node-link a{
+  font-family: Foco, Helvetica, Arial, Sans-serif;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.bean-media-wall .field-name-node-link a:after {
+  font-size: 1.2em;
+  font-family: 'sr-icons';
+  content: "\e020";
+  position: relative;
+   top: 3px;
+  color: #fff;
+}
+.bean-media-wall .field-name-node-link a:hover {
+  color: #fff;
+}
+
+.bean-media-wall .field-name-node-link a:hover:after{
+  right: -3px;
+}
+
+.dynamic-slide.bean-media-wall .media-wall__caption h5{
+  color:#c9c9c9;
+}
+.bean-media-wall .field-name-colorbox-node-link span.text,
+.bean-media-wall .media-wall__downloadables span.text,
+.bean-media-wall .field-name-media-wall-cbox-cta-node-link span.text,
+.bean-media-wall .field-name-node-link-field span.text,
+.dynamic-slide.bean-media-wall .field-name-node-link-field span.text{
+  display: none;
+  visibility: hidden;
+}
+
+/* Term icons*/
+
+.taxonomy-term.media-wall__type{
+  font-family: Foco, Helvetica, Arial, Sans-serif;
+  font-size: 1.1em;
+  padding-left: 22px;
+}
+
+.taxonomy-term.media-wall__type:before{
+  font-family: 'sr-icons';
+  content: "";
+  color: #36b3b5;
+  position: absolute;
+  font-size: 1.5em;
+  left: 16px;
+  top: 18px;
+}
+
+.taxonomy-term.media-wall__type.term-Events:before,
+.taxonomy-term.media-wall__type.term-Do:before{
+  content: "\e038";
+}
+.taxonomy-term.media-wall__type.term-Schools:before{
+  content: "\e043";
+}
+.taxonomy-term.media-wall__type.term-Merchandise:before{
+  content: "\e045";
+}
+.taxonomy-term.media-wall__type.term-News:before{
+  content: "\e02e";
+}
+.taxonomy-term.media-wall__type.term-TV:before{
+  content: "\e046";
+}
+.taxonomy-term.media-wall__type.term-Video:before{
+  content: "\e037";
+}
+.taxonomy-term.media-wall__type.term-Picture:before{
+  content: "\e03f";
+}
+.taxonomy-term.media-wall__type.term-Challenge:before{
+  content: "\e044";
+}
+.taxonomy-term.media-wall__type.term-Video:before{
+  content: "\e037";
+}
+.taxonomy-term.media-wall__type.term-Challenge:before{
+  content: "\e044"
+}
+.taxonomy-term.media-wall__type.term-Video:before{
+  content: "\e037"
+}
+
+.taxonomy-term.media-wall__type.term-id-310:before{
+  content: "\e049"
+}
+.taxonomy-term.media-wall__type.term-id-311:before{
+  content: "\e04a"
+}
+.taxonomy-term.media-wall__type.term-id-312:before{
+  content: "\e049"
+}
+.taxonomy-term.media-wall__type.term-id-313:before{
+  content: "\e04d"
+}
+.taxonomy-term.media-wall__type.term-id-314:before{
+  content: "\e03e"
+}
+
+
+/* Rollover overlay state for popups */
+.bean-media-wall .group-left .node-link-icon,
+.dynamic-slide.bean-media-wall .node-link-icon{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  position: static;
+  left: auto;
+  top: auto;
+}
+.bean-media-wall .group-left .node-link-background,
+.dynamic-slide.bean-media-wall .node-link-background{
+  display: none;
+}
+.bean-media-wall .group-left .node-link-icon:after,
+.dynamic-slide.bean-media-wall .node-link-icon:after{
+  font-family: 'sr-icons';
+  content: "\e00f";
+  position: absolute;
+  bottom: 24px;
+  left: 66px;
+  padding-top: 19px;
+  padding-left: 14px;
+  display: block;
+  font-size: 2.5em;
+  width: 60px;
+  height: 60px;
+  background: url(sprite.png) 0 0 no-repeat;
+  color: #fff;
+}
+.bean-media-wall .group-left .node-link-icon:hover:after,
+.dynamic-slide.bean-media-wall .node-link-icon:hover:after {
+  background-position: -110px 0;
+}
+.bean-media-wall .group-left .view-mode-media_wall .node-link-icon:after,
+.dynamic-slide.bean-media-wall .view-mode-media_wall .node-link-icon:after{
+  top: 28%;
+  left: 43%;
+  bottom: auto;
+}
+.bean-media-wall .group-left .view-mode-media_wall_promo_2 .node-link-icon:after,
+.dynamic-slide.bean-media-wall .view-mode-media_wall_promo_2 .node-link-icon:after{
+  top: 28%;
+  left: 40%;
+  bottom: auto;
+}
+.bean-media-wall .group-left .view-mode-media_wall_promo_3 .node-link-icon:after,
+.dynamic-slide.bean-media-wall .view-mode-media_wall_promo_3 .node-link-icon:after{
+  top: 33px;
+  left: 36%;
+  bottom: auto;
+}
+
+/* Arrow logo for icon hover */
+.bean-media-wall .group-left .node-media-images a.news-link .node-link-icon:after,
+.bean-media-wall .group-left .node-news-article .node-link-icon:after,
+.dynamic-slide.bean-media-wall .node-media-images a.news-link  .node-link-icon:after,
+.dynamic-slide.bean-media-wall .node-news-article .node-link-icon:after{
+  text-indent: 0;
+  content: "\e020";
+}
+/* Instagram logo for icon hover */
+.bean-media-wall .group-left .node-media-images.view-mode-media_wall_instagram .node-link-icon:after,
+.dynamic-slide.bean-media-wall .node-media-images.view-mode-media_wall_instagram .node-link-icon:after{
+  content: "\e00f";
+}
+/* Magnifying glass logo for icon hover */
+.bean-media-wall .group-left .node-media-images .node-link-icon:after,
+.dynamic-slide.bean-media-wall .node-media-images .node-link-icon:after{
+  content: "\e028";
+}
+/* Video logo for icon hover */
+.bean-media-wall .group-left .node-video .node-link-icon:after,
+.dynamic-slide.bean-media-wall .node-video .node-link-icon:after{
+  content: "\e016";
+}
+
+
+/**
+ * Small pods (instagram & fundraising)
+ */
+
+.bean-media-wall .media-wall-group__bottom .media-wall__downloadables{
+  height: auto;
+  margin-bottom:20px;
+}
+
+.bean-media-wall .media-wall__fundraising-kit .action-pod-item{
+  height: 100px;
+  margin: 0;
+}
+
+.bean-media-wall .media-wall__fundraising-kit .tile.rollover-state{
+  display: inherit;
+}
+
+.bean-media-wall .media-wall__fundraising-kit .tile.rollover-state .inner-wrap{
+  display: inherit;
+  vertical-align: inherit;
+  padding:10px 15px;
+}
+
+.bean-media-wall .media-wall__fundraising-kit .tile .button{
+  padding:10px 20px;
+}
+
+.bean-media-wall .media-wall__fundraising-kit .action-pod-item .tile.normal-state{
+  background: url(illustrations/illustrations_fr-kit2.png) center .5em no-repeat;
+}
+
+.bean-media-wall .media-wall__fundraising-kit .action-pod-item .normal-state.payin_coin{
+  background: url(illustrations/illustrations_coin.png) center .5em no-repeat;
+}
+
+.bean-media-wall .media-wall__fundraising-kit .action-pod-item .tile.normal-state .inner-wrap {
+padding: 0 22px;
+}
+
+.bean-media-wall .media-wall__fundraising-kit .action-pod-item  .tile.normal-state h3.title {
+margin-top: 38px;
+}
+
+.bean-media-wall .media-wall__fundraising-kit .action-pod-item .tile.rollover-state .button + .button{
+  margin:1em 0 0 0;
+}
+
+/* Position and display of intagram / fundraising kit icons*/
+.bean-media-wall .group-mw-bottom-downloadables .media-wall_instagram,
+.bean-media-wall .group-mw-bottom-downloadables .media-wall__fundraising-kit{
+  height: 100px;
+  min-height: 100px;
+}
+
+.bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables .media-wall_instagram{
+  float:right;
+  min-height: 100px;
+  background-color: black;
+
+}
+.bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables .media-wall_instagram img{
+  width: 100%;
+  height: 140px;
+}
+.bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables .media-wall__fundraising-kit{
+  float:left;
+}
+
+.group-left .media-wall-news-phone,
+.dynamic-slide .media-wall-news-phone{
+  display: none;
+  visibility: hidden;
+}
+
+/**
+ * Last page Header
+ */
+  h2.media-wall__title-end{
+    padding-top: 238px;
+    background: url(last-page-pic.png) center 0 no-repeat;
+    color: white;
+    text-align: center;
+  }
+
+  h2.media-wall__title-end + h4,
+  h2.media-wall__title-end + h4 a{
+    color: white;
+  }
+
+/**
+ * Overrides.
+ */
+
+/* Icon hover */
+.dynamic-slide.bean-media-wall .node-link-icon:after,
+.dynamic-slide.bean-media-wall .view-mode-media_wall_promo_3 .node-link-icon:after{
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+ }
+
+ .dynamic-slide.bean-media-wall .view-mode-media_wall_promo_3 .node-link-icon:after{
+   top: 34%;
+ }
+
+.bean-media-wall .media-wall-group__bottom > div .media-wall__caption,
+.dynamic-slide.bean-media-wall .media-wall__small-tile .media-wall__caption{
+  background-color: #000;
+}
+.media-wall ul.social-links-list,
+.media-wall .field-type-text-long ul.social-links-list{
+  width:25%;
+  margin:30px auto 0 !important; /* Have to use this here because its being used on a CSS imlementation i need to override. Not happy with someone else using !important. */
+}
+
+.media-wallul.social-links-list li{
+  list-style: none;
+  margin: 0 30px 0 0;
+  padding: 0;
+
+}
+.media-wall ul.social-links-list li a{
+  font-size: 3.4em;
+}
+.media-wall ul.social-links-list li:before {
+  content: "";
+  font-size: inherit;
+  color: inherit;
+  margin:0;
+}
+
+  /* Media bar */
+  .bean-media-wall .media-bar__list {
+    height: 478px;
+  }
+
+  /**
+   * Tweet Bar
+   */
+  h2.media-bar__header.media-bar__header--twitter{
+    font-size:1.4em;
+    background-color: black;
+    padding:10px 10px 10px 15px;
+  }
+  h2.media-bar__header--twitter:before {
+    font-family: 'sr-icons';
+    content: "\e012";
+    vertical-align: middle;
+    font-size: 26px;
+    color: #2fc9fd;
+    line-height: 0;
+    margin-right: 10px;
+  }
+  h2.media-bar__header.media-bar__header--twitter:after{
+    display: none;
+    visibility: hidden;
+  }
+
+
+/**
+ * Media Queries for specific displays.
+ */
+
+/* Fluid (including landscape) */
+@media (min-width: 0) and (max-width: 739px) {
+  .media-wall .group-right.grid-6{
+    display: none;
+    visibility: none;
+  }
+  /* Display suite bringing in its own CSS - reset here for fluid so Omega can take over */
+  .ds-2col .grid-16,
+  .ds-2col .grid-18{
+    width: auto;
+  }
+
+  /* Promo2 */
+  .bean-media-wall .view-mode-media_wall,
+  .bean-media-wall .view-mode-media_wall_promo_2{
+    height: 262px;
+    overflow: hidden;
+  }
+
+  /* Promo 3 */
+  .bean-media-wall .field-name-field-media-wall-promo-3 {
+    margin: 0;
+  }
+
+  /* Instagram */
+  #mobile-div1 .media-wall_instagram{
+    background-color: #1d1d1d;
+    overflow: hidden;
+  }
+  #mobile-div1 .media-wall_instagram img{
+    margin: 0 auto;
+  }
+  #mobile-div1.dynamic-slide.bean-media-wall .media-wall_instagram .node-link-icon:after{
+    top:50% !important;
+  }
+
+  #mobile-div1  .media-wall_instagram .views-field-images{
+    display: block;
+    visibility: visible;
+  }
+
+
+
+
+  /* Top wrapper */
+  .bean-media-wall .group_mw_top {
+    margin-bottom: 0px;
+  }
+
+
+  /* Bottom Promos */
+  .bean-media-wall .media-wall-group__bottom > div,
+  .bean-media-wall .media-wall-group__bottom  .view-mode-media_wall_promo_3,
+  .media-wall__small-tile{
+    height: 270px;
+    overflow: hidden;
+  }
+
+  /* Downloadables (FR Kit & PDF) . Disable this as downloadbles removed via JS an inserted into next page*/
+  .bean-media-wall .media-wall-group__bottom .media-wall__downloadables {
+    display: none;
+  }
+
+  .bean-media-wall .field-name-field-media-wall-promo,
+  .bean-media-wall .field-name-field-media-wall-promo-2,
+  .bean-media-wall .field-name-field-media-wall-promo-3,
+  .bean-media-wall .field-name-field-media-wall-promo-4 {
+    margin-bottom: 20px;
+  }
+  /* Video */
+  .bean-media-wall .field-name-field-media-wall-promo-2 .cr-mediaelement-video .cr_video_layer {
+    height: 245px;
+  }
+
+  /* Caption */
+  .bean-media-wall .media-wall__caption {
+    bottom: -1px;
+  }
+
+  /* Page 2 of slide */
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item{
+    width: 100%;
+  }
+
+  #mobile-div1 .grid-4{
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  /* Display additional news item */
+  #mobile-div1 .media-wall-news-phone{
+    display: block;
+    visibility: visible;
+  }
+
+  /* node icon links */
+  .bean-media-wall .group-left .view-mode-media_wall .node-link-icon:after, .dynamic-slide.bean-media-wall .view-mode-media_wall .node-link-icon:after {
+    top: 22%;
+  }
+  .dynamic-slide.bean-media-wall .node-link-icon:after,
+  .dynamic-slide.bean-media-wall .view-mode-media_wall_promo_3 .node-link-icon:after {
+    top: 30%;
+  }
+  .bean-media-wall .group-left .view-mode-media_wall_promo_3 .node-link-icon:after{
+    top: 55px;
+  }
+
+  /* Page 2 Fundraising kits */
+  /* Disable hover transition and stylings */
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item{
+    height: 242px;
+    float: none;
+    min-height: inherit;
+    background-color: #1d1d1d;
+    padding:0;
+  }
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item .curtain-icon {
+    position: relative;
+    height: 212px;
+    -webkit-transition-property: none;
+    -webkit-transition-duration: none;
+    -moz-transition-property: none;
+    -moz-transition-duration: none;
+    -o-transition-property: none;
+    -o-transition-duration: none;
+  }
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item .rollover-state{
+    bottom: 0;
+  }
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item .normal-state{
+    position: absolute;
+    top: 20px;
+  }
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item .normal-state .title {
+    font-size: 1.5em;
+  }
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item .curtain-icon{
+    width: 100%;
+    overflow: hidden;
+  }
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item .curtain-icon .download-ref{
+    overflow: hidden;
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item .curtain-icon .button{
+    width: auto;
+    float: left;
+    padding:8px;
+    background-color: #373737;
+  }
+
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item .tile.rollover-state .button + .button{
+    margin:0 0 0 10px;
+  }
+  .bean-media-wall .grid-4.media-wall__fundraising-kit{
+
+  }
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item .tile.normal-state h3.title{
+    color: #fff;
+    margin-top: 85px;
+  }
+
+  .media-wall ul.social-links-list, .media-wall .field-type-text-long ul.social-links-list {
+    width: 52%;
+  }
+
+  /**
+  * Flexslider
+  */
+  .flexslider--blue {
+    margin-bottom:60px;
+    padding-top:10px;
+    padding-bottom: 0px;
+  }
+  .ds-2col .grid-18{
+    height: 1150px;
+  }
+  .flexslider--blue .flex-prev {
+    left: -18px;
+  }
+  .flexslider--blue .flex-next {
+    right: -16px;
+  }
+  .media-wall .cr-loader {
+    height: 500px;
+  }
+  .media-wall .cr-loader .loader {
+    top: auto;
+  }
+}
+
+/* Narrow Landscape*/
+
+@media (min-width: 740px) and (max-width: 1024px) and (orientation: landscape) {
+  /**
+   * Dynamic slide tiles (slide 2+3 added by JS)
+   */
+
+  /* Icon hover */
+  .dynamic-slide.bean-media-wall .view-mode-media_wall_promo_3 .node-link-icon:after{
+    top: 30%;
+  }
+
+  .dynamic-slide.bean-media-wall .grid-12.media-wall__small-tile {
+    height:auto;
+  }
+
+}
+
+/* Narrow */
+@media (min-width: 740px) and (max-width: 979px) {
+
+  /* Height of Media Wall BG */
+  .content-row-wrapper.blackshard-bg{
+    background-repeat: repeat-y;
+    background-position: top;
+  }
+
+  .bean-media-wall .group-left .node-link-icon:after,
+  .dynamic-slide.bean-media-wall .node-link-icon:after{
+    padding-top: 13px;
+    padding-left: 0px;
+  }
+  /* Promo 1 icon hover */
+  .bean-media-wall .group-left .view-mode-media_wall .node-link-icon:after{
+    top: 30%;
+    left: 43%;
+    bottom: auto;
+  }
+  /* Promo 2 icon hover */
+  .bean-media-wall .group-left .view-mode-media_wall_promo_2 .node-link-icon:after{
+    top: 30%;
+    left: 40%;
+    bottom: auto;
+  }
+  /* Promo bottom icon hover */
+  .bean-media-wall .group-left .view-mode-media_wall_promo_3 .node-link-icon:after{
+    top: 33px;
+    left: 32%;
+    bottom: auto;
+  }
+
+  .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables .media-wall_instagram img{
+    width: 100%;
+    height: 100px;
+  }
+
+  /* Instagram logo for icon hover */
+  .bean-media-wall .group-left .media-wall_instagram .node-link-icon:after,
+  .dynamic-slide.bean-media-wall .media-wall_instagram .node-link-icon:after{
+    top: 35px;
+    left: 22px;
+  }
+
+  .promo-bottom-wrapper ul.social-links-list,
+  .promo-bottom-wrapper .field-type-text-long ul.social-links-list{
+      width:54%;
+  }
+
+  /* Media bar */
+  .responsive-layout-narrow .bean-media-wall .media-bar--type-twitter .media-bar__list,
+  .bean-media-wall .media-bar--type-twitter .media-bar__list{
+    height: 616px;
+  }
+
+  /* Small pods - Funraising kits */
+  .bean-media-wall .group-mw-bottom-downloadables .media-wall__fundraising-kit .action-pod-item{
+    background-color: #000;
+  }
+
+  .bean-media-wall .group-mw-bottom-downloadables .media-wall__fundraising-kit .action-pod-item .tile.rollover-state{
+    background: url(illustrations/illustrations_fr-kit2.png) 1em 1em no-repeat;
+  }
+  .bean-media-wall .group-mw-bottom-downloadables .media-wall__fundraising-kit .action-pod-item .tile.payin_coin {
+    background: url(illustrations/illustrations_coin.png) 1em 1em no-repeat;
+  }
+
+  /* Disable hover transition */
+  .bean-media-wall .group-mw-bottom-downloadables .media-wall__fundraising-kit .action-pod-item .curtain-icon {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    -webkit-transition-property: none;
+    -webkit-transition-duration: none;
+    -moz-transition-property: none;
+    -moz-transition-duration: none;
+    -o-transition-property: none;
+    -o-transition-duration: none;
+  }
+
+  .bean-media-wall .group-mw-bottom-downloadables .media-wall__fundraising-kit .download-ref{
+    position: absolute;
+    right: 60px;
+    top: 40px;
+  }
+
+  .bean-media-wall .group-mw-bottom-downloadables .media-wall__fundraising-kit .action-pod-item .tile.normal-state h3{
+    position: absolute;
+    top: -26px;
+    left: 106px;
+    margin-bottom: 0;
+    background: transparent;
+    color:#fff;
+  }
+
+  .bean-media-wall .group-mw-bottom-downloadables .media-wall__fundraising-kit a.button{
+    background-color: #353535;
+  }
+
+  /**
+   * Media Bar inside Media Wall
+   */
+  .responsive-layout-narrow .bean-media-wall .media-bar--type-twitter .media-bar__list > div > ul,
+  .bean-media-wall .media-bar__list > div > ul {
+    padding: 0 0px 0 0;
+  }
+  .responsive-layout-narrow .bean-media-wall .media-bar--type-twitter .media-bar__list li.item,
+  .bean-media-wall .media-bar__list li.item {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  .responsive-layout-narrow .bean-media-wall .media-bar--type-twitter .media-bar__scrollbarV {
+    width: 10px;
+  }
+
+  /**
+   * Dynamic slide tiles (slide 2+3 added by JS)
+   */
+
+  /* Icon hover */
+
+  .dynamic-slide.bean-media-wall .grid-12.media-wall__small-tile{
+    height: auto;
+  }
+  .dynamic-slide.bean-media-wall .media-wall__small-tile{
+
+    margin-bottom: 20px;
+  }
+
+  /**
+   * Flexslider
+   */
+
+  .flexslider--blue {
+    margin-bottom:60px;
+  }
+
+  .media-wall .slider-contents.equal-height-container{
+    height: 738px;
+  }
+
+  .flexslider--blue .flex-viewport {
+    margin: 0;
+  }
+
+  .flexslider--blue .flex-direction-nav{
+    bottom: -58px;
+  }
+
+  .flexslider--blue .flex-control-paging{
+    bottom: -10px;
+ }
+
+}
+
+
+/*  Normal to greater displays  */
+
+@media (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape){
+
+  /* Small pods - Funraising kits */
+  .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables{
+    position: absolute;
+    top: 0px;
+    right: 240px;
+    width: 140px;
+  }
+
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item{
+    height: 140px;
+  }
+
+  .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables > div{
+    margin: 0;
+    height: 140px;
+  }
+
+  .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables .media-wall_instagram{
+    margin-bottom:20px;
+  }
+
+  /* Instagram logo for icon hover */
+  .bean-media-wall .group-left .media-wall_instagram .node-link-icon:after,
+  .dynamic-slide.bean-media-wall .media-wall_instagram .node-link-icon:after{
+    left:44px;
+  }
+
+  /* Dynamic slide caption copy */
+  .dynamic-slide.bean-media-wall .media-wall__caption h5{
+    font-size: 16px;
+  }
+
+  /* Icon hover */
+  .dynamic-slide.bean-media-wall .grid-6 .node-link-icon:after,
+  .dynamic-slide.bean-media-wall .grid-6  .view-mode-media_wall_promo_3 .node-link-icon:after{
+    top: 34%;
+  }
+
+  /**
+   * Flexslider
+   */
+  .flexslider--blue {
+    margin-top:20px;
+  }
+
+  .media-wall.flexslider--blue .slider-content{
+    min-height: 598px;
+  }
+
+  .flexslider--blue .flex-control-paging {
+    bottom: 10px;
+  }
+
+  .flexslider--blue .flex-direction-nav {
+    bottom: -45px;
+  }
+
+  .flexslider--blue .flex-next{
+    right: -18px;
+  }
+
+}
+
+/*  Wide overrides  */
+
+@media (min-width: 1220px) {
+ .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables{
+    right: 300px;
+    width: 180px;
+  }
+  /* Instagram logo for icon hover */
+  .bean-media-wall .media-wall-group__bottom .media-wall_instagram .node-link-icon:after{
+    left:64px;
+  }
+
+  /* Bean Promos (first slide) */
+  .bean-media-wall .field-name-field-media-wall-promo .node,
+  .bean-media-wall .field-name-field-media-wall-promo-2 .node{
+    height:360px;
+  }
+
+  .bean-media-wall .media-wall-group__bottom > div,
+  .bean-media-wall .media-wall-group__bottom .view-mode-media_wall_promo_3,
+  .media-wall__small-tile {
+    height: 260px;
+  }
+  /* Instagram and FR Kit */
+  .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables > div,
+  .bean-media-wall .media-wall__fundraising-kit .action-pod-item,
+  .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables .media-wall_instagram img{
+    margin: 0;
+    height: 170px;
+  }
+
+    /* Media bar */
+  .bean-media-wall .media-bar__list {
+    height: 576px;
+  }
+
+
+   /**
+   * Flexslider
+   */
+
+  .flexslider--blue .flex-next{
+    right: -18px;
+  }
+  .flexslider--blue {
+    padding-bottom: 46px;
+  }
+
+}
+
+
+/*
+ * IE8 fix
+*/
+html.ie8 .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables { position: absolute; top: 0px; right: 240px; width: 140px; }
+html.ie8 .bean-media-wall .media-wall__fundraising-kit .action-pod-item{ height: 140px; }
+html.ie8 .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables > div{ margin: 0; height: 140px; }
+html.ie8 .bean-media-wall .media-wall-group__bottom .group-mw-bottom-downloadables .media-wall_instagram{ margin-bottom:20px; }
+html.ie8 .bean-media-wall .group-left .media-wall_instagram .node-link-icon:after,
+html.ie8 .dynamic-slide.bean-media-wall .media-wall_instagram .node-link-icon:after{ left:44px; }
+html.ie8 .dynamic-slide.bean-media-wall .media-wall__caption h5{ font-size: 16px; }
+html.ie8 .dynamic-slide.bean-media-wall .grid-6 .node-link-icon:after,
+html.ie8 .dynamic-slide.bean-media-wall .grid-6  .view-mode-media_wall_promo_3 .node-link-icon:after { top: 34%; }
+html.ie8 .media-wall.flexslider--blue .slider-content{ min-height: 598px; }
+html.ie8 .flexslider--blue .flex-control-paging { bottom: 10px; }
+html.ie8 .flexslider--blue .flex-direction-nav { bottom: -45px; }
+html.ie8 .flexslider--blue .flex-next{ right: -18px; }
+/* First slide - second video */
+html.ie8 #tabs-0-row2_col1-1 .group-mw-top .field-name-field-media-wall-promo,
+html.ie8 #tabs-0-row2_col1-1 .group-mw-top .field-name-field-media-wall-promo-2 { height: 300px; }
+html.ie8 #tabs-0-row2_col1-1 .group-mw-top .field-name-field-media-wall-promo-2 { max-width: 220px; overflow: hidden; }
+html.ie8 #tabs-0-row2_col1-1 .group-mw-top .field-name-field-media-wall-promo-2 img { max-width: 180%; margin-left: -30%; }
+html.ie8 .view-id-media_wall .media-wall__small-tile .cr_video_layer img,
+html.ie8 .view-id-media_wall .media-wall__small-tile .node-media-images img { max-width: 220px; }
+html.ie8 .media-wall a { text-decoration: none; }
+html.ie8 .view-id-media_wall .media-wall__small-tile .node-media-images { height: 145px;overflow: hidden;  }
+/* Video start frame fix for Promo 1, 2 and Bottom Promos */
+html.ie8 #tabs-0-row2_col1-0 .group-mw-top .field-name-field-media-wall-promo .cr-mediaelement-video{ max-width:300px; width:300px; height:300px; overflow: hidden;}
+html.ie8 #tabs-0-row2_col1-0 .group-mw-top .field-name-field-media-wall-promo .cr-mediaelement-video img{  width:300px; }
+html.ie8 #tabs-0-row2_col1-0 .group-mw-top .field-name-field-media-wall-promo-2 .field-name-field-image{ height: 300px; display: block;}
+html.ie8 #tabs-0-row2_col1-0 .group-mw-bottom .cr-mediaelement-video{ max-width:220px; width:220px; height:222px; overflow: hidden;}
+html.ie8 #tabs-0-row2_col1-0 .group-mw-bottom .cr-mediaelement-video img{  width:220px; }

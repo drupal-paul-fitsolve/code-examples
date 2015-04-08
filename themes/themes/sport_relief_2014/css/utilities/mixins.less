@@ -1,0 +1,241 @@
+/**
+ * @file
+ * Contains helper mixins for common styles or patterns.
+ */
+
+@base-font-size: 13;
+
+.font-size( @value: @base-size, @context: @base-font-size ) {
+  font-size: (@value / @context) + 0em;
+}
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF, @background: none) {
+  background: @color @background;
+  background: @background,
+              -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: @background,
+              -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: @background,
+              -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+  background: @background,
+              -o-linear-gradient(@start,
+                                   @stop);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{stop}', endColorstr='@{start}');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{stop}', endColorstr='@{start}');
+}
+
+.border-radius(@args) {
+  border-radius: @args;
+  -moz-border-radius: @args;
+  -webkit-border-radius: @args;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.border-top-radius(@args) {
+  border-top-left-radius: @args;
+  border-top-right-radius: @args;
+  -moz-border-top-left-radius: @args;
+  -moz-border-top-right-radius: @args;
+  -webkit-border-top-left-radius: @args;
+  -webkit-border-top-right-radius: @args;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.border-bottom-radius(@args) {
+  border-bottom-left-radius: @args;
+  border-bottom-right-radius: @args;
+  -moz-border-bottom-left-radius: @args;
+  -moz-border-bottom-right-radius: @args;
+  -webkit-border-bottom-left-radius: @args;
+  -webkit-border-bottom-right-radius: @args;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.border-left-radius(@args) {
+  border-top-left-radius: @args;
+  border-bottom-left-radius: @args;
+  -moz-border-top-left-radius: @args;
+  -moz-border-bottom-left-radius: @args;
+  -webkit-border-top-left-radius: @args;
+  -webkit-border-bottom-left-radius: @args;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.border-right-radius(@args) {
+  border-top-right-radius: @args;
+  border-bottom-right-radius: @args;
+  -moz-border-top-right-radius: @args;
+  -moz-border-bottom-right-radius: @args;
+  -webkit-border-top-right-radius: @args;
+  -webkit-border-bottom-right-radius: @args;
+    border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-top-left-radius: 0;
+  -moz-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.opacity(@opacity) {
+  @ieOpacity: @opacity * 100;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})"; // IE 8
+  opacity: @opacity;
+}
+
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.transform(@arg) {
+  -moz-transform: @arg;
+  -webkit-transform: @arg;
+  -o-transform: @arg;
+  -ms-transform: @arg;
+  transform: @arg;
+}
+
+.perspective(@arg) {
+  -moz-perspective: @arg;
+  -webkit-perspective: @arg;
+  -o-perspective: @arg;
+  -ms-perspective: @arg;
+  perspective: @arg;
+}
+
+.transform-style(@arg) {
+  -moz-transform-style: @arg;
+  -webkit-transform-style: @arg;
+  -o-transform-style: @arg;
+  -ms-transform-style: @arg;
+  transform-style: @arg;
+}
+
+.transform-origin(@arg) {
+  -moz-transform-origin: @arg;
+  -webkit-transform-origin: @arg;
+  -o-transform-origin: @arg;
+  -ms-transform-origin: @arg;
+  transform-origin: @arg;
+}
+
+.translate(@x:0, @y:0) {
+  -moz-transform: translate(@x, @y);
+  -webkit-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+
+.box-sizing(@arg) {
+  -webkit-box-sizing: @arg;
+  -moz-box-sizing: @arg;
+  -o-box-sizing: @arg;
+  box-sizing: @arg;
+}
+
+.appearance(@arg) {
+  -webkit-appearance: @arg;
+  -moz-appearance: @arg;
+  appearance: @arg;
+}
+
+.background-size(@arg) {
+  -webkit-background-size: @arg;
+  -moz-background-size: @arg;
+  -o-background-size: @arg;
+  background-size: @arg;
+  // IE8 requires a background-size behaviour file. This cannot be a relative path.
+  -ms-behavior: url("/sites/comicrelief.com/themes/comic_relief/css/crossbrowser/backgroundsize.min.htc");
+}
+
+.backface-visibility(@arg) {
+  -webkit-backface-visibility: @arg;
+  -moz-backface-visibility: @arg;
+  -o-backface-visibility: @arg;
+  backface-visibility: @arg;
+}
+
+.transition(@arg) {
+  -webkit-transition: @arg;
+  -moz-transition: @arg;
+  -o-transition: @arg;
+  -ms-transition: @arg;
+  transition: @arg;
+}
+
+.transition-delay(@arg) {
+  -webkit-transition-delay: @arg;
+  -moz-transition-delay: @arg;
+  -o-transition-delay: @arg;
+  -ms-transition-delay: @arg;
+  transition-delay: @arg;
+}
+
+.animation(@args) {
+  -webkit-animation: @args;
+    -moz-animation: @args;
+      -o-animation: @args;
+        animation: @args;
+}
+
+.animation-duration(@args) {
+  -webkit-animation-duration: @args;
+    -moz-animation-duration: @args;
+      -o-animation-duration: @args;
+        animation-duration: @args;
+}
+
+.animation-fill-mode(@args) {
+  -webkit-animation-fill-mode: @args;
+    -moz-animation-fill-mode: @args;
+      -o-animation-fill-mode: @args;
+        animation-fill-mode: @args;
+}
+
+.animation-timing-function(@args) {
+  -webkit-animation-timing-function: @args;
+    -moz-animation-timing-function: @args;
+      -o-animation-timing-function: @args;
+        animation-timing-function: @args;
+}
+
+.animation-name(@args) {
+  -webkit-animation-name: @args;
+      -moz-animation-name: @args;
+        -o-animation-name: @args;
+          animation-name: @args;
+}
+
+.animation-iteration-count(@arg) {
+  -webkit-animation-iteration-count: @arg;
+    -moz-animation-iteration-count: @arg;
+      -o-animation-iteration-count: @arg;
+        animation-iteration-count: @arg;
+}

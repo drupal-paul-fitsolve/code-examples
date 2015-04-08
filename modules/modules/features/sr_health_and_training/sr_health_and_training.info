@@ -1,0 +1,11 @@
+name = SR14 Health and Training
+core = 7.x
+package = "SR14"
+php = 5.2.4
+features[context][] = health-training
+features[ctools][] = context:context:3
+features[features_api][] = api:1
+features_exclude[dependencies][fe_block] = fe_block
+features_exclude[dependencies][context] = context
+features_exclude[dependencies][ctools] = ctools
+project path = sites/sportrelief.com/modules/features

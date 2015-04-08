@@ -1,0 +1,18 @@
+{
+  "curly": false,
+  "eqnull": true,
+  "eqeqeq": true,
+  "undef": true,
+  "globals": {
+    "jQuery": true,
+    "Drupal": true,
+    "skrollr": true,
+    "window": true,
+    "document": true,
+    "DocumentTouch": true,
+    "hoverTicker": true,
+    "clearTimeout": true,
+    "graceTime": true,
+    "setTimeout": true
+  }
+}

@@ -1,0 +1,592 @@
+.donate__intro {
+  text-align: center;
+
+  p {
+    margin: 0 auto;
+    width: 740px;
+  }
+}
+.donate__step-1 {
+  h4 {
+    margin: 0 auto;
+    color: @black;
+    font-size: 1.5em;
+  }
+}
+
+@media all and @fluidOnly {
+  .donate__intro {
+    p {
+      margin: 0 10px;
+      width: auto;
+    }
+  }
+
+  .donate__step-1 {
+    background: @darkest-grey url('../images/components/donate/donate-step-1.svg') no-repeat 20px 50% !important;
+//    height: 80px !important;
+    padding-left: 60px !important;
+
+    h4 {
+      margin: -10px auto !important;
+      color: @white !important;
+      font-size: 1.18em;
+      font-weight: bold;
+    }
+  }
+}
+
+#cr-donate-form, #cr-donate-pay-in-form {
+  h2 {
+    margin-top: 0;
+  }
+
+  a {
+    color: #444;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: @red;
+  }
+
+  .dk_container {
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: inherit;
+    }
+  }
+
+  .button--submit {
+    float: right;
+  }
+
+  #edit-previous {
+    float: none;
+  }
+}
+
+.donate-amount,
+.donate-giftaid,
+.donate-card-or-paypal,
+.donate-method {
+  background: white;
+  border: 0;
+  padding: @major-vertical-unit--desktop;
+  margin-bottom: 20px;
+}
+
+.donate-billing,
+.donate-subscribe {
+  background: white;
+  border: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  .fieldset-wrapper {
+    padding: @major-vertical-unit--desktop;
+  }
+}
+
+#cr-donate-form .donate-amount {
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+.donate-amount {
+  .input-amount {
+    margin-top: 6px;
+  }
+
+  .form-item-amount {
+
+    .form-label {
+      display: none;
+    }
+
+    .text-input {
+      font-size: 2.2em;
+      font-weight: bold;
+      background: #e7f9ff;
+      border: none;
+      width: 100%;
+      padding: 5px 10px;
+      height: 53px;
+
+      &.error {
+        border: 1px solid @red;
+      }
+    }
+  }
+}
+
+.donate-giftaid {
+  label {
+    font-weight: bold;
+  }
+}
+
+.giftaid-calculator {
+  margin-bottom: 15px;
+
+  h4 {
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  p {
+    .font-size(16);
+  }
+}
+
+.donate-card-or-paypal {
+  padding: 0;
+}
+
+.donate-by-card {
+  display: inline-block;
+  width: 40%;
+  float: left;
+  padding: @major-vertical-unit--desktop;
+  background: url('../images/down-arrow.png') no-repeat center bottom;
+  padding-bottom: 40px;
+}
+
+.donate-vertical-divider {
+  display: inline-block;
+  float: left;
+  background: url('../images/vertical-divider.png') no-repeat center center;
+  height: 198px;
+  .text {
+    padding-top: 90px;
+    display: block;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.2em;
+  }
+}
+
+.donate-by-paypal {
+  display: inline-block;
+  width: 43%;
+  float: left;
+  background: #fff;
+  padding: @major-vertical-unit--desktop;
+}
+
+.donate-paypal-only {
+  float: right;
+}
+
+.donate-by-paypal, .donate-paypal-only {
+  span {
+    background-image: url('../images/paypal-logo.png');
+    display: inline-block;
+    height: 19px;
+    text-indent: -9999px;
+    width: 69px;
+  }
+
+  .button-paypal {
+    float: none !important;
+//    margin-left: 10px;
+  }
+
+}
+
+.donate-method-radio {
+  float: left;
+  height: 40px;
+  margin-top: 20px;
+  width: 160px;
+
+  label.option {
+    display: block;
+
+    .icon-pm {
+      display: inline-block;
+      &-amex, &-jcb {
+        margin-top: -9px;
+      }
+      &-mastercard, &-maestro, &-visa--debit, &-visa--electron {
+        margin-top: -10px;
+      }
+      &-mastercard--debit {
+        margin-top: -15px;
+      }
+      &-visa {
+        margin-top: -3px;
+      }
+    }
+  }
+
+  // Remove highlight focus from radio buttons.
+  .form-item-wrapper:not(#foo) > input[type='radio']:focus + label {
+    .box-shadow(none);
+  }
+}
+
+.donate-methods-count-8 .donate-method-radio {
+  width: 175px;
+}
+
+.form-item-paymentType {
+  margin-left: 8px;
+}
+
+.donate-billing {
+
+  .form-item-wrapper {
+    margin: 5px 0;
+  }
+
+  .dk_container {
+    margin-bottom: 0;
+  }
+
+  .cr-donate-column-2 {
+    margin-top: 3px;
+  }
+
+  /**
+   * Address lookup
+   */
+  .form-item-address {
+    border-top: 1px dotted #333;
+    margin-top: 15px;
+    clear: left;
+
+    .form-item-postcode {
+      margin-top: 15px;
+      .text-input {
+        width: 135px;
+      }
+    }
+
+    .cr-plus-address-fields {
+      margin-top: 15px;
+    }
+
+    .cr-plus-manual-wrapper {
+      margin-top: 5px;
+    }
+
+
+    .form-item-postcode, .cr-plus-lookup-wrapper {
+      display: inline-block;
+    }
+
+    .cr-plus-postcode {
+      position: relative;
+    }
+
+    .cr-plus-lookup-wrapper {
+      position: absolute;
+      left: 150px;
+      top: 41px;
+    }
+
+  }
+
+}
+
+.donate-subscribe {
+  /* Keep me posted on donate form */
+  .form-item-MC-permission-email {
+    background: url('../images/letter-2.svg') no-repeat;
+    min-height: 60px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-left: 85px;
+  }
+
+  .form-item-MC-permission-post {
+    background: url('../images/stamp.svg') no-repeat;
+    min-height: 60px;
+    padding-top: 20px;
+    padding-left: 80px;
+    margin-top: 5px;
+    margin-left: 8px;
+  }
+}
+
+@media all and @wideOnly {
+  .donate-by-card {
+    width: 43%;
+  }
+}
+
+.pod-info-currency {
+  display: none;
+}
+
+@media all and @normalAndGreater {
+  .pod-info-currency {
+    display: block;
+  }
+}
+
+@media all and @fluidOnly {
+  /* temporary hide for money buys */
+  .column.alpha, .column.omega {
+    .pane-bundle-donate-money-buy {
+      display: none;
+    }
+  }
+
+  #cr-donate-form {
+    h2, h4 {
+      font-size: 1.5em;
+    }
+  }
+
+  .donate-by-paypal,
+  .donate-method {
+    padding-right: 15px;
+  }
+
+  .donate-amount {
+    padding-bottom: 25px;
+
+    .form-item-amount .text-input {
+      font-size: 1.56em;
+    }
+
+    .input-currency {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+
+  .donate-by-card, .donate-vertical-divider {
+    display: none;
+  }
+
+  .donate-by-paypal, .donate-paypal-only {
+    width: auto;
+    // padding-right: 20px;
+
+    h4 {
+      margin: 0 0 1em;
+    }
+
+    .button-paypal {
+//      margin-left: 10px;
+//      width: 5em;
+      &.button {
+        width: 142px;
+      }
+    }
+  }
+
+  .donate-giftaid {
+    border-top: 1px dotted #333;
+    padding-top: 15px;
+    padding-bottom: 0;
+
+    .giftaid-calculator {
+      margin-top: 10px;
+    }
+
+    .form-item-MC-permission-giftaid {
+      margin-top: 10px;
+
+      a {
+        display: block;
+      }
+    }
+
+    .form-item-wrapper:not(#foo) > input[type='checkbox'] + label {
+      display: block;
+      margin: 0;
+      padding: 0 0 0 30px;
+    }
+  }
+
+  .donate-method-radio {
+    width: 50%;
+  }
+
+  .donate-billing {
+
+    &:before {
+      background: @darkest-grey url('../images/components/donate/donate-step-2.svg') no-repeat 20px 50%;
+      color: @white;
+      content: 'Billing details';
+      display: block;
+      font-size: 1.1em;
+      font-weight: bold;
+      height: 80px;
+      line-height: 80px;
+      padding-left: 80px;
+    }
+
+    .fieldset-description {
+      margin-bottom: 20px;
+    }
+
+    .text-input {
+      width: 100%;
+    }
+
+    .form-item-email-confirm {
+      display: none;
+    }
+
+    .form-item-address {
+      border-top: 0;
+      margin-top: 0;
+
+      .form-item-postcode {
+        margin-top: 0;
+        .text-input {
+          width: 115px
+        }
+      }
+
+      .form-select {
+        width: 100%;
+      }
+
+      .cr-plus-lookup-wrapper {
+        top: 26px;
+        left: 130px;
+      }
+    }
+
+    .cr-plus-lookup {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .donate-subscribe {
+    &:before {
+      background: @darkest-grey url('../images/components/donate/donate-step-3.svg') no-repeat 20px 50%;
+      color: @white;
+      content: 'Keep me posted';
+      display: block;
+      font-size: 1.1em;
+      font-weight: bold;
+      height: 80px;
+      line-height: 80px;
+      padding-left: 80px;
+    }
+  }
+
+  .pane-cr-donate-donate-info {
+    margin-top: 20px;
+
+    a.external {
+    }
+  }
+}
+
+.pane-cr-donate-donate-info {
+  padding: 20px;
+  background: #fff;
+}
+
+/* Donate Link Popup */
+#redirect-wrapper {
+  height:100%;
+  left:0;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+}
+#redirect-message {
+  background-clip: padding-box;
+  background-color: @dark-grey;
+  border-radius: 4px;
+  color: @white;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  width: 80%;
+  max-width: 600px;
+  z-index: 101;
+}
+.overlay_bg {
+  background:none repeat scroll 0 0 #FFFFFF;
+  height:100%;
+  left:0;
+  opacity:0.8;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:100;
+}
+
+/* Donate - Thankyou page */
+.donate-thankyou-box {
+  .donate-thankyou-box-top {
+    background: transparent url("/sites/sportrelief.com/themes/sport_relief_2014/images/confirm.svg") no-repeat;
+    background-size: 42px 42px;
+    padding-left: 62px;
+    min-height: 50px;
+    h2 {
+      margin-top: 0;
+    }
+  }
+  .donate-thankyou-box-bottom {
+    padding-top: 15px;
+    padding-left: 62px;
+  }
+}
+
+@media all and @fluidOnly {
+  .donate-thankyou-box {
+    padding: 20px 15px 25px 15px;
+  }
+}
+
+.context-donate {
+  .promo-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.context-donate-cancel {
+  .promo-wrapper {
+    padding: 0 15px;
+  }
+}
+
+/* IE8 related fixes */
+.ie8 {
+  #cr-donate-form {
+    .donate-amount {
+      .form-item-amount {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .donate-method-radio {
+    width: 150px !important;
+
+    label.option {
+      display: inline-block !important;
+    }
+  }
+
+  .donate-subscribe {
+    /* Keep me posted on donate form */
+    .form-item-MC-permission-email {
+      background: url('../images/letter-2.jpg') no-repeat;
+    }
+
+    .form-item-MC-permission-post {
+      background: url('../images/stamp.jpg') no-repeat;
+    }
+  }
+}

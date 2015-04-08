@@ -1,0 +1,361 @@
+/**
+  * Sponsorship forms 3 nodes style
+  * /sponsorship-forms/ssrg
+  * /sponsorship-forms/all
+  * /sponsorship-forms/sr14
+  * /giving-page-guide/all
+  * /giving-page-cards/all
+  * /fundraising-kit/all
+  */
+
+/* Node layout override */
+.context-sponsorship-forms,
+.context-giving-page-cards,
+.context-giving-page-guide,
+.context-fundraising-kit { 
+  background: #414141 !important;
+  .subpod-wrapper { 
+    display: none; 
+  }
+}
+/*
+ * Tools overlay 
+ */
+
+/* Dowbloadable colorbox override, this class was added to colorbox (controller.js)
+ * it only happen on downaloadables with ".dl-overlay" class 
+*/
+.dl-overlay-box {
+  background-color: #292929;  
+  .border-radius(3px);
+  /*height: auto !important;*/
+  .node-title,
+  .subpod-wrapper,
+  .content-row-3-wrapper,
+  .content-row-4-wrapper,
+  .content-row-5-wrapper,
+  .content-row-6-wrapper,
+  .content-row-7-wrapper {
+    display: none;
+  }
+  /* temp fix for height of container with either 2 or 4 items  */
+  #cboxWrapper, 
+  #cboxMiddleLeft,
+  #cboxMiddleRight,
+  #cboxContent,
+  #cboxLoadedContent {
+    height: auto !important;
+  }
+}
+
+/* Styling */
+.sponsorship-forms {
+
+  .views-row {
+    clear: both; 
+
+    .views-column {
+      position: relative; 
+      overflow: hidden; 
+      float: left;
+      margin: 30px 0px 30px 0px;
+      background-color: #fff;
+      border: 1px solid #fff;
+      .border-radius(3px);  
+      line-height: 1.5em;
+      color: #000;  
+      text-align: center;
+
+      .curtain {
+        .tool-id  { 
+          display: none; 
+        }
+      }
+      .tile {
+        display: table;
+      }
+      .inner-wrap { 
+        display: table-cell; 
+        vertical-align: 
+        middle; padding: 15px;
+      }
+      h2.title, 
+      .download-ref { 
+        margin-top: 30px; 
+        font-weight: bold;
+      }
+      h2.title {
+        .font-size(21);
+        font-family: Helvetica, Arial, Sans-serif;
+      }
+      .download-ref { 
+        margin-top: 10px; 
+        .font-size(15);
+      }
+      .normal-state .download-ref {
+          display: block;
+      }
+      .download-link {          
+        color: #E33038;
+        text-decoration: none;
+      }
+    }
+
+    .views-column-1 { 
+      margin-left: 0px; 
+      margin-right: 16px; 
+    }
+    .views-column, 
+    .curtain,
+    .tile,
+    .inner-wrap { 
+      width: 230px; 
+      min-height: 330px; 
+    }
+  }
+  /* overlay */
+  .views-columns-2 {
+    .views-row {
+      .views-column {
+        width: 40.5%;
+        &.views-column-first {
+          margin-left: 16px;
+          min-height: 190px;
+        }
+        &.views-column-last {
+          margin-right: 5%;
+          float: right; 
+          min-height: 190px;
+        }
+        .inner-wrap {
+          display: block;
+          padding: 25px;
+        }
+        .icon {
+          position: absolute;
+          display: block;
+        }
+        .curtain {
+          top: 0px;
+        }
+        h2.title {
+          margin: 0px 0px 8px 0px;
+        }
+        h2.title, 
+        .desc,
+        .download-ref {  
+          padding-left: 40%;
+          text-align: left;
+        }  
+        .download-ref {
+          margin-top: 12px;
+        }
+      }      
+      .curtain,
+      .tile,
+      .inner-wrap { 
+        width: 94%;         
+      }
+      .views-column,
+      .curtain,
+      .tile,
+      .inner-wrap {
+        min-height: 145px;
+      }
+
+    }  
+  }
+  .views-columns-4 {
+    .views-row {
+      .views-column {
+        width: 45%;
+        margin-left: 16px; 
+        margin-right: 0px;        
+        .curtain {
+          top: 0px;
+        }
+      }
+      .curtain,
+      .tile,
+      .inner-wrap { 
+        width: 100%;         
+      }
+    }  
+  }
+
+}
+.responsive-layout-normal {
+  .sponsorship-forms {
+    .views-columns-4 {
+      .views-column {
+        .icon {
+          width: 70%;
+        }
+      }
+    }
+    .views-columns-2 {
+      .views-column {
+        .icon {
+          width: 115px;
+          img {
+            width: 115px;
+          }
+        }
+      }
+    }
+  }    
+}
+.responsive-layout-narrow {
+  .sponsorship-forms {
+    .views-columns-4 {
+      .views-column {
+        min-height: 190px;
+        &.views-column-1 {
+          margin-left: 0px;
+        }
+        .desc {
+          display: none;
+        }
+        h2.title {
+          .font-size(15);
+          margin-top: 10px;
+        }
+      }
+      .curtain,
+      .tile,
+      .inner-wrap {
+        min-height: 105px;
+      }
+    }
+    .views-columns-2 {
+      .views-column {
+          .icon {
+            img {
+              width: 60%;
+            }
+          }
+      }
+    }
+  }    
+}
+
+.responsive-layout-normal,
+.responsive-layout-narrow {
+  .sponsorship-forms {
+    .views-columns-2 {
+      .views-column,
+      .curtain,
+      .tile,
+      .inner-wrap {
+        
+      }
+      .curtain {
+        top: 0px;
+      }
+    }  
+  }  
+}  
+
+/* header */ 
+.sponsorship-forms-header { 
+  color: #fff; 
+  font-size: 24px; 
+  text-align: center; 
+  line-height: 30px; 
+  -top: 20px; 
+  .col-1,
+  .col-3 { 
+    width: 44%; 
+    max-width: 480px; 
+    float: left; 
+  }
+  .col-2 { 
+    width: 12%; 
+    max-width: 100px; 
+    float: left; 
+  }
+}
+
+/* Responsive */
+.ssrg.responsive-layout-mobile { 
+  #colorbox {
+    #cboxWrapper {
+      .node {
+        padding: 0px;
+      }
+      h2.title{
+        margin-top: 10px;
+      }
+      .views-column, 
+      .curtain,
+      .tile,
+      .inner-wrap { 
+        width: 45%; 
+      }
+      .curtain {
+        .icon {
+          img {
+            width: 60%;
+          }
+        }
+      }
+      
+    }
+  }  
+}
+.responsive-layout-mobile {
+  .sponsorship-forms {
+    .views-column {
+      margin: 10px 0px;
+    }
+    .views-column, 
+    .curtain,
+    .tile,
+    .inner-wrap { 
+      width: 100%; 
+    }
+  }  
+  &.context-sponsorship-forms{ 
+    .grid-3 {
+      display: none; 
+    }
+  }
+  /* overlay */
+  .views-columns-2 {
+    .views-row {
+      .views-column {
+        width: 100%;
+        &.views-column-first {
+          margin-left: 0px;
+        }
+        &.views-column-last {
+          margin-right: 0px;
+          float: none; 
+        }
+        h2.title, 
+        .desc,
+        .download-ref {  
+          padding-left: 0px;
+          text-align: center;
+        }
+        h2.title {
+          margin-top: 10px; 
+        }
+        .icon {
+          position: relative;
+          img {
+            margin: 0px auto;
+          }
+        }
+      }
+    }
+  }
+  .views-columns-4 {
+    .views-row {
+      .views-column {
+        width: 100%;
+        margin-left: 0px; 
+      }
+    }  
+  }      
+}

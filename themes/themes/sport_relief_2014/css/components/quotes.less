@@ -1,0 +1,59 @@
+blockquote,
+.quote {
+  font-family: @font-foco;
+  padding-bottom: 1em;
+  font-size: 1.4em;
+  margin: 0;
+  max-width: 100%;
+  display: inline-block;
+}
+/* Font Fall back for windows machine excluding >= IE9 */
+.font-fallback {
+  .quote {
+    font-family: @font-helvetica;
+  }
+}
+blockquote p:before,
+.quote:before {
+  color: @red;
+  content: '“';
+  font-size: 3em;
+  display: inline-block;
+  vertical-align: text-bottom;
+  line-height: 0;
+  margin-right: 5px;
+}
+blockquote p:after,
+.quote:after {
+  color: @red;
+  content: '”';
+  font-size: 3em;
+  display: inline-block;
+  vertical-align: text-bottom;
+  line-height: 0;
+  margin-left: 5px;
+}
+.quote--bubble {
+  background-color: @medium-grey;
+  border-radius: 8px;
+  border-bottom: 2px solid #bbb;
+}
+
+blockquote.quote--blue-single,
+.quote.quote--blue-single {
+  padding-left:35px;
+  padding-bottom: 2em;
+  p {
+    color: @blue;
+    font-size: 21px;
+    line-height: 25px;
+  }
+  p:after {
+    content:'';
+  }
+  p:before {
+    color: @blue;
+    margin-right: 11px;
+    margin-left: -35px;
+  }
+}

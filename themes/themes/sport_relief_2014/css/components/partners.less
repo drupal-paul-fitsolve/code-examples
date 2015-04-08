@@ -1,0 +1,175 @@
+ /**
+  * @file
+  * Styling for our partners.
+  */
+
+.js-partner-uuid {
+  display: none;
+}
+.partner {
+  position: relative;
+  cursor: pointer;
+  .no-touch &:hover:before {
+    content: 'Find out how they are supporting us >';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: @white;
+    .font-size(21);
+    font-family: @font-foco;
+    font-weight: bold;
+    text-align: center;
+    padding: 27% 19%;
+  }
+}
+
+/*@media all and @narrowOnly {
+  .partner {
+  padding: 15% 5%;
+}
+
+}*/
+
+.responsive-layout-mobile .partner {
+  margin:  0 10px @major-vertical-unit--mobile
+}
+.partner.is-loading:after {
+  /* Content and position */
+  content: '';
+  background: url(../images/loading.gif);
+  .box-sizing(border-box);
+  .background-size(60px);
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  top: 50%;
+  margin-top: -30px;
+}
+.responsive-layout-narrow .partner__description {
+  padding: 0 20px 20px;
+}
+.responsive-layout-narrow .partner__name {
+  padding: 0 20px;
+}
+.responsive-layout-normal .partner__description {
+  height: 200px;
+  padding-right: 20px;
+  overflow: auto;
+}
+.responsive-layout-wide .partner__description {
+  height: 230px;
+  padding-right: 20px;
+  overflow: auto;
+}
+
+.partner-basic--wrapper{
+  position: relative;
+  cursor: pointer;
+  
+  .field-name-field-external-link {
+
+    a {
+      text-decoration: none;
+    }
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: @white;
+    .font-size(21);
+    font-family: @font-foco;
+    font-weight: bold;
+    text-align: center;
+    padding: 30% 17%;
+    .opacity(0);
+
+    // IE8 mixin doesn't appear to work, so..
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    z-index: 1;
+    
+     &:hover{
+    .opacity(1);
+
+    // IE8 mixin doesn't appear to work, so..
+     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+     }
+  }
+}
+
+
+// Partners carousel scroller, markup is as such, for your reference:
+
+/*<div class="partners-carousel--wrapper">
+<span data-imgclass="partner--sainsburys"></span>
+<span data-imgclass="partner--bt"></span>
+<span data-imgclass="partner--ba"></span>
+<span data-imgclass="partner--premierleague"></span>
+<span data-imgclass="partner--rymans-robertdyas"></span>
+<span data-imgclass="partner--sse-cravendale"></span>
+<span data-imgclass="partner--ukaid"></span>
+</div>*/
+
+
+@media all and @wideOnly {
+  .partners-carousel--wrapper{
+    height:285px;
+    width:380px;
+    display:block;
+    background: url(../images/components/partner-carousel-images/partners-carousel-wide-2.jpg);
+
+    &.partner--sainsburys { background-position: 0 0; }
+    &.partner--bt { background-position: 0 -285px; }
+    &.partner--ba {background-position: 0 -570px;}
+    &.partner--premierleague { background-position: 0 -855px; }
+    &.partner--rymans-robertdyas {   background-position: 0 -1140px; }
+    &.partner--sse-cravendale { background-position: 0 -1425px; }
+    &.partner--ukaid {background-position: 0 -1710px;}
+  }
+}
+
+@media all and @normalOnly {
+  .partners-carousel--wrapper{
+    height:225px;
+    width:300px;
+    display:block;
+    background: url(../images/components/partner-carousel-images/partners-carousel-normal.jpg);
+
+    &.partner--sainsburys { background-position: 0 0; }
+    &.partner--bt { background-position: 0 -225px; }
+    &.partner--ba {background-position: 0 -450px;}
+    &.partner--premierleague { background-position: 0 -675px; }
+    &.partner--rymans-robertdyas {   background-position: 0 -900px; }
+    &.partner--sse-cravendale { background-position: 0 -1125px; }
+    &.partner--ukaid {background-position: 0 -1350px;}
+  }
+}
+
+@media all and @narrowOnly {
+  .partners-carousel--wrapper{
+    height:165px;
+    width:220px;
+    display:block;
+    background: url(../images/components/partner-carousel-images/partners-carousel-narrow.jpg);
+
+    &.partner--sainsburys { background-position: 0 0; }
+    &.partner--bt { background-position: 0 -165px; }
+    &.partner--ba {background-position: 0 -330px;}
+    &.partner--premierleague { background-position: 0 -495px; }
+    &.partner--rymans-robertdyas {   background-position: 0 -660px; }
+    &.partner--sse-cravendale { background-position: 0 -825px; }
+    &.partner--ukaid {background-position: 0 -990px;}
+  }
+}
+
+
+@media all and @fluidOnly {
+  .partners-carousel--wrapper{
+    display:none;
+  }
+}

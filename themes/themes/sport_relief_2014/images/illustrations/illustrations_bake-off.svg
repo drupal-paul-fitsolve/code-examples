@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="66px" height="70px" viewBox="0 0 66 70" enable-background="new 0 0 66 70" xml:space="preserve">
+<g>
+	
+		<line fill="none" stroke="#E33038" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="37" x2="65" y2="37"/>
+	
+		<line opacity="0.2" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="1" y1="37" x2="65" y2="37"/>
+	<g>
+		<path fill="#FFC95A" d="M9,15c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.656,0.909-3,3-3C7.656,12,9,13.343,9,15"/>
+		<rect x="3" y="15" fill="#FFC95A" width="5.163" height="37"/>
+		<rect x="39" y="15" fill="#FFC95A" width="6" height="37"/>
+		<rect x="6" y="12" fill="#FFC95A" width="36" height="40"/>
+		
+			<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="8" y1="32" x2="40" y2="32"/>
+		
+			<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="8" y1="38" x2="40" y2="38"/>
+		<g opacity="0.5">
+			<g>
+				<defs>
+					<rect id="SVGID_199_" x="17" y="12" width="28" height="14"/>
+				</defs>
+				<clipPath id="SVGID_2_">
+					<use xlink:href="#SVGID_199_"  overflow="visible"/>
+				</clipPath>
+				<polygon clip-path="url(#SVGID_2_)" fill="#FF9300" points="31.1,26 45,26 31,12 17,12 				"/>
+			</g>
+		</g>
+		<path fill="#F8DA7B" d="M31,12v11c0,1.657,1.344,3,3,3h11L31,12z"/>
+		<path fill="#FFFFFF" d="M45,26V15c0-1.657-1.344-3-3-3H31L45,26z"/>
+		<path fill="#FF9300" d="M7,26c0,0.553,0.447,1,1,1h18c0.553,0,1-0.447,1-1v-8c0-0.553-0.447-1-1-1H8c-0.553,0-1,0.447-1,1V26z"/>
+	</g>
+	<g>
+		<path fill="#FDE5A3" d="M16,9c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.656,0.909-3,3-3C14.656,6,16,7.343,16,9"/>
+		<rect x="10" y="9" fill="#FDE5A3" width="5.163" height="37"/>
+		<rect x="46" y="9" fill="#FEE8AC" width="6" height="37"/>
+		<rect x="13" y="6" fill="#FEE8AC" width="36" height="40"/>
+		<g opacity="0.3">
+			<g>
+				<defs>
+					<rect id="SVGID_201_" x="24" y="6" width="28" height="14"/>
+				</defs>
+				<clipPath id="SVGID_4_">
+					<use xlink:href="#SVGID_201_"  overflow="visible"/>
+				</clipPath>
+				<polygon clip-path="url(#SVGID_4_)" fill="#FF9300" points="38.1,20 52,20 38,6 24,6 				"/>
+			</g>
+		</g>
+		<path fill="#F8DA7B" d="M38,6v11c0,1.657,1.344,3,3,3h11L38,6z"/>
+		<path fill="#FFFFFF" d="M52,20V9c0-1.657-1.344-3-3-3H38L52,20z"/>
+		<g>
+			<circle fill="#E33038" cx="18" cy="14" r="4"/>
+			<path opacity="0.1" d="M20.828,16.828c-1.562,1.562-4.095,1.562-5.657,0s-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="18" cy="25" r="4"/>
+			<path opacity="0.1" d="M20.828,27.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="29" cy="14" r="4"/>
+			<path opacity="0.1" d="M31.828,16.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="29" cy="25" r="4"/>
+			<path opacity="0.1" d="M31.828,27.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="18" cy="36" r="4"/>
+			<path opacity="0.1" d="M20.828,38.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="29" cy="36" r="4"/>
+			<path opacity="0.1" d="M31.828,38.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="18" cy="47" r="4"/>
+			<path opacity="0.1" d="M20.828,49.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="29" cy="47" r="4"/>
+			<path opacity="0.1" d="M31.828,49.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="40" cy="14" r="4"/>
+			<path opacity="0.1" d="M42.828,16.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="40" cy="25" r="4"/>
+			<path opacity="0.1" d="M42.828,27.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="40" cy="36" r="4"/>
+			<path opacity="0.1" d="M42.828,38.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+		<g>
+			<circle fill="#E33038" cx="40" cy="47" r="4"/>
+			<path opacity="0.1" d="M42.828,49.828c-1.562,1.562-4.095,1.562-5.657,0c-1.562-1.562-1.562-4.095,0-5.657"/>
+		</g>
+	</g>
+	<g>
+		<path fill="#FFC95A" d="M27,3c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.656,0.909-3,3-3C25.656,0,27,1.343,27,3"/>
+		<rect x="21" y="3" fill="#FFC95A" width="5.163" height="37"/>
+		<rect x="57" y="3" fill="#FFC95A" width="6" height="37"/>
+		<rect x="24" fill="#FFC95A" width="36" height="40"/>
+		
+			<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="26" y1="21" x2="57" y2="21"/>
+		
+			<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="26" y1="28" x2="57" y2="28"/>
+		<g opacity="0.5">
+			<g>
+				<defs>
+					<rect id="SVGID_203_" x="35" width="28" height="14"/>
+				</defs>
+				<clipPath id="SVGID_6_">
+					<use xlink:href="#SVGID_203_"  overflow="visible"/>
+				</clipPath>
+				<polygon clip-path="url(#SVGID_6_)" fill="#FF9300" points="49.1,14 63,14 49,0 35,0 				"/>
+			</g>
+		</g>
+		<path fill="#F8DA7B" d="M49,0v11c0,1.657,1.344,3,3,3h11L49,0z"/>
+		<path fill="#FFFFFF" d="M63,14V3c0-1.657-1.344-3-3-3H49L63,14z"/>
+	</g>
+	<path fill="#FF9300" d="M26,38c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C25.553,37,26,37.447,26,38"/>
+	<path fill="#FF9300" d="M48,38c0,0.553-0.447,1-1,1c-0.553,0-1-0.447-1-1c0-0.553,0.447-1,1-1C47.553,37,48,37.447,48,38"/>
+	<rect x="25" y="37" fill="#FF9300" width="22" height="2"/>
+	<path fill="#E33038" d="M9,39c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C7.656,36,9,37.343,9,39"/>
+	<rect x="3" y="36" fill="#A9242A" width="60" height="8"/>
+	<path fill="#E33038" d="M63,39c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C61.656,36,63,37.343,63,39"/>
+	<path fill="#E33038" d="M9,67c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C7.656,64,9,65.343,9,67"/>
+	<rect x="3" y="36" fill="#E33038" width="6" height="31"/>
+	<path fill="#E33038" d="M63,67c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C61.656,64,63,65.343,63,67"/>
+	<rect x="57" y="36" fill="#E33038" width="6" height="31"/>
+	<rect x="6" y="36" fill="#E33038" width="54" height="34"/>
+	<g opacity="0.2">
+		<g>
+			<defs>
+				<rect id="SVGID_205_" x="54" y="39" width="6" height="6"/>
+			</defs>
+			<clipPath id="SVGID_8_">
+				<use xlink:href="#SVGID_205_"  overflow="visible"/>
+			</clipPath>
+			<rect x="54" y="39" clip-path="url(#SVGID_8_)" width="6" height="6"/>
+		</g>
+	</g>
+	<g opacity="0.5">
+		<rect x="3" y="30" fill="#FF9300" width="60" height="4"/>
+	</g>
+	<polygon fill="#E33038" points="3,32 3,34 3,36 63,36 63,34 63,32 	"/>
+	<g opacity="0.1">
+		<rect x="3" y="32.25" width="60" height="3.5"/>
+	</g>
+	<text transform="matrix(1 0 0 1 21.06 49.9999)"><tspan x="0" y="0" fill="#FDE5A3" font-family="'GothamRounded-Bold'" font-size="10">BAKE </tspan><tspan x="2.625" y="9" fill="#FDE5A3" font-family="'GothamRounded-Bold'" font-size="10">OFF</tspan></text>
+	<g>
+		<path fill="#FF9300" d="M41.079,9.895h-6.723h-0.978h-7.349l2.366,6.729c0,0,3.811,0.392,4.846,0.364
+			c1.034,0.028,5.472-0.364,5.472-0.364L41.079,9.895z"/>
+		<path fill="#FEE8AC" d="M40.552,8.374c-0.526-0.814-2.163-2.82-7.031-2.82c-4.912,0-6.873,2.636-6.992,2.82
+			c-0.947,1.467-0.585,3.135,0.81,3.725c1.083,0.459,2.47,0.132,3.479-0.723c0.481,0.939,1.425,1.578,2.51,1.578
+			c1.191,0,2.211-0.769,2.637-1.86c1.019,1.062,2.584,1.512,3.779,1.006C41.136,11.509,41.499,9.841,40.552,8.374z"/>
+		<circle fill="#FF9300" cx="33.926" cy="5.554" r="2.146"/>
+	</g>
+</g>
+</svg>

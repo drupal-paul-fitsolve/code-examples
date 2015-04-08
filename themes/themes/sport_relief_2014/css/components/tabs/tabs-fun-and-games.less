@@ -1,0 +1,55 @@
+@import "../../utilities/all-utilities.less";
+
+.tabs--fun-and-games {
+  .tab-link {
+    background: transparent url(../../../images/components/flash-games/tab-athletes-monsters-active.png) 0 0 no-repeat;
+    .background-size(cover);
+    display: block;
+    height: 145px;
+    @media all and @wideOnly {
+      height: 190px;
+    }
+    text-align: center;
+    .font-size(20);
+    line-height: 3em;
+    color: @white;
+    font-family: @font-foco;
+  }
+  a[href="#tabs-fun_and_games_landing-middle-0"].tab-link {
+    background-image: url(../../../images/components/flash-games/home_Game_Thumb_1athletes.jpg);
+    text-align: left;
+    text-indent: -9000px;
+  }
+  a[href="#tabs-fun_and_games_landing-middle-0"].tabs-active, a[href="#tabs-fun_and_games_landing-middle-0"].tab-link:hover {
+    background-image: url(../../../images/components/flash-games/home_Game_Thumb_1athletes_hover.jpg);
+  }
+  a[href="#tabs-fun_and_games_landing-middle-1"].tab-link {
+    background-image: url(../../../images/components/flash-games/home_Game_Thumb_2skyscraper.jpg);
+    text-align: left;
+    text-indent: -9000px;
+  }
+  a[href="#tabs-fun_and_games_landing-middle-1"].tabs-active, a[href="#tabs-fun_and_games_landing-middle-1"].tab-link:hover {
+    background-image: url(../../../images/components/flash-games/home_Game_Thumb_2skyscraper_hover.jpg);
+  }
+  a[href="#tabs-fun_and_games_landing-middle-2"].tab-link {
+    background-image: url(../../../images/components/flash-games/home_Game_Thumb_3_Conga.jpg);
+    text-align: left;
+    text-indent: -9000px;
+  }
+  a[href="#tabs-fun_and_games_landing-middle-2"].tabs-active, a[href="#tabs-fun_and_games_landing-middle-2"].tab-link:hover {
+    background-image: url(../../../images/components/flash-games/home_Game_Thumb_3conga_hover.jpg);
+  }
+  a[href="#tabs-fun_and_games_landing-middle-3"].tab-link {
+    background-image: url(../../../images/components/flash-games/home_Game_Thumb_4_avatar.jpg);
+    text-align: left;
+    text-indent: -9000px;
+  }
+  a[href="#tabs-fun_and_games_landing-middle-3"].tabs-active, a[href="#tabs-fun_and_games_landing-middle-3"].tab-link:hover {
+    background-image: url(../../../images/components/flash-games/home_Game_Thumb_4avatar_hover.jpg);
+  }
+}
+.responsive-layout-normal .tabs--fun-and-games a.tab-link {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

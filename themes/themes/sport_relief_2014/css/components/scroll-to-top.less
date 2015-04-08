@@ -1,0 +1,53 @@
+
+
+.scroll-to-top--button {
+	background-color: @swim-background;
+	color:white;
+	display:none;
+	position: relative;
+	text-align: center;
+	display:none;
+	padding: 0px 25px;
+	width:62px;
+	height:100px;
+	margin-left: 100px;
+	text-decoration: none;
+
+	.border-radius(5px);
+
+	&:hover {
+		/*font-weight:bold;*/
+		text-decoration: none;
+		background-color: #11B2E8;
+		color: white;
+	}
+
+	&.scrolling {
+		position:fixed;
+		top: 30px;
+	}
+}
+
+.responsive-layout-normal .scroll-to-top--button {
+	margin-left: 40px;
+}
+
+.responsive-layout-narrow .scroll-to-top--button {
+	margin-left: 0px;
+}
+
+.icon-icons--13{
+	font-family: 'sr-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	font-size: 4.0em;
+}
+
+.icon-icons--13:before {
+	content: "\e01f";
+}
