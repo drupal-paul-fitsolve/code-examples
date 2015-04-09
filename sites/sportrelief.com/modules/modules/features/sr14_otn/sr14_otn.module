@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the sr14_OTN feature.
- */
-
-include_once 'sr14_otn.features.inc';

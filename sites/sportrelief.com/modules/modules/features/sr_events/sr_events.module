@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SR Events feature.
- */
-
-include_once 'sr_events.features.inc';

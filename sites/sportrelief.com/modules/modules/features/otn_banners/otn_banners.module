@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the OTN Banners feature.
- */
-
-include_once 'otn_banners.features.inc';

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SR Battle Of The Backsides feature.
- */
-
-include_once 'sr_battle_of_the_backsides.features.inc';

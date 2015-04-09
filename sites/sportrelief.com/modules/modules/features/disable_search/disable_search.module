@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Disable Search feature.
- */
-
-include_once 'disable_search.features.inc';

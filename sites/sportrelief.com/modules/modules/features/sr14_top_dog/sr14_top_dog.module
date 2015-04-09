@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the sr14_top_dog feature.
- */
-
-include_once 'sr14_top_dog.features.inc';
