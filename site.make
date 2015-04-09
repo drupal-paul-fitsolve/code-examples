@@ -14,7 +14,7 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/menu_alter_callb
 ;Link to Comic Relief's Distro
 projects[crdistro][type] = profile
 projects[crdistro][download][type] = git
-projects[crdistro][download][url] = git@github.com:paul-at-fitsolve/crdistro.git
+projects[crdistro][download][url] = git@codebasehq.com:comic/comic-relief-distribution/crdistro.git
 
 
 
