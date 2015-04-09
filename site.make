@@ -16,8 +16,10 @@ projects[crdistro][type] = profile
 projects[crdistro][download][type] = git
 projects[crdistro][download][url] = git@codebasehq.com:comic/comic-relief-distribution/crdistro.git
 
-projects[drupagram][subdir] = "contrib"
-projects[drupagram][version] = "1.2"
-projects[drupagram][patch][] = "drupagram-20141014--add-url-option.patch"
+;Link to contributed modules that are specific to this site
+;There are no specific contributed modules for Sport Relief
 
-
+;Link to contributed themes that are specific to this site
+projects[omega][type] = theme
+projects[omega][subdir] = contrib
+projects[omega][version] = "3.1"
