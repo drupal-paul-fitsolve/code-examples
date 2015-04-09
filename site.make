@@ -16,5 +16,8 @@ projects[crdistro][type] = profile
 projects[crdistro][download][type] = git
 projects[crdistro][download][url] = git@codebasehq.com:comic/comic-relief-distribution/crdistro.git
 
+projects[drupagram][subdir] = "contrib"
+projects[drupagram][version] = "1.2"
+projects[drupagram][patch][] = "drupagram-20141014--add-url-option.patch"
 
 
