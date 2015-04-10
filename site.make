@@ -20,6 +20,7 @@ projects[crdistro][download][url] = git@codebasehq.com:comic/comic-relief-distri
 ;There are no specific contributed modules for Sport Relief
 
 ;Link to contributed themes that are specific to this site
-projects[omega][type] = theme
-projects[omega][subdir] = contrib
-projects[omega][version] = "3.1"
+;Added omega to repo as it has been customised
+;projects[omega][type] = theme
+;projects[omega][subdir] = contrib
+;projects[omega][version] = "3.1"
