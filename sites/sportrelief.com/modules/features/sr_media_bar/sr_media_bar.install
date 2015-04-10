@@ -1,0 +1,28 @@
+<?php
+/**
+ * @file
+ * Install for the Media Bar feature.
+ */
+
+/**
+ * Update feeds oauth table so that cron can pull tweets upon
+ * each run. Bug in feeds_oauth causes conflict unless feeds is pulled
+ * with a logged in and authenticated (via twitter) user. This copies authenticated user
+ * and inserts an entry for cron to use.
+ */
+function sr_media_bar_update_7100() {
+  // Fetch admin user entry
+  $row = db_query("SELECT * FROM {feeds_oauth_access_tokens} WHERE uid = :uid", array(':uid' => 1))->fetchObject();
+  // Update table
+  if($row){
+   // Convert row into an array to prepare for db insert
+   $new_entry = (array) $row;
+   // Set as anon user
+   $new_entry['uid'] = 0;
+   $new_entry['timestamp'] = time();
+   // Insert into DB
+   $feeds_oauth = db_insert('feeds_oauth_access_tokens')
+     ->fields($new_entry)
+     ->execute();
+  }
+}

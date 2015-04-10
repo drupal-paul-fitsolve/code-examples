@@ -1,0 +1,446 @@
+<?php
+/**
+ * @file
+ * CR Event module.
+ */
+
+
+define('CR_KML_LOCATION', 'public://cr_event_maps/kml/');
+define('CR_CSV_LOCATION', 'public://cr_event_maps/csv/');
+
+// Brings in the settings form
+module_load_include('inc', 'cr_event_map', 'cr_event_map.admin');
+
+/**
+ * implements hook_permission()
+ */
+function cr_event_map_permission() {
+  return array(
+    'administer cr_event_map settings' => array(
+      'title' => t('Administer CR Event Maps'),
+      'description' => t('Configure the CR Event Maps'),
+    ),
+  );
+}
+
+/**
+ * implements hook_menu()
+ */
+function cr_event_map_menu() {
+
+  $items = array();
+
+  $items['admin/config/services/cr_event_map'] = array(
+    'title' => 'CR Event Maps',
+    'description' => 'CR Event Maps Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('cr_event_map_settings_form'),
+    'access arguments' => array('administer cr_event_map settings'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['admin/config/services/cr_event_map/gapi/auth'] = array(
+    'title' => 'CR Event Map Google OAUTH',
+    'page callback' => 'page_callback_authenticate_googleAPI',
+    'access arguments' => array('administer cr_event_map settings'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['admin/config/services/cr_event_map/gapi/logout'] = array(
+    'title' => 'Logout from OAuth',
+    'page callback' => 'page_callback_logout_googleAPI',
+    'access arguments' => array('administer cr_event_map settings'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Custom page callback to authenticate the Google API
+ */
+function page_callback_authenticate_googleAPI() {
+  global $base_url;
+  
+  $content = array();
+
+  module_load_include('inc', 'cr_event_map', 'fusion_tables_auth');
+  $auth = new FusionTablesAuth();
+
+  if (isset($_GET['code'])) {
+    $auth->authenticate();
+    drupal_set_message(t('Successfully authenticated with the Google API'));
+    drupal_goto('admin/config/services/cr_event_map');
+  }
+
+  if ($auth->hasToken()) {
+    $auth->resaveToken();
+    drupal_set_message(t('Successfully authenticated with the Google API'));
+    drupal_goto('admin/config/services/cr_event_map');
+  }
+
+  drupal_set_message(t('We dont have a valid token we can use to connect to the Google API. Please use the below link to authenticate with your Google Account. This only needs to be done once.'));
+  $content = array(
+    '#markup' => l('Login with Google Account', $auth->createAuthUrl())
+  );
+  return $content;
+}
+
+/**
+ * Custom page callback to log out from the goolge API
+ */
+function page_callback_logout_googleAPI() {
+  module_load_include('inc', 'cr_event_map', 'fusion_tables_auth');
+  $auth = new FusionTablesAuth();
+  $auth->logout();
+  drupal_set_message(t('Successfully logged out of the Google API.'));
+  drupal_goto('admin/config/services/cr_event_map');
+}
+
+/**
+ * Implements hook_bean_types_api_info().
+ */
+function cr_event_map_bean_types_api_info() {
+  return array('api' => 4);
+}
+
+/**
+ * Implements hook_bean_types().
+ */
+function cr_event_map_bean_types() {
+  $plugins = array();
+  $plugin_path = drupal_get_path('module', 'cr_event_map') . '/plugins/bean';
+  $plugins['event_map'] = array(
+    'label' => t('Event Map'),
+    'description' => t('A Google Event Map'),
+    'abstract' => FALSE,
+    'handler' => array(
+      'class' => 'EventMapBean',
+      'parent' => 'bean',
+    ),
+    'path' => $plugin_path,
+    'file' => 'cr.event_map.inc',
+  );
+  return $plugins;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cr_event_map_theme() {
+  $items = array();
+  $items['cr_event_map_gmap'] = array(
+    'arguments' => array(
+      'kmls' => NULL,
+    ),
+    'render element' => 'element',
+    'file' => 'cr_event_map.theme.inc',
+    'template' => 'cr_event_map_gmap',
+  );
+  $items['cr_event_map_search'] = array(
+    'arguments' => array(
+      'type_label' => NULL,
+      'search_label'  => NULL,
+    ),
+    'render element' => 'element',
+    'file' => 'cr_event_map.theme.inc',
+  );
+  $items['cr_event_map_search_textfield'] = array(
+    'render element' => 'element',
+  );
+  return $items;
+}
+
+/**
+ * CORE FUNCTIONS
+ */
+
+/*
+ * Main Sync Function
+ * Syncronizes KML and Fusion Tables one step at a time
+ */
+function cr_event_map_sync($verbose = false, $testing = FALSE) {
+  watchdog('cr_event_map', 'Attempting to run Event Map Sync.', array(), WATCHDOG_INFO);
+
+  // Step 1
+  if($testing) {
+    drupal_set_message(t('<strong>Testing Map Sync</strong>'));
+    $kmls = array(unserialize(variable_get('cr_event_map_test_kml')));
+  } else {
+    $kmls = unserialize(variable_get('cr_event_map_kmls'));
+  }
+
+  if(!is_array($kmls) || count($kmls) < 0) {
+    if($verbose) {
+      drupal_set_message(t('Sorry, no KMLS to process.'));
+    }
+    watchdog('cr_event_map', 'No KMLs to process. Please setup CR Event Maps module.', array(), WATCHDOG_ERROR);
+    return;
+  }
+
+  // Step 2
+  // Parses through the saved KMLs saved under settings
+  // Connects to the end points and saves the kml files
+  cr_event_map_retrieve_kmls($kmls, $verbose);
+  
+  // Step 3
+  // Loops though the KMLs and uses the chosen parser to create the relevant CSV files
+  $parsed = cr_event_map_parse_kmls_to_csv($kmls, $verbose);
+  if(!$parsed) {
+    watchdog('cr_event_map', 'KMLs were not able to be parsed.', array(), WATCHDOG_ERROR);
+    return;
+  }
+  // Step 4
+  // Deletes the existing fusion table assigned to that kml, then uploads that CSV
+  // If count is 0, nothing was imported and errors are logged
+  $count = cr_event_map_sync_fusiontables($kmls, $verbose);
+
+  // Step 5, log
+  if($verbose && $count) {
+    drupal_set_message(t('Imported %count records into Fusion Tables', array('%count'=>$count)));
+  }
+  if($count > 0) {
+    watchdog('cr_event_map', 'Successfully fetched and imported records into Fusion Tables. Records imported: %count', array('%count' => $count), WATCHDOG_INFO);
+  } else {
+    watchdog('cr_event_map', 'CR Event Map Sync was attempted but import was not successfull with %count imports.', array('%count' => $count), WATCHDOG_NOTICE);
+  }
+
+  // Additional logging for test imports
+  if($testing && $verbose) {
+    if($count && isset($kmls[0])) {
+      $flink_attr = array('attributes' => array('target'=>'_blank'));
+      $doc_root = $_SERVER['DOCUMENT_ROOT'].'/';
+      $csv_path = str_replace($doc_root, '', $kmls[0]['csv_file_path']);
+      $info = array(
+        '%count'=>$count, 
+        '%fusion_table'=>$kmls[0]['tableid'],
+        '!fusion_link'=>l($kmls[0]['tableid'], 'https://www.google.com/fusiontables/DataSource?docid='.$kmls[0]['tableid'], $flink_attr),
+        '!kml_file_link'=>l(t('KML'), file_create_url($kmls[0]['kml_file']->uri), $flink_attr),
+        '!csv_file_link'=>l(t('CSV'), $csv_path, $flink_attr),
+      );
+      drupal_set_message(t('<strong>Test import successfull.</strong> Fetched !kml_file_link, converted it into !csv_file_link and imported %count records into the following fusion table: !fusion_link.', $info));
+    } else {
+      // Something didn't work, just output an error, followed by dpming the kml structure
+      drupal_set_message(t('<strong>Test import failed.</strong>'), 'error');
+    }
+
+    // If we have DPM available, we want to be able to view the KML files and info
+    if(function_exists('dpm')) {
+      dpm($kmls);
+    }
+  }
+
+  // Finished :)
+}
+
+/* 
+ * Implements hook_cron()
+ */
+function cr_event_map_cron() {
+  $last_run = variable_get('cr_event_map_last_run', false);
+
+  $fetch_time_seconds = variable_get('cr_event_map_fetch_time', 0) * 60;
+  $now = time();
+
+  // Just quit if it is set to 0
+  if($fetch_time_seconds === 0 || $fetch_time_seconds == '0') {
+    return; 
+  }
+  
+  $next_run = ($last_run) ? $last_run + $fetch_time_seconds : false;
+
+  if(!$next_run || $now > $next_run) {
+    watchdog('cr_event_map', 'Cron: Syncing KML <> Google Fusion Tables. Last run: %lastrun', array('%lastrun' => date("F j, Y, g:i a", $last_run)), WATCHDOG_INFO);
+    cr_event_map_sync();
+    variable_set('cr_event_map_last_run', time());
+  }
+}
+
+/*
+ * Core function to retrieve KMLS
+ *
+ * cr_event_map_retrieve_kmls()
+ * Loops through the KMLs and saves the files
+ */
+function cr_event_map_retrieve_kmls(&$kmls, $verbose = false) {
+  $kml_directory = CR_KML_LOCATION;
+  if(!file_prepare_directory($kml_directory, FILE_CREATE_DIRECTORY)) {
+    watchdog('cr_event_map', 'Could not create required directories to process KMLs: %dir', array('%dir' => $kml_directory), WATCHDOG_ERROR, $link = NULL);
+    if($verbose) {
+      drupal_set_message(t('Could not create required folder.'));
+    }
+    return;
+  }
+  // Loop through enabled KMLs, make a HTTP request and create the KMLs array
+  try {
+    foreach($kmls as $key => $kml) {
+      if(!$kml['enabled']) continue;
+
+      $kmls[$key]['machine_name'] = cr_event_map_machine_name($kml['name']);
+      $kml_destination = $kml_directory . $kmls[$key]['machine_name'] . '.kml';
+      
+      // Fetch data
+      $data = drupal_http_request($kml['url']);
+
+      if($data->code !== '200') {
+        watchdog('cr_event_map', 'Could not fetch event data %name file %url', array('%name' => $kml['name'], '%url' => $kml['url']), WATCHDOG_ERROR, $link = NULL);
+        if($verbose) {
+          drupal_set_message('Could not fetch event data. The error has been logged.', WATCHDOG_ERROR);
+        }
+        continue;
+      }
+
+      // Save file and store the information
+      $file = file_save_data($data->data, $kml_destination, FILE_EXISTS_REPLACE);
+      $kmls[$key]['fetched'] = time();
+      $kmls[$key]['kml_file'] = $file;
+    }
+  } catch (Exception $e) {
+    watchdog_exception('cr_event_map', $e);
+    if($verbose) {
+      drupal_set_message('Could not retrieve KML sources. The error has been logged.', WATCHDOG_ERROR);
+    }
+  }
+}
+
+/*
+ * Core function to parse KMLS
+ *
+ * cr_event_map_parse_kmls_to_csv()
+ * Loops through the KMLs and uses it's respective parser to create the CSVs for upload
+ */
+function cr_event_map_parse_kmls_to_csv(&$kmls, $verbose = false) {
+  module_load_include('inc', 'cr_event_map', 'kml_parsers');
+
+  // Parse each KML File
+  foreach($kmls as $key => $kml) {
+    $parameters = array($kml['machine_name'], $kml['kml_file'], $verbose);
+    $kmls[$key]['csv_file_path'] = call_user_func_array($kml['parser'], $parameters);
+
+    if(!$kmls[$key]['csv_file_path']) {
+      return $kmls[$key]['csv_file_path'];
+    }
+  }
+  return TRUE;
+}
+
+/*
+ * Core function to sync Fusion Table & KML CSV Files
+ *
+ * cr_event_map_sync_fusiontables()
+ * Connects to Google API and sets up the required services
+ * Sync all fusion tables from the sources
+ */
+function cr_event_map_sync_fusiontables(&$kmls, $verbose = false) {
+  /*
+   * AUTHENTICATE
+   * Authenticates with google and sets up the fusion table services
+   */
+  try {
+    module_load_include('inc', 'cr_event_map', 'fusion_tables_auth');
+    $auth = new FusionTablesAuth();
+
+    // Check if we have a token
+    if(!$auth->hasToken()) {
+      throw new Exception('Unable to authenticate with Google Fusions Table. Please ensure we have a valid token and the application is authenticated to connect with Googles API.');
+      return;
+    }
+    $auth->authenticate();
+    $auth->refreshToken();
+
+    // Table Service for generic stuff
+    $fusionTablesServices = $auth->getFusionTablesService();
+    
+    // Upload service to import rows
+    $fusionTableUploadService = $auth->getFusionTablesUploadService();
+    $uploadServiceResource = $fusionTableUploadService->import;
+  } catch (Exception $e) {
+    watchdog_exception('cr_event_map', $e);
+    if($verbose) {
+      drupal_set_message('Could not connect to Googles Fusion API. Please check your settings and the logs.', WATCHDOG_ERROR);
+    }
+  }
+
+  $count = 0;
+
+  /*
+   * UPLOAD CSVs
+   *
+   * Parses through the KMLs, grabs the appropriate CSV files and imports them into fusion tables
+   */
+  try {
+    foreach($kmls as $key => $kml) {
+      $csv = file_get_contents($kml['csv_file_path']);
+
+      // Delete if we have rows
+      $count_check_response = $fusionTablesServices->query->sql('SELECT name FROM '.$kml['tableid']);
+      if(isset($count_check_response['rows'])) {
+        $kmls[$key]['delete_response'] = $fusionTablesServices->query->sql('DELETE FROM '.$kml['tableid']);
+      }
+
+      // Import
+      $kmls[$key]['import_response'] = $uploadServiceResource->import($kml['tableid'], $csv);
+      $count += $kmls[$key]['import_response']['numRowsReceived'];
+    }
+    if($count == 0) {
+      throw new Exception('No events were imported to Fusion Table '.$kml['tableid'].'. KML Source Name: '.$kml['name']);
+    }
+  } catch (Exception $e) {
+    watchdog_exception('cr_event_map', $e);
+    if($verbose) {
+      drupal_set_message('There was an error updating the CR Events Map Fusion Table. Please view the logs.', WATCHDOG_ERROR);
+    }
+  }
+  return $count;
+}
+
+
+/**
+ * FORMS
+ */
+
+/*
+ * The search form used when outputting the map
+ */
+function cr_event_map_search_form($form, &$form_state, $filter_types, $filter_default, $title) {
+
+  $form['#attributes']['class'] = array('cr_event_map_search_form', 'search-event', 'clearfix');
+
+  $form['title'] = array(
+    '#type' => 'item',
+    '#markup' => t('<h2>'.$title.'</h2>'),
+    '#prefix' => '<div class="grid-11 alpha cr_events_map__title">',
+    '#suffix' => '</div>',
+  );
+
+  $form['search_filter'] = array(
+    '#type' => 'select',
+    '#title' => t("Type"),
+    '#title_display' => 'invisible',
+    '#options' => $filter_types,
+    '#default_value' => $filter_default,
+    '#prefix' => '<div class="grid-6 cr_events_map__filter">',
+    '#suffix' => '</div>',
+  );
+  $form['search_events'] = array(
+    '#type' => 'item',
+    '#markup' => '',
+    '#prefix' => '<div class="grid-6 alpha omega cr_events_map__search">',
+    '#suffix' => '</div>',
+  );
+  $form['search_events']['search_field'] = array(
+    '#name' => 'map_search_field',
+    '#type' => 'textfield',
+    '#size' => 20,
+    '#title' => t("Postcode/Town"),
+    '#title_display' => 'invisible',
+    '#attributes' => array(
+      'placeholder' => 'Postcode/Town'
+    ),
+  );
+  $form['search_events']['search_btn'] = array(
+    '#id' => 'map_search',
+    '#type' => 'submit',
+    '#value' => t('Search'),
+    '#executes_submit_callback' => FALSE,
+  );
+  return $form;
+}

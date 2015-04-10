@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Row wrapper classes feature.
+ */
+
+include_once 'row_wrapper_classes.features.inc';

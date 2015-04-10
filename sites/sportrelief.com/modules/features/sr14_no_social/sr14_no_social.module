@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the sr14-no-social feature.
+ */
+
+include_once 'sr14_no_social.features.inc';

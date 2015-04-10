@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Images Promo feature.
+ */
+
+include_once 'images_promo.features.inc';

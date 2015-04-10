@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="72px" height="72px" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
+<g>
+	<path fill="#FFC95A" d="M18,5c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C16.656,2,18,3.343,18,5"/>
+	<path fill="#FFC95A" d="M18,67c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C16.656,64,18,65.343,18,67"/>
+	<path fill="#FFC95A" d="M64,67c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C62.656,64,64,65.343,64,67"/>
+	<rect x="12" y="5" fill="#FFC95A" width="6" height="62"/>
+	<path fill="#FEE8AC" d="M63,5c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C61.656,2,63,3.343,63,5"/>
+	<rect x="58" y="5" fill="#FFC95A" width="6" height="62"/>
+	<rect x="15" y="2" fill="#FFC95A" width="45" height="68"/>
+	<path fill="#FFC95A" d="M18,5c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C16.656,2,18,3.343,18,5"/>
+	<path fill="#FFC95A" d="M18,67c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C16.656,64,18,65.343,18,67"/>
+	<path fill="#FFC95A" d="M64,67c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C62.656,64,64,65.343,64,67"/>
+	<rect x="12" y="5" fill="#FFC95A" width="6" height="62"/>
+	<path fill="#FFC95A" d="M63,5c0,1.657-1.344,3-3,3c-1.656,0-3-1.343-3-3c0-1.657,1.344-3,3-3C61.656,2,63,3.343,63,5"/>
+</g>
+<g>
+	<path fill="#FF9300" d="M37.063,13h-17c-0.552,0-1,0.448-1,1v12c0,0.552,0.448,1,1,1h17c0.552,0,1-0.448,1-1V14
+		C38.063,13.448,37.615,13,37.063,13z"/>
+	
+		<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="42.063" y1="14" x2="57.063" y2="14"/>
+	
+		<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="42.063" y1="20" x2="57.063" y2="20"/>
+	
+		<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="42.063" y1="26" x2="57.063" y2="26"/>
+	
+		<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="20.063" y1="32" x2="57.063" y2="32"/>
+	
+		<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="20.063" y1="38" x2="57.063" y2="38"/>
+	
+		<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="20.063" y1="44" x2="57.063" y2="44"/>
+	
+		<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="20.063" y1="50" x2="57.063" y2="50"/>
+	
+		<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="20.063" y1="56" x2="57.063" y2="56"/>
+	
+		<line fill="none" stroke="#FF9300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="20.063" y1="56" x2="57.063" y2="56"/>
+</g>
+<g>
+	<g opacity="0.5">
+		<g>
+			<defs>
+				<rect id="SVGID_217_" x="36" y="2" width="28" height="14"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_217_"  overflow="visible"/>
+			</clipPath>
+			<polygon clip-path="url(#SVGID_2_)" fill="#FF9300" points="51,15 64,16 50,2 36,2 			"/>
+		</g>
+	</g>
+	<path fill="#FDE5A3" d="M50,2v11c0,1.657,1.344,3,3,3h11L50,2z"/>
+	<path fill="#FFFFFF" d="M64,16V5c0-1.657-1.344-3-3-3H50L64,16z"/>
+	<g opacity="0.5">
+		<g>
+			<defs>
+				<rect id="SVGID_219_" x="36" y="2" width="28" height="14"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_219_"  overflow="visible"/>
+			</clipPath>
+			<polygon clip-path="url(#SVGID_4_)" fill="#FF9300" points="51,15 64,16 50,2 36,2 			"/>
+		</g>
+	</g>
+	<path fill="#FDE5A3" d="M50,2v11c0,1.657,1.344,3,3,3h11L50,2z"/>
+	<path fill="#FFFFFF" d="M64,16V5c0-1.657-1.344-3-3-3H50L64,16z"/>
+</g>
+</svg>

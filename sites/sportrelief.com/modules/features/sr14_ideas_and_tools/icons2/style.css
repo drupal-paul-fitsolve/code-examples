@@ -1,0 +1,100 @@
+@font-face {
+	font-family: 'SR-FR-Icons';
+	src:url('SR-FR-Icons.eot');
+	src:url('SR-FR-Icons.eot?#iefix') format('embedded-opentype'),
+		url('SR-FR-Icons.woff') format('woff'),
+		url('SR-FR-Icons.ttf') format('truetype'),
+		url('SR-FR-Icons.svg#SR-FR-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'SR-FR-Icons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="fricon-"] {
+*/
+.fricon-icons_tips_1-50, .fricon-icons_tips_2-51, .fricon-icons_tips_3-52, .fricon-icons_tips_4-53, .fricon-icons_tips_5-54, .fricon-icons_tips_6-55, .fricon-icons_tips_7-56, .fricon-icons_tips_8-57, .fricon-icons_tips_9-58, .fricon-icons_tips_10-59, .fricon-icons_tips_11-60, .fricon-icons_tips_12-61, .fricon-icons_tips_13-62, .fricon-icons_tips_14-63, .fricon-icons_tips_15-64, .fricon-icons_tips_16-65, .fricon-icons_tips_17-66, .fricon-icons_tips_18-67, .fricon-icons_tips_19-68, .fricon-icons_tips_20-69 {
+	font-family: 'SR-FR-Icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.fricon-icons_tips_1-50:before {
+	content: "\e000";
+}
+.fricon-icons_tips_2-51:before {
+	content: "\e001";
+}
+.fricon-icons_tips_3-52:before {
+	content: "\e002";
+}
+.fricon-icons_tips_4-53:before {
+	content: "\e003";
+}
+.fricon-icons_tips_5-54:before {
+	content: "\e004";
+}
+.fricon-icons_tips_6-55:before {
+	content: "\e005";
+}
+.fricon-icons_tips_7-56:before {
+	content: "\e006";
+}
+.fricon-icons_tips_8-57:before {
+	content: "\e007";
+}
+.fricon-icons_tips_9-58:before {
+	content: "\e008";
+}
+.fricon-icons_tips_10-59:before {
+	content: "\e009";
+}
+.fricon-icons_tips_11-60:before {
+	content: "\e00a";
+}
+.fricon-icons_tips_12-61:before {
+	content: "\e00b";
+}
+.fricon-icons_tips_13-62:before {
+	content: "\e00c";
+}
+.fricon-icons_tips_14-63:before {
+	content: "\e00d";
+}
+.fricon-icons_tips_15-64:before {
+	content: "\e00f";
+}
+.fricon-icons_tips_16-65:before {
+	content: "\e010";
+}
+.fricon-icons_tips_17-66:before {
+	content: "\e011";
+}
+.fricon-icons_tips_18-67:before {
+	content: "\e012";
+}
+.fricon-icons_tips_19-68:before {
+	content: "\e013";
+}
+.fricon-icons_tips_20-69:before {
+	content: "\e014";
+}

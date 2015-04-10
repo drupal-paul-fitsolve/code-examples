@@ -1,0 +1,12 @@
+name = sr14-no-social
+description = Add no-social class to body for pages that are never to show social share links
+core = 7.x
+package = "SR14"
+php = 5.2.4
+version = 7.x-1.0
+project = sr14_no_social
+features[context][] = no-social
+features[ctools][] = context:context:3
+features[features_api][] = api:1
+features_exclude[dependencies][context] = context
+features_exclude[dependencies][ctools] = ctools

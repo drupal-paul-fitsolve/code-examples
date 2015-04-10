@@ -1,0 +1,289 @@
+ /**
+  * @file
+  * Styling for the button. See page 30 of the Style Guide v2.0
+  */
+
+.button,
+.button--donwload-all a {
+  background-color: #E33038;
+  .transition(0.05s linear background-color);
+  border: 0;
+  color: #FFF;
+  display: inline-block;
+  .font-size(16);
+  font-family: @font-foco;
+  font-weight: bold;
+  text-align: center;
+  line-height: normal;
+  cursor: pointer;
+  padding: 10px 30px;
+  .appearance(none);
+  border-radius: 3px;
+  text-decoration: none;
+}
+.font-fallback {
+  .button,
+  .button--donwload-all a {
+    font-family: @font-helvetica;
+  }
+}
+.button:hover,
+.button:focus,
+.button--donwload-all a:hover,
+.button--donwload-all a:focus {
+  background-color: #C72930;
+  color: #FFF;
+  text-decoration: none;
+}
+.button + .button {
+  margin-left: 1em;
+}
+.button--large {
+  .font-size(18);
+  padding: 14px 30px;
+}
+.button--grey {
+  background-color: #DDDDDD;
+  color: #444444;
+}
+.button--grey:hover,
+.button--grey:focus {
+  background-color: #999999;
+}
+.button--light-grey {
+  background-color: @medium-grey;
+  color: @darker-grey;
+}
+.button--light-grey:hover,
+.button--light-grey:focus {
+  background-color: @dark-grey;
+  color: @white;
+}
+.button--dark-grey {
+  background-color: @darker-grey;
+  color: @white;
+}
+.button--dark-grey:hover,
+.button--dark-grey:focus {
+  background-color: @black;
+}
+.button--swim {
+  background-color: #0F9FCF;
+  color: #FFF;
+}
+.button--swim:hover,
+.button--swim:focus {
+  background-color: #0B89B3;
+}
+.button--run {
+  background-color: #E33038;
+  color: #FFF;
+}
+
+.button--run[href="#pledge-step--two"] {
+  background-color: #fed75f;
+  color: #5E4617;
+}
+
+.button--run[href="#pledge-step--four"] {
+  background-color: #385783;
+}
+
+.button--run:hover,
+.button--run:focus {
+  background-color: #C72930;
+}
+
+.button--run[href="#pledge-step--two"]:hover,
+.button--run[href="#pledge-step--two"]:focus {
+  background-color: #fec649;
+}
+
+.button--run[href="#pledge-step--four"]:hover,
+.button--run[href="#pledge-step--four"]:focus {
+  background-color: #2c4a78;
+}
+
+.button--cycle {
+  background-color: #D3DE43;
+  color: #48763A;
+}
+.button--cycle:hover,
+.button--cycle:focus {
+  background-color: #B7C138;
+  color: #48763A;
+}
+.button--soldout,
+.button--soldout:hover,
+.button--soldout:focus  {
+  background-color: @med-grey;
+  color: @white;
+}
+.button--facebook {
+  background-color: #3b5998;
+  color: @white;
+  padding: 15px;
+  &:hover {
+    background-color: #3b5998;
+  }
+  &:before {
+    .icon-facebook;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: -1px;
+  }
+}
+.button--twitter {
+  background-color: #39a9e0;
+  color: @white;
+  padding: 15px;
+  &:hover {
+    background-color: #39a9e0;
+  }
+  &:before {
+    .icon-twitter;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: -1px;
+  }
+}
+.button--itunes {
+  background: transparent url(../images/components/buttons/itunes_110x40.png) center bottom no-repeat;
+  width:110px;
+  height: 40px;
+  padding:0;
+  text-indent: -9999px;
+  &:hover {
+
+  }
+  @media @fluidOnly{
+    width:110px;
+  }
+}
+.button--full-width .button,
+ .button.button--full-width {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.button--full-width-large {
+  .font-size(30);
+  width:80%;
+  padding:23px 33px;
+
+  @media @fluidOnly{
+    .font-size(24);
+    padding: 12px 33px;
+  }
+}
+
+//Full width mobile buttons
+.responsive-layout-mobile .button {
+  width:100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.responsive-layout-mobile .button + .button {
+  margin-left: 0;
+}
+
+.button.button--watch-video {
+  background-color: @darkest-grey;
+  color: white;
+  position: relative;
+  padding: 10px 20px 10px 52px;
+  opacity: 0.95;
+
+  span {
+
+  }
+  span:after {
+    .icon-play2;
+    position: absolute;
+    left: 18px;
+    top: 5px;
+    .font-size(20);
+    color: white;
+    font-weight: normal;
+  }
+}
+.button.button--watch-video:hover {
+  background-color: white;
+  color: @darkest-grey;
+
+  span:after {
+    color: @darkest-grey;
+  }
+}
+
+.front .button--watch-video-front {
+  position: absolute;
+  right: 180px;
+  bottom: 111px;
+}
+.front.responsive-layout-normal {
+  .button--watch-video-front {
+    right: 161px;
+    bottom: 49px;
+  }
+}
+.front.responsive-layout-narrow {
+  .button--watch-video-front {
+    bottom: 106px;
+    margin-right: -95px;
+    right: 50%;
+  }
+}
+.front.responsive-layout-mobile {
+  .button--watch-video-front {
+    bottom: 20px;
+    margin-right: -78px;
+    right: 50%;
+  }
+}
+
+.button.button--play-video {
+  background: url(../images/components/video/play.png) no-repeat 0 0 transparent;
+  height: 82px;
+  width: 82px;
+  text-indent: -9999em;
+  padding: 0;
+}
+.button.button--play-video:hover {
+  background-position: 0 bottom;
+}
+
+.front .button--play-video-front {
+  bottom: 40px;
+  position: absolute;
+  right: 386px;
+}
+.front.responsive-layout-normal {
+  .button--play-video-front {
+    bottom: 20px;
+    right: 293px;
+  }
+}
+.front.responsive-layout-narrow {
+  .button--play-video-front {
+    bottom: 80px;
+    margin-right: -41px;
+    right: 50%;
+  }
+}
+.front.responsive-layout-mobile {
+  .button--play-video-front {
+    bottom: 20px;
+    margin-right: -30px;
+    right: 50%;
+  }
+  .button.button--play-video {
+    background-image: url(../images/components/video/play-m.png);
+    height: 60px;
+    width: 60px;
+  }
+}
+.responsive-layout-mobile .button--itunes{
+  width:110px;
+}

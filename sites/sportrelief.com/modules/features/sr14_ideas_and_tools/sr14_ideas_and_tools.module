@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file
+ * Code for the SR14 Idea and Tools feature.
+ */
+
+include_once 'sr14_ideas_and_tools.features.inc';
+/**
+ * @file
+ * Code for the SR14 ideas and tools feature.
+ */
+
+function sr14_ideas_and_tools_init() {
+        drupal_add_library('system', 'ui.slider');
+		$path_alias = drupal_get_path_alias(current_path());
+		if (strpos($path_alias,'ideas-and-tools') !== false) {
+			drupal_add_js(drupal_get_path('module', 'sr14_ideas_and_tools') . '/js/sr14_select-to-uislider.js');
+			drupal_add_js((drupal_get_path('module', 'sr14_ideas_and_tools') . '/js/sr14-ideas-and-tools.js'), array('weight' => -1));
+			drupal_add_css(drupal_get_path('module', 'sr14_ideas_and_tools') . '/css/sr14-ideas-and-tools.css');						
+		} 
+}

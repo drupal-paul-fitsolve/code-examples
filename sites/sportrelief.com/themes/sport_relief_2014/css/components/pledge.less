@@ -1,0 +1,451 @@
+.pledge-listing {
+  overflow: hidden;
+  text-align: center;
+}
+.pledge-listing--swim .flexslider_views_slideshow_slide {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/pledge-swim.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+.pledge-listing--run .flexslider_views_slideshow_slide {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/pledge-run.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+.pledge-listing--cycle .flexslider_views_slideshow_slide {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/pledge-cycle.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+.pledge-listing--swim .flexslider_views_slideshow_slide.views-row-1 {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/swim1.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+.pledge-listing--run .flexslider_views_slideshow_slide.views-row-1 {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/run1.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+.pledge-listing--cycle .flexslider_views_slideshow_slide.views-row-1 {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/cycle1.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+.pledge-listing--swim .flexslider_views_slideshow_slide.views-row-2 {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/swim2.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+.pledge-listing--run .flexslider_views_slideshow_slide.views-row-2 {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/run2.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+.pledge-listing--cycle .flexslider_views_slideshow_slide.views-row-2 {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/cycle2.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+.pledge-listing--swim .flexslider_views_slideshow_slide.views-row-3 {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/swim3.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+.pledge-listing--run .flexslider_views_slideshow_slide.views-row-3 {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/run3.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+.pledge-listing--cycle .flexslider_views_slideshow_slide.views-row-3 {
+  .responsive-layout-normal &,
+  .responsive-layout-wide & {
+    background: url(../images/components/ideas-pledge/cycle3.png) center 30px no-repeat;
+    height: 320px;
+  }
+}
+
+#validationmessage {
+   .font-size(14);
+   color: #e22f38;
+   margin-left: 10px;
+}
+
+.pledge__name,
+.pledge__age {
+  .font-size(20);
+  font-family: @font-helvetica;
+  color: @white;
+  display: inline-block;
+  margin-top: 220px;
+}
+.pledge__name:after {
+  content: ', ';
+}
+.pledge__category {
+  color: @white;
+  .font-size(16);
+}
+
+.js .pledge-step {
+  display: none;
+  .transition(opacity 1s ease-in);
+  opacity: 0;
+  &.is-active {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.pledge-submission-form {
+  position: relative;
+  &.is-loading:before {
+    content: '';
+    background: url(../images/loading.gif);
+    .box-sizing(border-box);
+    .background-size(60px);
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    right: 5%;
+    margin-left: -30px;
+    top: 50%;
+    margin-top: -30px;
+    z-index: 999;
+  }
+
+}
+
+.pledge-idea {
+  height: 360px;
+}
+
+.pledge-idea .field-name-field-body {
+  width: inherit;
+  padding: 0 100px;
+  position: relative;
+  left: 10px;
+}
+
+.enter-event .button,
+.giving-page .button {
+  position: relative;
+}
+
+@media all and @wideOnly {
+  .context-play-games .pledge-idea .field-name-field-body {
+    left: -42px;
+  }
+}
+@media all and @narrowOnly {
+  .context-play-games .pledge-idea .field-name-field-body {
+    padding: 0;
+    left: 0px;
+    margin: 0 20px;
+  }
+}
+.responsive-layout-normal .pledge-idea .field-name-field-body {
+  padding: 0 50px;
+}
+.pledge-idea__title {
+  font-size: 2.2em;
+  margin-top: 123px;
+  padding-top: 110px;
+  padding-left: 85px;
+  padding-right: 85px;
+  line-height: 1.2em;
+  left:-40px;
+  @media all and @wideOnly {
+    padding-top: 80px;
+  }
+  @media all and @narrowOnly {
+    padding-top: 105px;
+  }
+  &--ready {
+    padding-top: 105px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 83px;
+    left: 535px;
+    @media all and @wideOnly {
+      top: -82px;
+      left: 210px;
+    }
+    @media all and @narrowOnly {
+      left: 415px;
+    }
+    height: 120px;
+    width: 0;
+    margin: 30px auto 20px;
+    background: url('../images/components/ideas-pledge/pledge-sprites2.png') no-repeat;
+  }
+  &--swim:before {
+    background-position: -152px -12px;
+    width: 199px;
+    height: 173px;
+  }
+  &--run:before {
+    background-position: 10px -15px;
+    width: 185px;
+    height: 171px;
+  }
+  &--cycle:before {
+    background-position: -320px -18px;
+    width: 199px;
+    height: 171px;
+  }
+  &--freestyle:before {
+    background-position: -528px -16px;
+    left: 510px;
+    @media all and @wideOnly {
+      left: 190px;
+    }
+    @media all and @narrowOnly {
+      left: 385px;
+    }
+    width: 269px;
+  }
+  &--ready:before {
+    background: url('../images/components/ideas-pledge/spritesheet.png') no-repeat;
+    background-position: -5px -99px;
+    width: 173px;
+    height: 94px;
+    left: 220px;
+    @media all and @wideOnly {
+      left: 305px;
+    }
+    @media all and @narrowOnly {
+      left: 200px;
+    }
+    top: -20px;
+  }
+}
+.pledge-idea__title#pledge-step--four {
+  padding-top: 115px;
+}
+@media all and @narrowOnly {
+  .pledge-step--one .field-name-field-body {
+    position: absolute;
+    top: 68px;
+    width: 880px;
+    left: -183px;
+  }
+}
+@media all and @wideOnly {
+  .pledge-step--four {
+    #ideatext {
+      position: relative;
+      left: 39px;
+      top: 40px;
+      width: 450px;
+    }
+    .pledge-idea__buttons {
+      position: relative;
+      left: -41px;
+      top: 35px;
+    }
+  }
+}
+html.ie8 .pledge-step--four .buttonyellow {
+  top: 85px;
+  left: 28px;
+}
+html.ie8 .pledge-step--four .buttonblue {
+  top: 100px;
+  right: 60px;
+}
+.pledge-step--four .button--run {
+  position: relative;
+  z-index: 10;
+}
+
+#sr-fun-and-games-pledge-submit-form {
+  margin-left: 4em;
+  h6 {
+     color: white;
+     margin-bottom: 1em;
+     margin-left: .5em;
+  }
+}
+@media all and @narrowOnly {
+  #sr-fun-and-games-pledge-submit-form {
+    top: 50px;
+  }
+}
+
+.responsive-layout-narrow .container-24 .prefix-8.pledge-idea {
+  padding-left :320px;
+  @media all and @wideOnly {
+    padding-left: 350px;
+  }
+  @media all and @narrowOnly {
+    padding-left: 198px;
+    width: 620px;
+  }
+}
+
+.pledge-idea__buttons #btnback {
+  position: relative;
+  top: -50px;
+  left: -15px;
+  display:inline-block;
+  width:47px;
+  height:47px;
+  background: url(../images/components/ideas-pledge/btn-back-disabled.png) center  no-repeat;
+  text-indent: -9000px;
+}
+
+.pledge-idea__buttons #btnback.enabled {
+  background: url(../images/components/ideas-pledge/btn-back-enabled.png) center  no-repeat;
+}
+
+.pledge-idea__buttons #btnnext {
+  position: relative;
+  top: -50px;
+  left: 15px;
+  display:inline-block;
+  width:47px;
+  height:47px;
+  background: url(../images/components/ideas-pledge/btn-next-disabled.png) center  no-repeat;
+  text-indent: -9000px;
+}
+
+.pledge-idea__buttons #btnnext.enabled {
+  background: url(../images/components/ideas-pledge/btn-next-enabled.png) center  no-repeat;
+}
+
+/* ideas generator - step 1 */
+.context-play-games {
+  &.responsive-layout-normal {
+    .pledge-step--one {
+      position: relative;
+      .buttonyellow {
+        position: absolute;
+        top: 85px;
+        left: -5px;
+      }
+      .buttonblue {
+        position: absolute;
+        top: 95px;
+        right: -48px;
+      }
+
+    }
+  }
+  .pledge-step--three .leader {
+     margin-top: 75px;
+  }
+  @media all and @narrowOnly {
+    .pledge-step--three .leader {
+      margin-top: 115px;
+    }
+  }
+  @media all and @wideOnly {
+    .pledge-step--three .leader {
+      margin-top: 60px;
+    }
+  }
+
+}
+.kids-pledge-bg .mobile-play-now {
+  display: none;
+}
+@media all and @fluidOnly {
+  .kids-pledge-bg #panels-ipe-display-panels-node-422 {
+    margin-top: -9px;
+  }
+  .kids-pledge-bg .main-content {
+    background: url ('../images/components/ideas-pledge/mobile-replacement.jpg') no-repeat left top !important;
+    position: relative;
+    height: 1799px;
+  }
+  .kids-pledge-bg .content-row-1-wrapper {
+    background: none;
+  }
+  .kids-pledge-bg .promo-wrapper,
+  .kids-pledge-bg .subpod-wrapper,
+  .kids-pledge-bg .content-row-1-wrapper,
+  .kids-pledge-bg .content-row-2-wrapper {
+    display: none;
+  }
+  .kids-pledge-bg .mobile-play-now {
+    position: absolute;
+    top: 1748px;
+    color: #fff;
+    left: 110px;
+    display: block;
+    width: 90px;
+    height: 25px;
+    text-indent: -9999px;
+  }
+}
+
+.kids-pledge-widget--wrapper {
+  display: none;
+  margin: 250px 170px 0px 170px;
+  z-index: 999;
+  position: absolute;
+  width: 860px;
+}
+
+.kids-pledge-widget--leader {
+  color: #FFF;
+  margin: 0 0 5px 0;
+}
+
+a.kids-pledge-widget--noformatlink {
+  display: block;
+  margin-left: 90px;
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.kids-pledge-widget--cta {
+  float: right;
+}
+
+.kids-pledge-widget--text {
+  color: #FFF;
+}
+
+.kids-pledge-widget--text a {
+  color: #FFF;
+}
+
+.kids-bg .subpod-wrapper .container-24 .leader.grid-24 {
+  margin-bottom: 32px;
+}

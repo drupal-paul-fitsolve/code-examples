@@ -1,0 +1,66 @@
+/**
+  * @file
+  * Text component
+  */
+
+.large-paragraph {
+  .font-size(16);
+}
+.medium-paragraph {
+  .font-size(14);
+  line-height:21px;
+}
+.responsive-layout-narrow {
+  &.front .medium-paragraph {
+  .font-size(16);
+  line-height:24px;
+  }
+}
+
+.below-pod.terms-and-conditions {
+  position:absolute;
+  bottom:-21px;
+  left:0;
+}
+
+.below-pod.terms-and-conditions a {
+  color: @darkest-grey;
+  font-weight: bold;
+}
+
+.below-pod.terms-and-conditions a:hover {
+  text-decoration: underline;
+}
+
+.responsive-layout-mobile {
+  .below-pod.terms-and-conditions {
+    bottom: auto;
+    left: auto;
+    padding-bottom: 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  .text--padded-page-title {
+    text-align: center;
+    padding: 28px 0 18px;
+  }
+}
+
+.xx-small {
+  .font-size(10);
+}
+
+.text--lead {
+  .font-size(18);
+  font-weight: bold;
+  line-height:24px;
+  font-family: @font-foco;
+  padding-bottom: 0.5em;
+  margin-top: 0;
+}
+
+// Not sure what else to call it or where to put it!?
+.text--padded-page-title {
+  padding: 53px 0 0px;
+}

@@ -1,0 +1,13 @@
+name = SR14 Fundraiser Section Theme Settings
+core = 7.x
+package = "SR14"
+php = 5.2.4
+version = 7.x-1.1
+project = sr14_fundraise_section
+features[context][] = sr14_fundraise_showcase_scroller
+features[context][] = sr14_fundraiser_showcase
+features[ctools][] = context:context:3
+features[features_api][] = api:1
+features_exclude[dependencies][context] = context
+features_exclude[dependencies][ctools] = ctools
+project path = sites/sportrelief.com/modules/features

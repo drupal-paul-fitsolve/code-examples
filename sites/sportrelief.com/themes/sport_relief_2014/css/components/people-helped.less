@@ -1,0 +1,225 @@
+/* What We Do - People Helped section */
+.people-helped {
+  cursor: pointer;
+  margin-bottom: @minor-vertical-unit--desktop;
+  position: relative;
+  background: @black;
+  .responsive-layout-mobile & {
+    background: transparent;
+  }
+}
+.people-helped.is-loading > * {
+  opacity: 0.3;
+}
+.people-helped.is-loading:after {
+  /* Content and position */
+  content: '';
+  background: url(../images/loading.gif);
+  .box-sizing(border-box);
+  .background-size(60px);
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  .responsive-layout-mobile & {
+    .background-size(40px);
+    height: 40px;
+    width: 40px;
+    left: 30%;
+    top: 20%;
+  }
+}
+.responsive-layout-mobile {
+  .people-helped {
+    .box-sizing(border-box);
+    float: left;
+    width: 25%;
+    padding-left: 5px;
+    .field-name-field-main-image {
+      .border-radius(50%);
+      overflow: hidden;
+      padding-bottom: 100%;
+      height: 0;
+    }
+    img {
+      max-width: 180%;
+      margin-left: -40%;
+    }
+  }
+}
+
+// Temporary fix until we find a good way to remove pane titles
+.people-helped .pane-title {
+  display: none;
+}
+.responsive-layout-narrow,
+.responsive-layout-normal,
+.responsive-layout-wide {
+  .people-helped__name {
+    background-color: rgba(0,0,16,0.8);
+    border-radius: 50%;
+    color: #cdd943;
+    position:absolute;
+    font: @font-foco;
+    text-align: center;
+    height: 40.193050193%;
+    line-height: 130px;
+    width: 22.413793103%;
+  }
+}
+.people-helped-title {
+  display: inline-block;
+  padding-bottom: 0;
+  padding-right: 20px;
+  margin-top: 0;
+}
+.people-helped-section {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: @darkest-grey;
+  color: @white;
+  font-weight: bold;
+  padding: 2px 7px;
+}
+.people-helped-section + .people-helped-section {
+    margin-left: 1em;
+}
+.people-helped-section--better-futures {
+  background-color: #e03442;
+}
+.people-helped-section--healthier-finances {
+  background-color: #aa0050;
+}
+.people-helped-section--stronger-communities {
+  background-color: #923a80;
+}
+.people-helped-section--safer-lives {
+  background-color: #0076a9;
+}
+.people-helped-section--fairer-society {
+  background-color: #169bca;
+}
+.responsive-layout-normal .people-helped__name {
+  line-height: 100px;
+}
+.responsive-layout-narrow .people-helped__name {
+  font-size: 1em;
+  line-height: 80px;
+}
+.responsive-layout-mobile .people-helped__name {
+  .font-size(14);
+  color: @cycle-background;
+  background: @darkest-grey;
+  .border-radius(2px);
+  padding: 5px;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.responsive-layout-mobile .is-active .people-helped__name:after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #333333 transparent transparent transparent;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -5px;
+}
+/* Font Fall back for windows machine excluding >= IE9 */
+.font-fallback {
+  .people-helped__name {
+    font: @font-helvetica;
+  }
+}
+.responsive-layout-narrow,
+.responsive-layout-normal,
+.responsive-layout-wide {
+  .people-helped__name:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  .people-helped-top-left .people-helped__name {
+    bottom: 20px;
+    right: 15px;
+  }
+  .people-helped-top-left .people-helped__name:after {
+    border-width: 12px 12px 0 0;
+    border-color: rgba(0, 0, 16, 0.8) transparent transparent transparent;
+    top: 9.9%;
+    left: 10.4%;
+  }
+  .people-helped-top-right .people-helped__name {
+    bottom: 20px;
+    left: 15px;
+  }
+  .people-helped-top-right .people-helped__name:after {
+    border-width: 0 12px 12px 0;
+    border-color: transparent rgba(0, 0, 16, 0.8) transparent transparent;
+    top: 9.9%;
+    right: 10.4%;
+  }
+  .people-helped-bottom-right .people-helped__name {
+    top: 20px;
+    left: 15px;
+  }
+  .people-helped-bottom-right .people-helped__name:after {
+    border-width: 0 0 12px 12px;
+    border-color: transparent transparent rgba(0, 0, 16, 0.8) transparent;
+    bottom: 9.9%;
+    right: 10.4%;
+  }
+  .people-helped-bottom-left .people-helped__name {
+    top: 20px;
+    right: 15px;
+  }
+  .people-helped-bottom-left .people-helped__name:after {
+    border-width: 12px 0 0 12px;
+    border-color: transparent transparent transparent rgba(0, 0, 16, 0.8);
+    bottom: 9.9%;
+    left: 10.4%;
+  }
+  .people-helped__story {
+    height: 329px;
+  }
+  .people-helped__fact {
+    margin-top: 13px;
+  }
+  .people-helped-info {
+    position: absolute;
+    top: 140px;
+    left: 0;
+  }
+}
+// Normal specific styling
+.responsive-layout-normal .people-helped__story {
+  height: 259px;
+  overflow: auto;
+}
+.responsive-layout-normal .people-helped-info {
+  top: 122px;
+}
+// Narrow specific styling
+.responsive-layout-narrow .people-helped__story {
+  height: 191px;
+  overflow: auto;
+}
+.responsive-layout-narrow .people-helped-info {
+  top: 119px;
+}
+.js-people-helped-uuid {
+  display: none;
+}
+
+/* IE8 cannot handle transparency so we'll specify normal colours instead */
+.ie8 .people-helped__name {
+  background-color: @dark-grey;
+}

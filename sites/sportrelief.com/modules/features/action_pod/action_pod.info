@@ -1,0 +1,16 @@
+name = Action Pod
+core = 7.x
+package = "SR14"
+php = 5.2.4
+version = 7.x-1.0-beta2
+project = action_pod
+dependencies[] = downloadable
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[field_base][] = field_download_item
+features[field_instance][] = fieldable_panels_pane-action_pod-field_download_item
+features[variable][] = field_bundle_settings_fieldable_panels_pane__action_pod
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][entityreference] = entityreference
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][strongarm] = strongarm

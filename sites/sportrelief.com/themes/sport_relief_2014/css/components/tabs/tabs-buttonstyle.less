@@ -1,0 +1,157 @@
+/**
+  * @file
+  * SR14-specific styling for tabs
+  */
+
+.tab-wrapper--button-style {
+  background: #FFFFFF;
+  .border-radius(3px);
+  margin-bottom: 20px;
+  padding:20px;
+
+  a { text-decoration:none; }
+
+  a:hover{
+    text-decoration:none;
+  }
+}
+
+.context-faq, .context-legal, .context-privacy-policy {
+  .promo-bottom-wrapper {
+    display:none;
+  }
+}
+
+ .responsive-layout-mobile  {
+    .quickfinderIntro {
+      display:none;
+    }
+  }
+
+.tabs--button-style {
+
+  .leader {
+    margin-top:0px;
+  }
+
+  .rounded-pane {
+
+    .border-radius(3px);
+    background: @white;
+    padding:10px 10px 0px 10px;
+
+    .subpod-wrapper {
+      display:none;
+    }
+
+    h2.pane-title {
+      margin: 25px 0px 0px 20px;
+
+      .responsive-layout-mobile &{
+        margin: 25px 0px 0px 10px;
+      }
+    }
+
+    h3 {
+      margin-top:25px;
+      padding-top:30px;
+      border-top: 1px dashed #d1d1d1;
+    }
+
+    ul li {
+      width: 96% !important;
+    }
+
+    .q-heading {
+      text-decoration: none !important;
+
+      strong {
+        .font-size(15);
+      }
+    }
+  }
+
+  .tab-link {
+    background:#EEE;
+    color: #000;
+    width:150px;
+    font-weight: normal;
+    font-size: 13px; line-height:16px;
+    margin:10px;
+    padding: 9px 10px;
+    height:32px;
+    .border-radius(3px);
+    .transition(0.05s linear background-color);
+
+    &:hover {
+      background:@medium-grey;
+      text-decoration:none;
+    }
+
+    &.tabs-active {
+      background:#E42932 !important;
+      color: #FFF !important;
+    }
+
+    &:hover {
+      background:@medium-grey;
+    }
+
+    .responsive-layout-normal & {
+      padding: 9px 5px;
+    }
+
+    .responsive-layout-narrow & {
+      padding: 9px 5px;
+      margin: 5px;
+      width: 145px;
+    }
+  }
+
+  .item-list {
+    text-align: center;
+
+    ul li {
+      float: left;
+    }
+  }
+
+  h2.tabs-title {
+    margin-left:10px;
+    text-decoration: none;
+  }
+
+  .tab-contents {
+    background:@white;
+    .border-radius(3px);
+
+    ul {
+      margin-top:15px;
+      margin-bottom:15px;
+    }
+  }
+
+  .tab-content {
+   height:auto !important;
+  }
+}
+
+.tabs-selectbox--wrapper {
+  margin: 0 auto 30px;
+  width: 90%;
+  display:none;
+
+  .responsive-layout-mobile & {
+    display:block;
+  }
+
+  .dk_options_inner {
+    max-height:none;
+  }
+}
+
+.responsive-layout-mobile {
+  .tabs-selectbox--wrapper { width: 100%; }
+}
+
+

@@ -1,0 +1,11 @@
+name = SR14 Idea and Tools
+core = 7.x
+package = "SR14"
+php = 5.2.4
+version = 7.x-1.0-beta1
+project = sr14_ideas_and_tools
+features[context][] = sr14_ideas_and_tools_tools_overlay
+features[ctools][] = context:context:3
+features[features_api][] = api:1
+features_exclude[dependencies][context] = context
+features_exclude[dependencies][ctools] = ctools

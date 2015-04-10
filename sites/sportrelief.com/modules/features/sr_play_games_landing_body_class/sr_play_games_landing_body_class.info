@@ -1,0 +1,10 @@
+name = SR Play Games Landing Body Class
+core = 7.x
+package = "SR14"
+version = 7.x-1.0
+project = sr_play_games_landing_body_class
+features[context][] = play_games_body_class
+features[ctools][] = context:context:3
+features[features_api][] = api:1
+features_exclude[dependencies][context] = context
+features_exclude[dependencies][ctools] = ctools

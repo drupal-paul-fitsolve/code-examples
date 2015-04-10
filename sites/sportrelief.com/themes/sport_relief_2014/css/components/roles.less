@@ -1,0 +1,12 @@
+/**
+ * @file
+ * Roles component
+ */
+
+// Hide some of the cogs from specific roles.  This is done to obfuscate a few things from certain users whilst still allowing them to edit specific content if they are given the edit url.
+// Note that this may not be necessary as permissions alone may do the job BUT this is there incase we have to increase permissions for a specific role, and want the safety net
+body.role-digital-pm, body.role-content-editor, body.role-marketing-(general), body.role-marketing-(kids-only), body.role-marketing-(schools-only) {
+  .pane-fieldable-panels-pane .contextual-links-wrapper {
+    display:none;
+  }
+}

@@ -1,0 +1,133 @@
+@import "../utilities/all-utilities.less";
+
+.leaderboard {
+  padding: 145px 0 20px;
+  &:target {
+    .pod--dark;
+  }
+}
+
+.leaderboard.selected .view-id-games_leaderboard {
+  background: #282828;
+}
+
+.leaderboard__entry {
+  background: @light-grey;
+  display: block;
+  padding: 15px 20px;
+  overflow: hidden;
+  .leaderboard:target & {
+    background: #000;
+  }
+}
+
+.leaderboard.selected .leaderboard__entry {
+  background: black;
+}
+
+// Poor mans nth-child(2) and up
+.leaderboard__entry + .leaderboard__entry {
+  background: transparent;
+  .leaderboard:target & {
+    background: transparent;
+  }
+}
+
+// Poor mans nth-child(2) and up
+.leaderboard.selected  .leaderboard__entry + .leaderboard__entry {
+  background: #282828;
+}
+
+// Poor mans nth-child(3) and up
+.leaderboard__entry + .leaderboard__entry + .leaderboard__entry {
+  background: @light-grey;
+  .leaderboard:target & {
+    background: #000;
+  }
+}
+
+.leaderboard.selected .leaderboard__entry + .leaderboard__entry + .leaderboard__entry {
+  background: black;
+}
+
+// Poor mans nth-child(4) and up
+.leaderboard__entry + .leaderboard__entry + .leaderboard__entry + .leaderboard__entry {
+  background: transparent;
+  .leaderboard:target & {
+    background: transparent;
+  }
+}
+
+.leaderboard.selected  .leaderboard__entry + .leaderboard__entry + .leaderboard__entry + .leaderboard__entry {
+  background: transparent;
+}
+
+.leaderboard.selected h3,
+.leaderboard.selected .leaderboard__entry__position,
+.leaderboard.selected .leaderboard__entry__score {
+  color: white;
+}
+
+.kids-bg #game-jump.selected,
+.kids-bg #game-drop.selected,
+.kids-bg #game-hatch.selected
+ {
+  background-color: #282828;
+}
+
+.leaderboard__entry__position {
+  color: #999999;
+  .font-size(18);
+  font-weight: normal;
+  line-height: 23px;
+  padding: 5px 0;
+  background: url('../../images/components/leaderboard/sprite.png') no-repeat 0 -49px;
+  display: block;
+  height: 29px;
+  text-indent: -999em;
+  overflow: hidden;
+  .leaderboard:target & {
+    color: @white;
+  }
+}
+
+// Poor mans nth-child(2) and up
+.leaderboard__entry + .leaderboard__entry .leaderboard__entry__position  {
+  background-position: 0 -98px;
+  background-color: transparent;
+}
+
+// Poor mans nth-child(3) and up
+.leaderboard__entry + .leaderboard__entry + .leaderboard__entry .leaderboard__entry__position  {
+  background-position: 0 0;
+}
+
+// Poor mans nth-child(4) and up
+.leaderboard__entry + .leaderboard__entry + .leaderboard__entry + .leaderboard__entry .leaderboard__entry__position  {
+  background: none;
+  text-indent: 10px;
+  &:after {
+    content: 'th';
+  }
+}
+.leaderboard__entry__name {
+  .font-size(18);
+  font-weight: normal;
+  line-height: 23px;
+  padding: 5px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  .leaderboard:target & {
+    color: @white;
+  }
+}
+.leaderboard__entry__score {
+  color: #999999;
+  text-align: right;
+  .font-size(16);
+  line-height: 23px;
+  padding: 5px 0;
+  .leaderboard:target & {
+    color: @white;
+  }
+}

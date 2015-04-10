@@ -1,0 +1,280 @@
+/**
+  * @file
+  * Action Pods component
+  */
+
+/* Tool list */
+.action-pod-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  line-height: 1.5em;
+  color: #000;
+  text-align: center;
+  height: 180px;
+
+	.tile { display: table; }
+	.inner-wrap { display: table-cell; vertical-align: middle; padding: 0px 15px;}
+	h3.title { font-size: 16px; font-weight: bold; margin-top: 30px; }
+	.curtain-icon {
+	    position: absolute;
+	    top:-180px;
+	    bottom: 0px;
+	    -webkit-transition-property: top, bottom;
+	    -webkit-transition-duration: 0.5s;
+	    -moz-transition-property: top, bottom;
+	    -moz-transition-duration: 0.5s;
+	    -o-transition-property: top, bottom;
+	    -o-transition-duration: 0.5s;
+	    width: 100%;
+	}
+	.curtain-icon:hover {
+	    top:0px;
+	    bottom: -180px;
+	}
+	.normal-state,
+	.rollover-state {
+		background-color: #f9f9f9;
+		height: 180px;
+		width: 100%;
+	}
+	span.text {
+		.font-size(16);
+    font-weight: bold;
+	}
+
+}
+
+li.first .action-pod-item {margin-left: 0px;}
+li.last .action-pod-item {margin-right: 0px;}
+
+.pod--action-pod {
+	.pod-text h3 {
+		background: url(../images/action-pod-icon.png) no-repeat left top transparent;
+		padding-left: 50px;
+	}
+}
+
+.responsive-layout-narrow {
+	.pod--action-pod h3 {
+		height: 50px;
+		margin-bottom: 0;
+		line-height: 50px;
+		background-position: 190px 10px;
+	}
+	.pod--action-pod .pod__body {
+		padding-bottom: 0;
+		padding-top: 20px;
+	}
+}
+
+.responsive-layout-mobile {
+
+	.pod--action-pod .pod-text h3 {
+		background: none;
+		padding-left: 0;
+		text-align: left;
+		font-weight: bold;
+		.font-size(18);
+	}
+
+	.action-pod-item {
+		width:50%;
+		float:left;
+		margin:0;
+		position: relative;
+		min-height: 180px;
+		height: auto;
+		padding-bottom: 40px;
+		background-color: white;
+
+		.curtain-icon {
+			position: relative;
+			top: 0;
+		}
+		.normal-state,
+		.rollover-state {
+			height: auto;
+		}
+
+		.normal-state {
+			.title {
+				.font-size(13);
+			}
+		}
+
+		.rollover-state {
+			position: absolute;
+			bottom: -35px;
+			a .text {
+				color: @darkest-grey;
+				.font-size(13);
+				font-weight: normal;
+			}
+		}
+	}
+
+}
+
+
+
+.context-error-404, .context-error-403 {
+
+	.main-content {
+		padding-bottom:0px;
+	}
+
+	.action-pod--heading h3 {
+		background: url(/sites/sportrelief.com/themes/sport_relief_2014/images/action-pod-icon.png) no-repeat left top rgba(0, 0, 0, 0);
+		padding-left: 50px;
+	}
+
+	.error-page--body-text {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 2px dotted @dark-grey;
+	}
+
+	.pane-block-7 .action-pod-item, .pane-block-7 li.first .action-pod-item {
+		width: 145px !important;
+		margin-top: 0;
+		margin-bottom: 20px;
+		z-index:1;
+
+		h3.title{
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+	}
+
+	.pane-block-7 .action-pod-item, .pane-block-7 .tile {
+		height:145px;
+	}
+
+	.curtain-icon {
+		top: -145px ;
+	}
+
+	.pane-block-7 li.first .action-pod-item {
+		margin-left: 10px;
+	}
+
+
+	&.responsive-layout-normal, &.responsive-layout-narrow {
+
+		.pane-block-7 {
+
+			.action-pod-item .inner-wrap {
+				//padding: 0px 5px;
+			}
+
+			.action-pod-item, li.first .action-pod-item {
+			width: 110px !important;
+			margin-top: 0px;
+
+				h3.title{
+					margin-top: 10px;
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+
+	&.responsive-layout-normal {
+
+		.pane-block-7 {
+
+			.action-pod-item, li.first .action-pod-item {
+				width: 110px !important;
+				margin-top: 0px;
+
+				h3.title{
+					margin-top: 10px;
+					margin-bottom: 0;
+				}
+			}
+
+			.action-pods-pane {
+				margin-left:35px;
+			}
+
+			.action-pod-item, .tile {
+			height:145px;
+			}
+		}
+	}
+
+
+
+	&.responsive-layout-narrow {
+
+		.pane-block-7 {
+
+			.action-pod-item, li.first .action-pod-item {
+				width: 160px !important;
+				margin-right:0px;
+				margin-bottom:10px;
+
+				h3.title {
+					margin-top:10px;
+					margin-bottom:0px;
+				}
+			}
+		}
+	}
+
+
+
+	&.responsive-layout-mobile {
+
+		.pane-block-7 {
+			.action-pod-item, li.first .action-pod-item {
+				margin:0;
+				width: 50% !important;
+			}
+		}
+
+		.action-pod--heading h3 {
+			padding-bottom: 14px;
+		}
+
+		.error-page--image img {
+			margin:0 auto !important;
+		}
+
+		.action-pod-item {
+			padding-bottom: 0px;
+
+			.rollover-state {
+				bottom: -75px;
+			}
+		}
+	}
+}
+
+/* schools handy tools */
+.handy-tools .container-center {
+  overflow: hidden;
+}
+@media all and @narrowOnly {
+  .container-24 .handy-tools li {
+    margin: 0px 12px 0px 0px;
+    &.first {
+      margin-left: 12px;
+    }
+    &.last {
+      margin-right: 12px;
+    }
+  }
+}
+@media all and @normalOnly {
+  .action-pod-item h3.title {
+    font-size: 13px;
+  }
+}

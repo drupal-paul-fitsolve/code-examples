@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SR Play Games Landing Body Class feature.
+ */
+
+include_once 'sr_play_games_landing_body_class.features.inc';

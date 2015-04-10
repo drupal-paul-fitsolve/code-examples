@@ -1,0 +1,377 @@
+@media all and @narrowAndGreater {
+  body.bg {
+    background: url(../images/components/backgrounds/bluebackground-fade.jpg) center 100px no-repeat #EFEBE7;
+  }
+  .promo-bg .promo-wrapper {
+    background: url(../images/components/backgrounds/bluebackground.jpg) center bottom no-repeat #83d4e5;
+  }
+  // SRCR-307: Preventing large bg images being loaded on mobile/fluid breakpoint
+  .whiteshard-bg {
+    background: url(../images/components/backgrounds/whitebackground.jpg) center top no-repeat #ffffff;
+  }
+  .blackshard-bg {
+    background: url(../images/components/backgrounds/blackbackground.jpg) center top no-repeat #ffffff;
+  }
+}
+
+@media all and @fluidOnly {
+  body.bg {
+    background: url(../images/components/backgrounds/bluebackground-fade-mobile.jpg) top center no-repeat #EFEBE7;
+  }
+  .promo-wrapper {
+    // This prevents margins breaking out of the container and pushing the background down
+    border-top: 1px solid transparent;
+  }
+  .promo-bg .promo-wrapper {
+    background: url(../images/components/backgrounds/bluebackground-mobile.jpg) center bottom no-repeat #cee8f5;
+  }
+  .whiteshard-bg {
+    background-color: @white;
+  }
+  .blackshard-bg {
+    background-color: @black;
+  }
+}
+
+body.bg.promo-bg {
+  background-image: none!important;
+}
+
+.black-bg {
+  background-color: #1d1d1d;
+}
+.light-grey-bg {
+  background-color: #f4f4f4;
+}
+.medium-grey-bg {
+  background-color: #e8e8e8;
+}
+.darker-grey-bg {
+  background-color: #d5d5d5;
+}
+.darkest-grey-bg {
+  background-color: #2b2b2b;
+}
+.promo-bottom-wrapper {
+  background-color: white;
+}
+
+.bg-padding {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.bg-last-row {
+  margin-bottom: -40px;
+}
+
+.responsive-layout-mobile {
+  .light-grey-bg,
+  .medium-grey-bg,
+  .darker-grey-bg {
+    background-color: transparent;
+  }
+  .bg-padding {
+    padding: 0px;
+  }
+  .bg-last-row {
+    margin-bottom: 0px;
+  }
+}
+
+/* No background needed for homepage as the promo is full width */
+body.front, body.front .promo-wrapper { background-image: none!important; }
+
+/* SRCR-307: Preventing large bg images being loaded on mobile/fluid breakpoint */
+@media all and @narrowAndGreater {
+  body.front .promo-bottom-wrapper {
+    background: url(../images/components/backgrounds/whitebackground.jpg) center top no-repeat #ffffff;
+  }
+}
+
+@media all and @fluidOnly {
+  body.front .promo-bottom-wrapper {
+    background-color: @white;
+  }
+}
+
+.subpod-wrapper,
+.ubersubpod-wrapper {
+  background-color: #ddd;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+// Backgrounds for health and training
+.background-dark-gradient-bg {
+  background: #2E2E2E; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #343434 0%, #343434 50%, #2e2e2e 50%, #2e2e2e 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#343434), color-stop(50%,#343434), color-stop(50%,#2e2e2e), color-stop(100%,#2e2e2e)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #343434 0%,#343434 50%,#2e2e2e 50%,#2e2e2e 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #343434 0%,#343434 50%,#2e2e2e 50%,#2e2e2e 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #343434 0%,#343434 50%,#2e2e2e 50%,#2e2e2e 100%); /* IE10+ */
+  background: linear-gradient(45deg, #343434 0%,#343434 50%,#2e2e2e 50%,#2e2e2e 100%); /* W3C */
+}
+
+// Backgrounds for fun and games
+.kids-bg {
+  .promo-wrapper {
+    background: url(../images/components/backgrounds/bg-kids--normal.jpg) center bottom repeat-x #EEFDFF;
+    .responsive-layout-wide& {
+      background-image: url(../images/components/backgrounds/bg-kids--wide.jpg);
+    }
+    .responsive-layout-mobile& {
+      background-image: url(../images/components/backgrounds/bg-kids--narrow.jpg);
+      .playgames& {
+        #flexslider-1 {
+            display:none;
+        }
+      }
+      #mini-panel-fun_and_games_landing {
+         height: 360px;
+         background: url(../images/components/backgrounds/game-mobile.jpg) center top no-repeat;
+         background-size: 320px 360px;
+         cursor: pointer;
+      }
+    }
+    .pledge-step--one {
+      .field-name-field-body {
+       background-image: url(../images/components/backgrounds/kids-pledge-top-step1.png);
+       height: 191px;
+      }
+    }
+
+  }
+  &.responsive-layout-normal {
+    .pledge-step--one .field-name-field-body {
+      background-position: -90px 0px;
+    }
+  }
+  .main-content {
+    background: url(../images/components/backgrounds/bg-kids-bottom.jpg) center top no-repeat #eeeeee;
+    .responsive-layout-wide& {
+      background-image: url(../images/components/backgrounds/bg-kids-bottom--wide.jpg);
+    }
+  }
+  #game-jump {
+    background: url(/sites/sportrelief.com/themes/sport_relief_2014/images/components/backgrounds/leaderboard_logo_1.jpg) top center no-repeat;
+    background-size: 100% 145px;
+    background-color: white;
+  }
+  #game-drop {
+    background: url(/sites/sportrelief.com/themes/sport_relief_2014/images/components/backgrounds/leaderboard_logo_2.jpg) top center no-repeat;
+    background-size: 100% 145px;
+    background-color: white;
+  }
+  #game-hatch {
+    background: url(/sites/sportrelief.com/themes/sport_relief_2014/images/components/backgrounds/leaderboard_logo_3.jpg) top center no-repeat;
+    background-size: 100% 145px;
+    background-color: white;
+  }
+}
+.kids-pledge-bg {
+  .promo-wrapper {
+    background: url(../images/components/backgrounds/kids-pledge-top--normal.png) center top repeat-x #84b652;
+    .responsive-layout-wide& {
+      background-image: url(../images/components/backgrounds/kids-pledge-top--normal.png);
+      height: 1048px;
+    }
+    .container-24 {
+      background: url("../images/components/backgrounds/Name_Ticker_idle.gif") top center no-repeat;
+      height: 796px;
+    }
+    .container-24.clicked {
+      background: url("../images/components/backgrounds/Name_Ticker_Clicked.gif") top center no-repeat;
+      height: 796px;
+    }
+  }
+  .content-row-1-wrapper {
+    background: url(../images/components/backgrounds/bg-kids-pipes--normal.gif) center top no-repeat #edebe7;
+    height: 3597px;
+    .responsive-layout-wide& {
+      background: url(../images/components/backgrounds/bg-kids-pipes--normal.gif) center top no-repeat #edebe7;
+    }
+  }
+  .content-row-2-wrapper {
+    background: url("../images/components/backgrounds/Lab_idle.gif") center top no-repeat #DEDEDE;
+    height: 754px;
+    position: relative;
+    right: 5px;
+    @media all and @wideOnly {
+      right: 6px;
+    }
+  }
+  .content-row-2-wrapper.clicked {
+    background: url("../images/components/backgrounds/Lab_Clicked.gif") center top no-repeat #DEDEDE;
+  }
+}
+
+.responsive-layout-narrow.kids-pledge-bg .promo-wrapper .container-24 {
+    background: url("../images/components/backgrounds/Name_Ticker_narrow.png") center 170px no-repeat;
+}
+
+// Backgrounds for the what we do page
+.context-what-we-do.responsive-layout-mobile .main-content {
+  padding: 0;
+}
+.context-what-we-do .content-row-wrapper {
+  position: relative;
+  .responsive-layout-mobile& {
+    padding: 1px 10px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -45px;
+    top: 0;
+    width: 90px;
+    height: 40px;
+    background-image: url(../images/components/backgrounds/arrows-what-we-do.png);
+    background-position: 999em top;
+    background-repeat: no-repeat;
+  }
+}
+// Full width wrappers
+.context-what-we-do .content-row-1-wrapper {
+  background: @white url(../images/components/spend-areas/spend-areas-background.png) center 220px no-repeat;
+  padding: 80px 0 0;
+  position: relative;
+  .responsive-layout-mobile& {
+    background: @lightest-grey;
+    padding-top: 50px;
+  }
+   &:before {
+    background-position: 0 top;
+    .responsive-layout-mobile& {
+      background-position: -90px top;
+    }
+  }
+}
+.context-what-we-do .content-row-2-wrapper {
+  background: @lightest-grey;
+  .responsive-layout-mobile& {
+    background: @white;
+  }
+  &:before {
+    background-position: -90px top;
+    .responsive-layout-mobile& {
+      background-position: -180px top;
+    }
+  }
+}
+.context-what-we-do .content-row-3-wrapper {
+  background: @darker-grey;
+  &:before {
+    background-position: -180px top;
+    .responsive-layout-mobile& {
+      background-position: -90px top;
+      padding: 1px 0;
+    }
+  }
+}
+.context-what-we-do .content-row-4-wrapper {
+  border-top: 1px solid @darker-grey;
+  background: @darker-grey;
+  .responsive-layout-mobile& .row {
+    margin-top: 0;
+  }
+}
+.context-what-we-do .content-row-5-wrapper {
+  background: @lightest-grey;
+}
+.context-what-we-do .content-row-6-wrapper {
+  background: @lightest-grey;
+  padding-top: 40px;
+  .responsive-layout-mobile& {
+    padding-top: 40px;
+  }
+  &:before {
+    background-position: -270px top;
+  }
+}
+
+.schools-landing {
+  background-color: white;
+
+  &.responsive-layout-normal,
+  &.responsive-layout-narrow,
+  &.responsive-layout-mobile {
+      background-color: white;
+    }
+}
+
+.schools-landing.promo-bg.context-schools {
+  .promo-wrapper {
+    background: url(../images/components/backgrounds/bg-schools-landing-wide-promo.jpg) center bottom no-repeat #b1e0f4;
+  }
+  &.responsive-layout-normal .promo-wrapper {
+    background: url(../images/components/backgrounds/bg-schools-landing-normal-promo.jpg) center bottom no-repeat #b1e0f4;
+  }
+  &.responsive-layout-narrow .promo-wrapper {
+    background: url(../images/components/backgrounds/bg-schools-landing-narrow-promo.jpg) center bottom no-repeat #b1e0f4;
+  }
+  &.responsive-layout-mobile .promo-wrapper {
+    background: url(../images/components/backgrounds/bg-schools-landing-fluid.jpg) center bottom no-repeat #b1e0f4;
+  }
+}
+
+.promo-bg.context-schools {
+  .promo-wrapper {
+    background: url(../images/components/backgrounds/bg-schools-main-wide-promo.jpg) center bottom no-repeat #b1e0f4;
+  }
+  &.responsive-layout-normal .promo-wrapper {
+    background: url(../images/components/backgrounds/bg-schools-main-normal-promo.jpg) center bottom no-repeat #b1e0f4;
+  }
+  &.responsive-layout-narrow .promo-wrapper {
+    background: url(../images/components/backgrounds/bg-schools-main-narrow-promo.jpg) center bottom no-repeat #b1e0f4;
+  }
+  &.responsive-layout-mobile .promo-wrapper {
+    background: url(../images/components/backgrounds/bg-schools-main-fluid.jpg) center bottom no-repeat #b1e0f4;
+  }
+}
+
+.promo-bg.nurseries {
+  .promo-wrapper {
+    background: url(../images/components/backgrounds/bg_nurseries_wide.jpg) center top no-repeat #b1e0f4;
+  }
+  &.responsive-layout-normal .promo-wrapper {
+    background: url(../images/components/backgrounds/bg_nurseries_normal.jpg) center top no-repeat #b1e0f4;
+  }
+}
+
+/* Fixed image for pop-up survey on kids section */
+.kids-section-pop-up-survey {
+  display: block;
+  background: url(../images/components/backgrounds/kids-pop-up-survey-bg.png) no-repeat top left;
+  width: 53px;
+  height: 184px;
+  position: fixed;
+  top: 400px;
+  left: 0px;
+  text-indent: -9999px;
+  z-index: 10;
+}
+
+.promo-bg--off-white{
+  background: url(../images/components/backgrounds/bg--off-white.jpg) repeat-x bottom left #e9e8e3;
+}
+
+/* IE8 */
+.ie8 {
+
+  body.bg {
+    background: url(../images/components/backgrounds/bluebackground-fade.jpg) center 100px no-repeat #EFEBE7;
+  }
+  .promo-bg .promo-wrapper {
+    background: url(../images/components/backgrounds/bluebackground.jpg) center bottom no-repeat #83d4e5;
+  }
+  .whiteshard-bg {
+    background: url(../images/components/backgrounds/whitebackground.jpg) center top no-repeat #ffffff;
+  }
+  .blackshard-bg {
+    background: url(../images/components/backgrounds/blackbackground.jpg) center top no-repeat #ffffff;
+  }
+
+}

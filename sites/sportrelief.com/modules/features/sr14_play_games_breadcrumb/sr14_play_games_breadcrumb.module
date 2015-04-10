@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the sr14_play_games_breadcrumb feature.
+ */
+
+include_once 'sr14_play_games_breadcrumb.features.inc';

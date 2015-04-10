@@ -1,0 +1,204 @@
+ /**
+  * @file
+  * Headline styling. See page 26 of Style Guide v2.0.
+  */
+
+h1,
+.headline {
+  color: #292929;
+  font-family: @font-foco;
+  font-weight: bold;
+  -webkit-text-stroke: 1px;
+  .font-size(46);
+  line-height: 46px;
+}
+.background-dark .headline {
+  color: @white;
+}
+.headline.headline--huge {
+  .font-size(70);
+  line-height: 58px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.responsive-layout-normal {
+  h1,
+  .headline {
+    .font-size(40);
+    line-height: 42px;
+  }
+  .headline.headline--huge {
+    .font-size(56);
+    line-height: 48px;
+  }
+  &.front .headline.headline--huge {
+    margin-bottom:15px;
+  }
+}
+.responsive-layout-narrow {
+  h1,
+  .headline {
+    .font-size(32);
+    line-height: 34px;
+  }
+  .headline.headline--huge {
+    .font-size(56);
+    line-height: 48px;
+  }
+  &.front .headline.headline--huge {
+    .font-size(60);
+    line-height: 50px;
+  }
+}
+.responsive-layout-mobile {
+  h1,
+  .headline {
+    .font-size(30);
+    line-height: 32px;
+  }
+  .headline.headline--huge {
+    .font-size(30);
+    line-height: 32px;
+  }
+}
+.heading--three h2 {
+  .font-size(28);
+  line-height: 1em;
+}
+.responsive-layout-normal {
+  .heading--three h2 {
+    .font-size(23);
+    line-height: 23px;
+  }
+}
+.responsive-layout-narrow {
+  .heading--three h2 {
+    .font-size(20);
+    line-height: 20px;
+  }
+}
+.responsive-layout-mobile {
+  .heading--three h2 {
+    .font-size(21);
+    line-height: 1.0952em;
+  }
+}
+.headline--join-fun-games h2 {
+  background: url(../images/components/headlines/join-the-fun-games.png) no-repeat 0 0 transparent;
+  text-indent: -9999em;
+  width: 292px;
+  height: 74px;
+  .box-sizing(border-box);
+}
+.responsive-layout-normal {
+  .headline--join-fun-games h2 {
+    background: url(../images/components/headlines/join-the-fun-games-normal.png) no-repeat 0 0 transparent;
+    width: 238px;
+    height: 60px;
+  }
+  .headline--join-fun-games.headline--join-fun-games__front h2 {margin-top:80px;}
+}
+.responsive-layout-narrow {
+  .heading--three h2,
+  .headline--join-fun-games h3 {
+    .font-size(28);
+  }
+  .headline--join-fun-games.headline--join-fun-games__front h2 {margin-top:80px;}
+}
+.responsive-layout-narrow .headline--join-fun-games h2,
+.responsive-layout-mobile .headline--join-fun-games h2 {
+  padding-top: 45px;
+}
+.pod .alpha.headline--join-fun-games__front .pod__title + .pod__body {padding:0 25px 25px}
+.headline--join-fun-games.headline--join-fun-games__front h2 {
+  margin: 70px auto 0;
+  padding: 0;
+}
+.front.responsive-layout-narrow .headline--join-fun-games.headline--join-fun-games__front h2 {
+  margin: 45px auto 0;
+}
+.front.responsive-layout-mobile .headline--join-fun-games.headline--join-fun-games__front {
+  h2 {
+    margin: 35px auto 0;
+    background: url(../images/components/headlines/join-the-fun-games-mobile.png) no-repeat 0 0 transparent;
+    width: 220px;
+    height: 55px;
+  }
+  h3 {
+    .font-size(26);
+  }
+}
+
+
+.context-contact-us{
+  .text-align-center {
+    .headline {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    strong {
+      color: @red;
+    }
+    p {
+      margin: 0 auto 15px auto;
+      width: 80%;
+
+      a {
+        color: @red;
+        text-decoration:none;
+      }
+   }
+  }
+}
+
+.context-order-stuff{
+  h1.headline--huge {
+    text-transform: none;
+  }
+}
+
+
+// Banner Next On text classes
+.next-on--wrapper{
+  float: right;
+  position: relative;
+  p{
+    &.next-on-dayname,
+    &.next-on-daymonth,
+    &.next-on-time{
+      margin-top: 0;
+    }
+    &.next-on{
+      margin-bottom: 8px;
+    }
+  }
+  &.next-on--wrapper--bbc-one:after,
+  &.next-on--wrapper--bbc-two:after{
+    content: "";
+    width: 105px;
+    height: 70px;
+    background:url('../images/components/headlines/bbc-logo-sprite.png') no-repeat 0px 0px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+  }
+  &.next-on--wrapper--bbc-two:after{
+    background-position: 0px -101px;
+  }
+}
+
+
+
+p{
+  &.next-on {
+    font-size: 1.5em;
+    line-height: 1.25em;
+  }
+  &.next-on-dayname,
+  &.next-on-daymonth {
+    font-size: 1.25em;
+  }
+  &.next-on-time {
+    color: @dark-grey;
+  }
+}

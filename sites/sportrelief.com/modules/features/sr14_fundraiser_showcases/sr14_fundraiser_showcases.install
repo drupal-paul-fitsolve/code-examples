@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * Install for the SR14 Fundraiser Showcase.
+ */
+
+/**
+ * Adding CORS (cross origin resource sharing) configuration for youtube uploader path "youtube_uploader/nexturl"
+ */
+function sr14_fundraiser_showcases_update_7001() {
+  // If CORS module exists and is enabled update settings
+  if(module_exists('cors')){
+
+   $settings = variable_get('cors_domains', 0);
+
+   // If nothing returned from settings
+   if(!$settings){
+     $settings = array();
+   }
+
+   $settings = $settings + array('youtube_uploader/nexturl' => '*|*|application/json');
+
+   variable_set('cors_domains', $settings);
+
+  }
+}

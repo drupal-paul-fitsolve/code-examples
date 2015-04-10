@@ -1,0 +1,126 @@
+/* Split Tests */
+
+/*Homepage*/
+.split-b {
+  h1 { margin-bottom: 0; }
+  .subpreface-zone-wrapper { display: none; }
+  .leader-double { margin-top: 50px; }
+
+  &.responsive-layout-wide {
+    .leader-double { margin-top: 70px; }
+    .stick-image--front-promo {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+
+      .pane-bundle-image {
+        left: 20px;
+        position: absolute;
+        bottom: 0;
+        width: 380px;
+      }
+    }
+    .promo-wrapper .icon-pod--run {
+      margin-left: 400px;
+    }
+    .promo-wrapper .row { margin-top: 30px; }
+    .pod .icon-pod--front .pod__body, .pod .alpha.icon-pod--front .pod__body, .pod .omega.icon-pod--front .pod__body {
+      padding-bottom: 40px;
+    }
+  }
+  &.responsive-layout-normal {
+    .heading--three h2 { font-size: 22px; }
+    .medium-paragraph { font-size: 13px; }
+    .headline.headline--huge {
+      font-size: 45px;
+      line-height: 37px;
+    }
+    .half-price-badge--front {
+      right: -7px;
+      top: -51px;
+    }
+    .stick-image--front-promo {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+
+      .pane-bundle-image {
+        left: 20px;
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+      }
+    }
+    .icon-pod--run {
+      margin-left: 300px;
+    }
+  }
+  &.responsive-layout-narrow .half-price-badge--front,
+  &.responsive-layout-wide .half-price-badge--front {
+    right: -12px;
+    top: -71px;
+  }
+  .mejs-overlay-button {
+    background: url(../images/components/video/play.png) no-repeat 0 bottom transparent;
+    height: 82px;
+    width: 82px;
+    margin-left: -41px;
+    margin-top: -82px!important;
+  }
+  .mejs-overlay:hover .mejs-overlay-button { background-position: 0 bottom; }
+  .mejs-overlay .mejs-overlay-button:hover { background-position: 0 top; }
+  .promo-wrapper .cr-mediaelement-video { margin-top: 20px; }
+
+  &.responsive-layout-narrow {
+    .stick-image--front-promo {
+      position: absolute;
+      left: 50%;
+      margin-left: -190px;
+      top: -269px;
+    }
+    .promo-wrapper .cr-mediaelement-video {
+      margin-bottom: 280px;
+    }
+    .pod .icon-pod--front { margin-top: 40px; }
+    .search-event--large {
+        padding: 20px 180px 30px;
+    }
+    .search-event--large .text-input {
+      font-size: 1.38462em;
+      height: 60px;
+    }
+    .search-event--large .button {
+      font-size: 1.38462em;
+      height: 60px;
+      width: 65px;
+    }
+    .medium-paragraph {
+      padding: 0 20px;
+    }
+  }
+  &.responsive-layout-mobile {
+    .stick-image--front-promo {
+      position: absolute;
+      left: 50%;
+      margin-left: -156px;
+      top: -269px;
+    }
+    .promo-wrapper .row {
+      margin-top: 300px;
+      margin-bottom: 20px;
+    }
+    .icon-pod--run {
+      padding-top: 30px;
+    }
+    .mejs-overlay-button {
+      margin-top: -41px!important;
+    }
+    .promo-wrapper h1, .promo-wrapper h2, .promo-wrapper p, .promo-wrapper .search-events {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .promo-wrapper .pod .alpha .pod__title, .promo-wrapper .pod .omega .pod__title, .promo-wrapper .pod .pod__title { padding-bottom: 5px; }
+  }
+}
