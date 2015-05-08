@@ -1,7 +1,7 @@
 (function ($) {
 
   /**
-   * Behaviour for the RND15 Site Media Wall
+   * Behaviour for the rnd15 Site Media Wall
    *
    * Author: J.Pitt
    * Contributors: -

@@ -1,7 +1,7 @@
-name = RND15 Site Slideshows
+name = rnd15 Site Slideshows
 description = Mini Panel slideshow plugin: integrate with flexslider to display one or multiple panes per slide. 
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.01
 project = rnd15_site_slideshows

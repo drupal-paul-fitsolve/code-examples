@@ -2,10 +2,10 @@ JP: 01/12/14
 JW: 27/08/14
 -----------
 
-This feature provides the basic panes for RND15.
+This feature provides the basic panes for rnd15.
 
 Further information on the wiki:
-http://wiki.comicrelief.com/wiki/RND15_Technical_Documentation#RND15_Technical_Documentation
+http://wiki.comicrelief.com/wiki/rnd15_Technical_Documentation#rnd15_Technical_Documentation
 
 Process:
 --------
@@ -30,7 +30,7 @@ Image Pane:
 --------
 Title + Image
 
-The image pane is only used for images and titles. If you wish to add more content please create new fieldabled panel entity in RND15 Site Panes and document it here accordingly.
+The image pane is only used for images and titles. If you wish to add more content please create new fieldabled panel entity in rnd15 Site Panes and document it here accordingly.
 
 Video Pane:
 --------

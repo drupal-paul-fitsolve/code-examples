@@ -1,7 +1,7 @@
 JP: 28/11/14
 -----------
 Developer Documentation:
-http://confluence.comicrelief.com/display/rnd15Documentation/RND15+Site+Media
+http://confluence.comicrelief.com/display/rnd15Documentation/rnd15+Site+Media
 
 Video Panes Editor Documentation:
 http://confluence.comicrelief.com/display/rnd15EditorDocumentation/How+to+add+a+Video+Pane
@@ -28,7 +28,7 @@ This module provides the basic Video Implementation on the Red Nose Day 2015 web
 
 Please refer to the Video Pane﻿ or Video Page﻿ Editor Documentation﻿ on how to add the relevant video content.
 
-The Video Panes are handled via the RND15 Site Panes feature and the pages are handled separately in the RND15 Site Media Video feature.
+The Video Panes are handled via the rnd15 Site Panes feature and the pages are handled separately in the rnd15 Site Media Video feature.
 
 ===== GTM Tracking =====
 Several events are fired and pushed to the dataLayer listed below. For further information, please refer to the media.js file or the confluence documentation here: http://confluence.comicrelief.com/display/rnd15EditorDocumentation/GTM+Event+Tracking

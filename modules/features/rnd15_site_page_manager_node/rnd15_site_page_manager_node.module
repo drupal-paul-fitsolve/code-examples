@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the RND15 Site Page Manager Node feature.
+ * Code for the rnd15 Site Page Manager Node feature.
  */
 
 include_once 'rnd15_site_page_manager_node.features.inc';

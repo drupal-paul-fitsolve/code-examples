@@ -1,5 +1,5 @@
 /**
- * Behaviours for the RND15 Site Donate form validation.
+ * Behaviours for the rnd15 Site Donate form validation.
  *
  * @author Carl Hinton
  * Contributors: - Paul Wilkin
@@ -9,7 +9,7 @@
  * Description & additional notes:
  *
  * Much of this functionality is taken from cr_donate.validate.js which this overrides.
- * Additional functionality has been added to ensure payment field function correctly with the RND15 theme.
+ * Additional functionality has been added to ensure payment field function correctly with the rnd15 theme.
  *
  */
 (function($) {

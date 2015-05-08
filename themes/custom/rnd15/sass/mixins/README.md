@@ -1,3 +1,3 @@
-# RND15 theme mixins
+# rnd15 theme mixins
 
 # Todo: describe mixins with examples

@@ -1,7 +1,7 @@
-name = RND15 Site Vocabularies
-description = RND15 site vocabularies.
+name = rnd15 Site Vocabularies
+description = rnd15 site vocabularies.
 core = 7.x
-package = RND15
+package = rnd15
 version = 7.x-0.01
 project = rnd15_site_vocabularies
 dependencies[] = taxonomy

@@ -16,7 +16,7 @@ Enabling this feature enables these modules if they're not already enabled.
 
 -- INSTALLATION --
 
-Enable the feature 'RND15 Menu Templates' in the RND15 feature group
+Enable the feature 'rnd15 Menu Templates' in the rnd15 feature group
 
 Note: After enabling the feature, you may need to set the correct Bean permissions.
 

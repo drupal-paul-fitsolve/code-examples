@@ -1,7 +1,7 @@
 (function ($) {
 
   /**
-   * Behaviour for the RND15 Pane Filter
+   * Behaviour for the rnd15 Pane Filter
    *
    * Author: Andy E. Phipps & Jeremy Pitt
    * Contributors: -

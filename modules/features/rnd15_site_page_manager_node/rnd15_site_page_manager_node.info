@@ -1,7 +1,7 @@
-name = RND15 Site Page Manager Node
+name = rnd15 Site Page Manager Node
 description = A central feature to define the Page Manager Node Template settings
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.06
 project = rnd15_site_page_manager_node

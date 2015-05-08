@@ -14,8 +14,8 @@ class DeploymentTestCase extends DrupalWebTestCase {
 
   public static function getInfo() {
     return array(
-      'name' => 'RND15 Deployment unit tests',
-      'description' => 'Unit tests for RND15 Deployment functions.',
+      'name' => 'rnd15 Deployment unit tests',
+      'description' => 'Unit tests for rnd15 Deployment functions.',
       'group' => 'Comic Relief',
       'dependencies' => array('rnd15_site_deployment'),
     );

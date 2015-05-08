@@ -1,6 +1,6 @@
 (function ($) {
   /**
-   * JS for RND15 Google Tag Manager
+   * JS for rnd15 Google Tag Manager
    *
    * Author: J.Pitt
    * Contributors: -

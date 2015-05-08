@@ -1,6 +1,6 @@
-name = RND15 OTN Banner
+name = rnd15 OTN Banner
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.01
 project = rnd15_otn_banner

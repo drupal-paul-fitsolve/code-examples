@@ -1,7 +1,7 @@
-name = RND15 Site Cookies
+name = rnd15 Site Cookies
 description = Provides an EU Cookie Compliance banner.
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.02
 project = rnd15_site_cookies

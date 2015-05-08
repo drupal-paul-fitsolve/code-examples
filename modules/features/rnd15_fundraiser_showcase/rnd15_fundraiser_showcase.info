@@ -1,7 +1,7 @@
-name = RND15 Fundraiser showcase
+name = rnd15 Fundraiser showcase
 description = Provides content type, gallery view, field instances, moderation view, and page manager variant for Fundraiser showcase content.
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.03
 project = rnd15_fundraiser_showcase

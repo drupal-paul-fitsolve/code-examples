@@ -1,7 +1,7 @@
-name = RND15 TV, Events and News
-description = Provides the functionality for the RND15 TV, Events and News landing page.
+name = rnd15 TV, Events and News
+description = Provides the functionality for the rnd15 TV, Events and News landing page.
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.05
 project = rnd15_tv_events_and_news

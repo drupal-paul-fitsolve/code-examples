@@ -1,6 +1,6 @@
 (function ($) {
   /**
-   * Behaviour for the RND15 Interstital Message
+   * Behaviour for the rnd15 Interstital Message
    *
    * Author: J.Pitt
    * Contributors: -
@@ -44,7 +44,7 @@
       var _base = Drupal.behaviors.rnd15interstitial;
       var _settings = Drupal.settings.rnd15interstitial;
 
-      // Options custom to RND15
+      // Options custom to rnd15
       var interstitialOptions = {
         textAttributes : {
           'class': 'type--lg type--white type--centred interstitial__message'

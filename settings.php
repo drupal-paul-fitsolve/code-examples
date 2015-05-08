@@ -814,7 +814,7 @@ function cdn_pick_server($servers_for_file) {
 /**
  * Set campaign ID for DASP products.
  */
-define('CR_CAMPAIGN_ID', 'RND15');
+define('CR_CAMPAIGN_ID', 'rnd15');
 
 /**
  * Fast 404 settings:

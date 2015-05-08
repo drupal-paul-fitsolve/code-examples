@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Describe hooks provided by the RND15 Panel Transitions Module.
+ * Describe hooks provided by the rnd15 Panel Transitions Module.
  */
 
 /**

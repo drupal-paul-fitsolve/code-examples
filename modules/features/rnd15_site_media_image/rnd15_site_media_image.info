@@ -1,7 +1,7 @@
-name = RND15 Site Media Image
+name = rnd15 Site Media Image
 description = Provides the content type for Site Media Images.
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.03
 project = rnd15_site_media_image

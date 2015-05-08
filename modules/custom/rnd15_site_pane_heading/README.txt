@@ -1,4 +1,4 @@
-RND15 Fieldable Panels Pane Header Styles module.
+rnd15 Fieldable Panels Pane Header Styles module.
 =================================================
 
 This module provides form elements that allow selection of the header tag

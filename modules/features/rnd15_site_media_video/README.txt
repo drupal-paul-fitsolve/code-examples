@@ -1,7 +1,7 @@
 JP: 28/11/14
 -----------
 Developer Documentation:
-http://confluence.comicrelief.com/display/rnd15Documentation/RND15+Site+Media
+http://confluence.comicrelief.com/display/rnd15Documentation/rnd15+Site+Media
 
 Video Pages Editor Documentation:
 http://confluence.comicrelief.com/display/rnd15EditorDocumentation/How+to+add+a+Video+Page

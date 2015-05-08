@@ -1,7 +1,7 @@
 (function ($) {
 
   /**
-   * Behaviour for the RND15 Site ESU Header
+   * Behaviour for the rnd15 Site ESU Header
    *
    * Author: J.Pitt
    * Contributors: -

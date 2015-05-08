@@ -2,10 +2,10 @@
 JW: 17/7/14
 -----------
 
-This feature provides panel slideshow style/layout plugin for RND15. (Integration with Flexslider)
+This feature provides panel slideshow style/layout plugin for rnd15. (Integration with Flexslider)
 
 Further information on the wiki:
-http://wiki.comicrelief.com/wiki/RND15_Technical_Documentation#Slideshows
+http://wiki.comicrelief.com/wiki/rnd15_Technical_Documentation#Slideshows
 
 Process:
 --------

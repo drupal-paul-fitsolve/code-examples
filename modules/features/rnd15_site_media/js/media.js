@@ -1,5 +1,5 @@
 /*!
- * jQuery MediaElementJS Wrapper for RND15
+ * jQuery MediaElementJS Wrapper for rnd15
  * 
  * @author Jeremy P.
  * @date 9 Jan 2015

@@ -1,7 +1,7 @@
 (function ($) {
 
   /**
-   * Behaviour for the RND15 Site Media Element
+   * Behaviour for the rnd15 Site Media Element
    *
    * @author J.Pitt
    * @date 27 Oct 2014
@@ -9,7 +9,7 @@
    * Contributors: -
    * 
    * Description & additional notes:
-   * - Integrates the media.js jquery plugin with RND15 site
+   * - Integrates the media.js jquery plugin with rnd15 site
    * - It simply initiates the mediaVideo on every video element
    * - For more info, please check out the media.js file
    * - Video instances stored in Drupal.settings.rnd15siteMedia

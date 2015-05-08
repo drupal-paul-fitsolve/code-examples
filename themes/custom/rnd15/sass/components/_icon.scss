@@ -12,7 +12,7 @@ Usage is as simple as applying the 'icon' class and the 'icon-[NAME]' class to a
 
 These font-sizes (32px default, 54px large) don't change over breakpoints, as discussed with Dan Ridge.<br><br>
 
-See the examples below, check out the wiki documentation for full documentation here under 'Icons':<br>http://wiki.comicrelief.com/index.php?title=RND15_Technical_Documentation#SASS_Components
+See the examples below, check out the wiki documentation for full documentation here under 'Icons':<br>http://wiki.comicrelief.com/index.php?title=rnd15_Technical_Documentation#SASS_Components
 <br><br>
 
 ###Icons
@@ -94,7 +94,7 @@ pen     | .icon<br> .icon-pen<br> | <span class="icon-pen  icon-styleguide"></sp
 /* Uses font-date variable set in /variables/_icons.scss to point to most recent iconfont
 */
 
-// Check out the wiki documentation here for usage under 'Icons': http://wiki.comicrelief.com/index.php?title=RND15_Technical_Documentation#SASS_Components
+// Check out the wiki documentation here for usage under 'Icons': http://wiki.comicrelief.com/index.php?title=rnd15_Technical_Documentation#SASS_Components
 
 @font-face {
   font-family: 'rnd-icons';

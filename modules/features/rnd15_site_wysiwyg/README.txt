@@ -1,7 +1,7 @@
 @author: Carl Hinton for Comic Relief 20/11/14
 -----------
 
-This feature provides the ckeditor settings for RND15.
+This feature provides the ckeditor settings for rnd15.
 
 This includes:
 

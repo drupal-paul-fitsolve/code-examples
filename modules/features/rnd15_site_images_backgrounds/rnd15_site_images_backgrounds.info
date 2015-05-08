@@ -1,7 +1,7 @@
-name = RND15 Site Images Backgrounds
+name = rnd15 Site Images Backgrounds
 description = Provides picture groups for backgrounds with preset crop points.
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.07
 project = rnd15_site_images_backgrounds

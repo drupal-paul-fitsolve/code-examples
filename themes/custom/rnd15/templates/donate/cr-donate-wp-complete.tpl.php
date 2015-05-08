@@ -45,7 +45,7 @@
 
 <body class="container">
 <p class="logo">
-  <a href="http://www.rednoseday.com"><img src="https://secure.worldpay.com/i/25760/2015_logo.png" alt="RND15 Logo" width="139" height="216" border="0"/></a>
+  <a href="http://www.rednoseday.com"><img src="https://secure.worldpay.com/i/25760/2015_logo.png" alt="rnd15 Logo" width="139" height="216" border="0"/></a>
 </p>
 <div class="banner">
   <wpdisplay item=banner default="">

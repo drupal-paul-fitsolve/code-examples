@@ -3,7 +3,7 @@
 /**
  * PB: 2/9/2014
  * 
- * Contains the RND15 function override for 'breadcrumb'.
+ * Contains the rnd15 function override for 'breadcrumb'.
  */
 
 /**

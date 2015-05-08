@@ -72,7 +72,7 @@ function rnd15_site_deployment_update_7005() {
 
 
 /**
- * Enable RND15 Site Vocabularies feature.
+ * Enable rnd15 Site Vocabularies feature.
  */
 function rnd15_site_deployment_update_7006() {
 
@@ -84,7 +84,7 @@ function rnd15_site_deployment_update_7006() {
 }
 
 /**
- * Enable RND15 News articles feature.
+ * Enable rnd15 News articles feature.
  */
 function rnd15_site_deployment_update_7007() {
 
@@ -165,7 +165,7 @@ function rnd15_site_deployment_update_7009() {
 }
 
 /**
- * Enable RND15 DataTalk Site Tracking Module
+ * Enable rnd15 DataTalk Site Tracking Module
  */
 function rnd15_site_deployment_update_7010() {
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the RND15 News Article feature.
+ * Code for the rnd15 News Article feature.
  */
 
 include_once 'rnd15_site_news_article.features.inc';

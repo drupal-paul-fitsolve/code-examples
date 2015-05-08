@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Theme settings file for the RND15 theme.
+ * Theme settings file for the rnd15 theme.
  */
 
 require_once dirname(__FILE__) . '/template.php';

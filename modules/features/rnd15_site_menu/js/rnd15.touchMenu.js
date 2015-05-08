@@ -1,7 +1,7 @@
 (function ($) {
 
   /**
-   * Behaviour for the RND15 Touch Navigation
+   * Behaviour for the rnd15 Touch Navigation
    *
    * Author: J.Pitt
    * Contributors: -

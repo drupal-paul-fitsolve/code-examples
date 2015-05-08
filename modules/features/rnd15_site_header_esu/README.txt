@@ -1,18 +1,18 @@
 JP: 11/09/14
 -----------
 
-http://wiki.comicrelief.com/wiki/RND15_Technical_Documentation#Site_Header
+http://wiki.comicrelief.com/wiki/rnd15_Technical_Documentation#Site_Header
 
 This feature provides the default functionality for the ESU block in the header.
 
-It relies on the RND15 site menu and hooks into the menu script to show and hide the ESU.
+It relies on the rnd15 site menu and hooks into the menu script to show and hide the ESU.
 
 SASS Files:
 * <code>components/_esu-header.scss</code>
 * <code>variables/componeents/_esu-header.scss</code>
 
 Dependencies:
-* RND15 Site Menu
+* rnd15 Site Menu
 * CR Marketing Prefs feature
 * *CRL2 Breakpoints* & Enquire JS
 * jQuery Update and Version 1.7

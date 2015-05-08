@@ -1,7 +1,7 @@
 AP & JP: 04/02/15
 -----------
 
-This feature provides the Media Wall Pane and Layouts for RND15.
+This feature provides the Media Wall Pane and Layouts for rnd15.
 
 Further information on the wiki:
 http://confluence.comicrelief.com/display/rnd15Documentation/Media+Wall+Layouts

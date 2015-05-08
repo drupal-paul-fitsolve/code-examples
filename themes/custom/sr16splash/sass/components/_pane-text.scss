@@ -1,0 +1,62 @@
+/*
+ * _pane-text.scss
+ * Pane Text Sass Component
+ * Author: M.Wagg
+ * Last updated: 10th September 2014
+ */
+
+/*doc
+---
+title: Pane Text
+name: Pane-text
+category: Pane text
+---
+
+Essentially, the vast bulk of pane text work is actually dealt with in type component. The code added to this file is purely to allow you to center pane text vertically. the class to do this is `pane--text-center-vertical` and must be added as a row class in order for it to work. It has the required specificity not to break anything else.
+
+
+  Classes to use            |             Example of use in HTML              
+ -------------------------- | ------------------------------------------------- 
+
+
+*/
+
+/**
+ * To remove padding right and left for mini panels
+ */
+.panel-pane.pane--cols .pane-text {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* To be readded when have found a suitable solution - MW
+
+@include breakpoint($screen-md) {
+  .pane-text--center-vertical .col-md-6 .pane-text--content {
+    position: relative;
+  }
+
+  .pane-text--center-vertical .col-md-6 .pane-text--content .field--type-text-long {
+    position: absolute;
+    top: 50%;
+    transform: translateY(16%);
+  }
+
+  .pane-text--medium-copy.pane-text--center-vertical .col-md-6 .pane-text--content .field--type-text-long {
+    transform: translateY(5%);
+  }
+}
+
+@include breakpoint($screen-lg) {
+  .pane-text--center-vertical .col-md-6 .pane-text--content {
+  position: relative;
+  }
+
+  .pane-text--center-vertical .col-md-6 .pane-text--content .field--type-text-long {
+    position: absolute;
+    top: 50%;
+    transform: translateY(30%);
+  }
+}
+
+*/

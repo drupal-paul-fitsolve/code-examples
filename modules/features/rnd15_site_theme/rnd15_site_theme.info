@@ -1,7 +1,7 @@
-name = RND15 Site Theme
-description = RND15 theme variables and dependencies
+name = rnd15 Site Theme
+description = rnd15 theme variables and dependencies
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.12
 project = rnd15_site_theme

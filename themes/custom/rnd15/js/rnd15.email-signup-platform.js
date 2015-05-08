@@ -1,4 +1,4 @@
-// This check is duplicated across CR13, SR14 and now RND15 themes
+// This check is duplicated across CR13, SR14 and now rnd15 themes
 // PO asserted that this method of checking size onload provides
 // more accurate assessment of platform than tracking resized breakpoints
 

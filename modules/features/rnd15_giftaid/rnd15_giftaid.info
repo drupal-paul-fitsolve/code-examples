@@ -1,7 +1,7 @@
-name = RND15 Giftaid
-description = Provides RND15 Giftaid form additions
+name = rnd15 Giftaid
+description = Provides rnd15 Giftaid form additions
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.01
 project = rnd15_giftaid

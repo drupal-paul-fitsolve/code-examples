@@ -1,8 +1,8 @@
-name = RND15 Pane Filter
+name = rnd15 Pane Filter
 description = Provides javascript for pane filtering functionality
 core = 7.x
 version = 7.x-1.0-3
-package = RND15
+package = rnd15
 php = 5.2.4
 features[features_api][] = api:1
 project = rnd15_pane_filter

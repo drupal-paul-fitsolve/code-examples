@@ -1,0 +1,25 @@
+/*
+ * _form.scss
+ * Form mixin Styles
+ * Author: M.Wagg
+ * Last updated: 10th September 2014
+ */
+
+/**
+ * Mixin for general elements (input, textarea, select) to adopt background colour, widths, max widths and border colours including their hover and focus states
+ */
+@mixin element($border, $width, $borderfocus, $colour) {
+  background-color: $white-brand;
+  border: $border;
+  color: $black-brand;
+  font-family: $form-font;
+  font-size: $label-size;
+  font-weight: $weight;
+  @include transition-property(border-color, color);
+  @include transition-duration(180ms);
+  width: $width;
+  &:focus {
+  border: $borderfocus;
+  outline: none;
+  }
+}

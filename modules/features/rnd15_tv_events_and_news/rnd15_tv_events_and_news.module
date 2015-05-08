@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the RND15 Site TV, Events and News feature.
+ * Code for the rnd15 Site TV, Events and News feature.
  */
 
 include_once 'rnd15_tv_events_and_news.features.inc';

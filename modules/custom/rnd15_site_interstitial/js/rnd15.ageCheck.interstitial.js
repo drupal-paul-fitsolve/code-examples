@@ -1,6 +1,6 @@
 (function ($) {
   /**
-   * Behaviour for the RND15 Age Check Interstitial Message
+   * Behaviour for the rnd15 Age Check Interstitial Message
    *
    * Author: J.Pitt
    * Contributors: -
@@ -42,7 +42,7 @@
       var _base = Drupal.behaviors.rnd15ageCheckInterstitial;
       var _settings = Drupal.settings.rnd15ageCheckInterstitial;
 
-      // Options custom to RND15
+      // Options custom to rnd15
       var interstitialOptions = {
         textAttributes : {
           'class': 'type--lg type--white type--centred interstitial__message'

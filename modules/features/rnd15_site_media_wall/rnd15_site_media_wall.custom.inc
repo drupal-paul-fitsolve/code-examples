@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * All custom code of the RND15 Site Media Wall Feature
+ * All custom code of the rnd15 Site Media Wall Feature
  */
 
 /**

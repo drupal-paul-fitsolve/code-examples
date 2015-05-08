@@ -1,6 +1,6 @@
 Author: Orizu Nwokeji
 
-RND15 Search README.txt
+rnd15 Search README.txt
 =======================
 http://confluence.comicrelief.com/display/rnd15Documentation/Search+Implementation
 

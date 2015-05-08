@@ -1,0 +1,107 @@
+/*
+ * _donate.scss
+ * Donate page variables
+ * Author: M.Wagg
+ * Last updated: 7th January 2015
+ */
+
+/**
+ * default vars
+ */
+
+/**
+ * money buy vars
+ */
+$money-buy-row-top-padding:       80px;
+$money-buy-row-title-padding-top: 25px;
+$money-buy-amount-padding:        14px;
+$money-buy-currency-padding:      30px;
+$money-buy-image-top-xs:          40px;
+$money-buy-image-top-sm:          60px;
+$money-buy-text:                  30px;
+$money-buy-buttons:               30px;
+$error-message-top:               71px;
+$circle-height:                   32%;
+$circle-left:                     12%;
+$circle-padding:                  10%;
+$circle-width:                    25%;
+$circle-font-size:                1.5em;
+$circle-line-height:              0.5em;
+$circle-padding:                  39% 0;
+$circle-height-sm:                36%;
+$circle-left-sm:                  10%;
+$circle-width-sm:                 27%;
+$circle-font-size-sm:             1em;
+$circle-font-size-md:             1.5em;
+$circle-font-size-lg:             1.9em;
+
+/**
+ * giftaid vars
+ */
+$title-image-xs-sm:               "donate/Gift_aid_logo_S_XS.jpg";
+$title-image-xs-sm-height:        74px;
+$title-image-xs-sm-width:         184px;
+$title-image-md-lg:               "donate/Gift_aid_logo_L_M.jpg";
+$title-image-md-lg-height:        96px;
+$title-image-md-lg-width:         291px;
+$checkbox-padding:                30px;
+$description-padding:             36px;
+
+/**
+ * billing vars
+ */
+$billing-copy-padding-bottom:     40px;
+$postcode-btn-color:              $grey-v-dark;
+$postcode-btn-text-color:         #fff;
+$postcode-margin:                 -4px;
+$postcode-width:                  59.7%;
+$postcode-error:                  80px;
+$postcode-btn:                    40%;
+$postcode-btn-margin:             -3px;
+$postcode-btn-height:             51px;
+$address-lookup:                  30px;
+$form-required-line-height:       17px;
+$form-dropdown:                   300px;
+
+/**
+ * payment vars
+ */
+$payment-title:                   30px;
+$payment-card-padding:            74px;
+$payment-card-or-height:          50px;
+$payment-card-or-padding:         12px;
+$payment-card-or-right:           -15px;    
+$payment-card-or-top:             36%;
+$payment-card-or-width:           30px;
+$payment-cards:                   "donate/CC_logo_sprite.jpg";
+$payment-radio-height:            110px;
+$payment-radio-checked:           -29px;
+$payment-radio:                   33px;
+$payment-radio-image-height:      50px;
+$payment-radio-image-width:       70px;
+$payment-radio-image-top:         -60px;
+$paypal-logo:                     "donate/Donate_with_paypal.gif";
+$paypal-logo-height:              27px;
+$logo-width:                      142px;
+$paypal-margin-sm:                30px;
+$paypal-margin-md:                54px;
+$paypal-padding-sm:               60px;
+$title-pingit-image:              "donate/Donate_with_pingit.gif";
+$payment-amex-pos:                -15px -20px;
+$payment-jcb-pos:                 -112px -20px;
+$payment-mscd-pos:                -213px -20px;
+$payment-dmc-pos:                 -314px -20px;
+$payment-maes-pos:                -13px -95px;
+$payment-visa-pos:                -114px -95px;
+$payment-visd-pos:                -217px -95px;
+$payment-vied-pos:                -315px -95px;
+
+/**
+ * donate partners vars
+ */
+$donate-partner-image:            "donate/logos.jpg";
+
+/**
+ * subscribe vars
+ */
+$subscribe-type-padding:          40px;

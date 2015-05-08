@@ -1,7 +1,7 @@
-name = RND15 Panel Transitions - Flip
+name = rnd15 Panel Transitions - Flip
 description = Provides flip functionality for panel transitions.
 core = 7.x
-package = RND15
+package = rnd15
 version = 7.x-0.01
 dependencies[] = rnd15_panel_transitions
 scripts[] = js/rnd15.panelTransitionsFlip.min.js

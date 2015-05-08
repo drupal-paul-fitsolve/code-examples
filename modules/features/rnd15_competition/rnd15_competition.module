@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the RND15 Competition feature.
+ * Code for the rnd15 Competition feature.
  */
 
 include_once 'rnd15_competition.features.inc';

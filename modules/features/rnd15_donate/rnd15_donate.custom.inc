@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * All custom code of the RND15 Site Donate Feature
+ * All custom code of the rnd15 Site Donate Feature
  */
 
 /**
@@ -274,7 +274,7 @@ function rnd15_donate_delivery_raw($page_callback_result) {
 /**
  * Implementation of hook_form_FORM_ID_alter.
  *
- * Add RND15 specific elements to the donate_pay_in.inc form
+ * Add rnd15 specific elements to the donate_pay_in.inc form
  */
 function rnd15_donate_form_cr_donate_pay_in_form_alter(&$form, &$form_state, $form_id) {
 
@@ -413,7 +413,7 @@ function rnd15_donate_element_info_alter(&$type) {
 }
 
 /**
- * Overridden Process callback for the edDirect element. The base form element is modified to show a RND15 specific set of options.
+ * Overridden Process callback for the edDirect element. The base form element is modified to show a rnd15 specific set of options.
  */
 function rnd15_donate_area_job_element_process($element, $form_state = array(), $complete_form = array()) {  
   $element['job_title'] = array(
@@ -488,7 +488,7 @@ function rnd15_donate_establishment_type_element_process($element, $form_state =
 
 /**
  * Validation callback for fundraising paying in form, step 1.
- * This callback is added to the validation handlers for the RND15 version of the paying in form,
+ * This callback is added to the validation handlers for the rnd15 version of the paying in form,
  * in order to stop the user from submitting the select value.
  */
 function rnd15_donate_pay_in_form_validate_step_1($form, &$form_state) {
@@ -506,7 +506,7 @@ function rnd15_donate_pay_in_form_validate_step_1($form, &$form_state) {
 
 /**
  * Submit callback for fundraising paying in form, step 1.
- * This callback is added to the submit handlers for the RND15 version of the paying in form,
+ * This callback is added to the submit handlers for the rnd15 version of the paying in form,
  * in order to add the establishment type to the form, for a schools pay in.
  */
 function rnd15_donate_pay_in_form_submit_step_1($form, &$form_state) {

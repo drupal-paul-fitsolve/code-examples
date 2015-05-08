@@ -1,5 +1,5 @@
-name = 'RND15'
-description = 'RND15 theme. Base theme - cr_layout_v2. Theme settings - rnd15_site_theme feature.'
+name = 'rnd15'
+description = 'rnd15 theme. Base theme - cr_layout_v2. Theme settings - rnd15_site_theme feature.'
 base theme = 'cr_layout_v2'
 screenshot = 'screenshot.png'
 engine = 'phptemplate'

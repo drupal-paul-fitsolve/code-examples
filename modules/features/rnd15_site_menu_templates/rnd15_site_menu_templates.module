@@ -28,7 +28,7 @@ function rnd15_site_menu_templates_bean_types() {
     'description' => t('A block type that allows a Drupal menu to be rendered via .tpl file.'),
     'abstract' => FALSE,
     'handler' => array(
-      'class' => 'Rnd15SiteMenuTemplates',
+      'class' => 'rnd15SiteMenuTemplates',
       'parent' => 'bean',
       'path' => drupal_get_path('module', 'rnd15_site_menu_templates') . '/plugins',
       'file' => 'MenuTemplate.class.php',

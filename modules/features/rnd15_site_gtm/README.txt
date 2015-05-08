@@ -1,9 +1,9 @@
 JP: 01/10/14
 -----------
 
-http://wiki.comicrelief.com/wiki/RND15_Tracking
+http://wiki.comicrelief.com/wiki/rnd15_Tracking
 
-The RND15 GTM feature provides the global dataLayer JS object.
+The rnd15 GTM feature provides the global dataLayer JS object.
 
 Each piece of JS functionality on the site that needs to provide additional tracking information to Google Tag Manager simply needs to push an event object to this global array.
 

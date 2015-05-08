@@ -1,7 +1,7 @@
 JP: 16/10/14
 -----------
 
-http://wiki.comicrelief.com/wiki/RND15_Technical_Documentation#ESU_Strip_Pane
+http://wiki.comicrelief.com/wiki/rnd15_Technical_Documentation#ESU_Strip_Pane
 
 ==== ESU Strip Pane ====
 

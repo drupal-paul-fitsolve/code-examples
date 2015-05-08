@@ -1,7 +1,7 @@
-name = RND15 Site News Article
+name = rnd15 Site News Article
 description = Provides News article content type and field instances.
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.03
 project = rnd15_site_news_article

@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the RND15 Site Header feature.
+ * Code for the rnd15 Site Header feature.
  */
 
 include_once 'rnd15_site_header.features.inc';

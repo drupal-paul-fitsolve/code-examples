@@ -1,7 +1,7 @@
-name = RND15 View Modes
-description = Define a method to display content types for RND15 Splash and CRL 2
+name = rnd15 View Modes
+description = Define a method to display content types for rnd15 Splash and CRL 2
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.01
 project = rnd15_view_modes

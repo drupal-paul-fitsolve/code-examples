@@ -1,7 +1,7 @@
-name = RND15 Fieldable Panels Pane Header Styles
+name = rnd15 Fieldable Panels Pane Header Styles
 description = Select panel pane title header tags and add custom css classes
 core = 7.x
-package = "RND15"
+package = "rnd15"
 project = rnd15_site_pane_heading
 version = "7.x-1.0"
 dependencies[] = "ctools"

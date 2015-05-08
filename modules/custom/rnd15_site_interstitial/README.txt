@@ -1,7 +1,7 @@
 JP: 03/10/14
 -----------
 
-http://wiki.comicrelief.com/wiki/RND15_Interstitial
+http://wiki.comicrelief.com/wiki/rnd15_Interstitial
 
 http://confluence.comicrelief.com/display/rnd15EditorDocumentation/How+to+add+a+Age+Check+on+a+link
 
@@ -27,7 +27,7 @@ Adding an interstitial message to a menu link is simple. This module works in co
 
 To add the interstitial message simply follow these steps:
 
-# Login to the RND15 site
+# Login to the rnd15 site
 # Edit the menu you wish to update here: /admin/structure/menu
 # Edit the link
 # Under "Attributes", add a message to Interstitial and set the delay in milliseconds

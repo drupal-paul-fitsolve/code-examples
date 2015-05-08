@@ -1,7 +1,7 @@
-name = RND15 Site Panes
-description = Provides core RND15 panes for building pages.
+name = rnd15 Site Panes
+description = Provides core rnd15 panes for building pages.
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.14
 project = rnd15_site_panes

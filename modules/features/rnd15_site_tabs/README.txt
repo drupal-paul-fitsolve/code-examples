@@ -2,11 +2,11 @@
 AP: 10/09/14
 -----------
 
-This feature provides the layout and plugins to create tabbed content on the RND15 site.
+This feature provides the layout and plugins to create tabbed content on the rnd15 site.
 
 Further information on the wiki:
 
-http://wiki.comicrelief.com/wiki/RND15_Technical_Documentation#Tabs
+http://wiki.comicrelief.com/wiki/rnd15_Technical_Documentation#Tabs
 
 SASS Components and Variables:
 * <code>components/_tabs.scss</code>

@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the RND15 OTN Banner feature.
+ * Code for the rnd15 OTN Banner feature.
  */
 
 include_once 'rnd15_otn_banner.features.inc';

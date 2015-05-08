@@ -1,7 +1,7 @@
-name = RND15 Site Menu
-description = Provides RND15 Menu Functionality
+name = rnd15 Site Menu
+description = Provides rnd15 Menu Functionality
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.04
 project = rnd15_site_menu

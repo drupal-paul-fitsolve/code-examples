@@ -1,7 +1,7 @@
 (function ($) {
 
   /**
-   * Behaviour for the RND15 Pay In form
+   * Behaviour for the rnd15 Pay In form
    *
    * Author: Andy E. Phipps
    * Last updated: 25th February 2015
@@ -20,7 +20,7 @@
     },
 
     /*
-     * Attaches the RND15 rnd15PayIn Behaviour
+     * Attaches the rnd15 rnd15PayIn Behaviour
      */
     attach: function (context, settings) {
       var _base = Drupal.behaviors.rnd15PayIn;

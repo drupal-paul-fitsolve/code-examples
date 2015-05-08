@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * All custom code of the RND15 Site Menu Feature
+ * All custom code of the rnd15 Site Menu Feature
  */
 
 /**

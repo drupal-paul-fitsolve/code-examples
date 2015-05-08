@@ -1,6 +1,6 @@
 <?php
 
-class Rnd15SiteMenuTemplates extends BeanPlugin {
+class rnd15SiteMenuTemplates extends BeanPlugin {
   public function values() {
     $values = array(
       'menu_name' => 'main-menu',

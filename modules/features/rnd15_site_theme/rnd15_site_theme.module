@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the RND15 Site Theme feature.
+ * Code for the rnd15 Site Theme feature.
  */
 
 include_once 'rnd15_site_theme.features.inc';
@@ -24,7 +24,7 @@ function rnd15_site_theme_js_alter(&$javascript) {
       'data' => $themePath . '/js/overrides/rnd15.matchmedia.js',
     ),
     // We need picture fill only to run on images that are visible.
-    // Override Picture Fill JS with our own RND15 theme-specific Picture Fill JS.
+    // Override Picture Fill JS with our own rnd15 theme-specific Picture Fill JS.
     drupal_get_path('module', 'picture') . '/picturefill/picturefill.js' => array(
       'weight' => -100,
       'group' => JS_LIBRARY,

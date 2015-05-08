@@ -1,0 +1,28 @@
+/*
+ * _pane-fundraise.scss
+ * Pane Fundraise copy padding and margins for alignment,
+ * class added via 'custom class' pane plug-in field.
+ * Not required on xs and sm breakpoints, so starts at md
+ *
+ * Author: A.Phipps
+ * Last updated: 19th January 2015
+ */
+
+/*
+ * Medium Breakpoint
+ */
+@include breakpoint($screen-md) {
+  .pane-fundraise {
+    padding-top: $pane-fundraise--padding-top-md;
+    margin-left: $pane-fundraise--margin-left;
+  }
+}
+
+/*
+ * Large Breakpoint
+ */
+@include breakpoint($screen-lg) {
+  .pane-fundraise {
+    padding-top: $pane-fundraise--padding-top-lg;
+  }
+}

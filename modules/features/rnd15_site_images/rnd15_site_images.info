@@ -1,7 +1,7 @@
-name = RND15 Site Images
+name = rnd15 Site Images
 description = Provides adaptive image styles for the four Bootstrap-based breakpoints - xs, sm, md and lg.
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.03
 project = rnd15_site_images

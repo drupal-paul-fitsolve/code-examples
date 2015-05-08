@@ -1,0 +1,119 @@
+/*
+ * _pane-filter.scss
+ * Pane Filter Sass Component
+ * Author: A.Phipps
+ * Last updated: 29th January 2015
+ */
+
+ /*
+ * No styles for xs  as this functionality doesn't exist on this breakpoint;
+ * Static mobile-only content will be show in place, using the appropriate xs-only classes
+ */
+
+/**
+ * Small Breakpoint
+ */
+@include breakpoint($screen-sm) {
+  .pane-filter-content .row {
+    padding: 0;
+  }
+
+  // Applied/removed via JS to show/hide the panes to filter
+  .pane-filter-pane__hide {
+    display: none;
+  }
+
+  // Wraps each group of filter button
+  .pane-filter-group {
+    background-color: $grey-v-light;
+    clear: both;
+    content: "";
+    display: block;
+    margin-bottom: $pane-filter-group-margin;
+    padding-left: 0;
+    padding-right: 0;
+
+    &.last {
+      margin-bottom: $pane-filter-group-last-margin;
+    }
+  }
+
+  .panel-pane.pane--cols .pane-text.pane-filter-group-buttons {
+
+    // Fixes inline-block spacing issue
+    font-size:0;
+    padding: $pane-filter-group-buttons-padding--sm;
+    text-align:center;
+  
+    a.btn.filter__button {
+      height: $pane-filter-button-height--sm;
+      width:$pane-filter-button-width--sm;
+      padding: $pane-filter-button-padding--sm;
+      margin: $pane-filter-button-margin--sm;
+      font-family: $p-type--all-font;
+      font-weight: $pane-filter-button-fontweight;
+      text-align: center;
+      
+      &.active {
+        background: $black-brand;
+      }
+  
+      &:focus {
+        background: $black-brand;
+      }
+
+      &.last {
+        margin: 0;
+      }
+    }
+  }
+
+  .panel-pane.pane--cols .pane-text.pane-filter-group-description {
+    padding: $pane-filter-group-description-padding--sm;
+    text-align:  center;
+    span{
+      line-height: $pane-filter-group-description-line-height;
+      font-size: $pane-filter-group-description-font-size;
+    }
+  }
+}
+
+/**
+ * Medium Breakpoint
+ */
+ @include breakpoint($screen-md) {
+  .panel-pane.pane--cols .pane-text.pane-filter-group-description {
+    padding: $pane-filter-group-description-padding--md;
+    text-align:  left;
+
+    span {
+      font-size: $pane-filter-group-description-font-size--md;
+    }
+  }
+
+  .panel-pane.pane--cols .pane-text.pane-filter-group-buttons {
+    padding: $pane-filter-group-buttons-padding--md;
+    text-align:left;
+
+    a.btn.filter__button {
+      width: $pane-filter-button-width--md;
+    }
+  }
+}
+
+/**
+ * Large Breakpoint
+ */
+@include breakpoint($screen-lg) {
+  .panel-pane.pane--cols .pane-text.pane-filter-group-description {
+    span {
+      font-size: $pane-filter-group-description-font-size;
+    }
+  }
+
+  .panel-pane.pane--cols .pane-text.pane-filter-group-buttons {
+    a.btn.filter__button {
+      width: $pane-filter-button-width--lg;
+    }
+  }
+}

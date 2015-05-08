@@ -1,7 +1,7 @@
-name = RND15 Site Fields
+name = rnd15 Site Fields
 description = To manage and keep all the site wide fields in one place
 core = 7.x
-package = RND15
+package = rnd15
 php = 5.2.4
 version = 7.x-0.08
 project = rnd15_site_fields

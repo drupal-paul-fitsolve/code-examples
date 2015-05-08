@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the RND15 Donate feature.
+ * Code for the rnd15 Donate feature.
  */
 
 include_once 'rnd15_donate.features.inc';
@@ -66,6 +66,6 @@ function rnd15_donate_donate_content_type_edit_form_submit(&$form, &$form_state)
  * Implements hook_js_alter.
  */
 function rnd15_donate_js_alter(&$javascript) {
-  // Remove cr_donate version of this file, as rnd15_donate.custom.parsley.js customises this for RND15.
+  // Remove cr_donate version of this file, as rnd15_donate.custom.parsley.js customises this for rnd15.
   unset($javascript['sites/all/modules/custom/all/cr_donate/cr_donate.validate.js']);
 }

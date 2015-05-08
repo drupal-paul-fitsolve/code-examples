@@ -1,7 +1,7 @@
 JP: 28/11/14
 -----------
 Developer Documentation:
-http://confluence.comicrelief.com/display/rnd15Documentation/RND15+Site+Page+Manager+Node
+http://confluence.comicrelief.com/display/rnd15Documentation/rnd15+Site+Page+Manager+Node
 
 ##############
 This feature keeps the page manager node type variations in code.

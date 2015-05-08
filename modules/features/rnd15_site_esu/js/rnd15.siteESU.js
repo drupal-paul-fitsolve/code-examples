@@ -1,7 +1,7 @@
 (function ($) {
 
   /**
-   * Behaviour for the RND15 Site ESU Strip
+   * Behaviour for the rnd15 Site ESU Strip
    *
    * Author: J.Pitt
    * Contributors: -

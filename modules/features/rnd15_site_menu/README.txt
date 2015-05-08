@@ -1,11 +1,11 @@
 JP: 03/09/14
 -----------
 
-http://wiki.comicrelief.com/wiki/RND15_Technical_Documentation#Site_Navigation
+http://wiki.comicrelief.com/wiki/rnd15_Technical_Documentation#Site_Navigation
 
 The main navigation and touch functionality is provided by the *rnd15_site_menu* feature.
 
-The RND15 site menu is a light weight feature that provides a touch menu via JS using Drupal's "Main Menu". 
+The rnd15 site menu is a light weight feature that provides a touch menu via JS using Drupal's "Main Menu". 
 
 SASS Components:
 * <code>components/_nav-normal.scss</code>
@@ -47,7 +47,7 @@ The "First Level Link Page" has an ID appended with '-touch' e.g.:
 =====  Navigation Buttons (Button Nav) =====
 Navigation buttons are provided for touch and the normal navigation.
 
-These are handled and should only be provided by the RND15_site_menu feature and javascript to keep them consistent. All style are located in:
+These are handled and should only be provided by the rnd15_site_menu feature and javascript to keep them consistent. All style are located in:
 
 <code>sass/components/_button-nav.scss</code>
 

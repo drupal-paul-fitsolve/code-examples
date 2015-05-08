@@ -1,7 +1,7 @@
 (function ($) {
 
   /**
-   * Behaviour for the RND15 Site Tabs
+   * Behaviour for the rnd15 Site Tabs
    *
    * Author: Andy E. Phipps
    * Contributors: -
@@ -35,7 +35,7 @@
     },
 
     /*
-     * Attaches the RND15 Tabs Behaviour
+     * Attaches the rnd15 Tabs Behaviour
      */
     attach: function (context, settings) {
 
