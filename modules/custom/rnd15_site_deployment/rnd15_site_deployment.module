@@ -1,0 +1,248 @@
+<?php
+/**
+ * @file
+ * .module file for rnd15_site_deployment module
+ *
+ * This file is required for module discovery but hook_update_N implementations
+ * are found in the .install file
+ *
+ * Author: Jeremy Pitt
+ */
+
+
+/**
+ * Helper function for creating a role.
+ * @param String $role_name
+ *   - The role name to be applied.
+ * @return Boolean
+ *   - Success or failure.
+ *
+ */
+
+define("RND_15_SITE_DEPLOYMENT_ROLE_DEVELOPER", 'developer');
+define("RND_15_SITE_DEPLOYMENT_ROLE_QA", 'authenticated user');
+define("RND_15_SITE_DEPLOYMENT_ROLE_CONTENT_EDITOR", 'content editor');
+define("RND_15_SITE_DEPLOYMENT_ROLE_PAGE_BUILDER", 'content editor');
+
+function rnd15_site_deployment_create_role($role_name) {
+
+  watchdog('Deployment', t('Creating role %rolename.', array('%rolename' => $role_name)), WATCHDOG_NOTICE);
+  // Checking whether role already exists.
+  $role = user_role_load_by_name($role_name);
+  if (isset($role->rid)) {
+    watchdog('Deployment', t('Role already exists %rolename %rid', array('%rolename' => $role_name,
+      '%rid' => $role->rid)), WATCHDOG_NOTICE);
+    return TRUE;
+  }
+
+  $role = new stdClass();
+  $role->name = $role_name;
+  user_role_save($role);
+  $role = user_role_load_by_name($role_name);
+
+  return isset($role->rid);
+}
+
+/**
+ * Helper function for removing a role.
+ * @param String $role_name
+ *   - the role name to be applied.
+ * @return Boolean
+ *   - Success or failure.
+ *
+ */
+function rnd15_site_deployment_remove_role($role_name) {
+
+  $role = user_role_load_by_name($role_name);
+  if (!isset($role->rid)) {
+    watchdog('Deployment', 'Role %name attempted removal: Does not exist.', array('%name' => $role_name,),
+      WATCHDOG_NOTICE);
+    return FALSE;
+  }
+
+  user_role_delete($role_name);
+  watchdog('Deployment', 'Role %name removed %rid', array('%name' => $role_name, '%rid' => $role->rid),
+    WATCHDOG_NOTICE);
+
+  // Test success.
+  $role = user_role_load_by_name($role_name);
+  if (isset($role->rid)) {
+    return FALSE;
+  }
+
+  return TRUE;
+
+}
+
+/**
+ * Helper function for adding / removing a permission.
+ * @param String $role_name
+ *   - The role name against which the permission is to be applied.
+ * @param String $permission_machine_name
+ *   - The machine name of the permission.
+ * @param Bool $setting
+ *   - TRUE to turn on, FALSE to turn off.
+ * @return Boolean Result.
+ *   FALSE - failure.
+ *   TRUE  - success.
+ */
+function rnd15_site_deployment_set_permission($role_name, $permission_machine_name, $setting = TRUE) {
+
+  // Check the role exists.
+  $role = user_role_load_by_name($role_name);
+  if (is_null($role)) {
+    watchdog('Deployment', 'Role %role not found.', array('%role' => $role_name), WATCHDOG_WARNING);
+    return FALSE;
+  }
+
+  // Check the permission exists.
+  $perms = array_keys(user_permission_get_modules());
+  if (!in_array($permission_machine_name, $perms)) {
+    watchdog('Deployment', 'Permission %permission not found',
+      array('%permission' => $permission_machine_name), WATCHDOG_WARNING);
+    return FALSE;
+  }
+
+  // Check current status of user role permission.
+  $perms = array_pop(user_role_permissions(array($role->rid => $role)));
+
+  switch ($setting) {
+
+    case TRUE:
+      if ( isset($perms[$permission_machine_name]) && $perms[$permission_machine_name] == TRUE) {
+        return TRUE;
+      } else {
+        return user_role_grant_permissions($role->rid, array($permission_machine_name));
+      }
+      break;
+    CASE FALSE:
+      if (!isset($perms[$permission_machine_name])) {
+        return TRUE;
+      } else {
+        return user_role_change_permissions($role->rid, array($permission_machine_name => FALSE));
+      }
+      break;
+  }
+
+  return FALSE;
+
+}
+
+/**
+ * Helper function for creating users. Email address is unique.
+ * @param String $user_name
+ *  - The name of the user.
+ * @param String $email
+ *  - Email address of the user.
+ * @param String $password
+ *  - The password for the account.
+ */
+function rnd15_site_deployment_create_user($user_name, $email, $password='password') {
+
+  $send = getenv('AH_SITE_ENVIRONMENT') == 'cam-production';
+
+  // Check whether user exists.
+  if (rnd15_site_deployment_test_user_exists($email)) {
+    watchdog('Deployment', 'A user with email address %email already exists.', array('%email' => $email),
+      WATCHDOG_WARNING);
+    return FALSE;
+  }
+
+  // This will generate a random password if password is not set.
+  if ($password == 'password') {
+    $password = user_password(8);
+  }
+
+  //set up the user fields
+  $fields = array(
+    'name' => $user_name,
+    'mail' => $email,
+    'pass' => $password,
+    'status' => 1,
+    'init' => $email,
+    'roles' => array(
+      DRUPAL_AUTHENTICATED_RID => 'authenticated user',
+    ),
+  );
+
+  //the first parameter is left blank so a new user is created
+  $account = user_save('', $fields);
+
+  if ($send) {
+    // Manually set the password so it appears in the e-mail.
+    $account->password = $fields['pass'];
+
+    // Send the e-mail through the user module.
+    drupal_mail('user', 'register_no_approval_required', $email, NULL, array('account' => $account), variable_get('site_mail', 'noreply@example..com'));
+  }
+
+  return rnd15_site_deployment_test_user_exists($email);
+}
+
+/**
+ * Helper function for removing users.
+ * @param String $email
+ *   - The email address of the user that is to be removed.
+ */
+function rnd15_site_deployment_remove_user($email) {
+
+  $user = user_load_by_mail($email);
+
+  if (!rnd15_site_deployment_test_user_exists($email)) {
+    watchdog('Deployment', 'A user with email address %email does not exist.', array('%email' => $email),
+      WATCHDOG_WARNING);
+    return FALSE;
+  }
+
+  return user_delete($user->uid);
+
+}
+
+/**
+ * Helper function for setting a users roles.
+ * @param String $email
+ *   - The email address of the user.
+ * @param array $roles
+ *   - An array of user roles - the machine names are used here.
+ */
+function rnd15_site_deployment_set_roles($email, $roles=array()) {
+
+  if (!rnd15_site_deployment_test_user_exists($email)) {
+    watchdog('Deployment', 'A user with email address %email does not exist.', array('%email' => $email),
+      WATCHDOG_WARNING);
+    return FALSE;
+  }
+
+  // All accounts must have authenticated user.
+  array_push($roles, 'authenticated user');
+
+  // Remove all roles from the user.
+  $user = user_load_by_mail($email);
+  user_save($user, array('roles' => array()));
+
+  $roles_array = array();
+
+  // Add keys to the roles array..
+  foreach ($roles as $role) {
+    $rid = user_role_load_by_name($role)->rid;
+    $roles_array[$rid] = $role;
+  }
+
+  // Complete the final save.
+  return user_save($user, array('roles' => $roles_array));
+
+}
+
+/**
+ * A test to see if a user with an email address exists.
+ * @param $email
+ *   - Email address to test for.
+ * @return bool
+ *   - Result of whether the user exists or not.
+ */
+function rnd15_site_deployment_test_user_exists($email) {
+
+  $user = user_load_by_mail($email);
+  return isset($user->uid);
+
+}

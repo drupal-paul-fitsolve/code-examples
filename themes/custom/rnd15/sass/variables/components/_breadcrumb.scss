@@ -1,0 +1,21 @@
+/**
+ * PB: 2/9/2014
+ *
+ * Breadcrumb variables.
+ *
+ * See 
+ *  - ../components/_breadcrumb.scss for implementation.
+ */
+
+/**
+ * In case design requirements change, just abstracting
+ * a few variables out here for future ease.
+ */
+$breadcrumb-size:                13px;
+$breadcrumb-weight:              300;
+$breadcrumb-padding:             0 0 1px 0;
+$breadcrumb-color:               $white-brand;
+$breadcrumb-color-state:         $white-brand;
+$breadcrumb-border-color-state:  $white-brand;
+$breadcrumb-border-width-state:  1px;
+$breadcrumb-arrow-size:          20px;

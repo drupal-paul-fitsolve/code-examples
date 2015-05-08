@@ -1,0 +1,238 @@
+<?php
+
+/**
+* @file
+* Bean Plugin definition
+*/
+
+/**
+ * Implements hook_bean_types_api_info().
+ *
+ * Just registering our plugin with the Bean API here.
+ */
+function rnd15_site_menu_templates_bean_types_api_info() {
+  return array(
+    'api' => 4,
+  );
+}
+
+/**
+ * Implements hook_bean_types().
+ *
+ * Define a Bean type to use with Menus.
+ */
+function rnd15_site_menu_templates_bean_types() {
+  $plugins = array();
+  $plugins['menu_template'] = array(
+    'label' => t('Menu template'),
+    'description' => t('A block type that allows a Drupal menu to be rendered via .tpl file.'),
+    'abstract' => FALSE,
+    'handler' => array(
+      'class' => 'Rnd15SiteMenuTemplates',
+      'parent' => 'bean',
+      'path' => drupal_get_path('module', 'rnd15_site_menu_templates') . '/plugins',
+      'file' => 'MenuTemplate.class.php',
+    ),
+  );
+  return $plugins;
+}
+
+/**
+ * Implements hook_theme()
+ * 
+ * Define the theme hook for rendering menus through template files
+ */
+function rnd15_site_menu_templates_theme($menu){
+  return array(
+    'menu_template' => array(
+      'template' => 'menu-template',
+      'pattern' => 'menu_template__',
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'rnd15_site_menu_templates') . '/templates',
+      'variables' => array('menu' => NULL),
+    ),
+    'menu_template_help' => array(
+      'template' => 'menu-template-help',
+      'render element' => 'element',
+      'path' => drupal_get_path('module', 'rnd15_site_menu_templates') . '/templates',
+      'variables' => array('menu' => NULL),
+    ),
+  );
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ *
+ * We have to use a form alter here to tidy up the 
+ * block/add/menu-template form.
+ *
+ * The Bean API seems a little limited for this kind of thing.
+ *
+ * Just need to tidy it up here a little - remove the revision info, make the view 
+ * mode default to Default etc.
+ */
+function rnd15_site_menu_templates_form_bean_form_alter(&$form, &$form_state, $form_id) {
+
+  // Don't want to affect bean forms for other 
+  // modules that might use Bean plugins
+  if (isset($form['menu_name'])) {
+    
+    // Hide the revision fields
+    // We can't unset it as the Bean submit handler
+    // expects a title. So we hide it.
+    $form['revision']['#type'] = 'hidden';
+
+    // Hide the title field
+    // We can't unset it as the Bean submit handler
+    // expects a title. So we hide it.
+    $form['title']['#type'] = 'hidden';
+
+    // Set the view mode to Default, only if it's NULL 
+    // I.E another view mode hasn't been selected previously
+    if(is_null($form['view_mode']['#default_value'])){
+      $form['view_mode']['#default_value'] = 'Default';
+    }
+
+    // Make the label title a little more descriptive!
+    $form['label']['#title'] = t('Menu template name');
+    
+    // Remove label description as it's a little misleading on the form
+    unset($form['label']['#description']);
+
+  }
+
+}
+
+/**
+ * Implements hook_bean_submit().
+ *
+ * React to the bean form submit.
+ *
+ * We want to rebuild the theme registry on menu template 
+ * blocks save.
+ *
+ * This is so our new template file is picked up 
+ * without needing to flush caches etc.
+ */
+function rnd15_site_menu_templates_bean_form_submit($form, $form_state) {
+  // Clear the theme registry. Leave the other cache bins alone.
+  cache_clear_all('theme_registry', 'cache', TRUE);
+  return $form;
+}
+
+/**
+ * Helper function [_rnd15_site_menu_templates_prepare_menu_vars description]
+ * 
+ * Prepares the menu link array for the menu .tpl file
+ * 
+ * @param  array $menuTreeData  - [full menu array from menu_tree_all_data()]
+ * @param  array $menu          - [the menu array processed repeatedly until all children are found]
+ * @return array                - [a flat array of menu links, ready to be passed to the menu .tpl file]
+ */
+function _rnd15_site_menu_templates_prepare_menu_vars($menuTreeData, &$menu) {
+
+  foreach($menuTreeData as $link){
+
+    // Need to get the aliased URL for the link here.
+    // The link href will be node/10 for example.
+    // We need to alter this to the aliased URL so .tpl files
+    // can be moved safely through the different environments
+    // If no alias exists, just return the unaliased path    
+    $link['link']['href'] = drupal_get_path_alias($path = $link['link']['href']);
+
+    // My slightly suspect regex
+    // We:
+    //   change dashes in the link URL to undescores
+    //   change forward slashes in the URL to underscores
+    //   remove < and >, incases like <front>
+    $varName = strtolower(preg_replace(array(
+        '/-+/',
+        '/^-+/',
+        '/\/+/',
+        '/^\/+/',
+        '/\<+/',
+        '/^\<+/',
+        '/\>+/',
+        '/^\>+/',          
+      ), array('_', '_','_', '_','', '','', ''), $link['link']['href']));
+
+    // Add active-trail and active classes to the <a>, if required
+    $classes = array();
+
+    // Add the active-trail class, if required
+    $link['link']['in_active_trail'] == TRUE ? $classes[] = 'active-trail' : '';
+
+    // Add the active class, if required
+    $link['link']['link_path'] == $_GET['q'] ? $classes[] = 'active' : '';
+
+    // Add the expanded class, if required
+    if ($link['link']['has_children'] && $link['below']) {
+      $classes[] = 'expanded';
+    }
+
+    // Add classes to the $links localized options
+    $link['link']['localized_options']['attributes']['class'] = $classes;
+
+    // Cast the rendered link to array keys. The sanitised
+    // URL of the link becomes the array key so we can
+    // do this in the menu .tpl file:
+    // print $menu['about_us_contact'] where about-us/contact is the real URL
+    $menu[$varName]['#link'] = l(
+      $link['link']['title'],
+      $link['link']['href'],
+      $link['link']['localized_options']
+    );
+
+    // Add the mlid to the attributes to add to the li
+    $menu[$varName]['#li_attributes'] = array('class' => array('menu-' . $link['link']['mlid']));
+    
+    // If there are menu items in #below, pass them back through this function
+    $numChildren = count($link['below']);
+    if($numChildren) {
+      for($i = 1; $i <= $numChildren; $i++) {
+        _rnd15_site_menu_templates_prepare_menu_vars($link['below'], $menu);
+      }
+    }
+
+  }
+
+  return $menu;
+}
+
+/**
+ * Helper function [_rnd15_site_menu_templates_add_active_trail description]
+ * 
+ * Add the active trail indicators into the nenu tree.
+ *
+ * The data returned from menu_tree_all_data() doesn't contain the active trail indicators. Load of old Bobbins!
+ * This is a helper function that adds it back in.
+ * 
+ * @param  array $menuTreeData  - [full menu array from menu_tree_all_data()]
+ * @return array                - [array with in_active_trail set to TRUE if in active path]
+ */
+function _rnd15_site_menu_templates_add_active_trail($menuTreeData) {
+
+  // Grab any menu item to find the menu_name for this tree.
+  $menu_item = current($menuTreeData);
+  $tree_with_trail = menu_tree_page_data($menu_item['link']['menu_name']);
+
+  // To traverse the original tree down the active trail, we use a pointer.
+  $subtree_pointer = &$menuTreeData;
+
+  // Find each key in the active trail.
+  while ($tree_with_trail) {
+    foreach ($tree_with_trail as $key => &$value) {
+      if ($tree_with_trail[$key]['link']['in_active_trail']) {
+        // Set the active trail info in the original tree.
+        $subtree_pointer[$key]['link']['in_active_trail'] = TRUE;
+        // Continue in the subtree, if it exists.
+        $tree_with_trail = &$tree_with_trail[$key]['below'];
+        $subtree_pointer = &$subtree_pointer[$key]['below'];
+        break;
+      }
+      else {
+        unset($tree_with_trail[$key]);
+      }
+    }
+  }
+}

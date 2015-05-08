@@ -1,0 +1,94 @@
+/**
+ * Defines sitewide vaiables for the RND15 theme.
+ */
+
+/* Pinks */
+$pink-brand:    #FF9CB2;
+$pink-dark:     #D57893;
+$pink-v-dark:   #A14660;
+
+/* Oranges */
+$orange-brand:  #FF6A58;
+$orange-dark:   #F76654;
+$orange-v-dark: #D32713;
+
+/* Reds */
+$red-brand:     #F32836;
+$red-dark:      #F32836;
+$red-v-dark:    #B9010E;
+
+/* Purples */
+$purple-brand:  #A465B1;
+$purple-dark:   #A465B1;
+$purple-v-dark: #7C4A81;
+
+/* Blues */
+$blue-brand:    #00B3E7;
+$blue-dark:     #009AE8;
+$blue-v-dark:   #026897;
+
+/* Aquas */
+$aqua-brand:    #57D9D5;
+$aqua-dark:     #00B7B0;
+$aqua-v-dark:   #03908A;
+
+/* Greens */
+$green-brand:   #A3D55F;
+$green-dark:    #8CB94E;
+$green-v-dark:  #6C8F3E;
+/* Used in contact us form to be fully accessibly against background -AP */
+$green--confirmation: #5b7834;
+
+/* Yellows */
+$yellow-brand:  #FFC845;
+$yellow-dark:   #FFC845;
+$yellow-v-dark: #FFB400;
+
+/* Whites */
+$white-brand:   #FFF;
+
+/* Greys */
+
+$grey-v-light:  #f5f2ed;
+$grey-light:    #c8c8c8;
+$grey-brand:    #cdc8c0;
+$grey-dark:     #5f5c59;
+$grey-v-dark:   #666;
+
+/* Blacks */
+$black-brand:   #1E1E1E;
+
+/* Array of brand colours for use in SASS maps */
+$colorList: (
+  ("pink" $pink-brand),
+  ("pink-dark" $pink-dark),
+  ("pink-v-dark" $pink-v-dark),
+  ("orange" $orange-brand),
+  ("orange-dark" $orange-dark),
+  ("orange-v-dark" $orange-v-dark),
+  ("red" $red-brand),
+  ("red-dark" $red-dark),
+  ("red-v-dark" $red-v-dark),
+  ("purple" $purple-brand),
+  ("purple-dark" $purple-dark),
+  ("purple-v-dark" $purple-v-dark),
+  ("blue" $blue-brand),
+  ("blue-dark" $blue-dark),
+  ("blue-v-dark" $blue-v-dark),
+  ("aqua" $aqua-brand),
+  ("aqua-dark" $aqua-dark),
+  ("aqua-v-dark" $aqua-v-dark),
+  ("green" $green-brand),
+  ("green-dark" $green-dark),
+  ("green-v-dark" $green-v-dark),
+  ("yellow" $yellow-brand),
+  ("yellow-dark" $yellow-dark),
+  ("yellow-v-dark" $yellow-v-dark),
+  ("white" $white-brand),
+  ("grey-v-light" $grey-v-light),
+  ("grey-light" $grey-light),
+  ("grey" $grey-brand),
+  ("grey-dark" $grey-dark),
+  ("grey-v-dark" $grey-v-dark),
+  ("black" $black-brand)
+);

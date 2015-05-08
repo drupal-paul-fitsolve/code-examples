@@ -1,0 +1,287 @@
+/*
+ * _form.scss
+ * Form component Styles
+ * Author: M.Wagg
+ * Last updated: 10th September 2014
+ */
+
+/*doc
+---
+title: Form elements
+name: form
+category: form
+---
+
+Form components are setup to have a generic SASS file along with having specific files for the donate form and the dropkick implementation.
+
+Dropkick, tick boxes and radio buttons all use the icon font to display icons/fancy tickbox/radio button.
+
+All form styling is applied to the default elements with minimal use of classes other than for dropkick.
+
+The submit button is extended via the button classes, so please use .btn and .btn-[colour] to get the look you need.
+
+Element      |             Example                                    |    Class
+------------ | ------------------------------------------------------ | -------------------------------------------------
+Label        | <label>Label</label>                                   | 'label'
+Required     | <span class="form-required">*</span>                   | '.form-required'
+Input        | <input type="text"></input>                            | 'input'
+Textarea     | <textarea></textarea>                                  | 'textarea'
+Select       | <select id="normal_select"><option>1</option><option>2</option></select>  | 'select'
+Submit       | <input type="submit" class="form-submit btn btn-red"></input> | 'input[type=submit] btn btn-red'
+
+
+
+
+*/
+
+/**
+ * Basic form components
+ */
+div.form-item label {
+  font-weight: $weight;
+}
+
+label {
+  color: $label-color;
+  display: block;
+  font-family: $form-font;
+  font-size: $label-size;
+  padding: 0 0 5px;
+}
+
+select {
+  height: $element-height;
+}
+input {
+  min-height: $element-height;
+  line-height: inherit;
+}
+
+input, select, textarea {
+  @include element($element-border, $element-width, $focus-border, $border-colour);
+  @include border-radius(0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+input.form-text, textarea {
+  padding: 15px;
+  -webkit-appearance: none;
+}
+input.form-text:focus, textarea:focus {
+  padding: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.grippie { 
+  display: none;
+}
+
+.form-item {
+  margin-bottom: 25px;
+  &.form-item--inline {
+    input[type=submit],
+    a.btn {
+      margin-bottom: 20px;
+    }
+  }
+}
+.form-radios .form-type-radio, 
+.form-checkboxes .form-type-checkbox {
+  margin-bottom: 20px;
+  min-height: 26px;
+}
+
+input[type=radio], 
+input[type=checkbox] {
+  height: $radio-checkbox-height;
+  max-width: $radio-checkbox-width;
+}
+
+.form-type-radio, 
+.form-type-checkbox {
+  label {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 36px;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  label:before {
+    border: $element-border;
+    bottom: 1px;
+    content: "";
+    display: inline-block;
+    height: $radio-checkbox-height;
+    left: 1px;
+    position: absolute;
+    top: -2px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: $radio-checkbox-width;
+  }
+  input[type=radio], 
+  input[type=checkbox] {
+    position: absolute;
+    left: -3000px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  input[type=radio]:checked + label:before, 
+  input[type=checkbox]:checked + label:before {
+    color: $black-brand;
+    font-family: $icon-font-family;
+    
+  }
+  input[type=radio]:checked + label:after {
+    color: $grey-dark;
+    content: nth(nth($iconlist,27),2);
+    display: inline-block;
+    font-family: $icon-font-family;
+    font-size: 26px;
+    height: 26px;
+    left: 1px;
+    line-height: 26px;
+    position: absolute;
+    top: -1px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 26px;
+  }
+  input[type=checkbox]:checked + label:before {
+    content: nth(nth($iconlist,14),2);
+    display: block;
+    font-size: 32px;
+    line-height: 26px;
+    text-indent: -4px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+}
+
+.form-type-radio label:before { 
+  @include border-radius(50%);
+  display: block;
+}
+
+label {
+  color: $label-color;
+  font-size: $label-size;
+}
+
+.form-required {
+  color: $label--asterisk-color;
+  font-size: $label-asterisk-size;
+}
+
+/**
+ * Dropdowns for when Dropkick is not being used - ie: iOS devices
+ * Requested by designers
+ */
+select.form-select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: transparent;
+  position: relative;
+}
+
+.webform-component-select, 
+.form-type-select {
+  position: relative;
+}
+
+%select-after {
+  color: $black-brand;
+  content: nth(nth($iconlist,10),2);
+  display: block;
+  font-family: $icon-font-family;
+  font-size: 32px;
+  line-height: 54px;
+  height: 50px;
+  position: absolute;
+  right: 12px;
+  width: 30px;
+}
+
+.webform-component-select label::after {
+  @extend %select-after;
+  top: 22px;
+} 
+.form-type-select label::after {
+  @extend %select-after;
+  top: 26px;
+}
+
+@include breakpoint($screen-lg) {
+  .webform-component-select label::after, 
+  .form-type-select label::after {
+    display: none;
+  }
+}
+
+select.form-select[data-dkcacheid] {
+  position:absolute;
+  visibility:hidden;
+  bottom:0;
+  left:0;
+  height:0
+}
+
+input[type=submit] {
+  border: none;
+  font-size: $label-size;
+  font-weight: 600;
+  @include transition-property(background-color, color);
+  @include transition-duration(180ms);
+  &:focus {
+    background-color: $red-v-dark;
+    border: none;
+  }
+  &:hover {
+    background-color: $red-v-dark;
+  }
+}
+
+input[type=submit].cr-plus-lookup {
+  @include transition-property(background-color, color);
+  @include transition-duration(180ms);
+  &:focus {
+    background-color: darken( $address-btn, 20% );
+  }
+  &:hover {
+    background-color: darken( $address-btn, 20% );
+  }
+}
+
+/**
+ * Error
+ */
+.form-item .error {
+  border-color: $red-brand;
+  color: $red-brand;
+}
+
+/**
+ * Small and larger breakpoints
+ */
+@include breakpoint($screen-sm) {
+  .form-item--inline {
+    input[type=submit],
+    a.btn {
+      width: auto;
+      display: inline-block;
+      margin-right: 20px;
+    }
+    // Remove spacing if followed by either
+    input[type=submit] + a.btn,
+    a.btn + input[type=submit] {
+      margin-right: 0;
+    }
+  }
+}

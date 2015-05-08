@@ -1,0 +1,13 @@
+diff --git a/public/sites/all/modules/contrib/panels/panels_node/panels_node.module b/public/sites/all/modules/contrib/panels/panels_node/panels_node.module
+index 894dc67..b82cede 100644
+--- a/public/sites/all/modules/contrib/panels/panels_node/panels_node.module
++++ b/public/sites/all/modules/contrib/panels/panels_node/panels_node.module
+@@ -328,7 +328,7 @@ function panels_node_hook_view($node, $view_mode) {
+ 
+   $rendering[$node->nid] = TRUE;
+   ctools_include('plugins', 'panels');
+-  if ($view_mode == 'teaser') {
++  if ($view_mode == 'teaser' || $view_mode == 'search_result') {
+     // Because our teasier is never the same as our content, *always* provide
+     // the read more flag.
+     $node->readmore = TRUE;

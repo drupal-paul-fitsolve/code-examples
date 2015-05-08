@@ -1,0 +1,14 @@
+name = RND15 Site Google TM
+description = Provides RND15 Google Tag Manger Functionality. Mainly JS implementation
+core = 7.x
+package = RND15
+php = 5.2.4
+version = 7.x-0.01
+project = rnd15_site_gtm
+dependencies[] = crl2_breakpoints
+dependencies[] = jquery_update
+dependencies[] = features
+scripts[] = js/rnd15.gtm.min.js
+features[features_api][] = api:1
+no autodetect = 1
+project path = sites/rednoseday.com/modules/features/

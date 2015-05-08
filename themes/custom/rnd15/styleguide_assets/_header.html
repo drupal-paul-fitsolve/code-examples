@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RND15 Styleguide</title>
+    <link rel=stylesheet href="./doc.css" type="text/css">
+    <link rel=stylesheet href="./github.css" type="text/css">
+    <link rel=stylesheet href="./screen.css" type="text/css">
+    <link rel=stylesheet href="./helpers.css" type="text/css">
+
+    <link rel=stylesheet href="../css/rnd15.styles.css" type="text/css">
+    <script src="//use.typekit.net/xip7ept.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/dropkick.js"></script>
+    <script type="text/javascript" src="../js/vendor/dropkick.jquery.js"></script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      //Need to check for ctools-modal as well, otherwise it does not fire at all when on a page with ipe
+      $('select').attr('tabindex', 0).dropkick({
+        startSpeed: 0, /* We dont actually want a delay here */
+        change: function (value, label) {
+          // The AJAX views exposed filter object get's stale, this is a bit of a  hack but it works.
+          if($(this).attr('id')) {
+            $('#'+$(this).attr('id')).val(value).change();
+          }
+        }
+      }).after('<span class="select__icon"></span>');
+    });
+    </script>
+
+  </head>
+  <header class="header pbn" role="banner">
+    <div class="backgroundHighlight typeReversed1">
+      <div class="container">
+        <h1 class="h2 mvs">RND15 Styleguide</h1>
+      </div>
+    </div>
+    <div class="backgroundLowlight typeReversed1">
+      <div class="container">
+        <span>
+          <ul class="docNav listInline">
+            <% @categories.each do |category, file_name| %>
+              <li><a href="<%= file_name %>"><%= category %></a></li>
+            <% end %>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <section>
+      <div class="line">
+        <div class="col cols4">
+          <div class="componentMenu box boxBasic backgroundBasic">
+            <div class="boxBody pan">
+              <ul class="componentList listBorderedHover">
+                <% @blocks.each do |b| %>
+                  <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main col cols20 lastCol">

@@ -1,0 +1,10 @@
+<?php
+/**
+ * @file
+ * Code for the RND15 News Article feature.
+ */
+
+include_once 'rnd15_site_news_article.features.inc';
+
+// Include our custom module hooks.
+include_once 'rnd15_site_news_article.custom.inc';

@@ -1,0 +1,12 @@
+diff --git a/public/sites/rednoseday.com/modules/patched/panels/panels.module b/public/sites/rednoseday.com/modules/patched/panels/panels.module
+index de152a7..c784a50 100644
+--- a/public/sites/rednoseday.com/modules/patched/panels/panels.module
++++ b/public/sites/rednoseday.com/modules/patched/panels/panels.module
+@@ -887,6 +887,7 @@ function panels_save_display(&$display) {
+   if (empty($display->uuid) || !ctools_uuid_is_valid($display->uuid)) {
+     $display->uuid = ctools_uuid_generate();
+   }
++  module_invoke_all('panels_display_before_save', $display);
+   drupal_write_record('panels_display', $display, $update);
+ 
+   $pids = array();

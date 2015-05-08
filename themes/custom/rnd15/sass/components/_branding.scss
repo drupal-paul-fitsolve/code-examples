@@ -1,0 +1,130 @@
+/*
+ * _branding.scss
+ * Site Branding Styling
+ * Author: J.Pitt
+ * Last updated: 31st August 2014
+ */
+
+/**
+ * Basic Branding Contianer mobile first
+ */
+.branding {
+  position: relative;
+  z-index: 90;
+  margin-left: 15px;
+  height: $branding-xs-height;
+  width: $branding-logo-xs-width;
+  padding: $branding-xs-padding;
+}
+
+/**
+ * Banding Logo Component
+ */
+.branding__logo {
+  width: $branding-logo-xs-width;
+  height: $branding-logo-xs-height;
+  margin-left: 1px;
+  float: left;
+  position: relative;
+  z-index: 100;
+  background: transparent $branding-logo-xs no-repeat;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  @include transition-property(opacity);
+  @include transition-duration(80ms);
+  @include opacity(1);
+  > span {
+    display: block;
+    width: 100%;
+    line-height: 16px;
+    text-indent: -9999px;
+  }
+  &:hover {
+  }
+  &:active {
+    @include opacity(0.75);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+/**
+ * Slogan, positioned behind the main logo
+ */
+.branding__slogan {
+  position: absolute;
+  left: 83px;
+  text-indent: -9999px;
+  z-index: 99;
+}
+
+/**
+ * High Res Mobile Logo
+ */
+@include breakpoint($highres) {
+  .branding__logo {
+    background-image: $branding-logo-xs-2x;
+    background-size: $branding-logo-xs-width $branding-logo-xs-height;
+  }
+}
+
+/**
+ * Small Breakpoint
+ */
+@include breakpoint($screen-sm) {
+  .branding {
+    height: $branding-sm-height;
+    width: $branding-logo-sm-width;
+    padding: $branding-sm-padding;
+  }
+  .branding__logo {
+    width: $branding-logo-sm-width;
+    height: $branding-logo-sm-height;
+    margin-left: 0;
+    background-image: $branding-logo-sm;
+  }
+  .branding__slogan {
+    top: 46px;
+    left: 95px;
+  }
+}
+
+/**
+ * Small Breakpoint + High Res
+ */
+@include breakpoint(($screen-sm-min $highres)) {
+  .branding__logo {
+    background-image: $branding-logo-sm-2x;
+    background-size: $branding-logo-sm-width $branding-logo-sm-height;
+  }
+}
+
+/**
+ * Medium Breakpoint
+ */
+@include breakpoint($screen-md) {
+  .branding {
+    width: $branding-logo-md-width;
+    height: $branding-md-height;
+    padding: $branding-md-padding;
+  }
+  .branding__logo {
+    width: $branding-logo-md-width;
+    height: $branding-logo-md-height;
+    background-image: $branding-logo-md;
+  }
+  .branding__slogan {
+    left: 83px;
+    top: 39px;
+  }
+}
+
+/**
+ * Medium Breakpoint + High res
+ */
+@include breakpoint(($screen-md-min $highres)) {
+  .branding__logo {
+    background-image: $branding-logo-md-2x;
+    background-size: $branding-logo-md-width $branding-logo-md-height;
+  }
+}

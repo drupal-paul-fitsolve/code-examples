@@ -1,0 +1,187 @@
+
+/*doc
+---
+title: Icons
+name: icons
+category: icons
+---
+
+Using IcoMoon, we've created an updateable icon font to use across the site.<br><br>
+
+Usage is as simple as applying the 'icon' class and the 'icon-[NAME]' class to a span (or anchor wrapping a span) to choose the icon used. If you need the larger size, also add the 'icon--large' class.<br><br>
+
+These font-sizes (32px default, 54px large) don't change over breakpoints, as discussed with Dan Ridge.<br><br>
+
+See the examples below, check out the wiki documentation for full documentation here under 'Icons':<br>http://wiki.comicrelief.com/index.php?title=RND15_Technical_Documentation#SASS_Components
+<br><br>
+
+###Icons
+
+Icon name         |  Classes to use                     |             Example                              |    HTML
+------------------| ------------------------------------| -------------------------------------------------| -------------------------------------------------
+Zoom large        |.icon <br>.icon-zoom<br>.icon--large | <span class="icon-zoom icon--large icon-styleguide"></span> | `<span class="icon icon-zoom icon--large"></span>`
+Zoom         |.icon <br>.icon-zoom                 | <span class="icon-zoom icon-styleguide"></span> | `<span class="icon icon-zoom "></span>`
+search large      |.icon <br>.icon-search<br>.icon--large | <span class="icon-search icon--large icon-styleguide"></span> | `<span class="icon icon-search icon--large"></span>`
+search       |.icon <br>.icon-search<br> | <span class="icon-search  icon-styleguide"></span> | `<span class="icon icon-search "></span>`
+help large        |.icon <br>.icon-help<br>.icon--large | <span class="icon-help icon--large icon-styleguide "></span> | `<span class="icon icon-help icon--large"></span>`
+help         |.icon <br>.icon-help<br> | <span class="icon-help  icon-styleguide"></span> | `<span class="icon icon-help "></span>`
+basket large      |.icon <br>.icon-basket<br>.icon--large | <span class="icon-basket icon--large icon-styleguide"></span> | `<span class="icon icon-basket icon--large"></span>`
+basket       |.icon <br>.icon-basket<br> | <span class="icon-basket  icon-styleguide"></span> | `<span class="icon icon-basket "></span>`
+calendar large    |.icon <br>.icon-calendar<br>.icon--large | <span class="icon-calendar icon--large icon-styleguide"></span> | `<span class="icon icon-calendar icon--large"></span>`
+calendar     |.icon <br>.icon-calendar<br> | <span class="icon-calendar  icon-styleguide"></span> | `<span class="icon icon-calendar "></span>`
+email large       |.icon <br>.icon-email<br>.icon--large | <span class="icon-email icon--large icon-styleguide"></span> | `<span class="icon icon-email icon--large"></span>`
+email        |.icon <br>.icon-email<br> | <span class="icon-email  icon-styleguide"></span> | `<span class="icon icon-email "></span>`
+pause large       |.icon <br>.icon-pause<br>.icon--large | <span class="icon-pause icon--large icon-styleguide"></span> | `<span class="icon icon-pause icon--large"></span>`
+pause        |.icon <br>.icon-pause<br> | <span class="icon-pause  icon-styleguide"></span> | `<span class="icon icon-pause "></span>`
+stop large        |.icon <br>.icon-stop<br>.icon--large | <span class="icon-stop icon--large icon-styleguide"></span> | `<span class="icon icon-stop icon--large"></span>`
+stop         |.icon <br>.icon-stop<br> | <span class="icon-stop  icon-styleguide"></span> | `<span class="icon icon-stop "></span>`
+play-1 large      |.icon <br>.icon-play-1<br>.icon--large | <span class="icon-play-1 icon--large icon-styleguide"></span> | `<span class="icon icon-play-1 icon--large"></span>`
+play-1       |.icon <br>.icon-play-1<br> | <span class="icon-play-1  icon-styleguide"></span> | `<span class="icon icon-play-1 "></span>`
+play-2 large      |.icon <br>.icon-play-2<br>.icon--large | <span class="icon-play-2 icon--large icon-styleguide"></span> | `<span class="icon icon-play-2 icon--large"></span>`
+play-2       |.icon <br>.icon-play-2<br> | <span class="icon-play-2  icon-styleguide"></span> | `<span class="icon icon-play-2 "></span>`
+mobile-nav large  |.icon <br>.icon-mobile-nav<br>.icon--large | <span class="icon-mobile-nav icon--large icon-styleguide"></span> | `<span class="icon icon-mobile-nav icon--large"></span>`
+mobile-nav   |.icon <br>.icon-mobile-nav<br> | <span class="icon-mobile-nav  icon-styleguide"></span> | `<span class="icon icon-mobile-nav "></span>`
+tick large        |.icon <br>.icon-tick<br>.icon--large | <span class="icon-tick icon--large icon-styleguide"></span> | `<span class="icon icon-tick icon--large"></span>`
+tick         |.icon <br>.icon-tick<br> | <span class="icon-tick  icon-styleguide"></span> | `<span class="icon icon-tick "></span>`
+cross large       |.icon <br>.icon-cross<br>.icon--large | <span class="icon-cross icon--large icon-styleguide"></span> | `<span class="icon icon-cross icon--large"></span>`
+cross        |.icon <br>.icon-cross<br> | <span class="icon-cross  icon-styleguide"></span> | `<span class="icon icon-cross "></span>`
+plus large        |.icon <br>.icon-plus<br>.icon--large | <span class="icon-plus icon--large icon-styleguide"></span> | `<span class="icon icon-plus icon--large"></span>`
+plus         |.icon <br>.icon-plus<br> | <span class="icon-plus  icon-styleguide"></span> | `<span class="icon icon-plus "></span>`
+minus large       |.icon <br>.icon-minus<br>.icon--large | <span class="icon-minus icon--large icon-styleguide"></span> | `<span class="icon icon-minus icon--large"></span>`
+minus        |.icon <br>.icon-minus<br> | <span class="icon-minus  icon-styleguide"></span> | `<span class="icon icon-minus "></span>`
+arrow-down large  |.icon <br>.icon-arrow-down<br>.icon--large | <span class="icon-arrow-down icon--large icon-styleguide"></span> | `<span class="icon icon-arrow-down icon--large"></span>`
+arrow-down   |.icon <br>.icon-arrow-down<br> | <span class="icon-arrow-down  icon-styleguide"></span> | `<span class="icon icon-arrow-down "></span>`
+arrow-up large    |.icon <br>.icon-arrow-up<br>.icon--large | <span class="icon-arrow-up icon--large icon-styleguide"></span> | `<span class="icon icon-arrow-up icon--large"></span>`
+arrow-up     |.icon <br>.icon-arrow-up<br> | <span class="icon-arrow-up  icon-styleguide"></span> | `<span class="icon icon-arrow-up "></span>`
+arrow-right large |.icon <br>.icon-arrow-right<br>.icon--large | <span class="icon-arrow-right icon--large icon-styleguide"></span> | `<span class="icon icon-arrow-right icon--large"></span>`
+arrow-right  |.icon <br>.icon-arrow-right<br> | <span class="icon-arrow-right  icon-styleguide"></span> | `<span class="icon icon-arrow-right "></span>`
+arrow-left large  |.icon <br>.icon-arrow-left<br>.icon--large | <span class="icon-arrow-left icon--large icon-styleguide"></span> | `<span class="icon icon-arrow-left icon--large"></span>`
+arrow-left   |.icon <br>.icon-arrow-left<br> | <span class="icon-arrow-left  icon-styleguide"></span> | `<span class="icon icon-arrow-left "></span>`
+tumblr large      |.icon <br>.icon-tumblr<br>.icon--large | <span class="icon-tumblr icon--large icon-styleguide"></span> | `<span class="icon icon-tumblr icon--large"></span>`
+tumblr       |.icon <br>.icon-tumblr<br> | <span class="icon-tumblr  icon-styleguide"></span> | `<span class="icon icon-tumblr "></span>`
+Instagram large   |.icon <br>.icon-instagram<br>.icon--large | <span class="icon-instagram icon--large icon-styleguide"></span> | `<span class="icon icon-instagram icon--large"></span>`
+Instagram    |.icon <br>.icon-instagram<br> | <span class="icon-instagram  icon-styleguide"></span> | `<span class="icon icon-instagram "></span>`
+youtube large     |.icon <br>.icon-youtube<br>.icon--large | <span class="icon-youtube icon--large icon-styleguide"></span> | `<span class="icon icon-youtube icon--large"></span>`
+youtube      |.icon <br>.icon-youtube<br> | <span class="icon-youtube  icon-styleguide"></span> | `<span class="icon icon-youtube "></span>`
+google-plus large |.icon <br>.icon-google-plus<br>.icon--large | <span class="icon-google-plus icon--large icon-styleguide"></span> | `<span class="icon icon-google-plus icon--large"></span>`
+google-plus  |.icon <br>.icon-google-plus<br> | <span class="icon-google-plus  icon-styleguide"></span> | `<span class="icon icon-google-plus "></span>`
+twitter large     |.icon <br>.icon-twitter<br>.icon--large | <span class="icon-twitter icon--large icon-styleguide"></span> | `<span class="icon icon-twitter icon--large"></span>`
+twitter      |.icon <br>.icon-twitter<br> | <span class="icon-twitter  icon-styleguide"></span> | `<span class="icon icon-twitter "></span>`
+facebook large    |.icon <br>.icon-facebook<br>.icon--large | <span class="icon-facebook icon--large icon-styleguide"></span> | `<span class="icon icon-facebook icon--large"></span>`
+facebook     |.icon <br>.icon-facebook<br> | <span class="icon-facebook  icon-styleguide"></span> | `<span class="icon icon-facebook "></span>`
+circle large      |.icon <br>.icon-circle<br>.icon--large | <span class="icon-circle icon--large icon-styleguide"></span> | `<span class="icon icon-circle icon--large"></span>`
+circle       |.icon <br>.icon-circle<br> | <span class="icon-circle  icon-styleguide"></span> | `<span class="icon icon-circle "></span>`
+circle-stroke large    | .icon<br> .icon-circle-stroke<br>.icon--large | <span class="icon-circle-stroke icon--large icon-styleguide"></span> | `<span class="icon icon-circle-stroke icon--large"></span>`
+circle-stroke     | .icon<br> .icon-circle-stroke<br> | <span class="icon-circle-stroke  icon-styleguide"></span> | `<span class="icon icon-circle-stroke "></span>`
+close-circle large    | .icon<br> .icon-close-circle<br>.icon--large | <span class="icon-close-circle icon--large icon-styleguide"></span> | `<span class="icon icon-close-circle icon--large"></span>`
+close-circle     | .icon<br> .icon-close-circle<br> | <span class="icon-close-circle  icon-styleguide"></span> | `<span class="icon icon-close-circle "></span>`
+close-cross large    | .icon<br> .icon-close-cross<br>.icon--large | <span class="icon-close-cross icon--large icon-styleguide"></span> | `<span class="icon icon-close-cross icon--large"></span>`
+close-cross     | .icon<br> .icon-close-cross<br> | <span class="icon-close-cross  icon-styleguide"></span> | `<span class="icon icon-close-cross "></span>`
+close-circle-hover large    | .icon<br> .icon-close-circle-hover<br>.icon--large | <span class="icon-close-circle-hover icon--large icon-styleguide"></span> | `<span class="icon icon-close-circle-hover icon--large"></span>`
+close-circle-hover     | .icon<br> .icon-close-circle-hover<br> | <span class="icon-close-circle-hover  icon-styleguide"></span> | `<span class="icon icon-close-circle-hover "></span>`
+exclaimation-mark large    | .icon<br> .icon-exclaimation-mark<br>.icon--large | <span class="icon-exclaimation-mark icon--large icon-styleguide"></span> | `<span class="icon icon-exclaimation-mark icon--large"></span>`
+exclaimation-mark     | .icon<br> .icon-exclaimation-mark<br> | <span class="icon-exclaimation-mark  icon-styleguide"></span> | `<span class="icon icon-exclaimation-mark "></span>`
+help-circle large    | .icon<br> .icon-help-circle<br>.icon--large | <span class="icon-help-circle icon--large icon-styleguide"></span> | `<span class="icon icon-help-circle icon--large"></span>`
+help-circle     | .icon<br> .icon-help-circle<br> | <span class="icon-help-circle  icon-styleguide"></span> | `<span class="icon icon-help-circle "></span>`
+help-question-mark large    | .icon<br> .icon-help-question-mark<br>.icon--large | <span class="icon-help-question-mark icon--large icon-styleguide"></span> | `<span class="icon icon-help-question-mark icon--large"></span>`
+help-question-mark     | .icon<br> .icon-help-question-mark<br> | <span class="icon-help-question-mark  icon-styleguide"></span> | `<span class="icon icon-help-question-mark "></span>`
+pen large    | .icon<br> .icon-pen<br>.icon--large | <span class="icon-pen icon--large icon-styleguide"></span> | `<span class="icon icon-pen icon--large"></span>`
+pen     | .icon<br> .icon-pen<br> | <span class="icon-pen  icon-styleguide"></span> | `<span class="icon icon-pen "></span>`
+
+*/
+/* If you change any of the font files below, be sure to rename the date directory as well */
+/* This avoids problems with CDN caching older versions of the fonts 
+/* Uses font-date variable set in /variables/_icons.scss to point to most recent iconfont
+*/
+
+// Check out the wiki documentation here for usage under 'Icons': http://wiki.comicrelief.com/index.php?title=RND15_Technical_Documentation#SASS_Components
+
+@font-face {
+  font-family: 'rnd-icons';
+
+  src:url('../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.eot?-ccf8zg');
+  src:url('../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.eot?#iefix-ccf8zg') format('embedded-opentype'),
+    url('../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.woff?-ccf8zg') format('woff'),
+    url('../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.ttf?-ccf8zg') format('truetype'),
+    url('../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.svg?-ccf8zg#rnd-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Setting the relative path to font, specifically for the styleguide (extra class added in examples)
+@font-face {
+  font-family: 'rnd-icons-styleguide';
+  src:url('../../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.eot?-ccf8zg');
+  src:url('../../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.eot?#iefix-ccf8zg') format('embedded-opentype'),
+    url('../../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.woff?-ccf8zg') format('woff'),
+    url('../../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.ttf?-ccf8zg') format('truetype'),
+    url('../../sass/fonts/rnd-icons/#{$font-date}/fonts/rnd-icons.svg?-ccf8zg#rnd-icons') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.icon {
+
+  font-family: 'rnd-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display:inline-block;
+  height: 32px;
+  width: 32px;
+
+  // Default fontsize
+  &:before {
+    font-size: 32px;
+  }
+}
+
+// Setting the relative path to font, specifically for the styleguide (extra class added in examples)
+.icon-styleguide {
+  font-family: 'rnd-icons-styleguide';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display:inline-block;
+  height:32px;
+  width:32px;
+
+  // Default fontsize
+  &:before {
+    font-size: 32px;
+  }
+}
+
+// Larger fontsize added with this class
+.icon--large {
+  width: 54px;
+  height:54px;
+
+  &:before {
+    font-size: 54px;
+  } 
+}
+
+// Display the icon inline for use text
+.icon--inline {
+  display:inline;
+}
+
+// Recursively applying relevant fontmapping 'content' attribute using mixin and iconlists variable array
+// Updates to be made to $iconlist in /variables/_icons.scss
+@for $i from 1 to (length($iconlist)+1) {
+  @include iconfont(nth($iconlist,$i));
+}

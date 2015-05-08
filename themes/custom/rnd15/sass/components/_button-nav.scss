@@ -1,0 +1,287 @@
+/*
+ * _button-nav.scss
+ * Nav Button Styling
+ * Author: J.Pitt
+ * Last updated: 31st August 2014
+ */
+
+/*
+ * Default Button Nav Styles
+ */
+nav.nav .button-nav {
+  display: block;
+  background:none;
+  padding: 0;
+  border:none;
+  outline: none;
+  float: right;
+  height: 100%;
+  width: 50px;
+  position:relative;
+  // Little safari trick to avoid that weird grey on tap
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/**
+ * Button Nav Icon Component
+ */
+nav.nav .button-nav__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -($nav-button-size/2);
+  margin-top: -($nav-button-size/2);
+  &:before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    color: $nav-button-icon-color;
+    @include opacity(1);
+    @include transition-property(opacity);
+    @include transition-duration(180ms);
+  }
+}
+
+/**
+ * Button Nav Search Icon Component
+ */
+nav.nav .button-nav__icon.icon-search-2:before {
+  top: $nav-button-search-top-position;
+}
+
+/**
+ * Button Nav Text Component
+ */
+nav.nav .button-nav__text {
+  display: inline;
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+  font-weight: $nav-button-text-weight;
+  font-size: $nav-button-text-size;
+  line-height: $nav-button-text-line-height;
+  color: $nav-button-text-color;
+  @include opacity(0);
+  @include transition-property(opacity);
+  @include transition-duration(180ms);
+}
+
+/**
+ * Button Nav Hover Styles
+ */
+nav.nav .button-nav:hover {
+  .button-nav__icon:before {
+    @include opacity(0);
+    color: $nav-button-icon-hover-color;
+  }
+  .button-nav__text {
+    @include opacity(1);
+    color: $nav-button-text-hover-color;
+  }
+}
+
+// Button Nav Active Styles
+nav.nav .button-nav:active {
+  .button-nav__icon:before {
+    @include opacity(0);
+    color: $nav-button-icon-active-color;
+  }
+  .button-nav__text {
+    @include opacity(1);
+    color: $nav-button-text-active-color;
+  }
+}
+
+/**
+ * Link Buttons
+ */
+nav.nav a.button-nav {
+  display: table;
+  .button-nav__text {
+    display: table-cell;
+  }
+}
+
+/**
+ * Frost Button
+ */
+nav.nav .button-nav--frost .icon-person:before {
+  top: 9px;
+}
+
+/*
+ * Touch Navigation
+ */
+nav.nav .button-nav--toggle {
+  display: none;
+}
+
+nav.nav--touch {
+  /*
+   * Default Navigation Buttons
+   */
+  .button-nav {
+    width: 70px;
+    padding-bottom:0px;
+    background-color: $nav-touch-button-background-color;
+    @include transition-property(background-color);
+    @include transition-duration(180ms);
+
+    .button-nav__icon:before {
+      color: $nav-touch-button-icon-color;
+      @include transition-property(color);
+      @include transition-duration(180ms);
+    }
+
+    /**
+     * Button State
+     * For touch, we only need selected/expanded and the active state
+     */
+    &:hover {
+      .button-nav__icon:before {
+        @include opacity(1);
+      }
+      .button-nav__text {
+        @include opacity(0);
+      }
+    }
+    &:active {
+      background-color: $nav-touch-button-background-active-color;
+      .icon-mobile-nav:before {
+        color: $nav-touch-button-icon-active-color;
+      }
+    }
+    &.active {
+      background-color: $nav-touch-button-background-expanded-color;
+      .icon-mobile-nav:before {
+        color: $nav-touch-button-icon-expanded-color;
+      }
+    }
+    &.active:active {
+      background-color: $nav-touch-button-background-expanded-active-color;
+      .icon-mobile-nav:before {
+        color: $nav-touch-button-icon-expanded-active-color;
+      }
+    }
+
+    /**
+     * Button text component
+     */
+    .button-nav__text {
+      text-indent:-9999px;
+      line-height: 0;
+      width: 0;
+      border: none;
+    }
+
+    /**
+     * Button icon componenet
+     */
+    .button-nav__icon {
+      text-align: center;
+      width: $nav-touch-button-size-xs;
+      height: $nav-touch-button-size-xs;
+      margin-left: -($nav-touch-button-size-xs/2);
+      margin-top: -($nav-touch-button-size-xs/2);
+      &:before {
+        font-size: $nav-touch-button-size-xs;
+      }
+    }
+    .button-nav__icon.icon-search-2:before {
+      top: $nav-touch-button-search-top-position;
+    }
+  }
+
+  /*
+   * Navigation Toggle Button
+   */
+  .button-nav--toggle {
+    display: block;
+    position: relative;
+    top: 0;
+  }
+
+  /**
+   * Frost Button
+   */
+  .button-nav--frost .icon-person:before {
+    top: 11px;
+  }
+}
+
+/*
+ * Retina display
+ */
+@include breakpoint($highres) {
+  nav.nav--touch .button-nav {
+    width: 56px
+  }
+}
+
+/*
+ * Small Breakpoint
+ */
+@include breakpoint($screen-sm) {
+  /*
+   * Touch Nav Buttons
+   */
+  nav.nav.nav--touch {
+    .button-nav {
+      width: 120px;
+    }
+    .button-nav__icon {
+      width: $nav-touch-button-size-sm;
+      height: $nav-touch-button-size-sm;
+      margin-left: -($nav-touch-button-size-sm/2);
+      margin-top: -($nav-touch-button-size-sm/2);
+      &:before {
+        font-size: $nav-touch-button-size-sm;
+      }
+    }
+    .button-nav__icon.icon-search-2:before {
+      top: $nav-touch-button-search-top-position-sm;    
+    }
+
+    /*
+     * Correct position of the FROST person icon
+     */
+    .button-nav--frost .icon-person:before {
+      top: 20px;
+    }
+  }
+}
+
+/*
+ * Medium Breakpoint
+ */
+@include breakpoint($nav-button-breakpoint) {
+  /*
+   * Normal Nav Buttons
+   */
+  .button-nav .button-nav__icon {
+    width: $nav-button-size;
+    height: $nav-button-size;
+    &:before {
+      font-size: $nav-button-size;
+    }
+  }
+
+  /*
+   * Touch Nav Buttons
+   */
+  nav.nav.nav--touch {
+    .button-nav {
+      width: 100px;
+    }
+    .button-nav__icon { padding-top: 0; }
+    .button-nav__text { padding-top: 0; }
+  }
+
+  // Nav Toggle
+  .button-nav--toggle {
+    right: 0;
+  }
+}

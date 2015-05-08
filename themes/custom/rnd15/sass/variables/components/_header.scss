@@ -1,0 +1,13 @@
+/*
+ * _header.scss
+ * Header Variables
+ * Author: J.Pitt
+ * Last updated: 31st August 2014
+ */
+
+/**
+ * Defines header variables for the RND15 theme.
+ */
+$site-header-bg-color:              $white-brand;
+$site-header-bg-transition-timing:  180ms;
+$site-header-breakpoint:            1150px, 'no-query' true;
