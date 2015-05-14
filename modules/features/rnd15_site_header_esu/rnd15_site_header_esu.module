@@ -1,6 +1,0 @@
-<?php
-/**
- * @file
- * Drupal needs this blank file.
- */
-include_once 'rnd15_site_header_esu.custom.inc';

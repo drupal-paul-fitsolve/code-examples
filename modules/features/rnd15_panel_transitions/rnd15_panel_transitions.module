@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Drupal needs this blank file.
- */
-
-include_once 'rnd15_panel_transitions.custom.inc';

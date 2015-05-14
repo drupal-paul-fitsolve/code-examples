@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Images feature.
- */
-
-include_once 'rnd15_site_images.features.inc';

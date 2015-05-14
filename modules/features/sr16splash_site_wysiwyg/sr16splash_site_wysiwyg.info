@@ -1,0 +1,17 @@
+name = sr16splash Site WYSIWYG
+description = The Red Nose Day wysiwyg editor settings
+core = 7.x
+package = sr16splash
+php = 5.2.4
+version = 7.x-0.01
+project = sr16splash_site_wysiwyg
+dependencies[] = ckeditor
+dependencies[] = features
+dependencies[] = filter
+
+features[ckeditor_profile][] = CKEditor Global Profile
+features[ckeditor_profile][] = rnd_profile
+features[features_api][] = api:1
+features[filter][] = wysiwyg
+features[user_permission][] = administer ckeditor
+features[user_permission][] = customize ckeditor

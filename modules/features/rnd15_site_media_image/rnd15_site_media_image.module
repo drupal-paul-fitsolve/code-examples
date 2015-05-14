@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the rnd15 Site Media Image feature.
- */
-
-include_once 'rnd15_site_media_image.features.inc';

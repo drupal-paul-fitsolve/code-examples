@@ -214,7 +214,7 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => 'sr16_splash',
+      'database' => 'sr16_splash2',
       'username' => 'sr16_splash_user',
       'password' => 'f5Anedu4rahEpre',
       'host' => 'localhost',

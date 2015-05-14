@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the rnd15 Site Panes feature.
- */
-include_once 'rnd15_site_panes.features.inc';
-include_once 'rnd15_site_panes.custom.inc';
