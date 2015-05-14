@@ -66,7 +66,7 @@ function sr16splash_site_theme_strongarm() {
       'file_path' => 'sites/all/modules/contrib/eu-cookie-compliance/js/eu_cookie_compliance.js',
       'file_name' => 'eu_cookie_compliance.js',
       'version' => '',
-      'minified_file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/minified/eu_cookie_compliance.min.js',
+      'minified_file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/minified/eu_cookie_compliance.min.js',
       'original_size' => 6527,
       'minified_size' => 4981,
       'status' => TRUE,
@@ -153,8 +153,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_panel_transitions/plugins/sr16splash_panel_transitions_flip/js/sr16splash.panelTransitionsFlip.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_panel_transitions/plugins/sr16splash_panel_transitions_flip/js/sr16splash.panelTransitionsFlip.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_panel_transitions/plugins/sr16splash_panel_transitions_flip/js/sr16splash.panelTransitionsFlip.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_panel_transitions/plugins/sr16splash_panel_transitions_flip/js/sr16splash.panelTransitionsFlip.min.js',
       'file_name' => 'sr16splash.panelTransitionsFlip.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -166,8 +166,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_pane_filter/js/sr16splashPaneFilter.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_pane_filter/js/sr16splashPaneFilter.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_pane_filter/js/sr16splashPaneFilter.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_pane_filter/js/sr16splashPaneFilter.min.js',
       'file_name' => 'sr16splashPaneFilter.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -179,8 +179,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_esu/js/sr16splash.siteESU.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_esu/js/sr16splash.siteESU.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_esu/js/sr16splash.siteESU.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_esu/js/sr16splash.siteESU.min.js',
       'file_name' => 'sr16splash.siteESU.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -192,8 +192,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_gtm/js/sr16splash.gtm.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_gtm/js/sr16splash.gtm.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_gtm/js/sr16splash.gtm.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_gtm/js/sr16splash.gtm.min.js',
       'file_name' => 'sr16splash.gtm.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -205,8 +205,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_header_esu/js/sr16splash.siteHeaderESU.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_header_esu/js/sr16splash.siteHeaderESU.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_header_esu/js/sr16splash.siteHeaderESU.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_header_esu/js/sr16splash.siteHeaderESU.min.js',
       'file_name' => 'sr16splash.siteHeaderESU.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -218,8 +218,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.interstitial.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.interstitial.min.js',
+    'sites/splash.sportrelief.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.interstitial.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.interstitial.min.js',
       'file_name' => 'sr16splash.interstitial.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -231,8 +231,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.ageCheck.interstitial.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.ageCheck.interstitial.min.js',
+    'sites/splash.sportrelief.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.ageCheck.interstitial.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.ageCheck.interstitial.min.js',
       'file_name' => 'sr16splash.ageCheck.interstitial.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -244,8 +244,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_media/js/mediaelement-and-player.custom.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_media/js/mediaelement-and-player.custom.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_media/js/mediaelement-and-player.custom.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_media/js/mediaelement-and-player.custom.min.js',
       'file_name' => 'mediaelement-and-player.custom.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -257,8 +257,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_media/js/media.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_media/js/media.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_media/js/media.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_media/js/media.min.js',
       'file_name' => 'media.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -270,8 +270,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_media/js/sr16splash.siteMedia.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_media/js/sr16splash.siteMedia.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_media/js/sr16splash.siteMedia.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_media/js/sr16splash.siteMedia.min.js',
       'file_name' => 'sr16splash.siteMedia.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -283,8 +283,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_menu/js/sr16splash.touchMenu.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_menu/js/sr16splash.touchMenu.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_menu/js/sr16splash.touchMenu.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_menu/js/sr16splash.touchMenu.min.js',
       'file_name' => 'sr16splash.touchMenu.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -296,8 +296,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_tabs/js/sr16splash.siteTabs.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_tabs/js/sr16splash.siteTabs.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_tabs/js/sr16splash.siteTabs.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_tabs/js/sr16splash.siteTabs.min.js',
       'file_name' => 'sr16splash.siteTabs.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -430,7 +430,7 @@ function sr16splash_site_theme_strongarm() {
       'file_path' => 'sites/all/modules/contrib/picture/picture.js',
       'file_name' => 'picture.js',
       'version' => '7.34',
-      'minified_file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/minified/picture.7.34.min.js',
+      'minified_file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/minified/picture.7.34.min.js',
       'original_size' => 272,
       'minified_size' => 164,
       'status' => TRUE,
@@ -517,8 +517,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/fastclick.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/fastclick.min.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/fastclick.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/fastclick.min.js',
       'file_name' => 'fastclick.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -530,8 +530,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/dropkick.jquery.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/dropkick.jquery.min.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/dropkick.jquery.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/dropkick.jquery.min.js',
       'file_name' => 'dropkick.jquery.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -543,8 +543,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/dropkick.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/dropkick.min.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/dropkick.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/dropkick.min.js',
       'file_name' => 'dropkick.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -556,8 +556,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/sr16splash.dropkick.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/sr16splash.dropkick.min.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/sr16splash.dropkick.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/sr16splash.dropkick.min.js',
       'file_name' => 'sr16splash.dropkick.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -569,8 +569,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/sr16splash.email-signup-platform.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/sr16splash.email-signup-platform.min.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/sr16splash.email-signup-platform.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/sr16splash.email-signup-platform.min.js',
       'file_name' => 'sr16splash.email-signup-platform.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -582,8 +582,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/jquery.history.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/jquery.history.min.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/jquery.history.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/jquery.history.min.js',
       'file_name' => 'jquery.history.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -608,8 +608,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/patched/panels/panels_ipe/js/panels_ipe.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/patched/panels/panels_ipe/js/panels_ipe.js',
+    'sites/splash.sportrelief.com/modules/patched/panels/panels_ipe/js/panels_ipe.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/patched/panels/panels_ipe/js/panels_ipe.js',
       'file_name' => 'panels_ipe.js',
       'version' => '',
       'minified_file_path' => '',
@@ -651,7 +651,7 @@ function sr16splash_site_theme_strongarm() {
       'file_path' => 'sites/all/modules/contrib/flexslider/assets/js/flexslider.load.js',
       'file_name' => 'flexslider.load.js',
       'version' => '',
-      'minified_file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/minified/flexslider.load.min.js',
+      'minified_file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/minified/flexslider.load.min.js',
       'original_size' => 1799,
       'minified_size' => 1117,
       'status' => TRUE,
@@ -660,8 +660,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_slideshows/js/sr16splash_site_slideshows.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_slideshows/js/sr16splash_site_slideshows.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_slideshows/js/sr16splash_site_slideshows.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_slideshows/js/sr16splash_site_slideshows.min.js',
       'file_name' => 'sr16splash_site_slideshows.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -677,7 +677,7 @@ function sr16splash_site_theme_strongarm() {
       'file_path' => 'sites/all/modules/contrib/placeholder/placeholder.js',
       'file_name' => 'placeholder.js',
       'version' => '',
-      'minified_file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/minified/placeholder.min.js',
+      'minified_file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/minified/placeholder.min.js',
       'original_size' => 231,
       'minified_size' => 134,
       'status' => TRUE,
@@ -690,7 +690,7 @@ function sr16splash_site_theme_strongarm() {
       'file_path' => 'sites/all/libraries/placeholder/jquery.placeholder.js',
       'file_name' => 'jquery.placeholder.js',
       'version' => '',
-      'minified_file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/minified/jquery.placeholder.min.js',
+      'minified_file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/minified/jquery.placeholder.min.js',
       'original_size' => 4875,
       'minified_size' => 3366,
       'status' => TRUE,
@@ -712,8 +712,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/contrib/omega/omega/js/no-js.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/contrib/omega/omega/js/no-js.js',
+    'sites/splash.sportrelief.com/themes/contrib/omega/omega/js/no-js.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/contrib/omega/omega/js/no-js.js',
       'file_name' => 'no-js.js',
       'version' => '',
       'minified_file_path' => '',
@@ -725,8 +725,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/ie8-polyfill.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/vendor/ie8-polyfill.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/ie8-polyfill.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/ie8-polyfill.js',
       'file_name' => 'ie8-polyfill.js',
       'version' => '',
       'minified_file_path' => '',
@@ -946,8 +946,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_panel_transitions/plugins/sr16splash_panel_transitions_flip/js/sr16splash.panelTransitionsFlip.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_panel_transitions/plugins/sr16splash_panel_transitions_flip/js/sr16splash.panelTransitionsFlip.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_panel_transitions/plugins/sr16splash_panel_transitions_flip/js/sr16splash.panelTransitionsFlip.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_panel_transitions/plugins/sr16splash_panel_transitions_flip/js/sr16splash.panelTransitionsFlip.js',
       'file_name' => 'sr16splash.panelTransitionsFlip.js',
       'version' => '',
       'minified_file_path' => '',
@@ -959,8 +959,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_pane_filter/js/sr16splashPaneFilter.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_pane_filter/js/sr16splashPaneFilter.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_pane_filter/js/sr16splashPaneFilter.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_pane_filter/js/sr16splashPaneFilter.js',
       'file_name' => 'sr16splashPaneFilter.js',
       'version' => '',
       'minified_file_path' => '',
@@ -972,8 +972,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_esu/js/sr16splash.siteESU.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_esu/js/sr16splash.siteESU.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_esu/js/sr16splash.siteESU.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_esu/js/sr16splash.siteESU.js',
       'file_name' => 'sr16splash.siteESU.js',
       'version' => '',
       'minified_file_path' => '',
@@ -985,8 +985,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_gtm/js/sr16splash.gtm.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_gtm/js/sr16splash.gtm.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_gtm/js/sr16splash.gtm.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_gtm/js/sr16splash.gtm.js',
       'file_name' => 'sr16splash.gtm.js',
       'version' => '',
       'minified_file_path' => '',
@@ -998,8 +998,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_header_esu/js/sr16splash.siteHeaderESU.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_header_esu/js/sr16splash.siteHeaderESU.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_header_esu/js/sr16splash.siteHeaderESU.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_header_esu/js/sr16splash.siteHeaderESU.js',
       'file_name' => 'sr16splash.siteHeaderESU.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1011,8 +1011,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.interstitial.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.interstitial.js',
+    'sites/splash.sportrelief.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.interstitial.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.interstitial.js',
       'file_name' => 'sr16splash.interstitial.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1024,8 +1024,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.ageCheck.interstitial.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.ageCheck.interstitial.js',
+    'sites/splash.sportrelief.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.ageCheck.interstitial.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/custom/sr16splash_site_interstitial/js/sr16splash.ageCheck.interstitial.js',
       'file_name' => 'sr16splash.ageCheck.interstitial.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1037,8 +1037,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_media/js/sr16splash.siteMedia.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_media/js/sr16splash.siteMedia.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_media/js/sr16splash.siteMedia.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_media/js/sr16splash.siteMedia.js',
       'file_name' => 'sr16splash.siteMedia.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1050,8 +1050,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_tabs/js/sr16splash.siteTabs.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_tabs/js/sr16splash.siteTabs.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_tabs/js/sr16splash.siteTabs.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_tabs/js/sr16splash.siteTabs.js',
       'file_name' => 'sr16splash.siteTabs.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1063,8 +1063,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_slideshows/js/sr16splash_site_slideshows.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_slideshows/js/sr16splash_site_slideshows.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_slideshows/js/sr16splash_site_slideshows.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_slideshows/js/sr16splash_site_slideshows.js',
       'file_name' => 'sr16splash_site_slideshows.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1154,8 +1154,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/contrib/ckeditor/includes/ckeditor.utils.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/contrib/ckeditor/includes/ckeditor.utils.js',
+    'sites/splash.sportrelief.com/modules/contrib/ckeditor/includes/ckeditor.utils.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/contrib/ckeditor/includes/ckeditor.utils.js',
       'file_name' => 'ckeditor.utils.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1167,8 +1167,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/contrib/ckeditor/ckeditor/ckeditor.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/contrib/ckeditor/ckeditor/ckeditor.js',
+    'sites/splash.sportrelief.com/modules/contrib/ckeditor/ckeditor/ckeditor.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/contrib/ckeditor/ckeditor/ckeditor.js',
       'file_name' => 'ckeditor.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1336,8 +1336,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/patched/panels/js/panels-base.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/patched/panels/js/panels-base.js',
+    'sites/splash.sportrelief.com/modules/patched/panels/js/panels-base.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/patched/panels/js/panels-base.js',
       'file_name' => 'panels-base.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1349,8 +1349,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/patched/panels/js/display_editor.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/patched/panels/js/display_editor.js',
+    'sites/splash.sportrelief.com/modules/patched/panels/js/display_editor.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/patched/panels/js/display_editor.js',
       'file_name' => 'display_editor.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1401,8 +1401,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/patched/panels/js/layout.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/patched/panels/js/layout.js',
+    'sites/splash.sportrelief.com/modules/patched/panels/js/layout.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/patched/panels/js/layout.js',
       'file_name' => 'layout.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1505,8 +1505,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/patched/metatag/metatag.vertical-tabs.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/patched/metatag/metatag.vertical-tabs.js',
+    'sites/splash.sportrelief.com/modules/patched/metatag/metatag.vertical-tabs.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/patched/metatag/metatag.vertical-tabs.js',
       'file_name' => 'metatag.vertical-tabs.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1648,8 +1648,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/patched/metatag/metatag.admin.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/patched/metatag/metatag.admin.js',
+    'sites/splash.sportrelief.com/modules/patched/metatag/metatag.admin.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/patched/metatag/metatag.admin.js',
       'file_name' => 'metatag.admin.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1713,8 +1713,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.matchmedia.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.matchmedia.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.matchmedia.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.matchmedia.js',
       'file_name' => 'sr16splash.matchmedia.js',
       'version' => '0.1',
       'minified_file_path' => '',
@@ -1726,8 +1726,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.picturefill.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.picturefill.min.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.picturefill.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.picturefill.min.js',
       'file_name' => 'sr16splash.picturefill.min.js',
       'version' => '0.1',
       'minified_file_path' => '',
@@ -1739,8 +1739,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.flexslider.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.flexslider.min.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.flexslider.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.flexslider.min.js',
       'file_name' => 'sr16splash.flexslider.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1817,8 +1817,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_panes_media_wall/js/sr16splash.panesMediaWall.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_panes_media_wall/js/sr16splash.panesMediaWall.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_panes_media_wall/js/sr16splash.panesMediaWall.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_panes_media_wall/js/sr16splash.panesMediaWall.min.js',
       'file_name' => 'sr16splash.panesMediaWall.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1856,8 +1856,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_media_wall/js/sr16splash.mediaWall.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_media_wall/js/sr16splash.mediaWall.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_media_wall/js/sr16splash.mediaWall.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_media_wall/js/sr16splash.mediaWall.min.js',
       'file_name' => 'sr16splash.mediaWall.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1869,8 +1869,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_media_wall/js/sr16splash.mediaWall.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_media_wall/js/sr16splash.mediaWall.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_media_wall/js/sr16splash.mediaWall.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_media_wall/js/sr16splash.mediaWall.js',
       'file_name' => 'sr16splash.mediaWall.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1882,8 +1882,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_media_wall/js/sr16splash.siteMediaWall.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_media_wall/js/sr16splash.siteMediaWall.min.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_media_wall/js/sr16splash.siteMediaWall.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_media_wall/js/sr16splash.siteMediaWall.min.js',
       'file_name' => 'sr16splash.siteMediaWall.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1895,8 +1895,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.flexslider.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.flexslider.js',
+    'sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.flexslider.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.flexslider.js',
       'file_name' => 'sr16splash.flexslider.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1908,8 +1908,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/themes/contrib/omega/omega/js/omega.admin.min.js' => array(
-      'file_path' => 'sites/rednoseday.com/themes/contrib/omega/omega/js/omega.admin.min.js',
+    'sites/splash.sportrelief.com/themes/contrib/omega/omega/js/omega.admin.min.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/themes/contrib/omega/omega/js/omega.admin.min.js',
       'file_name' => 'omega.admin.min.js',
       'version' => '',
       'minified_file_path' => '',
@@ -1921,8 +1921,8 @@ function sr16splash_site_theme_strongarm() {
       'error_msg' => '',
       'skip' => 0,
     ),
-    'sites/rednoseday.com/modules/features/sr16splash_site_media_wall/js/sr16splash.siteMediaWall.js' => array(
-      'file_path' => 'sites/rednoseday.com/modules/features/sr16splash_site_media_wall/js/sr16splash.siteMediaWall.js',
+    'sites/splash.sportrelief.com/modules/features/sr16splash_site_media_wall/js/sr16splash.siteMediaWall.js' => array(
+      'file_path' => 'sites/splash.sportrelief.com/modules/features/sr16splash_site_media_wall/js/sr16splash.siteMediaWall.js',
       'file_name' => 'sr16splash.siteMediaWall.js',
       'version' => '',
       'minified_file_path' => '',
@@ -2165,7 +2165,7 @@ function sr16splash_site_theme_strongarm() {
     'logo_path' => '',
     'logo_upload' => '',
     'default_favicon' => 0,
-    'favicon_path' => 'sites/rednoseday.com/themes/custom/sr16splash/images/branding/favicon.ico',
+    'favicon_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/favicon.ico',
     'favicon_upload' => '',
     'omega_enable_warning' => '1',
     'omega_toggle_extension_layouts' => 1,
@@ -2198,23 +2198,23 @@ function sr16splash_site_theme_strongarm() {
       3 => '~sites/all/themes/custom/cr_layout_v2/libraries/html5shiv/html5shiv.min.js',
       4 => '~sites/all/themes/custom/cr_layout_v2/libraries/html5shiv/html5shiv-printshiv.min.js',
       5 => '~sites/all/themes/custom/cr_layout_v2/libraries/selectivizr/selectivizr.min.js',
-      6 => '~sites/rednoseday.com/themes/custom/sr16splash/js/vendor/fastclick.min.js',
-      7 => '~sites/rednoseday.com/themes/custom/sr16splash/js/vendor/ie8-polyfill.js',
+      6 => '~sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/fastclick.min.js',
+      7 => '~sites/splash.sportrelief.com/themes/custom/sr16splash/js/vendor/ie8-polyfill.js',
       8 => '~sites/all/modules/contrib/picture/picturefill/matchmedia.js',
       9 => '~sites/all/modules/contrib/picture/picture.js',
-      10 => '~sites/rednoseday.com/themes/custom/sr16splash/js/minified/picture.7.34.min.js',
+      10 => '~sites/splash.sportrelief.com/themes/custom/sr16splash/js/minified/picture.7.34.min.js',
       11 => '~sites/all/themes/custom/cr_layout_v2/libraries/modernizr/modernizr.min.js',
       12 => '~sites/all/modules/custom/cr_layout_v2/crl2_svg_field/js/crl2_svg_field.js',
       13 => '~sites/all/modules/custom/cr_layout_v2/crl2_svg_field/js/crl2_svg_field.min.js',
-      14 => '~sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.picturefill.min.js',
-      15 => '~sites/rednoseday.com/themes/custom/sr16splash/js/overrides/sr16splash.matchmedia.js',
+      14 => '~sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.picturefill.min.js',
+      15 => '~sites/splash.sportrelief.com/themes/custom/sr16splash/js/overrides/sr16splash.matchmedia.js',
       16 => '~sites/all/modules/contrib/jquery_update/replace/jquery/1.7/jquery.min.js',
       17 => '~sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/*',
     ),
     'omega_css_exclude' => array(
       0 => ':contrib/*',
       1 => 'misc/*',
-      2 => 'sites/rednoseday.com/themes/contrib/omega/*',
+      2 => 'sites/splash.sportrelief.com/themes/contrib/omega/*',
       3 => 'modules/node/*',
       4 => '~sites/all/modules/contrib/admin_menu/*',
       5 => '~sites/*/modules/features/*',
