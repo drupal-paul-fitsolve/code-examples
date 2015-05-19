@@ -696,7 +696,7 @@ switch (getenv('AH_SITE_ENVIRONMENT')) {
     // Disable memcache.
     $conf['cache_default_class'] = 'DrupalDatabaseCache';
     // Set stage file proxy source
-    $conf['stage_file_proxy_origin'] = 'http://' . urlencode('review') . ':hav3al00k@rnd15-dev.rednoseday.com';
+    $conf['stage_file_proxy_origin'] = 'http://' . urlencode('review') . ':hav3al00k@sr16-spl-dev.sportrelief.com/';
     $conf['stage_file_proxy_use_imagecache_root'] = TRUE;
 
     $conf['google_tag_container_id'] = null;
@@ -706,8 +706,8 @@ switch (getenv('AH_SITE_ENVIRONMENT')) {
   case 'development':
   case 'cam-development':
 
-    // Google Tag Manager container IDs, defined by Sjuan Wong in RED-421: https://jira.comicrelief.com/browse/RED-421
-    $conf['google_tag_container_id'] = 'GTM-WFH8MT';
+    // Google Tag Manager container IDs, defined by Sjuan Wong in SR-137: https://jira.comicrelief.com/browse/SR-137
+    $conf['google_tag_container_id'] = 'GTM-TLSGPH';
 
     break;
 
@@ -718,7 +718,7 @@ switch (getenv('AH_SITE_ENVIRONMENT')) {
     $conf['less_watch'] = 0;
 
     // Google Tag Manager container IDs, defined by Sjuan Wong in RED-1367:  https://jira.comicrelief.com/browse/RED-1367
-    $conf['google_tag_container_id'] = 'GTM-TZWGS4';
+    $conf['google_tag_container_id'] = 'GTM-5RJ2GQ';
  
     // No additional settings!
     break;
@@ -736,8 +736,8 @@ switch (getenv('AH_SITE_ENVIRONMENT')) {
     $conf['cache_lifetime'] = 300;
     $conf['page_cache_maximum_age'] = 600;
 
-     // Google Tag Manager container IDs, defined by Sjuan Wong in RED-421: https://jira.comicrelief.com/browse/RED-421
-    $conf['google_tag_container_id'] = 'GTM-N47HQJ';
+     // Google Tag Manager container IDs, defined by Sjuan Wong in SR-137: https://jira.comicrelief.com/browse/SR-137
+    $conf['google_tag_container_id'] = 'GTM-N2QWCH';
 
     // Pass through end user IP address, not load balancer.
     $conf['reverse_proxy'] = TRUE;
@@ -772,8 +772,8 @@ switch (getenv('AH_SITE_ENVIRONMENT')) {
     #$conf['cache_lifetime'] = 300;
     #$conf['page_cache_maximum_age'] = 600;
 
-     // Google Tag Manager container IDs, defined by Sjuan Wong in RED-421: https://jira.comicrelief.com/browse/RED-421
-    $conf['google_tag_container_id'] = 'GTM-NCLBZP';
+     // Google Tag Manager container IDs, defined by Sjuan Wong in SR-137: https://jira.comicrelief.com/browse/SR-137
+    $conf['google_tag_container_id'] = 'GTM-NZ729T';
 
     // Pass through end user IP address, not load balancer.
     $conf['reverse_proxy'] = TRUE;
@@ -810,11 +810,11 @@ function cdn_pick_server($servers_for_file) {
   $unique_file_id = hexdec(substr(md5($filename), 0, 5));
   return $servers_for_file[$unique_file_id % count($servers_for_file)];
 }
-
+ 
 /**
  * Set campaign ID for DASP products.
  */
-define('CR_CAMPAIGN_ID', 'rnd15');
+define('CR_CAMPAIGN_ID', 'sr16');
 
 /**
  * Fast 404 settings:
