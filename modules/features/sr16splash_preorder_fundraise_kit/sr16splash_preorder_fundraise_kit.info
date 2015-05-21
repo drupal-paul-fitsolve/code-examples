@@ -1,0 +1,9 @@
+name = SR16 Splash Pre-Order Fundraise Kit
+description = Provides a theme hook and template to style the pre-order kit webform block
+core = 7.x
+package = sr16splash
+php = 5.2.4
+version = 7.x-0.01
+project = sr16splash_preorder_fundraise_kit
+features[features_api][] = api:1
+no autodetect = 1
