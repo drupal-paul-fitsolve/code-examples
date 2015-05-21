@@ -607,11 +607,10 @@ if ($rabbitmq_host = getenv('RABBITMQ_HOST')) {
 
 /**
  * Memcache settings.
- */
-$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
+*/
+$conf['cache_backends'][] = 'profiles/crdistro/modules/contrib/memcache/memcache.inc';
 $conf['cache_default_class'] = 'MemCacheDrupal';
 $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-
 /**
  * Allow memcache configuration to be overridden by environment variables.
  */
@@ -630,7 +629,7 @@ if ($varnish_hosts = getenv('VARNISH_HOSTS')) {
   $conf['varnish_control_terminal'] = str_replace(' ', ':6082 ', $varnish_hosts) . ':6082';
 
   // Configure page cache to use Varnish.
-  $conf['cache_backends'][] = 'sites/all/modules/contrib/varnish/varnish.cache.inc';
+  $conf['cache_backends'][] = 'profiles/crdistro/modules/contrib/varnish/varnish.cache.inc';
   $conf['cache_class_cache_page'] = 'VarnishCache';
   $conf['page_cache_invoke_hooks'] = FALSE;
 
@@ -696,10 +695,10 @@ switch (getenv('AH_SITE_ENVIRONMENT')) {
     $conf['less_devel'] = TRUE;
 
     // Enable some handy module
-    $conf['environment_modules'] = array(
-      'devel' => 'sites/all/modules/contrib/devel/devel.module',
-      'stage_file_proxy' => 'sites/all/modules/contrib/stage_file_proxy/stage_file_proxy.module',
-    );
+   // $conf['environment_modules'] = array(
+     // 'devel' => 'sites/all/modules/contrib/devel/devel.module',
+     // 'stage_file_proxy' => 'sites/all/modules/contrib/stage_file_proxy/stage_file_proxy.module',
+   // );
     // Disable memcache.
     $conf['cache_default_class'] = 'DrupalDatabaseCache';
     // Set stage file proxy source
@@ -900,7 +899,7 @@ function cdn_pick_server($servers_for_file) {
 /**
  * Set campaign ID for DASP products.
  */
-define('CR_CAMPAIGN_ID', 'SR14');
+define('CR_CAMPAIGN_ID', 'SR16');
 
 /**
  * Fast 404 settings:
@@ -918,7 +917,7 @@ define('CR_CAMPAIGN_ID', 'SR14');
 
 # Load the fast_404.inc file. This is needed if you wish to do extension
 # checking in settings.php.
-include_once( DRUPAL_ROOT . '/sites/all/modules/contrib/fast_404/fast_404.inc');
+include_once( DRUPAL_ROOT . '/profiles/crdistro/modules/patched/fast_404/fast_404.inc');
 
 # Disallowed extensions. Any extension in here will not be served by Drupal and
 # will get a fast 404.
