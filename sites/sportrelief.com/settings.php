@@ -211,6 +211,22 @@
  * @endcode
  */
 
+$databases = array (
+  'default' =>
+  array (
+    'default' =>
+    array (
+      'database' => 'sr16',
+      'username' => 'cr-sr16',
+      'password' => 't3st4chE2aSwuh',
+      'host' => 'localhost',
+      'port' => '',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+);
+
 /**
  * Access control for update.php script.
  *
