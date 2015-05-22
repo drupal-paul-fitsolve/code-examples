@@ -11,25 +11,19 @@
 <section class="clearfix preorder--kit-type">
   <div class="container">
     <div class="row row--content row--small">
-
       <div class="col-xs-12">
         <div class="row">
-      <div class="col-xs-12 type--centred">
-        <h2 class="type--margin-none">Simply fill out the form below</h2>
-        <p>All fields marked with a <span class="form-required" title="This field is required.">*</span> are mandatory</p>
-      </div>
+          <div class="col-xs-12 type--centred">
+            <h2 class="type--margin-none">Simply fill out the form below</h2>
+            <p>All fields marked with a <span class="form-required" title="This field is required.">*</span> are mandatory</p>
           </div>
-
+        </div>
         <div class="row">
-
-      <div class="col-xs-12 col-md-6 col-md-push-3">
-        <?php print drupal_render($form['submitted']['choose_your_fundraising_kit']);?>
+          <div class="col-xs-12 col-md-6 col-md-push-3">
+            <?php print drupal_render($form['submitted']['choose_your_fundraising_kit']);?>
+          </div>
+        </div>
       </div>
-
-    </div>
-  </div>
-
-
     </div>
   </div>
 </section>
@@ -125,5 +119,5 @@
 </section>
 
 <?php 
-print drupal_render_children($form); 
-?>
+  print drupal_render_children($form); 
+  ?>
