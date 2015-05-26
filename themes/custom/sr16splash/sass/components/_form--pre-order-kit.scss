@@ -25,6 +25,10 @@
     max-height: 200px;
     overflow-y: scroll;
   }
+
+  .messages.error.messages-inline {
+    margin: -14px 0 14px 0;
+  }
 }
 
 .preorder--school-details .form-type-cr-eddirect-establishment {
@@ -52,5 +56,9 @@
 
   .webform-component-checkboxes {
     margin-bottom:0;
+  }
+
+  .messages.error.messages-inline {
+    margin: -21px 0 21px 36px;
   }
 }
