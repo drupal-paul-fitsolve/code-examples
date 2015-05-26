@@ -4,7 +4,7 @@
 
 .footer {
 
-  padding: 50px 5px 20px 5px;
+  padding: 0 5px 20px 5px;
   background-color: $black-brand;
 
   // Hover transitions for footer links
@@ -37,6 +37,7 @@
     // Fixes inline-block extra space bug
     font-size:0;
     margin-bottom: 15px;
+    margin-top: 30px;
 
     li {
       line-height:30px;
@@ -82,9 +83,13 @@
   .footer__social {
   
     ul {
-      margin:20px 0 20px 0;
+      margin: 0;
+      padding: 35px 0 20px 0;
+      background-color: $footer--social-grey;
   
       li{
+
+        margin: 0 20px;
   
         a {
           height:54px;
@@ -145,6 +150,6 @@
 
 @include breakpoint($screen-md) {
   .footer {
-    padding-top:100px;
+    //padding-top:100px;
   }
 }
