@@ -8,7 +8,7 @@
   
   //dpm($form);
   ?>
-<section class="clearfix preorder--kit-type">
+<section class="clearfix preorder-section preorder--type">
   <div class="container">
     <div class="row row--content row--small">
       <div class="col-xs-12">
@@ -27,7 +27,7 @@
     </div>
   </div>
 </section>
-<section class="clearfix bg-color--grey-v-light preorder--teachers-details">
+<section class="clearfix bg-color--grey-v-light preorder-section preorder--teachers-details">
   <div class="container">
     <div class="row row--content row--small">
       <div class="col-xs-12">
@@ -63,8 +63,8 @@
     </div>
   </div>
 </section>
-<section class="clearfix">
-  <div class="container preorder--school-details">
+<section class="clearfix preorder-section preorder--school-details">
+  <div class="container">
     <div class="row row--content row--small">
       <div class="col-xs-12 schools form-wrapper" id="edit-schools">
         <div class="row">
@@ -81,7 +81,7 @@
     </div>
   </div>
 </section>
-<section class="clearfix bg-color--grey-v-light preorder--checkboxes">
+<section class="clearfix bg-color--grey-v-light preorder-section preorder--checkboxes">
   <div class="container">
     <div class="row row--content row--small">
       <div class="col-xs-12">
@@ -104,7 +104,7 @@
     </div>
   </div>
 </section>
-<section class="clearfix preorder--submit">
+<section class="clearfix preorder-section preorder--submit">
   <div class="container">
     <div class="row row--content row--small">
       <div class="col-xs-12">
