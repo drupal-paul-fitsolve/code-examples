@@ -64,9 +64,10 @@ Type                                                                | Modifier C
 <p class="type--centred--sm">Center Aligned SM Breakpoint</p>       | '.type--centred--sm'
 <p class="type--right--md">Right Aligned MD Breakpoint</p>          | '.type--right--md'
 <p class="type--centred--lg">Center Aligned LG Breakpoint</p>       | '.type--centred--lg'
-
-
 */
+
+// Import webfont version of Open Sans, rather than the Typekit version
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600);
 
 /* defaults */
 

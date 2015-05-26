@@ -53,14 +53,6 @@ function sr16splash_site_theme_js_alter(&$javascript) {
 }
 
 /**
- * Implements hook_preprocess_TEMPLATE().
- */
-function sr16splash_site_theme_preprocess_html(&$variables) {
-  // Add TypeKit OpenSans font kit - kitId: 'xip7ept'
-  _sr16splash_add_typekit('xip7ept', 3000);
-}
-
-/**
  * Helper function to replace an existing js with a new path
  */
 function _sr16splash_replace_file(&$files, $newFile) {
