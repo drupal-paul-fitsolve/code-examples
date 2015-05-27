@@ -87,10 +87,17 @@
       padding: 35px 0 20px 0;
       background-color: $footer--social-grey;
   
-      li{
+      li {
+        margin: 0 5px;
 
-        margin: 0 20px;
-  
+        &.social-link--first {
+          margin-left: 0;
+        }
+
+        &.social-link--last {
+          margin-right: 0;
+        }
+
         a {
           height:54px;
           width: 54px;
@@ -148,8 +155,10 @@
   }
 }
 
-@include breakpoint($screen-md) {
+@include breakpoint($screen-sm) {
   .footer {
-    //padding-top:100px;
+    .footer__social ul li {
+      margin: 0 20px;
+    }
   }
 }
