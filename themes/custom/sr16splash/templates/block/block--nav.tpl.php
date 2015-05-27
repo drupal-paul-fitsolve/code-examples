@@ -44,6 +44,9 @@
  * @ingroup themeable
  */
 ?>
+
+<!-- Removing this for V1, but keeping handy for V2
+  
 <div class="nav__wrapper">
   <nav class="nav collapsible collapsed">
     <?php print $content; ?>
@@ -55,13 +58,10 @@
       <span class="button-nav__icon icon icon-email"></span>
       <span class="button-nav__text">Get the latest</span>
     </button>
-    <a href="SaveTheDate.file" title="Save the date" class="button-nav button-nav--frost">
-      <span class="button-nav__icon icon icon-person"></span>
-      <span class="button-nav__text">Save the date</span>
-    </a>
-<!--     <a href="/search" title="Looking for something" class="button-nav button-nav--search">
+     <a href="/search" title="Looking for something" class="button-nav button-nav--search">
       <span class="button-nav__icon icon icon-search-2"></span>
       <span class="button-nav__text">Search</span>
-    </a> -->
+    </a> 
   </nav>
 </div>
+-->
