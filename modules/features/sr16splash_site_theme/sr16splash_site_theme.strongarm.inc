@@ -2165,7 +2165,7 @@ function sr16splash_site_theme_strongarm() {
     'logo_path' => '',
     'logo_upload' => '',
     'default_favicon' => 0,
-    'favicon_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/favicon.ico',
+    'favicon_path' => 'sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/favicon-2016.ico',
     'favicon_upload' => '',
     'omega_enable_warning' => '1',
     'omega_toggle_extension_layouts' => 1,

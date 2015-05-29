@@ -41,6 +41,9 @@ See the examples below.
   line-height: $p-height;
   padding: 0 0 0 30px;
   position: relative;
+
+  &.type--light { font-weight: 300; }
+  &.type--semibold { font-weight: 600; }
 }
 
 @include breakpoint($screen-sm) {
@@ -66,7 +69,7 @@ See the examples below.
 .list li:before {
   @extend .icon;
   color: $red-brand;
-  content: nth(nth($iconlist,27),2);
+  content: nth(nth($iconlist,28),2);
   font-size: 14px;
   left: -3px;
   padding: 0 16px 0 0;
