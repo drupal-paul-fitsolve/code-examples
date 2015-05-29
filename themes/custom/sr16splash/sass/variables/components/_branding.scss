@@ -6,9 +6,9 @@
  */
 
 // Main branding height - affects the header height
-$branding-xs-height:       75px;
-$branding-sm-height:       110px;
-$branding-md-height:       90px;
+$branding-xs-height:       90px;
+$branding-sm-height:       108px;
+$branding-md-height:       100px;
 
 // Padding around the logo/slogan
 $branding-xs-padding:      13px 0 13px;
@@ -16,19 +16,20 @@ $branding-sm-padding:      20px 0 20px 15px;
 $branding-md-padding:      16px 145px 16px 0;
 
 // XS Logo
-$branding-logo-xs:         image-url("branding/sr16-logo_xs.png");
-$branding-logo-xs-2x:      image-url("branding/sr16-logo_xs@2x.png");
-$branding-logo-xs-width:   147px;
-$branding-logo-xs-height:  51px;
+$branding-logo-xs:         image-url("branding/sr16-logo-md.png");
+$branding-logo-xs-2x:      image-url("branding/sr16-logo-md@2x.png");
+$branding-logo-xs-width:   235px;
+$branding-logo-xs-height:  65px;
 
 // SM Logo
-$branding-logo-sm:         image-url("branding/sr16-logo_sm.png");
-$branding-logo-sm-2x:      image-url("branding/sr16-logo_sm@2x.png");
-$branding-logo-sm-width:   187px;
+$branding-logo-sm:         image-url("branding/sr16-logo-md.png");
+$branding-logo-sm-2x:      image-url("branding/sr16-logo-md@2x.png");
+$branding-logo-sm-width:   235px;
 $branding-logo-sm-height:  65px;
 
 // MD Logo
-$branding-logo-md:         image-url("branding/sr16-logo_md.png");
-$branding-logo-md-2x:      image-url("branding/sr16-logo_md@2x.png");
-$branding-logo-md-width:   145px;
-$branding-logo-md-height:  50px;
+
+$branding-logo-md:         image-url("branding/sr16-logo-md.png");
+$branding-logo-md-2x:      image-url("branding/sr16-logo-md@2x.png");
+$branding-logo-md-width:   235px;
+$branding-logo-md-height:  65px;
