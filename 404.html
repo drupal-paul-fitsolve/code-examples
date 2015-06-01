@@ -2,7 +2,7 @@
   <head>
     <style>
       * {
-        font-family: sans-serif;
+        font-family: "Open Sans",Helvetica,Arial,Sans-serif;
         font-weight: 300;
         margin: 0;
         padding: 0;
@@ -15,24 +15,15 @@
       body {
         background-color: #1e1e1e;
       }
+      h2 {
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 0 20px;
+      }
       p {
         font-size: 15px;
         line-height: 23px;
-      }
-      a.skip-link {
-        background-color: #f5f2ed;
-        border-bottom: none;
-        display: block;
-        margin: 0;
-        padding: 10px 0;
-        text-align: center;
-        width: 100%;
-      }
-      .element-invisible {
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
+        text-
       }
       .wrap.header {
         background-color: #fff;
@@ -45,12 +36,14 @@
         display: block;
         float: left;
         padding: 16px 0;
+        margin-left: 10px;
       }
       .logo a {
-        background: url("sites/rednoseday.com/themes/custom/rnd15/images/branding/rnd_logo_xs.png") 0 0 no-repeat transparent;
+        background: url("themes/custom/sr16splash/images/branding/sr16-logo-md.png") 0 0 no-repeat transparent;
         display: block;
         height: 51px;
-        width: 57px;
+        width: 185px;
+        background-size: cover;
       }
       .logo a span,
       .content h1 span,
@@ -79,8 +72,9 @@
         text-decoration: underline;
       }
       .main {
-        background-color: #7C4A81;
         display: block;
+        background: url("themes/custom/sr16splash/images/404/sr_404_promo_v1.jpg") center top no-repeat;
+        background-size: cover;
       }
       .main-inner {
         margin: 0 auto;
@@ -91,16 +85,9 @@
         width: 100%;
       }
       .content {
-        color: #fff;
+        color:  #1e1e1e;
         text-align: center;
-        padding: 100px 0 40px;
-      }
-      .content h1 {
-        background: url("sites/rednoseday.com/themes/custom/rnd15/images/404/awkward-title-xs-sm.png") 0 0 no-repeat transparent;
-        display: block;
-        height: 167px;
-        margin: 0 auto;
-        width: 300px;
+        padding: 100px 20px 40px;
       }
       .content p {
         margin-bottom: 28px;
@@ -109,15 +96,15 @@
         padding-top: 30px;
       }
       .content .btn {
-        border: 2px solid #fff;
-        color: #fff;
+        border: 2px solid #1e1e1e;
+        color: #1e1e1e;
         padding: 13px 27px;
         text-decoration: none;
       }
       .content .btn:hover {
-        background-color: #fff;
-        border: 2px solid #7C4A81;
-        color: #7C4A81;
+        background-color: #1e1e1e;
+        border: 2px solid #1e1e1e;
+        color: #fff;
       }
       .wrap.footer {
         background-color: #1e1e1e;
@@ -128,6 +115,7 @@
       .footer h4 {
         font-size: 18px;
         line-height: 22px;
+        font-weight: 300;
       }
       .footer .icons {
         padding: 20px 0 30px;
@@ -136,6 +124,8 @@
         display: inline-block;
         height: 54px;
         width: 54px;
+        background-image: url("themes/custom/sr16splash/images/404/sr16splash_icon_sprite.png");
+        background-repeat: no-repeat;
       }
       .footer .icons li a {
         display: block;
@@ -143,31 +133,31 @@
         width: 100%;
       }
       .facebook {
-        background: url("sites/rednoseday.com/themes/custom/rnd15/images/404/rnd15_icon_sprite.png") 0 -26px no-repeat transparent;
+        background-position: 0px -26px;
       }
       .facebook:hover {
-        background-position: 0 -80px;
+        background-position: 0px -80px;
       }
       .twitter {
-        background: url("sites/rednoseday.com/themes/custom/rnd15/images/404/rnd15_icon_sprite.png") -56px -26px no-repeat transparent;
+        background-position: -56px -26px;
       }
       .twitter:hover {
         background-position: -56px -80px;
       }
       .youtube {
-        background: url("sites/rednoseday.com/themes/custom/rnd15/images/404/rnd15_icon_sprite.png") -112px -26px no-repeat transparent;
+        background-position: -112px -26px;
       }
       .youtube:hover {
         background-position: -112px -80px;
       }
       .instagram {
-        background: url("sites/rednoseday.com/themes/custom/rnd15/images/404/rnd15_icon_sprite.png") -166px -26px no-repeat transparent;
+        background-position: -166px -26px;
       }
       .instagram:hover {
         background-position: -166px -80px;
       }
       .google {
-        background: url("sites/rednoseday.com/themes/custom/rnd15/images/404/rnd15_icon_sprite.png") -222px -26px no-repeat transparent;
+        background-position: -222px -26px;
       }
       .google:hover {
         background-position: -222px -80px;
@@ -189,15 +179,22 @@
         padding-bottom: 16px;
       }
       .cr-foot {
-        background: url("sites/rednoseday.com/themes/custom/rnd15/images/footer/CR_logo_v2.png") 0 0 no-repeat transparent;
+        background: url("themes/custom/sr16splash/images/footer/CR_logo_v2.png") 0 0 no-repeat transparent;
         display: block;
         height: 65px;
         margin: 0 auto;
         width: 65px;
       }
+      .type--xl {
+        font-size: 20px;
+        line-height: 22px;
+      }
+      .type--centred { 
+        text-align: center;
+      }
       @media (min-width: 768px) {
         .logo a {
-          background: url("sites/rednoseday.com/themes/custom/rnd15/images/branding/rnd_logo_sm.png") 0 0 no-repeat transparent;
+          background: url("themes/custom/sr16splash/images/branding/sr16-logo-md.png") 0 0 no-repeat transparent;
           height: 69px;
           width: 241px;
         }
@@ -216,11 +213,15 @@
           max-width: 420px;
           width: 50%;
         }
-        .content {
-          float: right;
-          max-width: 360px;
+        .content { 
+          max-width: 570px;
           padding: 20px 20px 0;
           width: 40%;
+          margin: 0px auto;
+        }
+        .type--xl {
+          font-size: 22px;
+          line-height: 26px;
         }
       }
       @media (min-width: 992px) {
@@ -241,6 +242,10 @@
           padding: 100px 0 40px;
           width: 100%;
         }
+        .type--xl {
+          font-size: 21px;
+          line-height: 24px;
+        }
       }
       @media (min-width: 1400px) {
         p {
@@ -250,10 +255,16 @@
         .header nav li a {
           padding: 41px 47px 0;
         }
+        .type--xl {
+          font-size: 18px;
+          line-height: 26px;
+        }
       }
     </style>
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
     <!-- Google Tag Manager -->
-    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NCLBZP"
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TLSGPH"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
 
@@ -265,68 +276,42 @@
     <!-- End Google Tag Manager -->
   </head>
   <body>
-    <div id="skip-link">
-      <a href="#main-content" class="element-invisible element-focusable skip-link">Skip to main content</a>
-    </div>
     <div class="wrap header">
       <header class="header inner clearfix">
         <div class="logo">
-          <a href="/" title="Red Nose Day" rel="home"><span>Red Nose Day</span></a>
+          <a href="/" title="Sport Relief" rel="home"><span>Sport Relief</span></a>
         </div>
-        <nav>
-          <ul>
-            <li><a href="/fundraise">Fundraise</a></li>
-            <li><a href="/schools">Schools</a></li>
-            <li><a href="/order-stuff">Order Stuff</a></li>
-            <li><a href="https://www.comicrelief.com/donate">Donate</a></li>
-          </ul>
-        </nav>
       </header>
     </div>
     <div class="wrap main clearfix">
-      <div class="main-inner">
-        <a id="#main-content"></a>
-        <article class="image">
-          <p><img src="/sites/rednoseday.com/themes/custom/rnd15/images/404/error404_promo_v2.jpg" alt="" /></p>
-        </article>
-        <section class="content">
-          <header>
-            <h1><span>Well...This is awkward!</span></h1>
-          </header>
-          <p>We can't seem to find the page you're looking for.</p>
-          <p class="extra-margin">This might be because you've accidentally typed the web address incorrectly or perhaps the page you're looking for has been removed, updated or deleted.</p>
-          <footer>
-            <p>
-              <a href="/" class="btn">Back to the homepage</a>
-            </p>
-          </footer>
-        </section>
-      </div>
+    <div class="content">
+      <h2 class="pane-title type--centred">Well, this is awakard</h2>
+        <p class="type--xl type--centred type--black">
+          We can't seem to find the page you're looking for. This might be because you've accidentally typed the web address incorrectly or the page you're looking for has been removed, updated or deleted.
+        </p>
+        <p class="type--centred type--black">
+          <a href="/" class="btn">Back to the homepage</a>
+        </p>
+    </div>
     </div>
     <div class="wrap footer">
       <footer class="inner">
-        <h4>Follow Us...</h4>
         <ul class="icons">
-          <li class="facebook"><a target="_blank" href="https://www.facebook.com/officialrednoseday?ref=ts&fref=ts"><span>Facebook</span></a></li>
-          <li class="twitter"><a target="_blank" href="https://twitter.com/rednoseday"><span>Twitter</span></a></li>
-          <li class="youtube"><a target="_blank" href="https://www.youtube.com/user/rednoseday"><span>YouTube</span></a></li>
-          <li class="instagram"><a target="_blank" href="http://instagram.com/comicrelief"><span>Instagram</span></a></li>
-          <li class="google"><a target="_blank" href="https://plus.google.com/+rednoseday/posts"><span>Google Plus</span></a></li>
+          <li class="facebook"><a target="_blank" href="https://www.facebook.com/sportrelief"><span>Facebook</span></a></li>
+          <li class="twitter"><a target="_blank" href="https://twitter.com/sportrelief"><span>Twitter</span></a></li>
+          <li class="google"><a target="_blank" href="https://plus.google.com/u/0/111824904248762866111/posts"><span>Google Plus</span></a></li>
+          <li class="youtube"><a target="_blank" href="http://www.youtube.com/sportrelief"><span>YouTube</span></a></li>
+          <li class="instagram"><a target="_blank" href="http://instagram.com/sportrelief"><span>Instagram</span></a></li>
         </ul>
         <nav>
           <ul>
-            <li><a href="/contact-us">Contact Us</a> |</li>
-            <li><a href="/frequently-asked-questions">FAQS</a> |</li>
             <li><a href="/legal">Legal</a> |</li>
-            <li><a href="/legal#/privacy-policy">Privacy Policy</a> |</li>
-            <li><a href="/legal#/privacy-policy/cookies">Cookies</a> |</li>
-            <li><a href="/call-centres">Call Centres</a> |</li>
-            <li><a href="/media-centre">Media Centre</a> |</li>
+            <li><a href="/privacy-policy">Privacy Policy</a> |</li>
             <li><a href="/accessibility">Accessibility</a> |</li>
-            <li><a href="/sitemap">Sitemap</a></li>
+            <li><a href="https://www.comicrelief.com/donate" target="_blank">Donate</a></li>
           </ul>
         </nav>
-        <p class="copyright">&copy; Comic Relief 2014. Comic Relief, registered charity 326568 (England/Wales); SC039730 (Scotland)</p>
+        <p class="copyright">&copy; Comic Relief 2015. Comic Relief, registered charity 326568 (England/Wales); SC039730 (Scotland)</p>
         <p class="cr-foot"><a href="/"><span>Comic Relief</span></a></p>
       </footer>
     </div> 
