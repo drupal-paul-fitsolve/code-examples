@@ -614,7 +614,7 @@ $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 /**
  * Allow memcache configuration to be overridden by environment variables.
  */
-$conf['memcache_key_prefix'] = getenv('MEMCACHE_PREFIX') ?: 'rednoseday-jan';
+$conf['memcache_key_prefix'] = getenv('MEMCACHE_PREFIX') ?: 'unknown';
 if ($memcache_hosts = getenv('MEMCACHE_HOSTS')) {
   $memcache_hosts = explode(' ', trim($memcache_hosts));
   foreach ($memcache_hosts as $memcache_host) {
@@ -853,7 +853,7 @@ $ga_js = "<script type=\"text/javascript\">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-43451738-1']);
   _gaq.push(['_setCustomVar', 1, 'Page type', 'Fast 404 Page Default']);
-  _gaq.push(['_setDomainName', '.rednoseday.com']);
+  _gaq.push(['_setDomainName', '.sportrelief.com']);
   _gaq.push(['_trackPageview']);
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
