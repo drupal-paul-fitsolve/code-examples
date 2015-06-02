@@ -38,6 +38,12 @@
         margin-left: 10px;
       }
       .logo a {
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+src='sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png',
+sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+src='sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png',
+sizingMethod='scale')";
         background: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png") 0 0 no-repeat transparent;
         display: block;
         height: 51px;
@@ -52,22 +58,14 @@
         text-indent: -9999px;
         width: 100%;
       }
-      nav ul {
+      .nav ul {
         margin: 0;
       }
-      nav li {
+      .nav li {
         display: inline-block;
+        list-style-type: none;
       }
-      .header nav {
-        display: none;
-      }
-      .header nav li a {
-        color: #333;
-        display: block;
-        padding: 41px 47px 0;
-        text-decoration: none;
-      }
-      nav li a:hover {
+      .nav li a:hover {
         text-decoration: underline;
       }
       .main {
@@ -163,16 +161,16 @@
       .google:hover {
         background-position: -222px -80px;
       }
-      .footer nav {
+      .footer .nav {
         margin-bottom: 15px;
         margin-top: 30px;
       }
-      .footer nav li a {
+      .footer .nav li a {
         color: #fff;
         padding: 10px;
         text-decoration: none;
       }
-      .footer nav li a:hover {
+      .footer .nav li a:hover {
         color: #c8c8c8;
         text-decoration: underline;
       }
@@ -205,12 +203,6 @@
         }
         p {
           line-height: 21px;
-        }
-        .header nav {
-          display: block;
-        }
-        .header nav li a {
-          padding: 41px 30px 0;
         }
         .image {
           float: left;
@@ -255,9 +247,6 @@
           font-size: 14px;
           line-height: 21px;
         }
-        .header nav li a {
-          padding: 41px 47px 0;
-        }
         .type--xl {
           font-size: 20px;
           line-height: 25px;
@@ -275,11 +264,11 @@
   </head>
   <body>
     <div class="wrap header">
-      <header class="header inner clearfix">
+      <div class="header inner clearfix">
         <div class="logo">
           <a href="/" title="Sport Relief" rel="home"><span>Sport Relief</span></a>
         </div>
-      </header>
+      </div>
     </div>
     <div class="wrap main clearfix">
     <div class="content">
@@ -301,14 +290,14 @@
           <li class="youtube"><a target="_blank" href="http://www.youtube.com/sportrelief"><span>YouTube</span></a></li>
           <li class="instagram"><a target="_blank" href="http://instagram.com/sportrelief"><span>Instagram</span></a></li>
         </ul>
-        <nav>
+        <div class="nav">
           <ul>
             <li><a href="/legal">Legal</a> |</li>
             <li><a href="/privacy-policy">Privacy Policy</a> |</li>
             <li><a href="/accessibility">Accessibility</a> |</li>
             <li><a href="https://www.comicrelief.com/donate" target="_blank">Donate</a></li>
           </ul>
-        </nav>
+        </div>
         <p class="copyright">&copy; Comic Relief 2015. Comic Relief, registered charity 326568 (England/Wales); SC039730 (Scotland)</p>
         <p class="cr-foot"><a href="/"><span>Comic Relief</span></a></p>
       </footer>
