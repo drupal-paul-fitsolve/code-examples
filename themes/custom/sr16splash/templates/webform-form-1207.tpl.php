@@ -6,7 +6,6 @@
     * Last updated: 22nd March 2015 
     */
   
-  //dpm($form);
   ?>
 <section class="clearfix preorder-section preorder--type">
   <div class="container">
@@ -118,6 +117,4 @@
   </div>
 </section>
 
-<?php 
-  print drupal_render_children($form); 
-  ?>
+<?php print drupal_render_children($form); ?>
