@@ -47,12 +47,4 @@ function sr16splash_preprocess_node(&$variables) {
           break;
       }
     }
-
-    else if ($variables['type'] == 'webform') {
-      dpm($variables['title']);
-      // I think this could done better, but I don't find a better function... And there's not machine name
-      $result = preg_replace('/[^a-z]/','_', strtolower($variables['title']));
-      $variables['theme_hook_suggestions'][] = 'html__node__' . $result;
-    }
-  
   }
