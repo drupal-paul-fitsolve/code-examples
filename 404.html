@@ -16,8 +16,8 @@
         background-color: #1e1e1e;
       }
       h2 {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 35px;
+        line-height: 45px;
         margin: 0 0 20px;
       }
       p {
@@ -35,7 +35,7 @@
       .logo {
         display: block;
         float: left;
-        padding: 16px 0;
+        padding: 15px 0 10px;
         margin-left: 10px;
       }
       .logo a {
@@ -90,7 +90,7 @@
         padding: 100px 20px 40px;
       }
       .content p {
-        margin-bottom: 28px;
+        margin-bottom: 38px;
       }
       .content footer {
         padding-top: 30px;
@@ -100,6 +100,7 @@
         color: #1e1e1e;
         padding: 13px 27px;
         text-decoration: none;
+        font-weight: bold;
       }
       .content .btn:hover {
         background-color: #1e1e1e;
@@ -107,9 +108,7 @@
         color: #fff;
       }
       .wrap.footer {
-        background-color: #1e1e1e;
         color: #fff;
-        padding-top: 100px;
         text-align: center;
       }
       .footer h4 {
@@ -118,13 +117,16 @@
         font-weight: 300;
       }
       .footer .icons {
-        padding: 20px 0 30px;
+        padding: 35px 0 20px 0;
+        margin: 0px;
+        background-color: #282828;
       }
       .footer .icons li {
         display: inline-block;
         height: 54px;
         width: 54px;
-        background-image: url("sites/splash.sportrelief.com/sites/splash.sportrelief.com/themes/custom/sr16splash/images/404/sr16splash_icon_sprite.png");
+        margin: 0px 5px;
+        background-image: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/404/sr16splash_icon_sprite.png");
         background-repeat: no-repeat;
       }
       .footer .icons li a {
@@ -163,7 +165,8 @@
         background-position: -222px -80px;
       }
       .footer nav {
-        padding-bottom: 20px;
+        margin-bottom: 15px;
+        margin-top: 30px;
       }
       .footer nav li a {
         color: #fff;
@@ -193,6 +196,9 @@
         text-align: center;
       }
       @media (min-width: 768px) {
+        h2 {
+          font-size: 50px;
+        }
         .logo a {
           background: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png") 0 0 no-repeat transparent;
           height: 69px;
@@ -215,8 +221,6 @@
         }
         .content { 
           max-width: 570px;
-          padding: 20px 20px 0;
-          width: 40%;
           margin: 0px auto;
         }
         .type--xl {
@@ -239,7 +243,7 @@
           width: 580px;
         }
         .content {
-          padding: 100px 0 40px;
+          padding: 85px 0px 105px;
           width: 100%;
         }
         .type--xl {
@@ -256,24 +260,19 @@
           padding: 41px 47px 0;
         }
         .type--xl {
-          font-size: 18px;
-          line-height: 26px;
+          font-size: 20px;
+          line-height: 25px;
         }
+      }
+      @media 
+      (-webkit-min-device-pixel-ratio: 2), 
+      (min-resolution: 192dpi) { 
+          /* Retina-specific stuff here */
+          background-image: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md@2x.png");
       }
     </style>
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
-    <!-- Google Tag Manager -->
-    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TLSGPH"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
-
-    {'gtm.start': new Date().getTime(),event:'gtm.js'}
-    );var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NCLBZP');</script>
-    <!-- End Google Tag Manager -->
   </head>
   <body>
     <div class="wrap header">
@@ -285,9 +284,9 @@
     </div>
     <div class="wrap main clearfix">
     <div class="content">
-      <h2 class="pane-title type--centred">Well, this is awakard</h2>
+      <h2 class="pane-title type--centred">Well, this is awkard</h2>
         <p class="type--xl type--centred type--black">
-          We can't seem to find the page you're looking for. This might be because you've accidentally typed the web address incorrectly or the page you're looking for has been removed, updated or deleted.
+          We can't seem to find the page you're looking for. This might be because you've accidentally typed the web address incorrectly or perhaps the page you're looking for has been removed, updated or deleted.
         </p>
         <p class="type--centred type--black">
           <a href="/" class="btn">Back to the homepage</a>
