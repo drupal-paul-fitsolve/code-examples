@@ -23,7 +23,6 @@
       p {
         font-size: 15px;
         line-height: 23px;
-        text-
       }
       .wrap.header {
         background-color: #fff;
@@ -43,7 +42,7 @@
         display: block;
         height: 51px;
         width: 185px;
-        background-size: cover;
+        background-size: contain;
       }
       .logo a span,
       .content h1 span,
@@ -200,9 +199,9 @@
           font-size: 50px;
         }
         .logo a {
-          background: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png") 0 0 no-repeat transparent;
           height: 69px;
-          width: 241px;
+          width: 250px;
+          background-size: initial;
         }
         p {
           line-height: 21px;
@@ -264,9 +263,9 @@
           line-height: 25px;
         }
       }
-      @media 
-      (-webkit-min-device-pixel-ratio: 2), 
-      (min-resolution: 192dpi) { 
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi) {
           /* Retina-specific stuff here */
           background-image: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md@2x.png");
       }
