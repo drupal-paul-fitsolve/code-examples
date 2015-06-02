@@ -38,12 +38,6 @@
         margin-left: 10px;
       }
       .logo a {
-        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-src='sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png',
-sizingMethod='scale');
-        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
-src='sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png',
-sizingMethod='scale')";
         background: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png") 0 0 no-repeat transparent;
         display: block;
         height: 51px;
@@ -259,6 +253,19 @@ sizingMethod='scale')";
           background-image: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md@2x.png");
       }
     </style>
+    <!--[if lt IE 9]>
+    <style>
+      .logo a {
+        background-image: none; 
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+src='sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png',
+sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+src='sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png',
+sizingMethod='scale')";
+      }
+     </style>
+    <![endif]-->
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
     <!-- Google Tag Manager -->
