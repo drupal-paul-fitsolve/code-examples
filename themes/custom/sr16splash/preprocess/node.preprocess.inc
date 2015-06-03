@@ -21,6 +21,7 @@
  * 
  */
 function sr16splash_preprocess_node(&$variables) { 
+
   // I think a view mode is always present in $variables but
   // let's check anyway.
   if(isset($variables['view_mode'])){
@@ -46,5 +47,4 @@ function sr16splash_preprocess_node(&$variables) {
           break;
       }
     }
-  
-}
+  }
