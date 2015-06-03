@@ -44,9 +44,6 @@
  * @ingroup themeable
  */
 ?>
-
-<!-- Removing this for V1, but keeping handy for V2
-  
 <div class="nav__wrapper">
   <nav class="nav collapsible collapsed">
     <?php print $content; ?>
@@ -64,4 +61,3 @@
     </a> 
   </nav>
 </div>
--->

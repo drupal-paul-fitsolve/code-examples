@@ -418,8 +418,7 @@
       var nav = document.querySelector(_base.defaults.mainNavClass);
 
       // If is touch, let's add the nav touch class NOW!
-      // edit: quick fix to check that the nav exists (removed for V1 splash site)
-      if(_settings.isTouch && nav) {
+      if(_settings.isTouch) {
         nav.className = nav.className + " nav--touch";
       }
     }
