@@ -7,6 +7,10 @@
  * Holds hook_update_N implementations
  */
 
+// This file was copied from RND15 meaning that the initial update functions
+// are redundant.  All updates up to sr16splash_site_deployment_update_7014 should be
+// ignored as these would not have been run.
+
 /**
  * Disable magic module
  */
@@ -243,4 +247,17 @@ function sr16splash_site_deployment_update_7014() {
 
   variable_set('panels_mini_block_support', 0);
 
+}
+
+// All update_N hooks up to this point will not have been run on sr16splash
+// They exist as the file was copied across from RND15
+
+/**
+ * Enable sr16splash_kit_preorder module
+ */
+function sr16splash_site_deployment_update_7015() {
+  $enable_modules = array(
+    'sr16splash_kit_preorder',
+  );
+  module_enable($enable_modules);
 }
