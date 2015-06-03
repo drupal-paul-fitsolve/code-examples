@@ -43,14 +43,14 @@ function sr16splash_kit_preorder_cr_webform_mq_message_insert($message_data, $we
       }
 
       $esu_message_data = array(
-        'email' => $message_data['email_address'],
-        'lists' => array('general' => 'general'),
-        'source' => $message_data['transSource'],
-        'sourceUrl' => $message_data['transSourceURL'],
+        'email'     => $message_data['email_address'] ?: 'unknown',
+        'lists'     => array('general' => 'general'),
+        'source'    => $message_data['transSource']  ?: 'unknown',
+        'sourceUrl' => $message_data['transSourceURL']  ?: 'unknown',
         'sendEmail' => FALSE,
-        'firstName' => $message_data['first_name'],
-        'phase' => $phase,
-        'timestamp' => $message_data['timestamp'],
+        'firstName' => $message_data['first_name']  ?: 'unknown',
+        'phase'     => $phase,
+        'timestamp' => $message_data['timestamp']  ?: REQUEST_TIME,
       );
 
       cr_marketing_prefs_subscribe(
