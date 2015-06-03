@@ -51,13 +51,12 @@ function sr16splash_site_footer_default_box() {
   $box->description = 'Footer social links box';
   $box->options = array(
     'body' => array(
-      'value' => '<h4 class="type--white">Follow us...</h4>
-<ul>
-<li><a class="icon icon-facebook icon--large" href="https://www.facebook.com/officialrednoseday?ref=ts&fref=ts" title="Facebook" target="_blank"><span>Facebook</span></a></li>
+      'value' => '<ul>
+<li class="social-link--first"><a class="icon icon-facebook icon--large" href="https://www.facebook.com/officialrednoseday?ref=ts&fref=ts" title="Facebook" target="_blank"><span>Facebook</span></a></li>
 <li><a class="icon icon-twitter icon--large" href="https://twitter.com/rednoseday" title="Twitter" target="_blank"><span>Twitter</span></a></li>
+<li class><a class="icon icon-google-plus icon--large" href="https://plus.google.com/+rednoseday/posts" title="Google Plus" target="_blank"><span>Google Plus</span></a></li>
 <li><a class="icon icon-youtube icon--large" href="https://www.youtube.com/user/rednoseday" title="Youtube" target="_blank"><span>Youtube</span></a></li>
-<li><a class="icon icon-instagram icon--large" href="http://www.instagram.com/rednoseday" title="Instagram" target="_blank"><span>Instagram</span></a></li>
-<li><a class="icon icon-google-plus icon--large" href="https://plus.google.com/+rednoseday/posts" title="Google Plus" target="_blank"><span>Google Plus</span></a></li>
+<li class="social-link--last"><a class="icon icon-instagram icon--large" href="http://www.instagram.com/rednoseday" title="Instagram" target="_blank"><span>Instagram</span></a></li>
 </ul>',
       'format' => 'full_html',
     ),

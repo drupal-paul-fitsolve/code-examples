@@ -41,6 +41,24 @@ See the examples below.
   line-height: $p-height;
   padding: 0 0 0 30px;
   position: relative;
+
+  &.type--light { font-weight: 300; }
+  &.type--semibold { font-weight: 600; }
+}
+
+ul.list.type--xl li {
+  font-size: $p-type--xl;
+  line-height: $p-type--xl-height;
+}
+
+ul.list.type--lg li {
+  font-size: $p-type--lg;
+  line-height: $p-type--lg-height;
+}
+
+ul.list.type--sm li {
+  font-size: $p-type--sm;
+  line-height: $p-type--sm-height;
 }
 
 @include breakpoint($screen-sm) {
@@ -54,6 +72,20 @@ See the examples below.
     font-size: $md-p;
     line-height: $md-p-height;
   }
+
+  ul.list.type--xl li  {
+    font-size: $md-p-type--xl;
+    line-height: $md-p-type--xl-height;
+  }
+
+  ul.list.type--lg li  {
+    font-size: $md-p-type--lg;
+    line-height: $md-p-type--lg-height;
+  }
+
+  ul.list.type--sm li  {
+    font-size: $md-p-type--sm;
+  }
 }
 
 @include breakpoint($screen-lg) {
@@ -61,12 +93,25 @@ See the examples below.
     font-size: $lg-p;
     line-height: $lg-p-height;
   }
+
+  ul.list.type--xl li {
+    font-size: $lg-p-type--xl;
+    line-height: $lg-p-type--xl-height;
+  }
+
+  ul.list.type--lg li {
+    font-size: $lg-p-type--lg;
+  }
+
+  ul.list.type--sm li {
+    font-size: $lg-p-type--sm;
+  }
 }
 
 .list li:before {
   @extend .icon;
   color: $red-brand;
-  content: nth(nth($iconlist,27),2);
+  content: nth(nth($iconlist,28),2);
   font-size: 14px;
   left: -3px;
   padding: 0 16px 0 0;

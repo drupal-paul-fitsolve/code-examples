@@ -415,9 +415,10 @@
         _settings.matchesTouchNavBreakpoint = matchQueryObject.matches;
       }
 
+      var nav = document.querySelector(_base.defaults.mainNavClass);
+
       // If is touch, let's add the nav touch class NOW!
       if(_settings.isTouch) {
-        var nav = document.querySelector(_base.defaults.mainNavClass);
         nav.className = nav.className + " nav--touch";
       }
     }
