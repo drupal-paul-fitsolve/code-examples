@@ -44,7 +44,7 @@ function sr16splash_kit_preorder_cr_webform_mq_message_insert($message_data, $we
 
       $esu_message_data = array(
         'email'     => $message_data['email_address'] ?: 'unknown',
-        'lists'     => array('general' => 'general'),
+        'lists'     => array('teacher' => 'teacher'),
         'source'    => $message_data['transSource']  ?: 'unknown',
         'sourceUrl' => $message_data['transSourceURL']  ?: 'unknown',
         'sendEmail' => FALSE,
