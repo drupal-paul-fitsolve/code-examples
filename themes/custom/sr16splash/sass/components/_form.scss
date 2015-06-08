@@ -187,8 +187,8 @@ select.form-select {
   -webkit-appearance: none;
   appearance: none;
   background-clip: padding-box;
-  background-color: transparent;
-  position: relative;
+  background-color: $white-brand;
+  //position: relative;
 }
 
 .webform-component-select, 
