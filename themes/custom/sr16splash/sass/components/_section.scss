@@ -52,6 +52,7 @@
   position: relative;
 }
 
+
 /*
  * Small Breakpoint
  */
@@ -62,6 +63,16 @@
     top: 0;
     overflow: hidden;
   }
+
+  .section--full-width-bg-overlay-sm.section--sticky-bottom .section__content {
+    top: auto;
+    bottom: 0;
+
+    .row--content {
+      padding-bottom: 20px;
+    }
+  }
+
 }
 
 /*
@@ -74,6 +85,16 @@
     top: 0;
     overflow: hidden;
   }
+
+  .section--full-width-bg-overlay-md.section--sticky-bottom .section__content {
+    top: auto;
+    bottom: 0;
+
+    .row--content {
+      padding-bottom: 20px;
+    }
+  }
+
   /*
    * This ensures that full width background variations 
    * have their images centered and fixed to a height

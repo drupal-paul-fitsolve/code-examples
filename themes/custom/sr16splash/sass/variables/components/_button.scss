@@ -30,7 +30,9 @@ $buttonList: (
   ("black" $black-brand $grey-dark $white-brand $black-brand),
   ("light-grey" $grey-v-light $grey-brand $black-brand $white-brand), // Added specifically for tabs -Andy P
   ("blue--fb" $blue-v-dark $blue-brand $white-brand $blue-v-dark), // Added specifically for Donate Thank You FB button -Matt W
-  ("white" $white-brand $grey-v-light $red-brand $blue-v-dark) // New *microsite* button
+  ("white--red-text" $white-brand $grey-v-light $red-brand $white-brand), // New *microsite* button
+  ("white--grey-text" $white-brand $grey-v-light $grey-dark $white-brand) // New *microsite* button
+
 );
 
 /**
