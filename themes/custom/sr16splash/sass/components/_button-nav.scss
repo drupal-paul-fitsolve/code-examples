@@ -35,7 +35,7 @@ nav.nav .button-nav__icon {
     width: 100%;
     height: 100%;
     position: absolute;
-    top:0;
+    top: 2px;
     left:0;
     text-align: center;
     color: $nav-button-icon-color;
@@ -243,11 +243,12 @@ nav.nav--touch {
   /*
    * Normal Nav Buttons
    */
-  .button-nav .button-nav__icon {
+  nav.nav .button-nav .button-nav__icon {
     width: $nav-button-size;
     height: $nav-button-size;
     &:before {
       font-size: $nav-button-size;
+      top: 0;
     }
   }
 

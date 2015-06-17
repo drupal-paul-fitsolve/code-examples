@@ -183,14 +183,11 @@ a.nav__link--primary-duplicate {
   }
 
   nav.nav .button-nav.button-esu--toggle {
-    width: 135px;
+    width: 140px;
 
     .button-nav__icon {
       left: auto;
       right: 0;
-      &:before {
-        top: 2px;
-      }
     }
 
     span.button-esu__description {
@@ -198,13 +195,17 @@ a.nav__link--primary-duplicate {
       font-weight: 600;
       font-size: 14px;
       line-height: 18px;
-      margin-right: 20px;
+      margin-right: 25px;
+      color: $nav-button-text-color;
     }
   }
 }
 
-
-
+@include breakpoint($nav-button-breakpoint) {
+ nav.nav {
+   width: $nav-width;
+ }
+}
 
 /**
  * 5. Normal Nav Breakpoint
@@ -212,7 +213,6 @@ a.nav__link--primary-duplicate {
 @include breakpoint($screen-md) {
   // Emulates the container class
   nav.nav {
-    //width: $nav-width;
     margin: 0 auto;
     padding-left: $nav-padding-left;
     padding-right: $nav-padding-right;
