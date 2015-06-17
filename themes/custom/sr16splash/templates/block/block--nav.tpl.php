@@ -46,12 +46,11 @@
 ?>
 <div class="nav__wrapper">
   <nav class="nav">
-  
     <button type="button" class="button-nav button-esu--toggle kids__item-hide">
-      <span class="button-esu__description">Get the latest</span>
+      <span class="button-esu__description hidden-xs">Get the latest</span>
       <span class="button-nav__icon icon icon-email"></span>
+      <span class="button-nav__text hidden-sm hidden-md hidden-lg">Get the latest</span>
     </button>
         <?php print $content; ?>
-
   </nav>
 </div>
