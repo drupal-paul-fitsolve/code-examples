@@ -95,6 +95,8 @@ nav.nav .button-nav:active {
   }
 }
 
+
+
 /**
  * Link Buttons
  */
@@ -105,12 +107,6 @@ nav.nav a.button-nav {
   }
 }
 
-/**
- * Frost Button
- */
-nav.nav .button-nav--frost .icon-person:before {
-  top: 9px;
-}
 
 /*
  * Touch Navigation
@@ -203,13 +199,6 @@ nav.nav--touch {
     position: relative;
     top: 0;
   }
-
-  /**
-   * Frost Button
-   */
-  .button-nav--frost .icon-person:before {
-    top: 11px;
-  }
 }
 
 /*
@@ -244,13 +233,6 @@ nav.nav--touch {
     .button-nav__icon.icon-search-2:before {
       top: $nav-touch-button-search-top-position-sm;    
     }
-
-    /*
-     * Correct position of the FROST person icon
-     */
-    .button-nav--frost .icon-person:before {
-      top: 20px;
-    }
   }
 }
 
@@ -283,5 +265,9 @@ nav.nav--touch {
   // Nav Toggle
   .button-nav--toggle {
     right: 0;
+  }
+
+  .nav.nav .button-nav .button-esu--toggle {
+    width:200px;
   }
 }
