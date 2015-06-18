@@ -178,6 +178,13 @@ a.nav__link--primary-duplicate {
  */
 @include breakpoint($screen-sm) {
 
+  nav.nav {
+    width: 720px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   nav.nav > ul.menu > li > a > span {
     padding-top: calc-nav-top-padding($nav-link-line-height, $nav-small-height, 0px);
   }
@@ -201,11 +208,6 @@ a.nav__link--primary-duplicate {
   }
 }
 
-@include breakpoint($nav-button-breakpoint) {
- nav.nav {
-   width: $nav-width;
- }
-}
 
 /**
  * 5. Normal Nav Breakpoint
@@ -213,6 +215,7 @@ a.nav__link--primary-duplicate {
 @include breakpoint($screen-md) {
   // Emulates the container class
   nav.nav {
+    width: 960px;
     margin: 0 auto;
     padding-left: $nav-padding-left;
     padding-right: $nav-padding-right;
@@ -224,5 +227,14 @@ a.nav__link--primary-duplicate {
   // Nav Level One
   nav.nav > ul.menu > li > a {
     padding: 0 $nav-one-link-padding;
+  }
+}
+
+/**
+ * 5. Large Nav Breakpoint
+ */
+@include breakpoint($screen-lg) {
+   nav.nav {
+    width: 1150px;
   }
 }
