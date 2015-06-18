@@ -57,3 +57,5 @@
     </div>
   </div>
 </section>
+
+<?php print drupal_render_children($form); ?>
