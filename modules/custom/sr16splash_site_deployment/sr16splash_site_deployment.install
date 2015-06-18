@@ -261,3 +261,13 @@ function sr16splash_site_deployment_update_7015() {
   );
   module_enable($enable_modules);
 }
+
+/**
+ * Enable sr16splash_register_interest module
+ */
+function sr16splash_site_deployment_update_7016() {
+  $enable_modules = array(
+    'sr16splash_register_interest',
+  );
+  module_enable($enable_modules);
+}
