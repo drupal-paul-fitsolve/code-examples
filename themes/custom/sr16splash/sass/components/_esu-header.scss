@@ -207,12 +207,23 @@ form.cr-marketing-prefs-header-form-teacher {
  */
 @include breakpoint($screen-sm) {
   .esu-header {
-    right: 120px;
+    right: 0;
     top: 0px;
     width: $esu-header-width;
   }
   .esu-header__container {
-    width: 100%;
+    width: 720px;
+  }
+}
+
+@include breakpoint($screen-md) {
+  .esu-header {
+    right: 10px;
+    top: 0;
+    width: $esu-header-width;
+  }
+  .esu-header__container {
+    width: 960px;
   }
 }
 
@@ -225,6 +236,18 @@ form.cr-marketing-prefs-header-form-teacher {
   }
   html.touch .esu-header {
     right: 115px;
+  }
+  .esu-header__container {
+    width: 960px;
+  }
+}
+
+
+@include breakpoint($screen-lg) {
+  .esu-header {
+    right: 10px;
+    top: 0;
+    width: $esu-header-width;
   }
   .esu-header__container {
     width: 1150px;
