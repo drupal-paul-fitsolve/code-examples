@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -50,6 +51,68 @@
  * @see example.sites.php
  * @see conf_path()
  */
+
+/*
+ * We make use of environment variables (envvars) to get site-specific
+ * configuration related to mysql, memcache, rabbitmq, varnish, solr etc.
+ * For web requests, these envvars are set by the webserver, but for drush
+ * commands, we need another mechanism as drush currently does not support
+ * setting envvars, it does however support adding / overriding drupal variables.
+ *
+ * By supplying some variable options in the drush command (or via a site alias)
+ * using a specific prefix in the variable names, we can detect these and convert
+ * them into envvars.  By taking care of this step, the rest of settings.php does
+ * not need to be concerned about whether the request is coming from drush or the
+ * webserver, the envvars will always be present.
+ *
+ * Example variables array for drush alias
+ * 'variables' => array(
+ *   'cr_env_AH_SITE_ENVIRONMENT' => 'cam-production',
+ *   'cr_env_VARNISH_HOSTS'       => '172.31.3.235 172.31.25.81 172.31.19.242 172.31.6.127 172.31.43.109 172.31.42.218',
+ *   'cr_env_MYSQL_HOST'          => '172.31.1.198',
+ *   'cr_env_MEMCACHE_HOSTS'      => '172.31.17.27 172.31.13.6',
+ *   'cr_env_MEMCACHE_PREFIX'     => 'sr16-spl-pr',
+ *   'a_normal_non_env_variable'  => 'test',
+ * ),
+ *
+ */
+
+/* This code is only appropriate during drush requests so first check we are running via drush
+ * Checking function_exists('drush_main') is the drush recommended way of determining this
+ * @see drush_main()
+ */
+if (function_exists('drush_main')) {
+  $variables_from_drush = drush_get_option_list('variables');
+  // set environment vars according to drush vars
+  array_walk($variables_from_drush, 'cr_set_env_vars_from_drush_supplied_vars', 'cr_env_');
+}
+
+/**
+ * Receives drupal vars set via drush, selectively (based on prefix) sets equivalent environment variables
+ *
+ * @param string $var_value
+ *   The variable value
+ * @param string $var_name
+ *   The variable name
+ * @param string $drush_env_var_prefix
+ *   The prefix used to identify the variable as one needing conversion to an environment variable
+ */
+function cr_set_env_vars_from_drush_supplied_vars($var_value, $var_name, $drush_env_var_prefix) {
+  // we only set env vars for correctly prefixed variable names, not every var set via drush
+  // will necessarily be related to environment variables
+
+  // foreach environment variable name, determine the equivalent drupal variable name
+  // as per the naming convention: $drush_env_var_prefix . strtolower($key)
+  // if the variable is set, then create the actual environment variable
+  $var_name = strtolower($var_name);
+  if (strpos($var_name, $drush_env_var_prefix) !== 0) {
+    return;
+  }
+
+  // convert to environment variable name and set
+  $env_var_name = strtoupper(substr($var_name, strlen($drush_env_var_prefix)));
+  putenv("$env_var_name=$var_value");
+}
 
 /**
  * Database settings:
