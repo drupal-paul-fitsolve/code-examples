@@ -12,7 +12,7 @@
       <div class="col-xs-12">
         <div class="row">
           <div class="col-xs-12 type--centred">
-            <h2 class="type--margin-none">Simply fill out this short form</h2>
+            <h2 class="type--margin-none">Simply fill in your details below.</h2>
             <p class="register-intro">All fields marked with a <span class="form-required" title="This field is required.">*</span> are mandatory</p>
           </div>
         </div>
@@ -43,9 +43,7 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-md-6 col-md-push-3">
-            <p class="register-terms">By completing this Registration of Interest form, we will send you
-              information by email regarding Comic Relief and Sport Relief events in
-              your area.</p>
+            <p class="register-terms">By registering your interest, you are agreeing to receive emails from Comic Relief. See our <a href="/privacy-policy" class="type--black" target="_blank">Privacy Policy</a> and find out how we look after your information.</p>
           </div>
         </div>
         <div class="row">
