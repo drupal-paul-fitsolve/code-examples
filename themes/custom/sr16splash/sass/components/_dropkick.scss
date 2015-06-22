@@ -42,6 +42,7 @@ select[data-dkcacheid] {
 
 .error .dk-selected {
     border-color: $red-brand;
+    border-width: 2px;
 }
 
 .dk-selected:after {
