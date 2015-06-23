@@ -55,6 +55,7 @@
   _padding-top: 38px; // IE8 Fallback for top 
 }
 .interstitial__message {
+  word-break: break-all;
   a {
     font-weight: 600;
   }
