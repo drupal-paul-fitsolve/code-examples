@@ -45,19 +45,12 @@
  */
 ?>
 <div class="nav__wrapper">
-  <nav class="nav collapsible collapsed">
-    <?php print $content; ?>
-    <button type="button" class="button-nav button-nav--toggle">
-      <span class="button-nav__text">Toggle navigation</span>
-      <span class="button-nav__icon icon icon-mobile-nav"></span>
-    </button>
+  <nav class="nav">
     <button type="button" class="button-nav button-esu--toggle kids__item-hide">
+      <span class="button-esu__description hidden-xs">Get the latest</span>
       <span class="button-nav__icon icon icon-email"></span>
-      <span class="button-nav__text">Get the latest</span>
+      <span class="button-nav__text hidden-sm hidden-md hidden-lg">Get the latest</span>
     </button>
-     <a href="/search" title="Looking for something" class="button-nav button-nav--search">
-      <span class="button-nav__icon icon icon-search-2"></span>
-      <span class="button-nav__text">Search</span>
-    </a> 
+        <?php print $content; ?>
   </nav>
 </div>

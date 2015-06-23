@@ -25,7 +25,26 @@ header.header {
 /*
  * Variations
  */
+
+@include breakpoint($screen-sm) {
+  .header__content.container {
+    width: 720px;
+  }
+}
+
+@include breakpoint($screen-md) {
+  .header__content.container {
+    width: 960px;
+  }
+}
+
 @include breakpoint($site-header-breakpoint) {
+  .header__content.container {
+    width: 960px;
+  }
+}
+
+@include breakpoint($screen-lg) {
   .header__content.container {
     width: 1150px;
   }

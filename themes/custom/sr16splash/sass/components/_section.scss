@@ -44,6 +44,12 @@
     max-width: none;
   }
 }
+/* 
+ * Another of Dan's hair-brained microsite-bespoke styles
+ */
+.section--border-bottom {
+  border-bottom: 1px $grey-brand solid;
+}
 
 /*
  * Admin - Make sure we can still edit panes by resetting it if we are in the IPE
@@ -51,6 +57,7 @@
 .panels-ipe-editing .section--full-width-bg .section__content {
   position: relative;
 }
+
 
 /*
  * Small Breakpoint
@@ -62,6 +69,16 @@
     top: 0;
     overflow: hidden;
   }
+
+  .section--full-width-bg-overlay-sm.section--sticky-bottom .section__content {
+    top: auto;
+    bottom: 0;
+
+    .row--content {
+      padding: 0 0 30px 0;
+    }
+  }
+
 }
 
 /*
@@ -74,6 +91,16 @@
     top: 0;
     overflow: hidden;
   }
+
+  .section--full-width-bg-overlay-md.section--sticky-bottom .section__content {
+    top: auto;
+    bottom: 0;
+
+    .row--content {
+      padding: 0 0 30px 0;
+    }
+  }
+
   /*
    * This ensures that full width background variations 
    * have their images centered and fixed to a height

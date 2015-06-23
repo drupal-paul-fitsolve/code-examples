@@ -418,7 +418,7 @@
       var nav = document.querySelector(_base.defaults.mainNavClass);
 
       // If is touch, let's add the nav touch class NOW!
-      if(_settings.isTouch) {
+      if(_settings.isTouch && nav) {
         nav.className = nav.className + " nav--touch";
       }
     }

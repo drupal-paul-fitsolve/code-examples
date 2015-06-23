@@ -62,7 +62,7 @@ nav.nav {
  */
 nav.nav > ul.menu {
   height: 100%;
-  float: left;
+  float: right;
 
   // Level one menu list items
   > li {
@@ -163,17 +163,7 @@ a.nav__link--primary-duplicate {
   }
 }
 
-/**
- * 5. Normal Nav Breakpoint
- */
-@include breakpoint($nav-normal-breakpoint) {
-  // Emulates the container class
-  nav.nav {
-    width: $nav-width;
-    margin: 0 auto;
-    padding-left: $nav-padding-left;
-    padding-right: $nav-padding-right;
-  }
+
   // Vertically center the nav link
   nav.nav > ul.menu > li > a > span {
     padding-top: calc-nav-top-padding($nav-link-line-height, $nav-normal-height, 0px);
@@ -181,5 +171,70 @@ a.nav__link--primary-duplicate {
   // Nav Level One
   nav.nav > ul.menu > li > a {
     padding: 0 $nav-one-link-padding;
+  }
+
+/**
+ * 4. Small Nav Breakpoint
+ */
+@include breakpoint($screen-sm) {
+
+  nav.nav {
+    width: 720px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  nav.nav > ul.menu > li > a > span {
+    padding-top: calc-nav-top-padding($nav-link-line-height, $nav-small-height, 0px);
+  }
+
+  nav.nav .button-nav.button-esu--toggle {
+    width: 140px;
+
+    .button-nav__icon {
+      left: auto;
+      right: 0;
+    }
+
+    span.button-esu__description {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      margin-right: 25px;
+      color: $nav-button-text-color;
+    }
+  }
+}
+
+
+/**
+ * 5. Normal Nav Breakpoint
+ */
+@include breakpoint($screen-md) {
+  // Emulates the container class
+  nav.nav {
+    width: 960px;
+    margin: 0 auto;
+    padding-left: $nav-padding-left;
+    padding-right: $nav-padding-right;
+  }
+  // Vertically center the nav link
+  nav.nav > ul.menu > li > a > span {
+    padding-top: calc-nav-top-padding($nav-link-line-height, $nav-wide-height, 0px);
+  }
+  // Nav Level One
+  nav.nav > ul.menu > li > a {
+    padding: 0 $nav-one-link-padding;
+  }
+}
+
+/**
+ * 5. Large Nav Breakpoint
+ */
+@include breakpoint($screen-lg) {
+   nav.nav {
+    width: 1150px;
   }
 }
