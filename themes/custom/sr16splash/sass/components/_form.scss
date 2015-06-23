@@ -211,10 +211,12 @@ select.form-select {
 .webform-component-select label::after {
   @extend %select-after;
   top: 22px;
+  pointer-events: none;
 } 
 .form-type-select label::after {
   @extend %select-after;
   top: 26px;
+  pointer-events: none;
 }
 
 @include breakpoint($screen-lg) {
