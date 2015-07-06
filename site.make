@@ -31,7 +31,7 @@ projects[crdistro][download][url] = git@codebasehq.com:comic/comic-relief-distri
 ;projects[picture][type] = module
 ;projects[picture][subdir] = contrib
 
-defaults[projects][contrib-destination]=sites/sportrelief.com
+defaults[projects][contrib-destination]=sites/sportrelief.com/modules
 defaults[projects][subdir]=contrib
 
 projects[picture] = 2.11 
