@@ -24,3 +24,9 @@ projects[crdistro][download][url] = git@codebasehq.com:comic/comic-relief-distri
 ;projects[omega][type] = theme
 ;projects[omega][subdir] = contrib
 ;projects[omega][version] = "3.1"
+
+
+projects[picture][type] = module
+projects[picture][subdir] = contrib
+ 
+
