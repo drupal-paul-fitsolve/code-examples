@@ -13,27 +13,14 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/menu_alter_callb
 
 ;Link to Comic Relief's Distro
 projects[crdistro][type] = profile
-projects[crdistro][subdir] = ""
 projects[crdistro][download][type] = git
 projects[crdistro][download][url] = git@codebasehq.com:comic/comic-relief-distribution/crdistro_v1.git
 
+projects[omega][type] = theme
+projects[omega][subdir] = contrib
+projects[omega][version] = "3.1"
 
-;Link to contributed modules that are specific to this site
-;There are no specific contributed modules for Sport Relief
-
-;Link to contributed themes that are specific to this site
-;Added omega to repo as it has been customised
-;projects[omega][type] = theme
-;projects[omega][subdir] = contrib
-;projects[omega][version] = "3.1"
-
-
-;projects[picture][type] = module
-;projects[picture][subdir] = contrib
-
-defaults[projects][contrib-destination]=sites/sportrelief.com/modules
-defaults[projects][subdir]=contrib
-
-projects[picture] = 2.11 
- 
+projects[picture][type] = module
+projects[picture][subdir] = contrib
+projects[picture][version] = 2.11 
 
