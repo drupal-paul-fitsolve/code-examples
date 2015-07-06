@@ -1,0 +1,38 @@
+name = 'rnd15'
+description = 'rnd15 theme. Base theme - cr_layout_v2. Theme settings - rnd15_site_theme feature.'
+base theme = 'cr_layout_v2'
+screenshot = 'screenshot.png'
+engine = 'phptemplate'
+core = '7.x'
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = 'css/rnd15.styles.css'
+stylesheets[all][] = 'css/rnd15.styles.no-query.css'
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = 'js/vendor/fastclick.min.js'
+scripts[] = 'js/vendor/dropkick.jquery.min.js'
+scripts[] = 'js/vendor/dropkick.min.js'
+scripts[] = 'js/rnd15.dropkick.min.js'
+scripts[] = 'js/rnd15.email-signup-platform.min.js'
+scripts[] = 'js/vendor/jquery.history.min.js'
+
+
+; ========================================
+; Regions
+; ========================================
+
+regions[header] = 'Header'
+regions[content] = 'Content'
+regions[footer] = 'Footer'
+
+; ========================================
+; Settings
+;
+; Note: For advanced theme settings, see the
+; feature: rnd15_site_theme
+; ========================================

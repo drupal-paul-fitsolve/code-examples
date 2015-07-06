@@ -1,0 +1,511 @@
+/*
+ * _type.scss
+ * Type Sass Component
+ * Author: M.Wagg
+ * Last updated: 10th September 2014
+ */
+
+/*doc
+---
+title: Type
+name: type
+category: Type
+---
+
+## Type Sizes
+There are 10 different type sizes, each with their own variants. Apply the class in the modifier to the size and style you would like. If the modifier simply say e.g h4 then no class is needed.
+
+There are a list of classes related to brand colours, use .type--white, .type--red for example.
+
+## Special Circumstances
+These have been displayed below on p tags but they can be attached to any tag, p tags are just used for demonstration. You should find everything you need here, if not, let me know.
+
+## Text Aligning
+There are classes below to show text being aligned, there are also breakpoint specific classes such as; .type--left--sm, .type--right--sm, .type--centred--sm. Note, these classes do not inherit upwards in a mobile first fashion, they work between breakpoints. The example will work for the SM breakpoint only.
+
+
+Type                                                                | Modifier Class
+-----------------------------------------------------------------   | -----------------
+<h1 class="type--xl">Heading 1 Xlarge</h1>                          | 'h1.type--xl'
+<h1 class="type--lg">Heading 1 Large</h1>                           | 'h1.type--lg'
+<h1 class="type--def">Heading 1</h1>                                | 'h1.type--def'
+<h2>Heading 2</h2>                                                  | 'h2'
+<h3>Heading 3</h3>                                                  | 'h3'
+<h4>Heading 4</h4>                                                  | 'h4'
+<p class="type--white" style="background:black;">White paragraph</p>| 'type--white'
+<p class="type--pink">Pink paragraph</p>                            | 'type--pink'
+<p class="type--orange">Orange paragraph</p>                        | 'type--orange'
+<p class="type--red">Red paragraph</p>                              | 'type--red'
+<p class="type--purple">Purple paragraph</p>                        | 'type--purple'
+<p class="type--blue">Blue paragraph</p>                            | 'type--blue'
+<p class="type--aqua">Aqua paragraph</p>                            | 'type--aqua'
+<p class="type--green">Green paragraph</p>                          | 'type--green'
+<p class="type--yellow">Yellow paragraph</p>                        | 'type--yellow'
+<p class="type--grey">Grey paragraph</p>                            | 'type--grey'
+<p class="type--black">Black paragraph</p>                          | 'type--black'
+<p class="type--xl">XLarge paragraph</p>                            | 'p.type--xl'
+<span class="type--xl">XLarge span</span>                           | 'span.type--xl'
+<p class="type--lg">Large paragraph</p>                             | 'p.type--lg'
+<span class="type--lg">Large span</span>                            | 'span.type--lg'
+<p>Body paragrapgh</p>                                              | 'p'
+<span>Body span</span>                                              | 'span'
+<p class="type--sm">small paragraph</p>                             | 'p.type--sm'
+<span class="type--sm">small span</span>                            | 'span.type--sm'
+<p class="type--xl">Special Circumstances below</p>                 | ''
+<p class="type--light">Light Type</p>                               | '.type--light'
+<p class="type--semibold">Semibold Type</p>                         | '.type--semibold'
+<p class="type--upper">Uppercase</p>                                | '.type--upper'
+<p class="type--non-upper">Not Uppsercase</p>                       | '.type--non-upper'
+<p class="type--italic">Italic Type</p>                             | '.type--italic'
+<p class="type--left">Left Aligned</p>                              | '.type--left'
+<p class="type--centred">Center Aligned</p>                         | '.type--centred'
+<p class="type--right">Right Aligned</p>                            | '.type--right'
+<p class="type--left--xs">Left Aligned XS Breakpoint</p>            | '.type--left--xs'
+<p class="type--centred--sm">Center Aligned SM Breakpoint</p>       | '.type--centred--sm'
+<p class="type--right--md">Right Aligned MD Breakpoint</p>          | '.type--right--md'
+<p class="type--centred--lg">Center Aligned LG Breakpoint</p>       | '.type--centred--lg'
+*/
+
+// Import webfont version of Open Sans, rather than the Typekit version
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600);
+
+/* defaults */
+
+body {
+  color: $body-type--color;
+}
+
+/* font manipulation */
+.type--italic { font-style: italic; }
+.type--upper { text-transform: uppercase; }
+.type--non-upper { text-transform: none; }
+.type--margin-none { margin: $type-no-margin; }
+
+/* font weight */
+.type--light { font-weight: 300; }
+.type--semibold,
+strong { font-weight: 600; }
+
+/* Wrapping */
+.type--break-word {
+-ms-word-break: break-all;
+
+     /* Be VERY careful with this, breaks normal words wh_erever */
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
+
+/* padding */
+.type--promo-padding-top { padding-top: $padding-top; }
+
+/* colours */
+.type--white { color: $type--white; }
+.type--pink { color: $pink-brand; }
+.type--orange { color: $orange-brand; }
+.type--red { color: $red-brand; }
+.type--purple { color: $purple-brand; }
+.type--blue { color: $blue-brand; }
+.type--aqua { color: $aqua-brand; }
+.type--green { color: $green-brand; }
+.type--yellow { color: $yellow-brand; }
+.type--grey { color: $grey-brand; }
+.type--black { color: $black-brand; }
+
+/* aligning text */
+.type--left { text-align: left; }
+.type--centred { text-align: center; }
+.type--right { text-align: right; }
+
+/* hide text for image replacement */
+.type--hide {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+@include breakpoint($screen-xs $screen-xs-max) {
+  .type--left--xs { text-align: left; }
+  .type--centred--xs { text-align: center; }
+  .type--right--xs { text-align: right; }
+}
+
+@include breakpoint($screen-sm-min $screen-sm-max) {
+  .type--left--sm { text-align: left; }
+  .type--centred--sm { text-align: center; }
+  .type--right--sm { text-align: right; }
+}
+
+@include breakpoint(($screen-md-min $screen-md-max, $no-query)) {
+  .type--left--md { text-align: left; }
+  .type--centred--md { text-align: center; }
+  .type--right--md { text-align: right; }
+}
+
+@include breakpoint($screen-lg) {
+  .type--left--lg { text-align: left; }
+  .type--centred--lg { text-align: center; }
+  .type--right--lg { text-align: right; }
+}
+
+h1 {
+  color: $heading-type-color;
+  font-size: $h1;
+  font-weight: $weight;
+  line-height: $h1-height;
+  margin: $heading-margin;
+  text-transform: $h1-type--all-case;
+}
+
+h1.type--xl {
+  font-size: $h1-type--xl;
+  line-height: $h1-type--xl-height;
+}
+
+h1.type--lg {
+  font-size: $h1-type--lg;
+  line-height: $h1-type--lg-height;
+}
+
+h1.type--md {
+  font-size: $h1-type--md;
+  line-height: $h1-type--md-height;
+  margin: 0;
+}
+
+h1.type--sm {
+    color: $heading-type-color;
+    font-family: $h2-type--all-font;
+    font-size: $h2;
+    line-height: $h2-height;
+    text-transform: none;
+    font-weight: 600;
+}
+
+h1.type--margin-large {
+  margin: $heading-margin-large;
+}
+
+h1.type--margin-v-large {
+  margin: $heading-margin-v-large;
+}
+
+h1.type--row-large-copy {
+  margin: $heading-margin-large;
+}
+
+@include breakpoint($screen-md) {
+  h1.type--row-large-copy {
+    margin: $heading-margin-v-large;
+  }
+}
+
+h2 {
+  color: $heading-type-color;
+  font-family: $h2-type--all-font;
+  font-size: $h2;
+  font-weight: $weight;
+  line-height: $h2-height;
+  margin: $heading-margin;
+}
+
+h2.type--margin-large {
+  margin: $heading-margin-large;
+}
+
+h2.type--margin-v-large {
+  margin: $heading-margin-v-large;
+}
+
+h2.type--row-large-copy {
+  margin: $heading-margin-large;
+}
+
+@include breakpoint($screen-md) {
+  h2.type--row-large-copy {
+    margin: $heading-margin-v-large;
+  }
+}
+
+h3 {
+  color: $heading-type-color;
+  font-family: $h3-type--all-font;
+  font-size: $h3;
+  font-weight: $weight;
+  line-height: $h3-height;
+  margin: $heading-margin;
+}
+
+h3.type--margin-large {
+  margin: $heading-margin-large;
+}
+
+h3.type--margin-v-large {
+  margin: $heading-margin-v-large;
+}
+
+h3.type--row-large-copy {
+  margin: $heading-margin-large;
+}
+
+@include breakpoint($screen-md) {
+  h3.type--row-large-copy {
+    margin: $heading-margin-v-large;
+  }
+}
+
+h4 {
+  color: $heading-type-color;
+  font-family: $h4-type--all-font;
+  font-size: $h4;
+  font-weight: $weight;
+  line-height: $h4-height;
+  margin: $heading-margin;
+}
+
+h4.type--margin-large {
+  margin: $heading-margin-large;
+}
+
+h4.type--margin-v-large {
+  margin: $heading-margin-v-large;
+}
+
+h4.type--row-large-copy {
+  margin: $heading-margin-large;
+}
+
+@include breakpoint($screen-md) {
+  h4.type--row-large-copy {
+    margin: $heading-margin-v-large;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p + p,
+p + blockquote {
+  margin-top: $paragraph-margin-top;
+}
+
+p + h1, p + h2, p + h3, p + h4 {
+  margin-top: $heading-after-paragraph-margin-top;
+}
+
+p, span {
+  font-family: $p-type--all-font;
+  font-size: $p;
+  font-weight: $weight;
+  line-height: $p-height;
+}
+
+p.type--xl {
+  font-size: $p-type--xl;
+  line-height: $p-type--xl-height;
+}
+
+p.type--lg {
+  font-size: $p-type--lg;
+  line-height: $p-type--lg-height;
+}
+
+p.type--sm {
+  font-size: $p-type--sm;
+  line-height: $p-type--sm-height;
+}
+
+p.type--row-large-margin-top {
+  margin: $type-large-margin-top;
+}
+
+p.type--row-promo-margin-top {
+  margin-top: $paragrapgh-promo-margin-top;
+}
+
+/* sm styles */
+
+@include breakpoint($screen-sm) {
+  h1.type--xl {
+    font-size: $sm-h1-type--xl;
+    line-height: $sm-h1-type--xl-height;
+  }
+
+  h1.type--lg {
+    font-size: $sm-h1-type--lg;
+    line-height: $sm-h1-type--lg-height;
+  }
+
+  h1 {
+    font-size: $sm-h1;
+    line-height: $sm-h1-height;
+  }
+
+  h2 {
+    font-size: $sm-h2;
+    line-height: $h2-height;
+  }
+
+  h3 {
+    font-size: $sm-h3;
+    line-height: $sm-h3-height;
+  }
+
+  p, 
+  span {
+    line-height: $sm-p-height;
+  }
+
+  p.type--xl {
+    font-size: $sm-p-type--xl;
+    line-height: $sm-p-type--xl-height;
+  }
+
+  p.type--lg {
+    line-height: $sm-p-type--lg-height;
+  }
+
+  p.type--sm {
+    font-size: $sm-p-type--sm;
+  }
+}
+
+/* md style */
+
+@include breakpoint($screen-md) {
+  h1.type--xl {
+    font-size: $md-h1-type--xl;
+    line-height: $md-h1-type--xl-height;
+  }
+
+  h1.type--lg {
+    font-size: $md-h1-type--lg;
+    line-height: $md-h1-type--lg-height;
+  }
+
+  h1 {
+    font-size: $md-h1;
+    line-height: $md-h1-height;
+  }
+
+  h2 {
+    font-size: $md-h2;
+    line-height: $md-h2-height;
+  }
+
+  h3 {
+    font-size: $md-h3;
+    line-height: $md-h3-height;
+  }
+
+  h4 {
+    font-size: $md-h4;
+  }
+
+  p, 
+  span {
+    font-size: $md-p;
+    line-height: $md-p-height;
+  }
+
+  p.type--xl {
+    font-size: $md-p-type--xl;
+    line-height: $md-p-type--xl-height;
+  }
+
+  p.type--lg {
+    font-size: $md-p-type--lg;
+    line-height: $md-p-type--lg-height;
+  }
+
+  p.type--sm {
+    font-size: $md-p-type--sm;
+  }
+
+  p.type--xl-negative-margin {
+    margin-top: $negative-margin-xl-md;
+  }
+
+  p.type--lg-negative-margin {
+    margin-top: $negative-margin-lg-md;
+  }
+
+  p.type--sm-negative-margin {
+    margin-top: $negative-margin-sm-md;
+  }
+
+  p.type--negative-margin {
+    margin-top: $negative-margin-md;
+  }
+
+  p.type--row-promo-margin-top {
+    margin-top: $paragrapgh-promo-margin-top-md;
+  }
+}
+
+/* lg style */
+
+@include breakpoint($screen-lg) {
+  h1.type--xl {
+    font-size: $lg-h1-type--xl;
+    line-height: $lg-h1-type--xl-height;
+  }
+
+  h1.type--lg {
+    font-size: $lg-h1-type--lg;
+    line-height: $lg-h1-type--lg-height;
+  }
+
+  h2 {
+    line-height: $lg-h2-height;
+  }
+
+  h3 {
+    font-size: $lg-h3;
+    line-height: $lg-h3-height;
+  }
+
+  p, span {
+    font-size: $lg-p;
+    line-height: $lg-p-height;
+  }
+
+  p.type--xl {
+    font-size: $lg-p-type--xl;
+    line-height: $lg-p-type--xl-height;
+  }
+
+  p.type--lg {
+    font-size: $lg-p-type--lg;
+  }
+
+  p.type--sm {
+    font-size: $lg-p-type--sm;
+  }
+
+  p.type--xl-negative-margin {
+    margin-top: $negative-margin-xl-lg;
+  }
+
+  p.type--lg-negative-margin {
+    margin-top: $negative-margin-lg-lg;
+  }
+
+  p.type--sm-negative-margin {
+    margin-top: $negative-margin-sm-lg;
+  }
+
+  p.type--negative-margin {
+    margin-top: $negative-margin-lg;
+  }
+  p.type--row-promo-margin-top {
+    margin-top: $paragrapgh-promo-margin-top-lg;
+  }
+}

@@ -1,0 +1,60 @@
+/**
+ * PB: 9/9/2014
+ *
+ * Mixin to enable the panel transision flip component.
+ *
+ * see 
+ *  - ../components/_transition-flip.scss for implementation.
+ */
+
+/**
+ * Parameters:
+ * 
+ * $speed - animation duration in seconds.
+ * $perspective - 3d perpective for browsers that support css3 3d animations.
+ * $degress - direction of rotation.
+ */
+@mixin flip($speed: 0.5s, $perspective: 500, $degrees: 180deg) {
+  display: block;
+  position: relative;
+  .front,
+  .back {
+    @include transition(all $speed ease-in-out);
+    @include backface-visibility(hidden);
+    @include transform-style(preserve-3d);
+    display: block;
+    cursor: pointer;
+  }
+  .front { position: relative; }
+  .back { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .no-csstransforms3d & {
+      visibility: hidden;
+    }
+  }
+  .front {
+    @include transform3d(perspective($perspective) rotateY(0));
+  }
+  .back {
+    @include rotateY(-180deg);
+  }
+  &:hover {
+    .front { 
+      @include transform(rotateY($degrees)); //No 3D fallback
+      @include rotateY($degrees);
+      .no-csstransforms3d & {
+        visibility: hidden;
+      }
+    }
+    .back { 
+      @include transform(rotateY(0)); //No 3D fallback
+      @include transform3d(perspective($perspective) rotateY(0));
+      .no-csstransforms3d & {
+        visibility: visible;
+      }
+    }
+  }
+}

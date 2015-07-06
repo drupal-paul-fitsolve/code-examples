@@ -1,0 +1,30 @@
+/*
+ * _pane-video.scss
+ * Pane Text Sass Component
+ * Author: J.Pitt
+ * Last updated: 20th November 2014
+ */
+
+/*doc
+---
+title: Pane Video
+name: Pane-video
+category: Pane Video
+---
+
+Essentially, the vast bulk of pane text work is actually dealt with in type component. The code added to this file is purely to allow you to center pane text vertically. the class to do this is `pane--text-center-vertical` and must be added as a row class in order for it to work. It has the required specificity not to break anything else.
+
+
+  Classes to use            |             Example of use in HTML              
+ -------------------------- | ------------------------------------------------- 
+
+
+*/
+.pane-video {
+
+}
+
+.pane-video__caption {
+  background-color: $pane-video__caption-bg-color;
+  padding: $pane-video__caption-padding;
+}

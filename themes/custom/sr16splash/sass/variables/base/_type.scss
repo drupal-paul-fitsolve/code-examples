@@ -1,0 +1,134 @@
+/*
+ * _type.scss
+ * Type Variables
+ * Author: M.Wagg
+ * Last updated: 10th September 2014
+ */
+
+/* colours */
+$body-type--color:    $grey-dark;
+$type--white:         $white-brand;
+$heading-type-color:  $black-brand;
+$p-color:             $grey-dark;
+
+/* font case */
+$h1-type--all-case:   UPPERCASE;
+
+/* Font weight */
+$weight:              300;
+
+/* font family */
+$h2-type--all-font:  "Open Sans", Helvetica, Arial, Sans-serif;
+$h3-type--all-font:  "Open Sans", Helvetica, Arial, Sans-serif;
+$h4-type--all-font:  "Open Sans", Helvetica, Arial, Sans-serif;
+$p-type--all-font:   "Open Sans", Helvetica, Arial, Sans-serif;
+
+/* padding */
+$padding-top:        5px;
+
+/* margin */
+$paragraph-margin-top:               19px;
+$paragrapgh-promo-margin-top:        14px;
+$paragrapgh-promo-margin-top-md:     5px;
+$paragrapgh-promo-margin-top-lg:     3px;
+$heading-after-paragraph-margin-top: 30px;
+$heading-margin:                     0 0 20px;
+$heading-margin-large:               0 0 30px;
+$heading-margin-v-large:             0 0 40px;
+$type-no-margin:                     0;
+$type-large-margin-top:              34px 0 0;
+$negative-margin-md:                 -5px;
+$negative-margin-lg:                 -5px;
+$negative-margin-sm-md:              -3px;
+$negative-margin-sm-lg:              -3px;
+$negative-margin-lg-md:              -5px;
+$negative-margin-lg-lg:              -7px;
+$negative-margin-xl-md:              -3px;
+$negative-margin-xl-lg:              -5px;
+
+/* xsmall/default font sizes */
+$h1-type--xl:     40px;
+$h1-type--lg:     40px;
+$h1-type--md:     36px;
+$h1:              40px;
+$h2:              24px;
+$h3:              21px;
+$h4:              18px;
+$p-type--xl:      20px;
+$p-type--lg:      18px;
+$p:               15px;
+$p-type--sm:      12px;
+
+/* small font sizes */
+$sm-h1-type--xl:   60px;
+$sm-h1-type--lg:   60px;
+$sm-h1:            50px;
+$sm-h2:            30px;
+$sm-h3:            22px;
+$sm-p-type--xl:    22px;
+$sm-p-type--sm:    11px;
+
+/* medium font sizes */
+$md-h1-type--xl:   90px;
+$md-h1-type--lg:   78px;
+$md-h1:            70px;
+$md-h2:            30px;
+$md-h3:            21px;
+$md-h4:            18px;
+$md-p-type--xl:    21px;
+$md-p-type--lg:    16px;
+$md-p:             14px;
+$md-p-type--sm:    12px;
+
+/* large font sizes */
+
+$lg-h1-type--xl:   100px;
+$lg-h1-type--lg:   80px;
+$lg-h3:            22px;
+$lg-p-type--xl:    18px;
+$lg-p-type--lg:    16px;
+$lg-p:             14px;
+$lg-p-type--sm:    12px;
+
+//* Line heights *//
+
+/* xsmall/default line heights */
+$h1-type--xl-height:       40px;
+$h1-type--lg-height:       40px;
+$h1-type--md-height:       36px;
+$h1-height:                40px;
+$h2-height:                28px;
+$h3-height:                24px;
+$h4-height:                22px;
+$p-type--xl-height:        22px;
+$p-type--lg-height:        25px;
+$p-height:                 23px;
+$p-type--sm-height:        16px;
+
+/* small line heights */
+$sm-h1-type--xl-height:   66px;
+$sm-h1-type--lg-height:   60px;
+$sm-h1-height:            55px;
+$sm-h2-height:            30px;
+$sm-h3-height:            26px;
+$sm-p-type--xl-height:    26px;
+$sm-p-type--lg-height:    23px;
+$sm-p-height:             21px;
+
+/* medium line heights */
+$md-h1-type--xl-height:   88px;
+$md-h1-type--lg-height:   72px;
+$md-h1-height:            65px;
+$md-h2-height:            40px;
+$md-h3-height:            28px;
+$md-p-type--xl-height:    24px;
+$md-p-type--lg-height:    25px;
+$md-p-height:             22px;
+
+/* large line heights */
+$lg-h1-type--xl-height:   92px;
+$lg-h1-type--lg-height:   80px;
+$lg-h2-height:            30px;
+$lg-h3-height:            26px;
+$lg-p-type--xl-height:    26px;
+$lg-p-height:             21px;

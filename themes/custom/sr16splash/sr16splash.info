@@ -1,0 +1,38 @@
+name = 'sr16splash'
+description = 'sr16splash theme. Base theme - cr_layout_v2. Theme settings - sr16splash_site_theme feature.'
+base theme = 'cr_layout_v2'
+screenshot = 'screenshot.png'
+engine = 'phptemplate'
+core = '7.x'
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = 'css/sr16splash.styles.css'
+stylesheets[all][] = 'css/sr16splash.styles.no-query.css'
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = 'js/vendor/fastclick.min.js'
+scripts[] = 'js/vendor/dropkick.jquery.min.js'
+scripts[] = 'js/vendor/dropkick.min.js'
+scripts[] = 'js/sr16splash.dropkick.min.js'
+scripts[] = 'js/sr16splash.email-signup-platform.min.js'
+scripts[] = 'js/vendor/jquery.history.min.js'
+
+
+; ========================================
+; Regions
+; ========================================
+
+regions[header] = 'Header'
+regions[content] = 'Content'
+regions[footer] = 'Footer'
+
+; ========================================
+; Settings
+;
+; Note: For advanced theme settings, see the
+; feature: sr16splash_site_theme
+; ========================================

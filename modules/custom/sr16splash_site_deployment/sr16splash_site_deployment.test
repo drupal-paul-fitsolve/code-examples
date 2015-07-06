@@ -1,0 +1,73 @@
+<?php
+/**
+ * @file
+ * Tests for the deployment module.
+ * @author Carl Hinton for Comic Relief.
+ * @date 3rd February 2015.
+ */
+
+/**
+ * Deployment module class for all deployment module test cases.
+ */
+
+class DeploymentTestCase extends DrupalWebTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'sr16splash Deployment unit tests',
+      'description' => 'Unit tests for sr16splash Deployment functions.',
+      'group' => 'Comic Relief',
+      'dependencies' => array('sr16splash_site_deployment'),
+    );
+  }
+
+  // SetUp function required to ensure all necessary modules are loaded.
+  function setUp(array $modules = array()) {
+    $modules[] = 'sr16splash_site_deployment';
+    parent::setUp($modules);
+  }
+
+  // Test to ensure roles are created and deleted correctly.
+  public function testCreateRole() {
+    // Test creation.
+    $role_name = $this->randomString(8);
+    $this->assertFalse(user_role_load_by_name($role_name), t('The role %role already exists.',
+      array('%role' => $role_name)));
+    sr16splash_site_deployment_create_role($role_name);
+    $this->assertTrue(isset(user_role_load_by_name($role_name)->rid), t('The role %role was not created.',
+      array('%role' => $role_name)));
+
+    // Test removal.
+    sr16splash_site_deployment_remove_role($role_name);
+    $this->assertFalse(isset(user_role_load_by_name($role_name)->rid), t('The role %role was not deleted. RID %rid',
+      array('%role' => $role_name)));
+
+    // Test running twice.
+    sr16splash_site_deployment_create_role($role_name);
+    sr16splash_site_deployment_create_role($role_name);
+    sr16splash_site_deployment_remove_role($role_name);
+    sr16splash_site_deployment_remove_role($role_name);
+
+  }
+
+ // Test to ensure that users are created and deleted correctly.
+ public function testCreateUsers() {
+
+   // Test create user.
+   $username = $this->randomString(8);
+   $this->assertFalse(sr16splash_site_deployment_test_user_exists($username . '@comicrelief.com'), t('The user %user already exists.',
+     array('%user' => $username)));
+
+   sr16splash_site_deployment_create_user($username, $username . '@comicrelief.com');
+
+   $this->assertTrue(sr16splash_site_deployment_test_user_exists($username . '@comicrelief.com'), t('The user %user has been created.',
+     array('%user' => $username)));
+
+   // Test remove user.
+   sr16splash_site_deployment_remove_user($username . '@comicrelief.com');
+   $this->assertFalse(sr16splash_site_deployment_test_user_exists($username), t('The user %user was deleted.',
+     array('%user' => $username)));
+
+ }
+
+}

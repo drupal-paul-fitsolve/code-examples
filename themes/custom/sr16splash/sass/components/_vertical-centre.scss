@@ -1,0 +1,9 @@
+/*
+ * _vertical-centre.scss
+ * Vertical Centre mixin Styles
+ * Author: M.Wagg
+ * Last updated: 16th December 2014
+ */
+ .vertical-centre {
+  @extend %vertical-centre;
+ }

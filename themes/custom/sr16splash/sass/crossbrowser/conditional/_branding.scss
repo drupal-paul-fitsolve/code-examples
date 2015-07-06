@@ -1,0 +1,18 @@
+/*
+ * _branding.scss
+ * Cross Browser Branding Styles
+ * Author: J.Pitt
+ * Last updated: 4th September 2014
+ */
+
+// IE8 Banding Logo Component
+.branding__logo,
+.branding__logo:active {
+  background: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 */   
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);   /* IE6 & 7 */      
+  zoom: 1;
+  background-image: $branding-logo-md;
+  width: $branding-logo-md-width;
+  height: $branding-logo-md-height;
+}

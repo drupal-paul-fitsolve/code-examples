@@ -1,0 +1,9 @@
+name = sr16splash Site WYSIWYG Styles
+description = The rednose day wysiwyg editor style settings
+core = 7.x
+package = sr16splash
+php = 5.2.4
+version = 7.x-0.01
+project = sr16splash_site_wysiwyg
+dependencies[] = ckeditor
+dependencies[] = sr16splash_site_wysiwyg

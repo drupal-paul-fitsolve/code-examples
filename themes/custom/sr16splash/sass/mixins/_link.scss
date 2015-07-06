@@ -1,0 +1,45 @@
+/***********************************
+ *  Link colour
+ */
+
+@mixin inline-link-colors($link--colour, $state--color) {
+  border-bottom: $link-border solid $link--colour;
+  color: $color;
+  text-decoration: none;
+  @include transition-property(border, color);
+  @include transition-duration(180ms);
+  &:hover {
+    border-bottom: $link-border-hover solid $state--color;
+    color: $black-brand;
+  }
+  &:active {
+    border-bottom: $link-border-hover solid $state--color;
+    border-color: darken( $state--color, 20% );
+    color: $color;
+  }
+  &:focus {
+    border-bottom: $link-border-hover solid $state--color;
+    color: $black-brand;
+  }
+}
+
+@mixin link-colors($link--colour) {
+  border-bottom: $link-border-hover solid $link--colour;
+  color: $color;
+  text-decoration: none;
+  @include transition-property(border, color);
+  @include transition-duration(180ms);
+  &:hover {
+    border-bottom: $link-inline-border solid $grey-dark;
+    color: $black-brand;
+  }
+  &:active {
+    border-bottom: $link-inline-border solid $grey-dark;
+    border-color: darken( $black-brand, 20% );
+    color: $color;
+  }
+  &:focus {
+    border-bottom: $link-inline-border solid $grey-dark;
+    color: $black-brand;
+  }
+}

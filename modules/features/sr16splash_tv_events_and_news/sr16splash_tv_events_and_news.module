@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the sr16splash Site TV, Events and News feature.
+ */
+
+include_once 'sr16splash_tv_events_and_news.features.inc';

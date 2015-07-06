@@ -1,0 +1,84 @@
+/*
+ * _interstitial.scss
+ * Interstitial Styling
+ * Author: J.Pitt
+ * Last updated: 30th December 2014
+ */
+
+/**
+ * Mobile First
+ */
+
+/**
+ * Main Component
+ */
+#interstitial,
+#interstitial__background {
+  position: fixed;
+  -webkit-backface-visibility: hidden; // http://benfrain.com/easy-css-fix-fixed-positioning-android-2-2-2-3/
+}
+#interstitial {
+  z-index: 3002;
+  width: $interstitial-overlay-xs-width;
+  height: $interstitial-overlay-xs-height;
+  top: 50%;
+  left: 50%;
+  margin-top: -($interstitial-overlay-xs-height/2);
+  margin-left: -($interstitial-overlay-xs-width/2);
+  background-color: $interstitial-overlay-bg-color;
+  display: none;
+}
+#interstitial__background {
+  display: none;
+  z-index: 3000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  @include opacity($interstitial-background-bg-opacity);
+  background-color: $interstitial-background-bg-color;
+}
+
+/**
+ * Sub Components
+ */
+.interstitial__content {
+  display: table;
+  width: $interstitial-overlay-xs-width;
+  height: $interstitial-overlay-xs-height;
+}
+.interstitial__content-inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: $interstitial-overlay-xs-content-padding;
+  _padding-top: 38px; // IE8 Fallback for top 
+}
+.interstitial__message {
+  a {
+    font-weight: 600;
+  }
+  i.seconds {
+    font-style: normal;
+  }
+}
+.interstitital__btn {}
+.interstitital__btn-cancel {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/**
+ * Small and larger breakpoints
+ */
+@include breakpoint($screen-sm) {
+  #interstitial,
+  .interstitial__content {
+    width: $interstitial-overlay-sm-width;
+    height: $interstitial-overlay-sm-height;
+  }
+  #interstitial {
+    margin-top: -($interstitial-overlay-sm-height/2);
+    margin-left: -($interstitial-overlay-sm-width/2);
+  }
+}

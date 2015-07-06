@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the sr16splash View Modes feature.
+ */
+
+include_once 'sr16splash_view_modes.features.inc';

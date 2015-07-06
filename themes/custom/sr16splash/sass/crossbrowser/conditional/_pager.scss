@@ -1,0 +1,18 @@
+/*
+ * _pager.scss
+ * IE8-specific tweaks for Pager component for Views etc
+ *
+ * Author: A.Phipps
+ * Last updated: 13th February 2015
+ */
+
+/* Workaround for IE8's before and z-index issues */
+.lt-ie9 {
+  .pager .pager__item.pager__number {
+    color: $grey-dark;
+    &:before {
+      color: $grey-dark;
+      @extend .icon-close-circle;
+    }
+  }
+}

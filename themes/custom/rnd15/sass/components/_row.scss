@@ -1,0 +1,305 @@
+/*
+ * _row.scss
+ * Row Sass Component
+ * Author: M.Wagg
+ * Last updated: 10th September 2014
+ */
+
+/*doc
+---
+title: Rows
+name: Rows
+category: Rows
+---
+
+The following classes for the row component all respond to all breakpoints.
+
+The row styles are created in HTML by adding the required row class modifiers to an `<div>` or a `<section>` with a `.row--` class.
+There is no core .row class as that name is reserved for Bootstrap is is not used here.
+
+See the examples below.
+
+###Row base class
+
+The class .row--content includes all default margins and paddings accross all breakpoints.
+
+  Classes to use         |             Example of use in HTML              
+ ----------------------- | -----------------------------------------------------------
+ .row--content           | `<div class="row-content">`<br>`Content/images`<br>`</div>`
+
+### Row classes for margins and paddings
+
+  Classes to use                          |             Example of use in HTML                                            |       HTML
+ ---------------------------------------- | ----------------------------------------------------------------------------- | ----------------
+ .row--content<br>.row--padding-none      | <div class="row--content row--padding-none"><br>Content/images<br></div>      |   `<div class="row--content row--padding-none">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--small             | <div class="row--content row--small"><br>Content/images<br></div>             |   `<div class="row--content row--small">`<br>`Content/images`<br>`</div>`
+
+ ### Row classes for backgrounds
+
+ Classes to use                             |          Example of use                                                        |       HTML
+ ------------------------------------------ | ------------------------------------------------------------------------------ | ----------------
+ .row--content<br>.row--bg-black-circles    | <div class="row--content row--bg-black-circles"><br>Content/images<br></div>   |   `<div class="row--content row--bg-black-circles">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-black-dots       | <div class="row--content row--bg-black-dots"><br>Content/images<br></div>      |   `<div class="row--content row--bg-black-dots">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-black-triangles  | <div class="row--content row--bg-black-triangles"><br>Content/images<br></div> |   `<div class="row--content row--bg-black-triangles">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-black-zigzags    | <div class="row--content row--bg-black-zigzags"><br>Content/images<br></div>   |   `<div class="row--content row--bg-black-zigzags">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-white-circles    | <div class="row--content row--bg-white-circles"><br>Content/images<br></div>   |   `<div class="row--content row--bg-white-circles">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-white-stars      | <div class="row--content row--bg-white-stars"><br>Content/images<br></div>     |   `<div class="row--content row--bg-white-stars">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-grey-dots        | <div class="row--content row--bg-grey-dots"><br>Content/images<br></div>       |   `<div class="row--content row--bg-grey-dots">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-grey-stars       | <div class="row--content row--bg-grey-stars"><br>Content/images<br></div>      |   `<div class="row--content row--bg-grey-stars">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-grey-triangles   | <div class="row--content row--bg-grey-triangles"><br>Content/images<br></div>  |   `<div class="row--content row--bg-grey-triangles">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-grey-zigzags     | <div class="row--content row--bg-grey-zigzags"><br>Content/images<br></div>    |   `<div class="row--content row--bg-grey-zigzags">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-pink-soil        | <div class="row--content row--bg-pink-soil"><br>Content/images<br></div>       |   `<div class="row--content row--bg-pink-soil">`<br>`Content/images`<br>`</div>`
+ .row--content<br>.row--bg-selfie           | <div class="row--content row--bg-selfie"><br>Content/images<br></div>          |   `<div class="row--content row--bg-selfie">`<br>`Content/images`<br>`</div>`
+
+
+##How to use Rows across the site
+
+Specific Row classes are only required when they are specifically mentioned below, if not the default row class (added already) will work fine.
+
+###Row Small Copy
+
+Body copy below should be `<h3 class="type--centred type--white type--margin-large">Some text</h3>`<br/><br/>
+
+Row Small copy |
+---------------------------------------------------------------------------------------------------- | ----------------
+<img src="../styleguide_assets/img/row_small_copy.png" alt="" style="max-width: 700px;" /><br/><br/> |
+<br/>
+###Row Medium Copy
+
+Row class should be `pane-text--medium-copy` while the title should be `<h2 class="type-centred">Title</h2>` and the copy should be `<p class="type--lg type--centred"></p>`<br/><br/>
+
+Row Medium Copy |
+-------------------------------------------------------------------------------------------- |
+<img src="../styleguide_assets/img/row_medium_copy.png" alt="" style="max-width: 700px;" />  |
+<br/>
+###Row Large Copy
+
+The title should be `<h2 class="type-centred type--white type--row-large-copy">Title</h2>` while the first paragraph should be `<p class="type--lg type--lg-negative-margin type--centred--xs type--entred--sm type--white"></p>` and the second paragraph should be `<p class="type--white type--centred--xs type--entred--sm"></p>` and the button should be `<p class="type--centred--xs type--centred--sm type--row-large-margin-top"><a class="btn btn-color btn-ghost"></a></p>`<br/><br/>
+
+Row Large Copy |
+------------------------------------------------------------------------------------------------------- |
+<img src="../styleguide_assets/img/row_large_copy.png" alt="" style="max-width: 700px;" />              |
+<br/>
+###Row Main Center
+
+Row class should be `pane-image--row-center` while the title should be `<h3 class="type--centred type--margin-large"></h3>` and the button should be `<p class="type--centred "><a class="btn btn-color"></a></p>`<br/><br/>
+
+Row Main Center |
+------------------------------------------------------------------------------------------------------- |
+<img src="../styleguide_assets/img/row_main_center.png" alt="" style="max-width: 700px;" />             |
+<br/>
+###Row Quote
+
+The quote should be `<h2 class="type--centred type--margin-none"></h2>`<br/><br/>
+
+Row Quote |
+------------------------------------------------------------------------------------------------------- |
+<img src="../styleguide_assets/img/row_quote.png" alt="" style="max-width: 700px;" />             |
+<br/>
+
+###Row Two Messages
+
+Row class should be `pane-image__wrapper--multiple-images`<br/>
+Header should be `<h2 class="type--centred"></h2>`<br/>
+Two sets of mini panels are required, the image in the first mini panel should have class `pane-image--first-class` applied<br/>
+Mini panels should be set to 12xs 6sm and 4md with a 2md offset for the first one<br/>
+Title should be `<h3 class="type--centred"></h3>`<br/>
+Copy should be `<p class="type--centred"></p>`<br/>
+Button should be `<p class="type--centred"><a class="btn btn-color"></a></p>`<br/><br/>
+
+Row Two Messages |
+------------------------------------------------------------------------------------------------------- |
+<img src="../styleguide_assets/img/row_two_messages.png" alt="" style="max-width: 700px;" />            |
+<br/>
+
+###Row Three Messages template 1
+
+Row class should be `pane-image__wrapper--multiple-images`<br/>
+Header should be `<h2 class="type--white type--centred"></h2>`<br/>
+Copy above messages should be `<p class="type--lg type--white type--centred"></p>`<br/>
+Three sets of mini panels are required, the image in the first mini panel should have class `pane-image--first-class` applied<br/>
+Mini panels should be set to 12xs 4sm<br/>
+Button should be `<p class="type--centred"><a class="btn btn-color btn-ghost"></a></p>`<br/><br/>
+
+Row Three Messages template 1 |
+------------------------------------------------------------------------------------------------------- |
+<img src="../styleguide_assets/img/row_three_messages_var_1.png" alt="" style="max-width: 700px;" />    |
+<br/>
+
+###Row Three Messages template 2
+
+Row class should be `pane-image__wrapper--multiple-images`<br/>
+Header should be `<h2 class="type--centred"></h2>`<br/>
+Three sets of mini panels are required, the image in the first mini panel should have class `pane-image--first-class` applied<br/>
+Copy should be `<p class="type--centred type--lg"></p>`<br/>
+The link should be `<p class="type--centred type--semibold"><a class="link--color"></a></p>`<br/><br/>
+
+Row Three Messages template 2 |
+------------------------------------------------------------------------------------------------------- |
+<img src="../styleguide_assets/img/row_three_messages_var_2.png" alt="" style="max-width: 700px;" />    |
+<br/>
+
+###Row Three Messages template 3
+
+Row class should be `pane-image__wrapper--multiple-images`<br/>
+Header should be `<h3 class="type--centred"></h3>`<br/>
+Three sets of mini panels are required, the image in the first mini panel should have class `pane-image--first-class` applied<br/>
+Copy should be `<p class="type--centred"></p>`<br/>
+The link should be `<p class="type--centred"><a class="btn btn-color"></a></p>`<br/><br/>
+
+Row Three Messages template 3 |
+------------------------------------------------------------------------------------------------------- |
+<img src="../styleguide_assets/img/row_three_messages_var_3.png" alt="" style="max-width: 700px;" />    |
+<br/>
+
+*/
+
+/**
+ * The Generic Row
+ */
+.row--content {
+  padding: $row-padding;
+}
+
+@include breakpoint($screen-sm) {
+  .row--content {
+    padding: $row-padding-sm;
+  }
+}
+@include breakpoint($screen-md) {
+  .row--content {
+    padding: $row-padding-md;
+  }
+}
+@include breakpoint($screen-lg) {
+  .row--content {
+    padding: $row-padding-lg;
+  }
+}
+ 
+/**
+ * Background Image Pattern
+ */
+%bg-patterns {
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+.row--bg-black-circles { 
+  background-image: image-url("background-tiles/circles-black.gif");
+  @extend %bg-patterns;
+}
+.row--bg-black-dots { 
+  background: image-url("background-tiles/dots-black.gif");
+  @extend %bg-patterns;
+}
+.row--bg-black-triangles {
+  background: image-url("background-tiles/triangles-black.gif");
+  @extend %bg-patterns;
+}
+.row--bg-black-zigzags {
+  background: image-url("background-tiles/zigzags-black.gif");
+  @extend %bg-patterns;
+}
+.row--bg-white-circles {
+  background: image-url("background-tiles/circles-white.gif");
+  @extend %bg-patterns;
+}
+.row--bg-white-stars {
+  background: image-url("background-tiles/stars-white.gif");
+  @extend %bg-patterns;
+}
+.row--bg-grey-dots {
+  background: image-url("background-tiles/dots-grey.gif");
+  @extend %bg-patterns;
+}
+.row--bg-grey-stars {
+  background: image-url("background-tiles/stars-grey.gif");
+  @extend %bg-patterns;
+}
+.row--bg-grey-triangles {
+  background: image-url("background-tiles/triangles-grey.gif");
+  @extend %bg-patterns;
+}
+.row--bg-grey-zigzags {
+  background: image-url("background-tiles/zigzags-grey.gif");
+  @extend %bg-patterns;
+}
+.row--bg-pink-soil {
+  background: image-url("background-tiles/soil-pink.gif");
+  @extend %bg-patterns;
+}
+.row--bg-selfie {
+  background: image-url("background-tiles/selfie.gif");
+  @extend %bg-patterns;
+}
+
+/**
+ * Row paddings for non landing page promos both with and without breadcrumbs
+ * Top is with breadcrumbs, bottom is without
+ * No padding bottom as the image is taking care of that
+ */
+.row--promo-non-landing-overlay-bc {
+  padding-bottom: 0;
+  padding-top: 73px
+}
+
+.row--promo-non-landing-overlay {
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+
+@include breakpoint($screen-md) {
+  .row--promo-non-landing-overlay {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+}
+
+/**
+ * Small padding row
+ */
+.row--small {
+  padding-bottom: $row-small-padding;
+  padding-top: $row-small-padding;
+}
+
+/**
+ * Extra small padding row
+ */
+.row--extra-small {
+  padding-bottom: $row-extra-small-padding;
+  padding-top: $row-extra-small-padding;
+}
+
+/**
+ * No padding row
+ */
+.row--padding-none {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+/**
+ * Search pages rows
+ */
+.search__row {
+  margin-bottom: $row-search-margin;
+  &:before, 
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.search__row-term {
+  padding-bottom: $row-search-term-padding-bottom;
+  padding-top: $row-search-term-padding-top;
+}
+
+@include breakpoint($screen-sm) {
+  .search__row-term {
+    padding-bottom: $row-search-term-padding-bottom-sm;
+  }
+}
