@@ -13,8 +13,10 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/menu_alter_callb
 
 ;Link to Comic Relief's Distro
 projects[crdistro][type] = profile
+projects[crdistro][subdir] = ""
 projects[crdistro][download][type] = git
 projects[crdistro][download][url] = git@codebasehq.com:comic/comic-relief-distribution/crdistro_v1.git
+
 
 ;Link to contributed modules that are specific to this site
 ;There are no specific contributed modules for Sport Relief
