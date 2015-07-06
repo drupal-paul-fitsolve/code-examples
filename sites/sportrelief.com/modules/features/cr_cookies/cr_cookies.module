@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the CR Cookies feature.
- */
-
-include_once 'cr_cookies.features.inc';

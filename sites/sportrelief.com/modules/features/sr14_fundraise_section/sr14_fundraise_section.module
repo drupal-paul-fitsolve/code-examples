@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SR14 Fundraise Section feature.
- */
-
-include_once 'sr14_fundraise_section.features.inc';

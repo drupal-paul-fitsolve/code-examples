@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the CR Media Image feature.
- */
-
-include_once 'cr_media_image.features.inc';

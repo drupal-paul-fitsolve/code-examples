@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SR Showcase Scroller feature.
- */
-
-include_once 'sr_showcase_scroller.features.inc';

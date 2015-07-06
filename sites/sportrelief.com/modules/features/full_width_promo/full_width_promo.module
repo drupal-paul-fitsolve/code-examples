@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Full width promo feature.
- */
-
-include_once 'full_width_promo.features.inc';
