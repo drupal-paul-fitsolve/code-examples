@@ -1,0 +1,245 @@
+<?php
+/**
+ * @file
+ * Code for the sr16splash Fundraiser showcase feature.
+ * Updated: 11th March 2015
+ */
+
+include_once 'sr16splash_fundraiser_showcase.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function sr16splash_fundraiser_showcase_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
+
+/**
+ * Implements of hook_theme()
+ */
+function sr16splash_fundraiser_showcase_theme() {
+  return array(
+    'sr16splash_fundraiser_showcase_submission_form' => array(
+      'render element' => 'form',
+      'template' => 'template/sr16splash-fundraiser-showcase-submission-form'
+    )
+  );
+}
+
+/**
+ * Implements hook_form_views_exposed_form_alter.
+ */
+function sr16splash_fundraiser_showcase_form_views_exposed_form_alter(&$form, &$form_state) {
+  /**
+   * Adds a HTML5 placeholder to the search input on the Fundraiser
+   * Gallery exposed filter.
+   */
+  if ($form['#id'] == 'views-exposed-form-fundraiser-showcase-panel-pane-1') {
+    $form['search']['#attributes']['placeholder'] = t('Search fundraisers');
+  }
+}
+
+/**
+ * Implements hook_token_info().
+ * Provides four custom tokens for next/previous URL and Links
+ *
+ * @return array
+ */
+function sr16splash_fundraiser_showcase_token_info() {
+  $info = array(
+    'tokens' => array(
+      'current-page' => array(
+        'next:url' => array(
+          'name' => t('Next URL'),
+          'description' => t("URL to the next published node of this type."),
+          'type' => 'url',
+        ),
+        'previous:url' => array(
+          'name' => t('Previous Link'),
+          'description' => t("URL to the previous published node of this type."),
+          'type' => 'url',
+        ),
+        'next:link' => array(
+          'name' => t('Next Link'),
+          'description' => t("Link to the next published node of this type."),
+        ),
+        'previous:link' => array(
+          'name' => t('Previous URL'),
+          'description' => t("Link to the previous published node of this type."),
+        ),
+       ),
+    ),
+  );
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function sr16splash_fundraiser_showcase_tokens($type, array $tokens, array $data = array(), array $options = array()) {
+  $url_options = array();
+  if (isset($options['language'])) {
+    $url_options['language'] = $options['language'];
+  }
+
+  $replacements = array();
+
+  // Check if we are using one of the relevant tokens
+  $filter_tokens = array('next:url', 'next:link', 'previous:url', 'previous:link');
+  if (count(array_intersect($filter_tokens, array_keys($tokens)))) {
+    // Grab node object from menu
+    $node = menu_get_object();
+  }
+
+  if ($type == 'current-page' && !empty($node)) {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'next:url':
+          $nid = _get_prevnext_node_id('next', $node->type, $node->nid);
+          $replacements[$original] = drupal_get_path_alias('node/' . $nid);
+          break;
+        case 'previous:url':
+          $nid = _get_prevnext_node_id('previous', $node->type, $node->nid);
+          $replacements[$original] = drupal_get_path_alias('node/' . $nid);
+          break;
+        case 'next:link':
+          $nid = _get_prevnext_node_id('next', $node->type, $node->nid);
+          $path = drupal_get_path_alias('node/' . $nid);
+          $replacements[$original] = l('Next', $path, $url_options);
+          break;
+        case 'previous:link':
+          $nid = _get_prevnext_node_id('previous', $node->type, $node->nid);
+          $path = drupal_get_path_alias('node/' . $nid);
+          $replacements[$original] = l('Previous', $path, $url_options);
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}
+
+/**
+ * Helper function to retrieve all node ids by a node type
+ * @param  string  $type      The node type
+ * @param  integer $published The published state, defaults to 1
+ * @return array   $nids      Returns an array of all the ids
+ */
+function _get_all_node_ids_by_type($type, $published = 1) {
+  $nids = array();
+  // Skip if we dont have a type
+  if (empty($type)) {
+    return;
+  }
+
+  // Unique cache id based on the type
+  $cid = 'sr16splash_fundraiser_showcase:nids:' . $type;
+
+  // Get from cache
+  $cache = cache_get($cid);
+
+  if (!empty($cache->data)) {
+    return $cache->data;
+  }
+
+  // Otherwise retrieve from DB
+  $result = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('type', $type, '=')
+    ->condition('status', $published, '=')
+    ->orderBy('n.changed', 'DESC')
+    ->execute();
+
+  // Grab the Node IDs
+  while ($record = $result->fetchAssoc()) {
+    $nids[] = $record['nid'];
+  }
+
+  // Please cache temporarily
+  cache_set($cid, $nids, 'cache', CACHE_TEMPORARY);
+
+  return $nids;
+}
+
+/**
+ * Helper function to return the next/previous ID
+ * @param  string  $direction     The drection e.g. "next" or "previous"
+ * @param  string  $node_type     the current node type
+ * @param  integer $node_id       the current node id
+ * @return integer                returns the next/previous node id
+ */
+function _get_prevnext_node_id($direction = 'next', $node_type, $node_id) {
+  // Use static function to save the node type IDs
+  $nids = &drupal_static(__FUNCTION__ . '_ids', array());
+  if (empty($nids[$node_type])) {
+    $nids[$node_type] = _get_all_node_ids_by_type($node_type);
+  }
+
+  // Flip so we can find the current position
+  $nid_vals = array_flip($nids[$node_type]);
+  $nid_position = $nid_vals[$node_id];
+
+  // Int that represents the next node or the previous one
+  $dir_num = $direction == 'next' ? 1 : -1;
+
+  // If we have a previous or next one, assign it to the goto_nid variable
+  if (!empty($nids[$node_type][$nid_position + $dir_num])) {
+    $goto_nid = $nids[$node_type][$nid_position + $dir_num];
+  } else {
+    // If we do not have a next or previous, we want to get the first or last accordingly
+    switch ($direction) {
+      case 'next':
+        $goto_nid = reset($nids[$node_type]);
+      break;
+      case 'previous':
+        $goto_nid = end($nids[$node_type]);
+      break;
+    }
+  }
+
+  return $goto_nid;
+}
+
+/**
+ * Implements hook_node_update.
+ */
+function sr16splash_fundraiser_showcase_node_update($node) {
+  
+  // Check that the updated node is of our fundraiser_showcase type
+  // AND that we've actually just published the node
+  if ($node->type == 'fundraiser_showcase' && ($node->original->status == 0 && $node->status == 1)) {
+
+    $email_address = $node->field_site_email[LANGUAGE_NONE][0]['value'];
+
+    $msg = drupal_mail('sr16splash_fundraiser_showcase', 'notify', $email_address, language_default());
+
+    // Create watchdog error if the email fails to send
+    if ($msg['result']) {
+      return TRUE;
+    }
+    else {
+      $alert = 'Failed to send fundraise showcase notification email to !email_address';
+      watchdog('sr16splash_fundraiser_showcase_mail', $alert, array('!email_address' => $email_address), WATCHDOG_ALERT); 
+      return FALSE;
+    }
+  }
+}
+
+/**
+ * Implements hook_mail.
+ */
+function sr16splash_fundraiser_showcase_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'notify':
+      $message['send'] = TRUE;
+      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+      $message['subject'] = t('Your photos have now been published!');
+      $message['body'][] =  t("Your photos have now been published! 
+        Go to the http://www.rednoseday.com/fundraise/fundraiser-gallery to see your pictures. 
+        Thank you so much for your support! 
+        If you haven't paid in your fantastic fundraising yet, find out how at http://www.rednoseday.com/payin");
+      break;
+  }
+}

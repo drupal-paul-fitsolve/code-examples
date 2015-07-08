@@ -1,0 +1,166 @@
+/*
+ * Section content component
+ * By default, it has no styling
+ */
+.section__content {}
+
+/* If the main section has full width background,
+ * make sure it's relative and has overflow hidden
+ */
+.section--full-width-bg {
+  position: relative;
+  overflow: hidden;
+  /* Ensure rows don't get padding if we're using
+   * background images in columns.
+   */
+  .section__container__bg-pane .row--content {
+    padding: 0;
+  }
+}
+
+/*
+ * Section Background Overlay Content Variation
+ * By default, it has no styling
+ * PS we cannot use @extend here!
+ */
+.section--full-width-bg-overlay-xs .section__content {
+  position: absolute;
+  width:100%;
+  top: 0;
+  overflow: hidden;
+}
+
+/*
+ * This ensures the XS small image actually scales up
+ * This affects landscape mobile which does not fit in the SM breakpoint
+ */
+.section--full-width-bg .section__bg-pane .pane-image,
+.section--full-width-bg .section__bg-pane .pane-image .pane-image--content {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0px;
+  img {
+    width: 100%;
+    max-width: none;
+  }
+}
+/* 
+ * Another of Dan's hair-brained microsite-bespoke styles
+ */
+.section--border-bottom {
+  border-bottom: 1px $grey-brand solid;
+}
+
+/*
+ * Admin - Make sure we can still edit panes by resetting it if we are in the IPE
+ */
+.panels-ipe-editing .section--full-width-bg .section__content {
+  position: relative;
+}
+
+
+/*
+ * Small Breakpoint
+ */
+@include breakpoint($screen-sm) {
+  .section--full-width-bg-overlay-sm .section__content {
+    position: absolute;
+    width:100%;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .section--full-width-bg-overlay-sm.section--sticky-bottom .section__content {
+    top: auto;
+    bottom: 0;
+
+    .row--content {
+      padding: 0 0 30px 0;
+    }
+  }
+
+}
+
+/*
+ * Medium Breakpoint
+ */
+@include breakpoint($screen-md) {
+  .section--full-width-bg-overlay-md .section__content {
+    position: absolute;
+    width:100%;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .section--full-width-bg-overlay-md.section--sticky-bottom .section__content {
+    top: auto;
+    bottom: 0;
+
+    .row--content {
+      padding: 0 0 30px 0;
+    }
+  }
+
+  /*
+   * This ensures that full width background variations 
+   * have their images centered and fixed to a height
+   */
+  .section--full-width-bg .section__bg-pane .pane-image {
+    margin-left: -700px;
+    left: 50%;
+    position: relative;
+    span[data-picture] {
+      width: 1400px;
+      display: block;
+    }
+    img {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+/*
+ * Large Breakpoint
+ */
+@include breakpoint($screen-lg) {
+  .section--full-width-bg-overlay-lg .section__content {
+    position: absolute;
+    width:100%;
+    top: 0;
+    overflow: hidden;
+  }
+  /*
+   * This ensures that full width background variations 
+   * have their images centered and fixed to a height
+   */
+  .section--full-width-bg .section__bg-pane .pane-image {
+    margin-left: -850px;
+    left: 50%;
+    position: relative;
+    span[data-picture] {
+      width: 1700px;
+      display: block;
+    }
+  }
+}
+
+/*
+ * Above Image Size as Breakpoint
+ * This makes sure the image starts stretching if we hit the widest version of this image
+ */
+@include breakpoint(1701px) {
+  .section--full-width-bg .section__bg-pane .pane-image {
+    margin-left: 0;
+    left: auto;
+    span[data-picture] {
+      width: 100%;
+      display: block;
+      img {
+        max-width: none;
+        min-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

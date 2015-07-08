@@ -1,0 +1,34 @@
+/*
+ * _branding.scss
+ * Site Branding Variables
+ * Author: J.Pitt
+ * Last updated: 31st August 2014
+ */
+
+// Main branding height - affects the header height
+$branding-xs-height:       75px;
+$branding-sm-height:       110px;
+$branding-md-height:       90px;
+
+// Padding around the logo/slogan
+$branding-xs-padding:      13px 0 13px;
+$branding-sm-padding:      20px 0 20px 15px;
+$branding-md-padding:      16px 145px 16px 0;
+
+// XS Logo
+$branding-logo-xs:         image-url("branding/rnd-logo_xs.png");
+$branding-logo-xs-2x:      image-url("branding/rnd-logo_xs@2x.png");
+$branding-logo-xs-width:   57px;
+$branding-logo-xs-height:  51px;
+
+// SM Logo
+$branding-logo-sm:         image-url("branding/rnd-logo_sm.png");
+$branding-logo-sm-2x:      image-url("branding/rnd-logo_sm@2x.png");
+$branding-logo-sm-width:   241px;
+$branding-logo-sm-height:  69px;
+
+// MD Logo
+$branding-logo-md:         image-url("branding/rnd-logo_md.png");
+$branding-logo-md-2x:      image-url("branding/rnd-logo_md@2x.png");
+$branding-logo-md-width:   145px;
+$branding-logo-md-height:  58px;

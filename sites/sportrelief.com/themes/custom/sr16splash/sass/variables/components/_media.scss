@@ -1,0 +1,49 @@
+/**
+ * JP: 25/11/2014
+ *
+ * Media Variables
+ *
+ * See 
+ *  - ../components/_media.scss for implementation.
+ *  - ../components/_media-video.scss for implementation.
+ */
+
+/**
+ * MediaElementJS Variables
+ */
+$media-controls-svg:                      image-url("video/controls.svg");
+$media-controls-png:                      image-url("video/controls.png");
+$media-controls-bigplay-svg:              image-url("video/bigplay.svg");
+$media-controls-bigplay-png:              image-url("video/bigplay.png");
+$media-controls-loading-gif:              image-url("video/loading.gif");
+$media-controls-type-color:               $white-brand;
+$media-controls-bg-color:                 #323232;
+$media-controls-bg-opacity:               0.7;
+$media-controls-margin:                   0 0;
+$media-controls-padding:                  0 0;
+$media-controls-padding-sm:               0 20px;
+$media-controls-width:                    100%;
+$media-controls-bottom:                   0;
+$media-controls-time-total-bg-color:      $black-brand;
+$media-controls-time-total-height:        7px;  
+$media-controls-time-current-bg-color:    $blue-brand;
+$media-controls-time-loaded-bg-color:     $white-brand;
+$media-controls-time-float-bg-color:      $black-brand;
+$media-controls-volume-bg-color:          $black-brand;
+$media-controls-volume-handle-bg-color:   $white-brand;
+$media-controls-volume-total-bg-color:    $white-brand;
+$media-controls-volume-current-bg-color:  $blue-brand;
+
+/**
+ * Media Video Variables
+ */
+$media-video-overlay-btn-opacity:         0.6;
+
+/**
+ * Media Inline Video Row Variables
+ */
+$media-video-row-background-color:        $black-brand;
+$media-video-row-background-opacity:      1;
+$media-video-row-close-btn-color:         $grey-brand;
+$media-video-row-close-btn-color-hover:   $white-brand;
+$media-video-row-transition-time:         180ms;

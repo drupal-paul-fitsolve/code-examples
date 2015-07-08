@@ -1,0 +1,38 @@
+/*
+ * _page-fundraiser-showcase.scss
+ * Page Fundraider Showcase Styles
+ * Author: P.Brady
+ * Last updated: 26th February 2015
+ */
+.page--fundraise--fundraiser-gallery--search {
+
+  .views-exposed-widgets {
+    position: relative;
+  }
+
+  input[type=text] {
+    min-height: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .views-submit-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    input[type=submit],
+    input[type=submit]:hover {
+      background-color: transparent;
+      color: $grey-dark;
+      padding-left: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 26px;
+      @extend .icon;
+      &:before {
+        font-size: 26px;
+      }
+    }
+  }
+
+}

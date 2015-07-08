@@ -1,0 +1,64 @@
+/**
+ * PB: 2/9/2014
+ * 
+ * Styles for the breadcrumb.
+ *
+ * Basic styling here.
+ * - Always centre ul.breadcrumb within it's pane
+ * - Remove default underline for anchors
+ * - Provide a white underline on hover
+ * - Style the right arrow span delimitter icon font
+ * 
+ * Note: Breadcrumb links are always white.
+ * 
+ * We're already adding .type--white class to each anchor in the breadcrumb. See 
+ * - rnd15_menu_breadcrumb_alter in themes/custom/rnd15/template.php
+ *
+ * Also, we add a span with icon font as the delimitter.
+ * Need to do it like this so we don't get a hover on the delimitter. See
+ * - rnd15_breadcrumb in themes/custom/rnd15/theme/breadcrumb.theme.inc
+ * 
+ */
+
+/**
+ * Breadcrumbs are always added to pages and page variants via Page Manager. So,
+ * .pane-page-breadcrumb seems a sensible and reliable DOM class to target.
+ */
+
+/* Always centre ul.breadcrumb within it's pane */
+.pane-page-breadcrumb       { text-align: center; }
+.pane-page-breadcrumb ul    { list-style: none; margin: 0; }
+.pane-page-breadcrumb ul li { display: inline; }
+
+/* Provide a white underline on hover with transition */
+.pane-page-breadcrumb ul li a.type--white {
+  font-size: $breadcrumb-size;
+  text-decoration: none;
+  font-weight: $breadcrumb-weight;
+  padding: $breadcrumb-padding;
+  @include transition-property(border, color);
+  @include transition-duration(180ms);
+  &:hover,
+  &:active,
+  &:focus {
+    color: $breadcrumb-color-state;
+    border-bottom: $breadcrumb-border-width-state solid $breadcrumb-border-color-state;
+  }
+}
+
+/* Style the right arrow between breadcrumb links */
+.pane-page-breadcrumb ul {
+  span.icon-arrow-right {
+    position: relative;
+    width: 20px;
+    height: 25px;
+    display: inline-block;
+    &:before {
+      position: absolute;
+      left: 0;
+      bottom: 7px;
+      position: absolute;
+      font-size: $breadcrumb-arrow-size;
+    }
+  }
+}

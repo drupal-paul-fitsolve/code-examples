@@ -1,0 +1,258 @@
+/*
+ * _esu-strip.scss
+ * Site ESU Strip
+ * Author: J.Wang/J.Pitt
+ * Last updated: 16th October 2014
+ */
+
+/*
+ * Generic Styles
+ */
+.row.esu-strip__row {
+  padding-top: $esu-strip-padding-vertical;
+  padding-bottom: $esu-strip-padding-vertical;
+}
+.esu-strip__container {
+  position: relative;
+}
+
+/*
+ * Components
+ */
+.esu-strip__icon { 
+  background: $esu-strip-icon-large-email-url center center no-repeat;
+  width: $esu-strip-icon-width-xs;
+  height: $esu-strip-icon-height-xs;
+  margin-bottom: $esu-strip-icon-margin-bottom-xs;
+}
+
+.esu-strip__icon.esu-strip__thankyou {
+  padding-top: 0px;
+  background-image: none; 
+  
+  > span {
+    width: $esu-strip-icon-thanks-width;
+    height: $esu-strip-icon-thanks-height;
+    margin-bottom: $esu-strip-icon-thanks-margin-bottom-xs;
+    overflow: hidden;
+    position: relative;
+
+    /* circle */
+    &:before {
+      font-size: $esu-strip-icon-thanks-font-size;
+      position: relative;
+      top: -28px;
+      left: -28px;
+    }
+    /* tick */
+    > span {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      &:before {
+        @extend .icon--large;
+        position: relative;
+        top: -5px;
+        left: -4px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/*
+ * Action components
+ */
+.esu-strip__email,
+.esu-strip__submit {
+  display: inline-block;
+}
+.esu-strip__submit {
+  margin-left: -5px;
+}
+
+/*
+ * Email Component
+ */
+.esu-strip__email {
+  width: $esu-strip-email-width-xs;
+
+  // Ensure select is full width
+  .form-item-phase select {
+    width: 100%;
+    padding-left: 10px;
+  }
+  .form-item-email {
+    margin-bottom: 0px;
+  }
+  // :focus added to override default padding-left
+  input.form-text, 
+  input.form-text:focus {
+    border-right: 0px;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+  .form-item {
+    margin-bottom: 0px;
+  }
+  label {
+    text-align: left;
+  }
+}
+
+/*
+ * Teach option step
+ */
+.cr-marketing-prefs-promo-form-teacher {
+  .esu-strip__submit_age {
+    top: -1px;
+    position: relative;
+    .form-submit {
+      padding: 15px;
+    }
+  }
+}
+
+/*
+ * Complete Step
+ */
+.cr-marketing-prefs-promo-form-complete {
+  .esu-strip__intro h4 {
+    margin-bottom: 0px;
+  }
+}
+
+/*
+ * XS High Res Illustration
+ */
+@include breakpoint($highres) {
+  .esu-strip__icon { 
+    background-image: $esu-strip-icon-large-email-url-2x;
+    background-size: $esu-strip-icon-width-lg $esu-strip-icon-height-lg;
+  } 
+}
+
+/*
+ * Small breakpoint
+ */
+@include breakpoint($screen-sm) {
+  .esu-strip__container {
+    padding-left: $esu-strip-padding-horizon-sm;
+    padding-right: $esu-strip-padding-horizon-sm;
+    display: table;
+  }
+  .esu-strip__icon,
+  .esu-strip__intro, 
+  .esu-strip__action {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .esu-strip__icon {
+    top: 2px;
+    width: $esu-strip-icon-width-sm-md;
+    height: $esu-strip-icon-height-sm-md;
+    margin-bottom: $esu-strip-icon-margin-bottom-sm;
+    padding-top: $esu-strip-icon-padding-top;
+    background-image: $esu-strip-icon-small-email-url;
+    background-size: 100%;
+    &.esu-strip__thankyou {
+      display: block;
+      margin-top: 4px;
+      margin-bottom: 2px;
+      height: 45px;
+      > span {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .esu-strip__intro {
+    width: $esu-strip-intro-width-sm; 
+    padding: 0px 15px;
+    background-position: left center; 
+    h4 {
+      margin-bottom: 0px;
+    }
+  }
+  .esu-strip__action {
+    width: $esu-strip-action-width-sm;
+    position: relative;
+    .esu-strip__submit {
+      position: relative;
+      top: -1px;
+    }
+    .messages--error {
+      position: absolute;
+      left: 2px;
+      bottom: -36px;
+    }
+    .esu-strip__submit_age {
+      top: -2px;
+    }
+  }
+
+  .esu-strip__email {
+    width: $esu-strip-email-width-sm;
+    .form-item-phase > label {
+      position: absolute;
+      margin-top: -25px;
+      width: 100%;
+    }
+  }  
+}
+@include breakpoint(($screen-sm-min $highres)) {
+  .esu-strip__icon {
+    background-image: $esu-strip-icon-small-email-url-2x;
+  }
+}
+
+/*
+ * Medium breakpoint
+ */
+@include breakpoint($screen-md) {
+  .esu-strip__container {
+    padding-left: $esu-strip-padding-horizon-md;
+    padding-right: $esu-strip-padding-horizon-md;
+  }
+  .esu-strip__intro {       
+    width: $esu-strip-intro-width-md; 
+  }
+  .esu-strip__action {
+    width: $esu-strip-action-width-md;
+  }
+  .esu-strip__email {
+    input.form-text {
+      padding-left: 15px;
+    }
+    width: $esu-strip-email-width-md;
+  }
+}
+
+/*
+ * Large breakpoint
+ */
+@include breakpoint($screen-lg) {
+  .esu-strip__container {
+    padding-left: $esu-strip-padding-horizon-lg;
+    padding-right: $esu-strip-padding-horizon-lg;
+  }
+  .esu-strip__icon {
+    width: $esu-strip-icon-width-lg;
+    height: $esu-strip-icon-height-lg;
+    background-image: $esu-strip-icon-large-email-url;
+  }
+  .esu-strip__email {
+    width: $esu-strip-email-width-lg;
+  }
+  .esu-strip__action {
+    width: $esu-strip-action-width-lg;
+  }
+  .esu-strip__intro {
+    width: $esu-strip-intro-width-lg;
+  }
+}
+@include breakpoint(($screen-lg-min $highres)) {
+  .esu-strip__icon {
+    background-image: $esu-strip-icon-large-email-url-2x;
+  }
+}

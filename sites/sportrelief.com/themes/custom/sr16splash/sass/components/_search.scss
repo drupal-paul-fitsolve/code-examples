@@ -1,0 +1,138 @@
+/*
+ * _search.scss
+ * Search Sass Component
+ * Author: M.Wagg
+ * Last updated: 12th February 2015
+ */
+
+/**
+ * Generic styles for XS breakpoint
+ */
+.search__view {
+  padding-bottom: $search-view-padding-bottom;
+}
+
+.search__tabs-list {
+  margin-left: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    padding-bottom: $search-tabs-buttons-padding-bottom;
+    a {
+      width: 100%;
+    }
+    a.tabs-active {
+      background-color: $red-v-dark;
+    }
+  }
+}
+
+.search__frost__link {
+  padding-bottom: $search-frost-link-padding-bottom;
+}
+
+.search__view__empty {
+  padding-top: $search-view-empty-padding-top;
+}
+
+.search__input input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-size: $search-input-font-size;
+  &:focus {
+    border-bottom: $search-input-border-focus solid $white-brand;
+    padding: $search-input-padding;
+  }
+}
+.search__button input {
+  margin-top: $search-button-margin-top;
+}
+.search__result {
+  min-height: $search-results-min-height;
+}
+.search__result__icon,
+.search__result__copy {
+  min-height: inherit;
+}
+.search__result__copy {
+  padding-bottom: $search-results-copy-padding-bottom;
+  padding-top: $search-results-copy-padding-top;
+}
+.search__result__total {
+  padding-bottom: $search-results-total-padding-bottom;
+  padding-top: $search-results-total-padding-top;
+}
+.search__result__show-icon {
+  background-image: image-url($search-results-icon-bg-image);
+  height: $search-results-icon-height;
+  margin: $search-results-icon-margin-top auto 0;
+  position: relative;
+  text-indent: 150%;
+  width: $search-results-icon-width;
+}
+
+/**
+ * SM breakpoint
+ */
+@include breakpoint($screen-sm) {
+  .search__result__show-icon {
+    width: 100%;
+  }
+}
+
+/**
+ * MD breakpoint
+ */
+@include breakpoint($screen-md) {
+  .search__result__show-icon {
+    width: $search-results-icon-width;
+  }
+}
+
+.search__result__show-shop_product {
+  background-position: $search-results-bg-position-shop;
+}
+.search__result__show-video {
+  background-position: $search-results-bg-position-video;
+}
+.search__result__show-news_article {
+  background-position: $search-results-bg-position-news-article;
+}
+.search__result__show-media_image {
+  background-position: $search-results-bg-position-media-image;
+}
+.search__result__show-page_manager_page {
+  background-position: $search-results-bg-position-page-manager;
+}
+.search__result__show-search_downloadable {
+  background-position: $search-results-bg-position-downloadable;
+}
+
+/**
+ * For highres/retina displays
+ */
+@include breakpoint($highres) {
+  .search__result__show-icon {
+    background-size: $search-results-icon-bg-size-highres;
+    width: $search-results-icon-width-highres;
+  }
+  .search__result__show-shop_product {
+    background-position: $search-results-bg-position-shop-highres;
+  }
+  .search__result__show-video {
+    background-position: $search-results-bg-position-video-highres;
+  }
+  .search__result__show-news_article {
+    background-position: $search-results-bg-position-news-article-highres;
+  }
+  .search__result__show-media_image {
+    background-position: $search-results-bg-position-media-image-highres;
+  }
+  .search__result__show-page_manager_page {
+    background-position: $search-results-bg-position-page-manager-highres;
+  }
+  .search__result__show-search_downloadable {
+    background-position: $search-results-bg-position-downloadable-highres;
+  }
+}

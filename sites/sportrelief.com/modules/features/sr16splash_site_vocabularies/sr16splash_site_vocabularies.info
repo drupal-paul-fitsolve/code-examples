@@ -1,0 +1,11 @@
+name = sr16splash Site Vocabularies
+description = sr16splash site vocabularies.
+core = 7.x
+package = sr16splash
+version = 7.x-0.01
+project = sr16splash_site_vocabularies
+dependencies[] = taxonomy
+features[features_api][] = api:1
+features[taxonomy][] = media_category
+no autodetect = 1
+project path = sites/rednoseday.com/modules/features

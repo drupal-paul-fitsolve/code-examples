@@ -1,0 +1,51 @@
+/*
+ * _header.scss
+ * Site Header Styling
+ * Author: J.Pitt
+ * Last updated: 14th August 2014
+ */
+header.header {
+  position: relative;
+  z-index: 500;
+  background-color: $site-header-bg-color;
+  @include transition-property(background-color);
+  @include transition-duration($site-header-bg-transition-timing);  
+  @include box-shadow(0px 4px rgba(0,0,0,0.1));
+}
+
+/*
+ * Components
+ */
+.header__row {}
+.header__content.container {
+  width: 100%;
+  position: relative;
+}
+
+/*
+ * Variations
+ */
+
+@include breakpoint($screen-sm) {
+  .header__content.container {
+    width: 720px;
+  }
+}
+
+@include breakpoint($screen-md) {
+  .header__content.container {
+    width: 960px;
+  }
+}
+
+@include breakpoint($site-header-breakpoint) {
+  .header__content.container {
+    width: 960px;
+  }
+}
+
+@include breakpoint($screen-lg) {
+  .header__content.container {
+    width: 1150px;
+  }
+}

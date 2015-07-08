@@ -1,0 +1,272 @@
+/*doc
+---
+title: Link
+name: link
+category: Link
+---
+
+##Link usage
+Links should be wrapped in 'p' tags for semantic markup. Please use the colour class you wish the link to be as below for the underline colour of the link. 
+
+On the wrapping 'p' tag, add the class for the size it should be as the bottom three examples demonstrate. Font weight can also be changed in the same way by using .type--semibold.
+
+There are two main link states below, inline and on their own. The inline links are shown first and the links on their own are displayed after. 
+
+###Inline Links
+For links within paragraphs please use the inline variation of the link. E.g.
+<p>Lorem ipsum <a class="link--inline-orange" href="#">Inline orange link</a> dolor.</p>
+
+###Standalone Links
+For standalone links please use the normal link variation. This is primarily for CTA type links:
+<p><a class="link--orange" href="#">Standalone</a></p>
+<br>
+<br>
+
+Type                                                                              | Modifier Class
+--------------------------------------------------------------------------------- | ----------------
+<a class="link--inline-pink" href="#">Pink Link</a>                               | '.link--inline-pink'
+<a class="link--inline-orange" href="#">Orange Link</a>                           | '.link--inline-orange'
+<a class="link--inline-red" href="#">Red Link</a>                                 | '.link--inline-red'
+<a class="link--inline-purple" href="#">Purple Link</a>                           | '.link--inline-purple'
+<a class="link--inline-blue" href="#">Blue Link</a>                               | '.link--inline-blue'
+<a class="link--inline-aqua" href="#">Aqua Link</a>                               | '.link--inline-aqua'
+<a class="link--inline-green" href="#">Green Link</a>                             | '.link--inline-green'
+<a class="link--inline-yellow" href="#">Yellow Link</a>                           | '.link--inline-yellow'
+<a class="link--inline-grey" href="#">Grey Link</a>                               | '.link--inline-grey'
+<a class="link--inline-black" href="#">Black Link</a>                             | '.link--inline-black'
+<p class="type--white"><a class="link--inline-white" href="#">White link</a></p>  | 'p.type--white .link--inline-white'
+<p class="type--xl"><a class="link--inline-green" href="#">Green Link</a><p>      | '.type--xl'
+<p class="type--lg"><a class="link--inline-green" href="#">Green Link</a></p>     | '.type--lg'
+<p><a class="link--inline-green" href="#">Green Link</a></p>                      | 'p'
+<p class="type--white"><a href="#" class="link--inline-green">Green link</a></p>  | 'p.type--white .link--inline-green'
+<p><a href="#" class="type--white inline-link-green">Green link</a></p>           | 'a.type--white .link--inline-green'
+<p class="type--semibold"><a href="#" class="link--inline-red">Red Link</a></p>   | '.type--semibold .link--inline-red'
+<a class="link--pink" href="#">Pink Link</a>                                      | '.link-pink'
+<a class="link--orange" href="#">Orange Link</a>                                  | '.link-orange'
+<a class="link--red" href="#">Red Link</a>                                        | '.link-red'
+<a class="link--purple" href="#">Purple Link</a>                                  | '.link-purple'
+<a class="link--blue" href="#">Blue Link</a>                                      | '.link-blue'
+<a class="link--aqua" href="#">Aqua Link</a>                                      | '.link-aqua'
+<a class="link--green" href="#">Green Link</a>                                    | '.link-green'
+<a class="link--yellow" href="#">Yellow Link</a>                                  | '.link-yellow'
+<a class="link--grey" href="#">Grey Link</a>                                      | '.link-grey'
+<a class="link--black" href="#">Black Link</a>                                    | '.link-black'
+<p class="type--white"><a class="link--white">White link</a></p>                  | 'p.type--white .link--white'
+<p class="type--xl"><a class="link--green" href="#">Green Link</a><p>             | '.type--xl'
+<p class="type--lg"><a class="link--green" href="#">Green Link</a></p>            | '.type--lg'
+<p><a class="link--green" href="#">Green Link</a></p>                             | 'p'
+<p class="type--white"><a href="#" class="link--green">Green link</a></p>         | 'p.type--white .link-green'
+<p><a href="#" class="type--white link--green">Green link</a></p>                 | 'a.type--white .link-green'
+<p class="type--semibold"><a href="#" class="link--red">Red Link</a></p>          | '.type--semibold .link-red'
+<p class="type--semibold"><a href="#" class="link--red">Red Link</a></p>          | '.type--semibold .link-red'
+<p class="type--lg type--black"><a href="#" class="link--grey link--back">Back link</a></p> | '.type--lg .type--black .link--grey .link--back'
+<p class="type--lg type--black"><a href="#" class="link--grey link--previous">Previous link</a></p>| .type--lg .type--black .link--grey .link--previous'
+<p class="type--lg type--black"><a href="#" class="link--grey link--next">Next link</a></p> | .type--lg .type--black .link--grey .link--next'
+*/
+
+
+/**
+ * Pink link
+ */
+.link--inline-pink {
+  @include inline-link-colors($pink-dark, $pink-v-dark);
+}
+
+.link--pink {
+  @include link-colors($pink-dark);
+}
+
+/**
+ * orange link
+ */
+.link--inline-orange {
+  @include inline-link-colors($orange-dark, $orange-v-dark);
+}
+
+.link--orange {
+  @include link-colors($orange-dark);
+}
+
+/**
+ * red link
+ */
+.link--inline-red {
+  @include inline-link-colors($red-dark, $red-v-dark);
+}
+
+.link--red {
+  @include link-colors($red-dark);
+}
+
+/**
+ * purple link
+ */
+.link--inline-purple {
+  @include inline-link-colors($purple-dark, $purple-v-dark);
+}
+
+.link--purple {
+  @include link-colors($purple-dark);
+}
+
+/**
+ * blue link
+ */
+.link--inline-blue {
+  @include inline-link-colors($blue-dark, $blue-v-dark);
+}
+
+.link--blue {
+  @include link-colors($blue-dark);
+}
+
+/**
+ * aqua link
+ */
+.link--inline-aqua {
+  @include inline-link-colors($aqua-dark, $aqua-v-dark);
+}
+
+.link--aqua {
+  @include link-colors($aqua-dark);
+}
+
+/**
+ * green link
+ */
+.link--inline-green {
+  @include inline-link-colors($green-dark, $green-v-dark);
+}
+
+.link--green {
+  @include link-colors($green-dark);
+}
+
+/**
+ * yellow link
+ */
+.link--inline-yellow {
+  @include inline-link-colors($yellow-dark, $yellow-v-dark);
+}
+
+.link--yellow {
+  @include link-colors($yellow-dark);
+}
+
+/**
+ * grey link
+ */
+.link--inline-grey {
+  @include inline-link-colors($grey-brand, $grey-dark);
+}
+
+.link--grey {
+  @include link-colors($grey-brand);
+}
+
+/**
+ * black link
+ */
+.link--inline-black {
+  @include inline-link-colors($black-brand, $black-brand);
+}
+
+.link--black {
+  @include link-colors($black-brand);
+}
+
+/**
+ * white link
+ */
+.link--inline-white {
+  @include inline-link-colors($white-brand, $grey-light);
+}
+
+.link--white {
+  @include link-colors($white-brand);
+}
+
+/**
+ * in case of .type--white
+ */
+p.type--white a, 
+a.type--white {
+  &:hover {
+    color: $grey-light;
+  }
+  &:active {
+    color: $grey-light; 
+  }
+  &:focus {
+    color: $grey-light;
+  }
+}
+
+/**
+ * Back, previous and next links,
+ * used on Fundraise Ideas pages
+ * Author: Pete Brady & Andy Phipps
+ */
+ 
+.row.row--content.row--fundraise-ideas-links {
+  padding: 25px 0;
+}
+
+.link--back,
+.link--previous,
+.link--next {
+  @extend .icon;
+  font-size: $link-font-size;
+  font-family: $p-type--all-font;
+  width: auto;
+  height: auto;
+  border-bottom: 0;
+  text-decoration: none;
+  position: relative;
+  font-weight: $link-back-next-and-previous-font-weight;
+
+  /* To hide parts of the copy on certain breakpoints,
+   * we'll be using spans with visibility classes; this rule
+   * ensures said span receives the correct stying of its parent
+   */
+  span {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-family: inherit;
+  }
+
+  &:before {
+    color: $grey-dark;
+    font-weight: $link-back-next-and-previous-font-weight;
+    top: $link-back-next-and-previous-top-position;
+    font-size: $link-icon-font-size;
+    font-family: 'rnd-icons';
+
+    position: absolute;
+
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: 0;
+  }
+}
+
+.link--back,
+.link--previous {
+  padding-left: $link-back-and-previous-padding;
+  @extend .icon-arrow-left;
+  &:before {
+    left: $link-back-and-previous-position; 
+  }
+}
+
+.link--next {
+  padding-right: $link-back-and-previous-padding;
+  @extend .icon-arrow-right;
+  &:before {
+    right: $link-back-and-previous-position; 
+  }
+}

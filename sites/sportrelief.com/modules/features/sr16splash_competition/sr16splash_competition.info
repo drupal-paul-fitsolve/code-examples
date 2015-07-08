@@ -1,0 +1,12 @@
+name = sr16splash Competition
+description = Provides sr16splash Who Nose Competition form additions
+core = 7.x
+package = sr16splash
+php = 5.2.4
+version = 7.x-0.01
+project = sr16splash_competition
+dependencies[] = cr_competition
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+no autodetect = 1
+project path = sites/rednoseday.com/modules/features/
