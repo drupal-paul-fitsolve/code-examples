@@ -1,0 +1,35 @@
+/*
+ * _bg-color--story.scss
+ * Story Background Color Component
+ * Author: J.Wang
+ * Last updated: 28th January 2015
+ */
+
+/*doc
+---
+title: Story BG Colors
+name: Story BG Colors
+category: Utilities
+---
+
+The bg-color component allows you to add a background color to any element on the site via a class.
+
+See the examples below.
+
+### BG Color Classes
+
+  Classes to use                 |             Example of use                    |  HTML              
+ ------------------------------- | --------------------------------------------- | -------------------------------------------- 
+ <br>.bg-color--story-grey  | <div class="bg-color--story-grey">Content/images</div>  |  `<div class="bg-color--story-grey">`<br>`Content/images`<br>`</div>`
+ <br>.bg-color--story-blue  | <div class="bg-color--story-blue">Content/images</div>  |  `<div class="bg-color--story-blue">`<br>`Content/images`<br>`</div>`
+ <br>.bg-color--story-beige | <div class="bg-color--story-beige">Content/images</div> |  `<div class="bg-color--story-beige">`<br>`Content/images`<br>`</div>`
+*/
+
+/** 
+ * Process $bgStoryColorList colour variations through our bg-color-story-variations mixin.
+ *
+ * see 
+ *  - ../variables/components/_bg-color--story.scss for colour variations - $bgStoryColorList.
+ *  - ../mixins/components/_bg-color.scss for the mixin that applies the colour variation classes.
+ */
+@include bg-color-story-variations($bgStoryColorList);

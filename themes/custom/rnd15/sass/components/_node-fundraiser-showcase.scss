@@ -1,0 +1,82 @@
+/*
+ * _node-fundraiser-showcase.scss
+ * Node Fundraider Showcase Styles
+ * Author: P.Brady
+ * Last updated: 19th February 2015
+ */
+
+/* Fundraiser showcase: general */
+.node--fundraiser-showcase {
+  background: #000;
+}
+
+/* Fundraiser showcase: heading */
+.node--fundraiser-showcase__heading h1 {
+  color: $white-brand;
+  font-family: "open-sans", Helvetica, Arial, Sans-serif;
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+/* Fundraiser showcase: caption */
+.node--fundraiser-showcase__caption {
+  color: $grey-v-light;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "open-sans", Helvetica, Arial, Sans-serif;
+}
+
+/* Fundraiser showcase: images */
+.node--fundraiser-showcase__images .panel-pane {
+  padding-top: 15px;  
+  background: $black-brand;
+  .field__item {
+    margin-bottom: 15px;
+  }
+}
+
+/* Centre images */
+.node--fundraiser-showcase__images .panel-pane img {
+  margin: 0 auto;
+}
+
+/* Node Gallery teasers */
+.node--fundraiser-showcase--teaser {
+
+  p + p {
+    margin-top: 0;
+  }
+
+  /* Reduce the badge's font size */
+
+  .badge:after {
+    font-size: 13px;
+    line-height: 13px;
+    top: 17px;
+  }
+
+  /**
+   * Medium breakpoint
+   */
+  @include breakpoint($screen-md) {
+    .badge:after {
+        font-size: 14px;
+        line-height: 14px;
+        top: 24px;
+      }    
+  }
+
+  /**
+   * Large breakpoint
+   */
+  @include breakpoint($screen-lg) {
+    .badge:after {
+        top: 26px;
+      }    
+  }
+
+
+}
+
+

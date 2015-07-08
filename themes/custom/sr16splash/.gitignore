@@ -1,0 +1,13 @@
+# Ignore the node modules folder (created by 'npm install').
+node_modules
+
+# We absolutely don't want to have the .sass-cache in git.
+.sass-cache
+
+# Lets exclude css and style guide for our own sanity
+css
+styleguide
+
+# stop this, otherwise cant run it on server
+Gemfile.lock
+

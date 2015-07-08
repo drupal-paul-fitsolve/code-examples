@@ -1,0 +1,15 @@
+name = sr16splash View Modes
+description = Define a method to display content types for sr16splash Splash and CRL 2
+core = 7.x
+package = sr16splash
+php = 5.2.4
+version = 7.x-0.01
+project = sr16splash_view_modes
+dependencies[] = ctools
+dependencies[] = ds
+features[ctools][] = ds:ds:1
+features[ds_view_modes][] = full_content
+features[ds_view_modes][] = panel
+features[ds_view_modes][] = token
+features[features_api][] = api:1
+no autodetect = 1

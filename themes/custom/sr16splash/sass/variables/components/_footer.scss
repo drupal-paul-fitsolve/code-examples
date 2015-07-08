@@ -1,0 +1,9 @@
+/**
+ * Defines variables used in the footer
+ */
+
+/*	Edge case for the footer; against the $black-brand background,
+	existing greys are too light or dark (introducing accessibility issues) */
+
+$footer--copyright-grey:	#747373;
+$footer--social-grey: 		#282828;

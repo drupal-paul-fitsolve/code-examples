@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+  <head>
+    <style>
+      * {
+        font-family: "Open Sans",Helvetica,Arial,Sans-serif;
+        font-weight: 300;
+        margin: 0;
+        padding: 0;
+      }
+      .clearfix:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+      body {
+        background-color: #1e1e1e;
+      }
+      h2 {
+        font-size: 35px;
+        line-height: 45px;
+        margin: 0 0 20px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 23px;
+      }
+      .wrap.header {
+        background-color: #fff;
+      }
+      .header.inner {
+        margin: 0 auto;
+        max-width: 960px;
+      }
+      .logo {
+        display: block;
+        float: left;
+        padding: 15px 0 10px;
+        margin-left: 10px;
+      }
+      .logo a {
+        background: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png") 0 0 no-repeat transparent;
+        display: block;
+        height: 51px;
+        width: 185px;
+        background-size: contain;
+      }
+      .logo a span,
+      .content h1 span,
+      .cr-foot span, 
+      .footer ul li span {
+        display: block;
+        text-indent: -9999px;
+        width: 100%;
+      }
+      .nav ul {
+        margin: 0;
+      }
+      .nav li {
+        display: inline-block;
+        list-style-type: none;
+      }
+      .nav li a:hover {
+        text-decoration: underline;
+      }
+      .main {
+        display: block;
+        background: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/404/sr_404_promo_v1.jpg") center top no-repeat;
+        background-size: cover;
+      }
+      .main-inner {
+        margin: 0 auto;
+        max-width: 960px;
+      }
+      .image img {
+        display: block;
+        width: 100%;
+      }
+      .content {
+        color:  #1e1e1e;
+        text-align: center;
+        padding: 100px 20px 40px;
+      }
+      .content p {
+        margin-bottom: 38px;
+      }
+      .content footer {
+        padding-top: 30px;
+      }
+      .content .btn {
+        border: 2px solid #1e1e1e;
+        color: #1e1e1e;
+        padding: 13px 27px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .content .btn:hover {
+        background-color: #1e1e1e;
+        border: 2px solid #1e1e1e;
+        color: #fff;
+      }
+      .wrap.footer {
+        color: #fff;
+        text-align: center;
+      }
+      .footer h4 {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 300;
+      }
+      .footer .icons {
+        padding: 35px 0 20px 0;
+        margin: 0px;
+        background-color: #282828;
+      }
+      .footer .icons li {
+        display: inline-block;
+        height: 54px;
+        width: 54px;
+        margin: 0px 5px;
+        background-image: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/404/sr16splash_icon_sprite.png");
+        background-repeat: no-repeat;
+      }
+      .footer .icons li a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+      .facebook {
+        background-position: 0px -26px;
+      }
+      .facebook:hover {
+        background-position: 0px -80px;
+      }
+      .twitter {
+        background-position: -56px -26px;
+      }
+      .twitter:hover {
+        background-position: -56px -80px;
+      }
+      .youtube {
+        background-position: -112px -26px;
+      }
+      .youtube:hover {
+        background-position: -112px -80px;
+      }
+      .instagram {
+        background-position: -166px -26px;
+      }
+      .instagram:hover {
+        background-position: -166px -80px;
+      }
+      .google {
+        background-position: -222px -26px;
+      }
+      .google:hover {
+        background-position: -222px -80px;
+      }
+      .footer .nav {
+        margin-bottom: 15px;
+        margin-top: 30px;
+      }
+      .footer .nav li a {
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+      }
+      .footer .nav li a:hover {
+        color: #c8c8c8;
+        text-decoration: underline;
+      }
+      .copyright {
+        color: #747373;
+        padding-bottom: 16px;
+      }
+      .cr-foot {
+        background: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/footer/CR_logo_v2.png") 0 0 no-repeat transparent;
+        display: block;
+        height: 65px;
+        margin: 0 auto;
+        width: 65px;
+      }
+      .type--xl {
+        font-size: 20px;
+        line-height: 22px;
+      }
+      .type--centred { 
+        text-align: center;
+      }
+      @media (min-width: 768px) {
+        h2 {
+          font-size: 50px;
+        }
+        .logo a {
+          height: 69px;
+          width: 250px;
+          background-size: initial;
+        }
+        p {
+          line-height: 21px;
+        }
+        .image {
+          float: left;
+          margin: 30px 0;
+          max-width: 420px;
+          width: 50%;
+        }
+        .content { 
+          max-width: 570px;
+          margin: 0px auto;
+        }
+        .type--xl {
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+      @media (min-width: 992px) {
+        p {
+          font-size: 14px;
+          line-height: 22px;
+        }
+        .header nav {
+          float: right;
+        }
+        .image {
+          margin: 0;
+        }
+        .image img {
+          width: 580px;
+        }
+        .content {
+          padding: 85px 0px 105px;
+          width: 100%;
+        }
+        .type--xl {
+          font-size: 21px;
+          line-height: 24px;
+        }
+      }
+      @media (min-width: 1400px) {
+        p {
+          font-size: 14px;
+          line-height: 21px;
+        }
+        .type--xl {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi) {
+          /* Retina-specific stuff here */
+          background-image: url("sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md@2x.png");
+      }
+    </style>
+    <!--[if lt IE 9]>
+    <style>
+      .logo a {
+        background-image: none; 
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+src='sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png',
+sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+src='sites/splash.sportrelief.com/themes/custom/sr16splash/images/branding/sr16-logo-md.png',
+sizingMethod='scale')";
+      }
+     </style>
+    <![endif]-->
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NZ729T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+    {'gtm.start': new Date().getTime(),event:'gtm.js'}
+    );var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NZ729T');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <div class="wrap header">
+      <div class="header inner clearfix">
+        <div class="logo">
+          <a href="/" title="Sport Relief" rel="home"><span>Sport Relief</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap main clearfix">
+    <div class="content">
+      <h2 class="pane-title type--centred">Well, this is awkward</h2>
+        <p class="type--xl type--centred type--black">
+          We can't seem to find the page you're looking for. This might be because you've accidentally typed the web address incorrectly or perhaps the page you're looking for has been removed, updated or deleted.
+        </p>
+        <p class="type--centred type--black">
+          <a href="/" class="btn">Back to the homepage</a>
+        </p>
+    </div>
+    </div>
+    <div class="wrap footer">
+      <footer class="inner">
+        <ul class="icons">
+          <li class="facebook"><a target="_blank" href="https://www.facebook.com/sportrelief"><span>Facebook</span></a></li>
+          <li class="twitter"><a target="_blank" href="https://twitter.com/sportrelief"><span>Twitter</span></a></li>
+          <li class="google"><a target="_blank" href="https://plus.google.com/u/0/111824904248762866111/posts"><span>Google Plus</span></a></li>
+          <li class="youtube"><a target="_blank" href="http://www.youtube.com/sportrelief"><span>YouTube</span></a></li>
+          <li class="instagram"><a target="_blank" href="http://instagram.com/sportrelief"><span>Instagram</span></a></li>
+        </ul>
+        <div class="nav">
+          <ul>
+            <li><a href="/legal">Legal</a> |</li>
+            <li><a href="/privacy-policy">Privacy Policy</a> |</li>
+            <li><a href="/accessibility">Accessibility</a> |</li>
+            <li><a href="https://www.comicrelief.com/donate" target="_blank">Donate</a></li>
+          </ul>
+        </div>
+        <p class="copyright">&copy; Comic Relief 2015. Comic Relief, registered charity 326568 (England/Wales); SC039730 (Scotland)</p>
+        <p class="cr-foot"><a href="/"><span>Comic Relief</span></a></p>
+      </footer>
+    </div> 
+  </body>
+</html>

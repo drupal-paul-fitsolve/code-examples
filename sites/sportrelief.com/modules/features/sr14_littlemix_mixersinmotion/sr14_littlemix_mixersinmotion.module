@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SR14 Little Mix Mixers in Motion feature.
- */
-
-include_once 'sr14_littlemix_mixersinmotion.features.inc';

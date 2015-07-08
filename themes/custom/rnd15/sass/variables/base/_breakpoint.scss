@@ -1,0 +1,67 @@
+/**
+ * Breakpoints
+ *
+ * For usage, please refer to:
+ * http://wiki.comicrelief.com/wiki/CR_Layout_V2#Breakpoints_and_SASS_Usage
+ * More on the breakpoint mixin usage:
+ * https://github.com/Team-Sass/breakpoint/wiki
+ *
+ * Single query breakpoint:
+ * @include breakpoint($screen-md) {
+ *   .test { color: blue; }
+ * }
+ * 
+ * Multiple query breakpoint:
+ * @include breakpoint(($screen-md-min $highres)) {
+ *   .test { color: blue; }
+ * }
+ *
+ * If you want to define a min and max-width range, make sure to use the "-min" and "-max" variables.
+ * For example:
+ * @include breakpoint(($screen-md-min $screen-md-max)) {
+ *   .test { color: blue; }
+ * }
+ *
+ */  
+
+// No Query usage:
+// @include breakpoint(($screen-md-min $screen-md-max, $no-query))
+$no-query:                   'no-query' true;
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  0px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm-min:              768px;
+$screen-sm:                  $screen-sm-min, $no-query;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md-min:              992px;
+$screen-md:                  $screen-md-min, $no-query;
+
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1400px;
+$screen-lg-min:              $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+// Resolution Media Query
+$highres:                     min-resolution 1.5dppx;

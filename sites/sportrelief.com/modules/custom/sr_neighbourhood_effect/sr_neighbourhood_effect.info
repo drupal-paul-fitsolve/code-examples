@@ -1,5 +1,0 @@
-name = Neighbourhood Effect
-description = Adds the neighbourhood effect tracking to our website
-core = 7.x
-package = "SR14"
-configure = admin/config/system/neighbourhoodeffect

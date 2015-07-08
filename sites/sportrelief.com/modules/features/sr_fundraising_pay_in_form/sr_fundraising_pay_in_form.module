@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SR Fundraising Pay In Form feature.
- */
-
-include_once 'sr_fundraising_pay_in_form.features.inc';

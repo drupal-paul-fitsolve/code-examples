@@ -1,5 +1,0 @@
-name = SR Front Countdown
-description = Provide the Sport Relief Countdown widget on the homepage
-package = "SR14"
-
-core = 7.x

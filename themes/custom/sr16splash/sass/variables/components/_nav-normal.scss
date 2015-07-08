@@ -1,0 +1,121 @@
+/*
+ * _nav-normal.scss
+ * Normal Navigation Variables
+ * Author: J.Pitt
+ * Last updated: 22nd January 2015
+ */
+
+/*
+ * Menu Spacing
+ */
+$nav-padding-before-logo:        60px;
+$nav-one-link-padding:           13px;
+
+/*
+ * Generic Menu Vars
+ */
+$nav-width:                      1150px;
+$nav-link-font-size:             14px;
+$nav-link-line-height:           18px;
+$nav-normal-breakpoint:          1150px, 'no-query' true;
+$nav-padding-left:               ($branding-logo-md-width + $nav-padding-before-logo - $nav-one-link-padding);
+$nav-padding-right:              15px;
+
+// Only used for IE8, otherwise height is always set by the logo
+$nav-one-min-height:             $branding-md-height;
+
+/*
+ * Navigation Heights by Breakpoint
+ */
+$nav-small-height:              108px;
+$nav-normal-height:             90px;
+$nav-wide-height:               100px;
+
+/*
+ * Normal Level One Links
+ */
+$nav-one-link-weight:            600;
+
+$nav-one-link-color:             #333;
+$nav-one-link-bg-color:          false;
+$nav-one-link-border-width:      2px;
+$nav-one-link-border-color:      transparent;
+$nav-one-link-font-size:         $nav-link-font-size;
+$nav-one-link-line-height:       $nav-link-line-height;
+
+/*
+ * Level One Link Styles
+ */
+$nav-link-one : (
+  // Selector, color, bg color, border width, border bg
+  ("" $nav-one-link-color $nav-one-link-bg-color 2px $nav-one-link-border-color),
+  (":hover" $nav-one-link-color $nav-one-link-bg-color 2px $grey-brand),
+  (":focus" $nav-one-link-color $nav-one-link-bg-color 2px $grey-brand),
+  (":active" lighten($nav-one-link-color, 20%) $nav-one-link-bg-color 2px lighten($grey-brand, 5%)),
+
+  (".active" $nav-one-link-color $nav-one-link-bg-color 2px $grey-brand),
+  (".active:hover" $nav-one-link-color $nav-one-link-bg-color 2px $grey-brand),
+  (".active:active" lighten($nav-one-link-color, 20%) $nav-one-link-bg-color 2px lighten($grey-brand, 5%)),
+
+  (".active-trail" $nav-one-link-color $nav-one-link-bg-color 2px $grey-brand),
+  (".active-trail:hover" $nav-one-link-color $nav-one-link-bg-color 2px $grey-brand),
+  (".active-trail:active" lighten($nav-one-link-color, 20%) $nav-one-link-bg-color 2px lighten($grey-brand, 5%))
+); 
+
+/*
+ * Normal Level Two/Three Links
+ */
+$nav-two-link-font-size:        $nav-link-font-size;
+$nav-two-link-line-height:      17px;
+$nav-two-link-color:            $white-brand;
+$nav-two-link-bg-color:         $black-brand;
+$nav-two-link-border-width:     2px;
+$nav-two-link-border-color:     transparent;
+
+/*
+ * Normal Level Two paddings
+ */
+$nav-link-two-padding:          12px 15px 12px;
+
+/*
+ * Duplicate Nav Link
+ */
+$nav-duplicate-bottom-border-height:        2px;
+$nav-duplicate-bottom-border:               $nav-duplicate-bottom-border-height solid $grey-v-dark;
+$nav-duplicate-bottom-border-side-margins:  18px;
+
+/*
+ * Normal Level Two/Three Link Styles
+ */
+$nav-link-two : (
+  // Selector, color, bg color, border width, border bg
+  ("" $nav-two-link-color $nav-two-link-bg-color $nav-two-link-border-width $nav-two-link-border-color),
+  (":hover" $nav-two-link-color #42403d $nav-two-link-border-width $nav-two-link-border-color),
+  (":active" $nav-two-link-color #403e3c $nav-two-link-border-width $nav-two-link-border-color),
+
+  (".active" $nav-two-link-color $nav-two-link-bg-color $nav-two-link-border-width $nav-two-link-border-color),
+  (".active:hover" $nav-two-link-color #42403d $nav-two-link-border-width $nav-two-link-border-color),
+  (".active:active" $nav-two-link-color #403e3c $nav-two-link-border-width $nav-two-link-border-color),
+
+  (".active-trail" $nav-two-link-color $nav-two-link-bg-color $nav-two-link-border-width $nav-two-link-border-color),
+  (".active-trail:hover" $nav-two-link-color #42403d $nav-two-link-border-width $nav-two-link-border-color),
+  (".active-trail:active" $nav-two-link-color #403e3c $nav-two-link-border-width $nav-two-link-border-color)
+); 
+
+/*
+ * First Level Two Link Triangle
+ */
+$nav-triangle-width:                  12px;
+$nav-triangle-height:                 $nav-triangle-width;
+$nav-triangle-color:                  $nav-two-link-bg-color;
+$nav-triangle-color-hover:            #42403d;
+$nav-triangle-color-active:           #403e3c;
+$nav-triangle-color-selected:         $nav-two-link-bg-color;
+$nav-triangle-color-selected-hover:   #42403d;
+$nav-triangle-color-selected-active:  #403e3c;
+
+/*
+ * Kids Nav
+ */
+$nav-kids-one-link-padding:  30px;
+$nav-kids-padding-left:      ($branding-logo-md-width + $nav-padding-before-logo - $nav-kids-one-link-padding) + 30px;

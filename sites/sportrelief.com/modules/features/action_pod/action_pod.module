@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Action Pod feature.
- */
-
-include_once 'action_pod.features.inc';

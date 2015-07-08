@@ -1,0 +1,18 @@
+/*
+ * _badge.scss
+ * Badge Component IE8
+ *
+ * Removes badges due to how IE8 does weird things to :befores, :afters
+ * and z-indexes, as agreed by PM (Faye Wakefield)
+ * 
+ * Author: A.Phipps
+ * Last updated: 5th February 2015
+ */
+
+.lt-ie9 {
+  .badge {
+  	&:before, &:after {
+  		display:none;
+  	}
+  }
+}

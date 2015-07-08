@@ -1,0 +1,15 @@
+name = sr16splash Site Menu
+description = Provides sr16splash Menu Functionality
+core = 7.x
+package = sr16splash
+php = 5.2.4
+version = 7.x-0.04
+project = sr16splash_site_menu
+dependencies[] = crl2_breakpoints
+dependencies[] = jquery_update
+dependencies[] = menu
+dependencies[] = features
+scripts[] = js/sr16splash.touchMenu.min.js
+features[features_api][] = api:1
+no autodetect = 1
+project path = sites/rednoseday.com/modules/features/

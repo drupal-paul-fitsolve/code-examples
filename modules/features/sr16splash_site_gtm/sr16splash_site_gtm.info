@@ -1,0 +1,14 @@
+name = sr16splash Site Google TM
+description = Provides sr16splash Google Tag Manger Functionality. Mainly JS implementation
+core = 7.x
+package = sr16splash
+php = 5.2.4
+version = 7.x-0.01
+project = sr16splash_site_gtm
+dependencies[] = crl2_breakpoints
+dependencies[] = jquery_update
+dependencies[] = features
+scripts[] = js/sr16splash.gtm.min.js
+features[features_api][] = api:1
+no autodetect = 1
+project path = sites/rednoseday.com/modules/features/
