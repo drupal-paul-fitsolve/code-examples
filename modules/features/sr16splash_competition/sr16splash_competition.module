@@ -1,8 +1,0 @@
-<?php
-/**
- * @file
- * Code for the sr16splash Competition feature.
- */
-
-include_once 'sr16splash_competition.features.inc';
-include_once 'sr16splash_competition.custom.inc';

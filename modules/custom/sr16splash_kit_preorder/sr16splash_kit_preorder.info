@@ -1,9 +1,0 @@
-name = sr16splash Kit Preorder
-description = Provides additional functionality required by the "preorder schools kit" webform
-core = 7.x
-package = sr16splash
-php = 5.2.4
-version = 7.x-0.01
-project = sr16splash_kit_preorder
-dependencies[] = cr_marketing_prefs
-dependencies[] = cr_message_queues

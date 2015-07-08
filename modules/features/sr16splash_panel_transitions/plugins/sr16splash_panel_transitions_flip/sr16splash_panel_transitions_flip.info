@@ -1,7 +1,0 @@
-name = sr16splash Panel Transitions - Flip
-description = Provides flip functionality for panel transitions.
-core = 7.x
-package = sr16splash
-version = 7.x-0.01
-dependencies[] = sr16splash_panel_transitions
-scripts[] = js/sr16splash.panelTransitionsFlip.min.js

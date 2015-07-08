@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the sr16splash Site Page Manager Node feature.
- */
-
-include_once 'sr16splash_site_page_manager_node.features.inc';
