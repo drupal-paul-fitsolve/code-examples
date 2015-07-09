@@ -1,8 +1,6 @@
 api = 2
 core = 7.x
 
-defaults[projects][subdir] = "contrib"
-
 projects[drupal][version] = 7.34
 
 ;Patches applied to core
@@ -14,4 +12,5 @@ projects[crdistro][type] = profile
 projects[crdistro][download][type] = git
 projects[crdistro][download][url] = git@codebasehq.com:comic/comic-relief-distribution/crdistro_v1.git
 
+projects[picture][subdir] = contrib
 projects[picture] = 2.11
