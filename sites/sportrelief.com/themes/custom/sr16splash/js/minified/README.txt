@@ -1,1 +1,0 @@
-This folder contains contrib JS where want the files to be minified but do not want to patch the modules themselves. These files are overriden and replaced usign the Minify JS module. The settings are stored in the sr16splash_site_theme feature.

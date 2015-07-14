@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the sr16splash Site Media Image feature.
- */
-
-include_once 'sr16splash_site_media_image.features.inc';

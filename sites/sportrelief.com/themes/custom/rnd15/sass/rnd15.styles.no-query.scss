@@ -1,8 +1,0 @@
-$breakpoint-no-queries: true;
-$breakpoint-no-query-fallbacks: true;
-
-// Re-render everything from styles.scss but without media queries.
-@import "rnd15.styles";
-
-// Add crossbrowser support for IE that accepts conditional statement, IE9 downwards
-@import "crossbrowser/conditional/**/*";
