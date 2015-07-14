@@ -1,0 +1,77 @@
+/*
+ * _nav-touch.scss
+ * Touch Navigation Variables
+ * Author: J.Pitt
+ * Last updated: 22nd January 2015
+ */
+
+/*
+ * Generic Menu Vars
+ */
+$nav-touch-link-weight:         300;
+
+/*
+ * Touch Navigation Heights by Breakpoint
+ */
+$nav-touch-height-xs:           75px;
+$nav-touch-height-sm:           110px;
+
+/*
+ * Level One Main Link Styles
+ */
+$nav-touch-link-one : (
+  // Selector, color, bg color, border width, border bg
+  ("" $grey-dark #f9f9f9 2px transparent),
+  (":hover" $white-brand #acaaa9 2px $white-brand),
+  (":active" $white-brand lighten(#acaaa9, 10%) 2px $white-brand),
+  (".active" $black-brand $white-brand 2px $black-brand),
+  (".active:hover" $white-brand #acaaa9 2px $white-brand),
+  (".active:active" $white-brand lighten(#acaaa9, 10%) 2px $white-brand)
+);
+
+/*
+ * Level Two & Three Link Styles
+ */
+$nav-touch-link-two-three : (
+  // Selector, color, bg color, border width, border bg
+  ("" $white-brand $black-brand 2px transparent),
+  (":hover" $white-brand #3f3d3c 2px transparent),
+  (":active" $white-brand darken(#3f3d3c, 10%) 2px transparent),
+  (".active" $white-brand #3f3d3c 2px transparent),
+  (".active:hover" $white-brand lighten(#3f3d3c, 10%) 2px transparent),
+  (".active:active" $white-brand darken(#3f3d3c, 10%) 2px transparent)
+);
+
+/*
+ * Link Padding
+ */
+$nav-touch-one-link-padding-xs:         17px 0 17px;
+$nav-touch-one-link-padding-sm:         20px 0 20px;
+$nav-touch-one-link-padding-md:         17px 0 17px;
+$nav-touch-one-link-padding-lg:         17px 0 17px;
+
+$nav-touch-two-link-padding-xs:         15px 0 15px;
+$nav-touch-two-link-padding-sm:         18px 0 18px;
+$nav-touch-two-link-padding-md:         15px 0 15px;
+$nav-touch-two-link-padding-lg:         15px 0 15px;
+
+/*
+ * Link Font-size and line heights by breakpoint
+ */
+$nav-touch-one-link-font-size-xs:       24px;
+$nav-touch-one-link-line-height-xs:     24px;
+$nav-touch-one-link-font-size-sm:       28px;
+$nav-touch-one-link-line-height-sm:     32px;
+$nav-touch-one-link-font-size-md:       21px;
+$nav-touch-one-link-line-height-md:     24px;
+$nav-touch-one-link-font-size-lg:       21px;
+$nav-touch-one-link-line-height-lg:     24px;
+
+$nav-touch-two-link-font-size-xs:       18px;
+$nav-touch-two-link-line-height-xs:     20px;
+$nav-touch-two-link-font-size-sm:       24px;
+$nav-touch-two-link-line-height-sm:     30px;
+$nav-touch-two-link-font-size-md:       18px;
+$nav-touch-two-link-line-height-md:     22px;
+$nav-touch-two-link-font-size-lg:       18px;
+$nav-touch-two-link-line-height-lg:     22px;

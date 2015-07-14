@@ -1,0 +1,91 @@
+/*
+ * _form.scss
+ * Form component Styles
+ * Author: M.Wagg
+ * Last updated: 4th March 2015
+ */
+
+/**
+ * To remove fancy styles for radio buttons and checkboxes to make forms functional on IE8
+ */
+.lt-ie9 {
+  .form-type-radio,
+  .form-type-checkbox {
+    label {
+      border: none;
+      padding-left: 0;
+      position: relative;
+      top: 0;
+    }
+    label:before {
+      display: none;
+    }
+    input[type=radio],
+    input[type=checkbox] {
+      border: none;
+      display: block;
+      height: 12px;
+      position: static;
+      background-color: transparent;
+    }
+    input[type=radio]:checked + label:before, 
+    input[type=checkbox]:checked +label:before {
+      display: none;
+    }
+  }
+  /* donate & payin */
+  .cr-donate-form,
+  .cr-donate-pay-in-form,
+  .payin--intro {
+    .form-type-radio {
+      input[type=radio] {
+        margin: 0px auto;
+      }
+    }  
+  }
+  /* payment method */
+  .payment {
+    .form-type-radio {
+      label {
+        display: block;
+        margin-top: $payment-label-margin-lg-ie8;
+      }
+      #edit-paymenttype-amex {
+        display: block !important;
+      }
+    }
+  }
+  /* payin form - payment method */
+  .cr-donate-pay-in-form {
+    .payin__options {
+      label {
+        display: none;
+      }
+    }
+    .payin__method {
+      .form-type-radio {
+        label {
+          margin-left: $payment-label-margin-sm-ie8;    
+          margin-top: $payment-label-margin-lg-ie8;
+          display: block;
+        }
+        input[type=radio] {
+          display: block;
+        }
+      }
+      .donate-method-AMEX {
+        label {
+          margin-left: $payment-label-margin-lg-ie8;
+        }
+        #edit-paymenttype-amex {
+          display: block !important;
+        }
+      }
+      .donate-method-JCB {
+        label {
+          margin-left: $payment-label-margin-md-ie8;
+        }
+      }
+    }
+  }
+}

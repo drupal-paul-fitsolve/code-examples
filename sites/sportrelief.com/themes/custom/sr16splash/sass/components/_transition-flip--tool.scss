@@ -1,0 +1,167 @@
+/*
+ * _transition-flip--tool.scss
+ * SASS rules for the transition-flip--tool component.
+ * Author: P.Brady
+ * Last updated: 10th September 2014
+ *
+ */
+
+// Generic styles to apply across all breakpoints
+.transition-flip--tool {
+
+  height: $transition-flip--tool-height;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  // Front card
+  .front {
+    background: $white-brand;
+    .pane-text {
+      padding: $transition-flip--tool-front-padding;
+      height: $transition-flip--tool-front-height;
+      display: table;
+      vertical-align: middle;
+      text-align: center;
+      width: 100%;
+      .pane-text--content {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+      p {
+        font-weight: 600;
+        font-size: $transition-flip--tool-front-link-size;
+        line-height: $transition-flip--tool-front-line-height;
+      }
+    }
+  }
+
+  // Back card
+  a .back,
+  .back {
+    width: 100%; 
+    background: $white-brand;
+    display: table !important;
+    .pane-text {
+      padding: $transition-flip--tool-back-padding;
+      width: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: $grey-dark;
+      p {
+        font-weight: 300;
+        line-height: $transition-flip--tool-back-line-height;
+        span {
+          font-weight: 600;
+        }
+      }
+      .dl {
+        color: $black-brand;
+        font-size: $transition-flip--tool-back-link-size;
+      }
+    }
+  }
+  // END Generic styles to apply across all breakpoints
+
+  // Styles for Small (sm)
+  @include breakpoint($screen-sm) {
+    height: $transition-flip--tool-height-sm;  
+    
+    // Front card
+    .front {
+      .pane-text {
+        padding: $transition-flip--tool-front-padding-sm;
+        height: $transition-flip--tool-front-height-sm;
+        p {
+          font-size: $transition-flip--tool-front-link-size-sm;
+          line-height: $transition-flip--tool-front-line-height-sm;
+        }
+      }
+    }
+
+    // Back card
+    a .back,
+    .back {
+      .pane-text {
+        padding: $transition-flip--tool-back-padding-sm;
+        p {      
+          line-height: $transition-flip--tool-back-line-height-sm;
+        }
+        .dl {
+          font-size: $transition-flip--tool-back-link-size-sm;
+        }
+      }
+    }
+
+  }
+  // END Styles for Small (sm)
+
+  // Styles for Medium (md)
+  @include breakpoint($screen-md) {
+    height: $transition-flip--tool-height-md;  
+    
+    // Front card
+    .front {
+      .pane-text {
+        padding: $transition-flip--tool-front-padding-md;
+        height: $transition-flip--tool-front-height-md;
+        p {
+          font-size: $transition-flip--tool-front-link-size-md;
+          line-height: $transition-flip--tool-front-line-height-md;
+        }
+      }
+    }
+
+    // Back card
+    a .back,
+    .back {
+      .pane-text {
+        padding: $transition-flip--tool-back-padding-md;
+        p {      
+          line-height: $transition-flip--tool-back-line-height-md;
+        }
+        .dl {
+          font-size: $transition-flip--tool-back-link-size-md;
+        }
+      }
+    }
+
+  }
+  // END Styles for Medium (md)
+
+  // Styles for Large (lg)
+  @include breakpoint($screen-lg) {
+    height: $transition-flip--tool-height-lg;  
+    
+    // Front card
+    .front {
+      .pane-text {
+        padding: $transition-flip--tool-front-padding-lg;
+        height: $transition-flip--tool-front-height-lg;
+        p {
+          font-size: $transition-flip--tool-front-link-size-lg;
+          line-height: $transition-flip--tool-front-line-height-lg;
+        }
+      }
+    }
+
+    // Back card
+    a .back,
+    .back {
+      .pane-text {
+        padding: $transition-flip--tool-back-padding-lg;
+        p {      
+          line-height: $transition-flip--tool-back-line-height-lg;
+        }
+        .dl {
+          font-size: $transition-flip--tool-back-link-size-lg;
+        }
+      }
+    }
+
+  }
+  // END Styles for Large (lg)
+
+
+}

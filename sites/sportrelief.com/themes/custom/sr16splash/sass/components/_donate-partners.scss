@@ -1,0 +1,74 @@
+/*
+ * _donate-partners.scss
+ * Donate Partners Component
+ * Author: M.Wagg
+ * Last updated: 17th November 2014
+ */
+
+.donate-partners {
+  padding: 40px 0 0;
+  text-align: center;
+}
+
+.donate-partners__logo {
+  background-image: image-url($logo-image);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: $logo-height;
+  list-style: none;
+  text-indent: -9999px;
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.donate-partners__logo--frsb {
+  background-position: $logo--frsb-bg;
+  margin: 0 $margin-16 $margin-30 0;
+  width: $logo--frsb-width;
+}
+
+.donate-partners__logo--worldpay {
+  background-position: $logo--worldpay-bg;
+  margin-right: $margin-20;
+  width: $logo--worldpay-width;
+}
+
+.donate-partners__logo--caf {
+  background-position: $logo--caf-bg;
+  margin-right: $margin-20;
+  width: $logo--caf-width;
+}
+
+.donate-partners__logo--digicert {
+  background-position: $logo--digicert-bg;
+  width: $logo--digicert-width;
+}
+
+/*
+ * Small Breakpoint
+ */
+
+@include breakpoint($screen-sm) {
+  .donate-partners__logo {
+    margin: 0;
+  }
+}
+
+/*
+ * Large Breakpoint
+ */
+
+@include breakpoint($screen-lg) {
+  .donate-partners__logo--frsb {
+    margin-right: $margin-30;
+  }
+  .donate-partners__logo--worldpay {
+    margin-right: $margin-20;
+  }
+  .donate-partners__logo--caf {
+    margin-right: $margin-20;
+  }
+}

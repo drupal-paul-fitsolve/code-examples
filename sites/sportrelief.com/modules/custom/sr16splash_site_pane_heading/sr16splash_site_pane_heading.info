@@ -1,0 +1,9 @@
+name = sr16splash Fieldable Panels Pane Header Styles
+description = Select panel pane title header tags and add custom css classes
+core = 7.x
+package = "sr16splash"
+project = sr16splash_site_pane_heading
+version = "7.x-1.0"
+dependencies[] = "ctools"
+dependencies[] = "fieldable_panels_panes"
+dependencies[] = "panels"

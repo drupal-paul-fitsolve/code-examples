@@ -1,0 +1,261 @@
+/*
+ * _pane-filter--kids.scss
+ * Pane Filter Sass Component
+ * Author: A.Phipps
+ * Last updated: 29th January 2015
+ */
+
+/*
+ * Kids Idea Generator page - uses Pane Filter but with custom styling and buttons
+ * 
+ * Small AND Medium Breakpoint  (no filter functionality and buttons on XS breakpoint)
+ */
+@include breakpoint($screen-sm) {
+  
+  .pane-filter-section.idea-generator {
+
+    .idea-generator-step-number {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  
+    .pane-filter-group {
+      background-color: transparent;
+      margin-top: 10px;
+
+      &.last {
+        margin-top: 10px;
+      }
+    }
+  
+    .panel-pane.pane--cols .pane-text.pane-filter-group-buttons {
+  
+      text-align:center;
+      padding: 0;
+  
+      a.btn.filter__button.ideas__button {
+        background-image: image-url("idea-generator/button_sprite_sm-md.jpg");
+        background-size: 1170px 390px;
+        background-position: 0 0;
+        width: 130px;
+        height: 130px;
+        padding: 0;
+        margin: 0 15px 30px 15px;
+        text-indent: -9999px;
+      }
+  
+      // All buttons
+      #easy-button {
+        background-position: 0 0;
+        &:hover {
+          background-position: 0 -130px;
+        }
+        &.active {
+          background-position: 0 -260px;
+        }
+      }
+  
+      #slightly-tougher-button {
+        background-position: -130px 0;
+        &:hover {
+          background-position: -130px -130px;
+        }
+        &.active {
+          background-position: -130px -260px;
+        }
+      }
+  
+      #super-human-button {
+        background-position: -260px 0;
+        &:hover {
+          background-position: -260px -130px;
+        }
+        &.active {
+          background-position: -260px -260px;
+        }
+      }
+  
+      #funnyface-button {
+        background-position: -390px 0;
+        &:hover {
+          background-position: -390px -130px;
+        }
+        &.active {
+          background-position: -390px -260px;
+        }
+      }
+  
+      #bake-button {
+        background-position: -520px 0;
+        &:hover {
+          background-position: -520px -130px;
+        }
+        &.active {
+          background-position: -520px -260px;
+        }
+      }
+  
+      #perform-button {
+        background-position: -650px 0;
+        &:hover {
+          background-position: -650px -130px;
+        }
+        &.active {
+          background-position: -650px -260px;
+        }
+      }
+  
+      #sponsor-button {
+        background-position: -780px 0;
+        &:hover {
+          background-position: -780px -130px;
+        }
+        &.active {
+          background-position: -780px -260px;
+        }
+      }
+  
+      #dare-button {
+        background-position: -910px 0;
+        &:hover {
+          background-position: -910px -130px;
+        }
+        &.active {
+          background-position: -910px -260px;
+        }
+      }
+  
+      #sell-button {
+        background-position: -1040px 0;
+        &:hover {
+          background-position: -1040px -130px;
+        }
+        &.active {
+          background-position: -1040px -260px;
+        }
+      }
+    }
+  
+    .idea-generator-activity .panel-pane.pane--cols .pane-text.pane-filter-group-buttons a.btn.filter__button.ideas__button {
+      margin: 0 15px 30px 15px;
+    }
+  }
+}
+
+/* High-res bg image for sm and md retina devices */
+@include breakpoint($screen-sm-min $highres) {
+  .pane-filter-section.idea-generator .panel-pane.pane--cols .pane-text.pane-filter-group-buttons a.btn.filter__button.ideas__button {
+    background-image: image-url("idea-generator/button_sprite_sm-md@2x.jpg");
+  }
+}
+
+/* Large breakpoint */
+@include breakpoint($screen-lg) {
+  .pane-filter-section.idea-generator .panel-pane.pane--cols .pane-text.pane-filter-group-buttons {
+
+    a.btn.filter__button.ideas__button {
+      background-image: image-url("idea-generator/button_sprite_lg.jpg");
+      background-size: 1530px 510px;
+      width: 170px;
+      height: 170px;
+    }
+
+    // All buttons
+    #easy-button {
+      background-position: 0 0;
+      &:hover {
+        background-position: 0 -170px;
+      }
+      &.active {
+        background-position: 0 -340px;
+      }
+    }
+
+    #slightly-tougher-button {
+      background-position: -170px 0;
+      &:hover {
+        background-position: -170px -170px;
+      }
+      &.active {
+        background-position: -170px -340px;
+      }
+    }
+
+   #super-human-button {
+      background-position: -340px 0;
+      &:hover {
+        background-position: -340px -170px;
+      }
+      &.active {
+        background-position: -340px -340px;
+      }
+    }
+
+    #funnyface-button {
+      background-position: -510px 0;
+      &:hover {
+        background-position: -510px -170px;
+      }
+      &.active {
+        background-position: -510px -340px;
+      }
+    }
+
+    #bake-button {
+      background-position: -680px 0;
+      &:hover {
+        background-position: -680px -170px;
+      }
+      &.active {
+        background-position: -680px -340px;
+      }
+    }
+
+    #perform-button {
+      background-position: -850px 0;
+      &:hover {
+        background-position: -850px -170px;
+      }
+      &.active {
+        background-position: -850px -340px;
+      }
+    }
+
+    #sponsor-button {
+      background-position: -1020px 0;
+      &:hover {
+        background-position: -1020px -170px;
+      }
+      &.active {
+        background-position: -1020px -340px;
+      }
+    }
+
+    #dare-button {
+      background-position: -1190px 0;
+      &:hover {
+        background-position: -1190px -170px;
+      }
+      &.active {
+        background-position: -1190px -340px;
+      }
+    }
+
+    #sell-button {
+      background-position: -1360px 0;
+      &:hover {
+        background-position: -1360px -170px;
+      }
+      &.active {
+        background-position: -1360px -340px;
+      }
+    }
+  }
+}
+
+/* High-res bg image for lg retina devices */
+@include breakpoint($screen-lg-min $highres) {
+  .pane-filter-section.idea-generator .panel-pane.pane--cols .pane-text.pane-filter-group-buttons a.btn.filter__button.ideas__button {
+    background-image: image-url("idea-generator/button_sprite_lg@2x.jpg");
+  }
+}

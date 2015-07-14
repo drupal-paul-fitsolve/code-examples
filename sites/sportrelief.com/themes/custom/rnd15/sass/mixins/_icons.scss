@@ -1,0 +1,7 @@
+// IcoMoon font-mapping, used in components/_icons.scss
+
+@mixin iconfont($input){
+	.icon-#{nth($input, 1)}:before {
+  		content: nth($input, 2);
+	}
+}

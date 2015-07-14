@@ -1,0 +1,15 @@
+/*
+ * _pane.scss
+ * Pane Sass Component
+ * Author: M.Wagg
+ * Last updated: 10th September 2014
+ */
+.panel-pane.pane--cols .panel-pane.pane-cols {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.panel-pane.pane--no-cols {
+  float: left;
+  width: 100%;
+}
