@@ -1,1 +1,0 @@
-alert('cr_general.js');
