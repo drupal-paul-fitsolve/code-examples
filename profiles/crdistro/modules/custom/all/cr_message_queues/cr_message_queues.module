@@ -1,3 +1,0 @@
-<?php
-
-define('CR_MESSAGE_QUEUES_DEFAULT_EXCHANGE', 'dasp');
