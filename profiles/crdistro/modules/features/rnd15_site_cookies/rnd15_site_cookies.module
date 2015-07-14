@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RND15 Site Cookies feature.
+ */
+
+include_once 'rnd15_site_cookies.features.inc';

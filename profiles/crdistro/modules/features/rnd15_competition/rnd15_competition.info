@@ -1,0 +1,12 @@
+name = RND15 Competition
+description = Provides RND15 Who Nose Competition form additions
+core = 7.x
+package = RND15
+php = 5.2.4
+version = 7.x-0.01
+project = rnd15_competition
+dependencies[] = cr_competition
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+no autodetect = 1
+project path = sites/rednoseday.com/modules/features/

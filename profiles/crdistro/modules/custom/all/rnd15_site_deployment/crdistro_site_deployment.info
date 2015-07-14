@@ -1,0 +1,6 @@
+name = CRDISTRO Deployment
+description = Deployment module, used to automated changes to this site.
+package = "CRDISTRO"
+core = 7.x
+version = "7.x-0.05"
+files[] = rnd15_site_deployment.test

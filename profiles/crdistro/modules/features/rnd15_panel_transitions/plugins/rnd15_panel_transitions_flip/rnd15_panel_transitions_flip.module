@@ -1,0 +1,15 @@
+<?php
+/*
+ * @file panel_transitions_flip.module
+ * 
+ * Register panel_transitions_flip with cTools.
+ * 
+ * Author: P.Brady
+ * Last updated: 10th September 2014
+ *
+ */
+function rnd15_panel_transitions_flip_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'panels' && ($plugin == 'styles' || $plugin == 'layouts')) {
+    return 'plugins/' . $plugin;
+  }
+}

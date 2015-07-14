@@ -1,0 +1,118 @@
+ /**
+  * @file
+  * Base and layout styling for tabs.
+  */
+
+// Base styling for all tabs
+.tabs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.tabs li {
+  padding: 0;
+  margin: 0;
+}
+.tab-link {
+  background: grey;
+  display: block;
+  margin: 0;
+  padding: 0.5em 1em;
+  text-decoration:none;
+}
+.tab-link.tabs-active {
+  background: #EEE;
+}
+.tab-contents {
+  background: #EEE;
+  overflow: hidden;
+}
+
+// SRSITE-698 required a transparent bg
+.context-play-games { .tab-contents { background: transparent; } }
+
+.tab-content {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+// reinstate standard li rules for text fields
+.tabs .field ul {
+
+  margin: @minor-vertical-unit--desktop 0;
+
+  li {
+    text-align: left;
+    margin-left: 0;
+    display: list-item;
+  }
+}
+
+// Main tabs
+.tabs--main ul {
+  clear:both;
+}
+.tabs--main li{
+  float: left;
+}
+
+// Promo tabs
+.tabs--promo ul {
+  clear:both;
+}
+.tabs--promo li{
+  display: table-cell;
+  width: 2%;
+}
+.tabs--promo .tab-link {
+/*  font-size: 2em;
+*/  text-align: center;
+  height: 50px;
+  color: black;
+}
+
+
+
+// Side tabs
+.tabs--side .item-list {
+  float: left;
+  width: 25%;
+}
+.tabs--side .tab-contents {
+  float: left;
+  width: 75%;
+}
+
+// Button-style tabs
+.tab-wrapper--button-style {
+  background: white;
+}
+
+.tabs--button-style {
+  .tab-link {
+    background:grey;
+    color:black;
+
+    &.tabs-active {
+      background:white;
+    }
+  }
+
+  .item-list {
+    text-align: center;
+  }
+
+  .item-list ul li {
+  float: left;
+  }
+
+  .tab-contents {
+    background:none;
+  }
+
+  .tab-content {
+   height:auto !important;
+  }
+}
+

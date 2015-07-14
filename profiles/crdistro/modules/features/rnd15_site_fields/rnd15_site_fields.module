@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RND15 Site Fields feature.
+ */
+
+include_once 'rnd15_site_fields.features.inc';

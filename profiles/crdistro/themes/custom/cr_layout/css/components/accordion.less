@@ -1,0 +1,31 @@
+ /**
+  * @file
+  * Accordion styling
+  */
+
+.accordion-item {
+  background-color: @dark;
+  color: @white;
+  padding: 5px;
+}
+.accordion-item[open] {
+  background-color: transparent;
+  color: @dark;
+}
+.accordion-title {
+  .font-size(18);
+  cursor: pointer;
+  outline: none;
+}
+.accordion-title::-webkit-details-marker {
+  display: none;
+}
+.accordion-title:after {
+  content: '+';
+  float: right;
+  .font-size(18);
+  line-height: .7em;
+}
+.accordion-item[open] .accordion-title:after {
+  content: '–';
+}

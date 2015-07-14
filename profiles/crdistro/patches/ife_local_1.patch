@@ -1,0 +1,14 @@
+diff -uprb a/ife.module b/ife.module
+--- ife.module	2012-10-31 23:32:59.000000000 +0000
++++ ife.module	2015-04-07 11:08:52.956749616 +0100
+@@ -265,7 +265,8 @@ function ife_element_errors_set($element
+
+   // Recurse through all children.
+   foreach (element_children($element) as $key) {
+-    if (isset($element[$key]) && $element[$key]) {
++    $excluded_fields = array('radio', 'hidden', 'token', 'value');
++    if (isset($element[$key]) && $element[$key] && !in_array($element[$key]['#type'], $excluded_fields)) {
+       ife_element_errors_set($element[$key], $display);
+     }
+   }
+

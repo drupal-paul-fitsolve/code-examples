@@ -1,0 +1,59 @@
+diff -rupN flexslider/assets/js/flexslider.load.js /usr/local/zend/var/apps/http/rnd15-local/80/public/sites/all/modules/contrib/flexslider/assets/js/flexslider.load.js
+--- flexslider/assets/js/flexslider.load.js	2013-03-06 14:18:27.000000000 +0000
++++ /usr/local/zend/var/apps/http/rnd15-local/80/public/sites/all/modules/contrib/flexslider/assets/js/flexslider.load.js	2015-04-07 11:08:52.952749616 +0100
+@@ -4,9 +4,18 @@
+ Drupal.behaviors.flexslider = {
+   attach: function(context, settings) {
+     var sliders = [];
++    //Skip if we do not have flexslider instances
++    if(!settings.flexslider) return;
+ 
+     for (id in settings.flexslider.instances) {
+-      
++
++      //Get current layout isnt called in time
++      var wW = $(window).width();
++      if(settings.flexslider.optionsets[settings.flexslider.instances[id]] !== undefined && 
++         settings.flexslider.optionsets[settings.flexslider.instances[id]].disableMobile && wW <= 740) {
++        return;
++      }
++
+       if (settings.flexslider.optionsets[settings.flexslider.instances[id]] !== undefined) {
+         if (settings.flexslider.optionsets[settings.flexslider.instances[id]].asNavFor !== '') {
+           // We have to initialize all the sliders which are "asNavFor" first.
+diff -rupN flexslider/flexslider.admin.inc /usr/local/zend/var/apps/http/rnd15-local/80/public/sites/all/modules/contrib/flexslider/flexslider.admin.inc
+--- flexslider/flexslider.admin.inc	2013-03-06 14:18:27.000000000 +0000
++++ /usr/local/zend/var/apps/http/rnd15-local/80/public/sites/all/modules/contrib/flexslider/flexslider.admin.inc	2015-04-07 11:08:52.952749616 +0100
+@@ -81,7 +81,7 @@ function flexslider_option_elements($opt
+   $easing_options = array('swing' => t('Swing'), 'linear' => t('Linear'));
+   if (module_exists('jqeasing')) {
+     $easing_options = array_merge($easing_options, _flexslider_jqeasing_options());
+-    
++
+   }
+ 
+   $form['animation_slideshow']['easing'] = array(
+@@ -344,6 +344,12 @@ function flexslider_option_elements($opt
+     '#description' => t('Declare custom control navigation. Example would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.'),
+     '#default_value' => isset($options['manualControls']) ? $options['manualControls'] : _flexslider_optionset_defaults('manualControls'),
+   );
++  $form['advanced']['disableMobile'] = array(
++    '#type' => 'checkbox',
++    '#title' => t('Disable Mobile'),
++    '#description' => t('Do not load flexslider on mobile. Checks the Omega theme breakpoint.'),
++    '#default_value' => isset($options['disableMobile']) ? $options['disableMobile'] : _flexslider_optionset_defaults('disableMobile'),
++  );
+ 
+   return $form;
+ }
+diff -rupN flexslider/flexslider.module /usr/local/zend/var/apps/http/rnd15-local/80/public/sites/all/modules/contrib/flexslider/flexslider.module
+--- flexslider/flexslider.module	2013-03-06 14:18:27.000000000 +0000
++++ /usr/local/zend/var/apps/http/rnd15-local/80/public/sites/all/modules/contrib/flexslider/flexslider.module	2015-04-07 11:08:52.952749616 +0100
+@@ -419,6 +419,7 @@ function _flexslider_optionset_defaults(
+     'pauseOnHover' => FALSE,
+     //'controlscontainer' => '.flex-nav-container', -- updated in v2
+     'manualControls' => '',
++    'disableMobile' => FALSE,
+     //'startCallback' => 'function() {}', -- replace by 'start'
+     //'beforeCallback' => 'function() {}', -- replaced by 'before'
+     //'afterCallback' => 'function() {}', -- replaced by 'after'

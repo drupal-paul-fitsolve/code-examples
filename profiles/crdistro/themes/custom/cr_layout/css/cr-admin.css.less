@@ -1,0 +1,146 @@
+/* Base Media Queries */
+@narrowAndGreater: ~"(min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)";
+@normalAndGreater: ~"(min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)";
+@wideAndGreater: ~"(min-width: 1220px)";
+
+@fluidOnly: ~"(min-width: 0) and (max-width: 739px)";
+@narrowOnly: ~"(min-width: 740px) and (max-width: 979px)";
+@normalOnly: ~"(min-width: 980px) and (max-width: 1219px)";
+@wideOnly: ~"(min-width: 1220px)";
+
+/* Base colors */
+@dark: #333333;
+@medium: #B2B2B2;
+@light: #DBDBDB;
+@white: #FFFFFF;
+@black: #000000;
+
+
+/* Base Variables */
+@color-alpha: #FF0000;
+
+
+// Admin
+body.panels-ipe {margin-bottom:50px!important;}
+.panels-ipe-editing .admin-only,
+.panels-ipe-editing .panels-ipe-region {clear:both;}
+.admin-only {display:none; }
+
+.panels-ipe .container-24 .row.admin-only {display:none; }
+.panels-ipe-editing .container-24 .row.admin-only {display:block; }
+
+.panels-ipe-editing .admin-only {display:block; }
+.panels-ipe-editing .panels-ipe-portlet-content {position:relative;}
+//Modal override
+#modalContent {
+  position: fixed!important;
+}
+.collapsible {
+  display: block!important;
+}
+body.panels-ipe div.panels-ipe-newblock li {
+  float:left;
+}
+
+
+// Show/hide items based on classes
+.fluidonly, .narrowonly, .normalonly, .wideonly {
+  display:none;
+}
+@media all and @fluidOnly{
+    .fluidonly {
+      display:block;
+    }
+    .page-admin-appearance-styleguide {
+      #zone-content {
+        #region-content {
+          margin:0 10px;
+        }
+      }
+    }
+}
+@media all and @narrowOnly{
+    .narrowonly {
+      display:block;
+    }
+    .page-admin-appearance-styleguide {
+      #zone-content {
+        width:700px;
+      }
+    }
+}
+@media all and @normalOnly{
+    .normalonly {
+      display:block;
+    }
+    .page-admin-appearance-styleguide {
+      #zone-content {
+        width:940px;
+      }
+    }
+}
+@media all and @wideOnly{
+    .wideonly {
+      display:block;
+    }
+    .page-admin-appearance-styleguide {
+      #zone-content {
+        width:1180px;
+      }
+    }
+}
+
+
+#block-bean-responsive-test h2 {
+  color:red; // Prototype only
+}
+
+.page-admin-appearance-styleguide {
+  #zone-content {
+    margin:0 auto;
+  }
+}
+
+
+//Equal heights
+.panels-ipe-region,
+.panels-ipe-sort-container,
+.fieldable-panels-pane {
+  height:100%;
+}
+
+//Fix for position relative on contextual-links-region which
+//is effecting the pod media positioning
+.admin-menu .pane-bundle-text-media {
+    position: inherit;
+}
+
+.panels-ipe-editing .grid-24 .pod-content,
+.panels-ipe-editing .column.grid-24 .pod-content,
+.panels-ipe-editing .column.grid-18 .pod-content {
+    width:100%;
+}
+
+//Margin for forms in IPE editing
+#panels-edit-style-settings-form .form-item-wrapper,
+#panels-edit-style-settings-form .form-wrapper,
+#panels-edit-style-settings-form .button,
+#panels-edit-style-type-form .form-item-wrapper,
+#panels-edit-style-type-form .form-wrapper,
+#panels-edit-style-type-form .button,
+#fieldable-panels-panes-fieldable-panels-pane-content-type-edit-form .form-item-wrapper,
+#fieldable-panels-panes-fieldable-panels-pane-content-type-edit-form .form-wrapper,
+#fieldable-panels-panes-fieldable-panels-pane-content-type-edit-form .button,{
+  margin-top:25px;
+  clear:both;
+  float:none;
+}
+
+/* Override input styling for admin menu */
+#admin-menu .text-input {height: 17px;}
+
+/* Remove error cross on system messages */
+#block-delta-blocks-messages .error:before {
+  content: "";
+  margin-right: 0;
+}

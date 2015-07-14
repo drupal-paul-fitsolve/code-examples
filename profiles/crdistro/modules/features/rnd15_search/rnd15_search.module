@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the rnd15_search feature.
+ */
+
+include_once 'rnd15_search.features.inc';

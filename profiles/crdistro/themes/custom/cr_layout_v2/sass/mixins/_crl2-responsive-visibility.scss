@@ -1,0 +1,28 @@
+// Copied from Bootstrap sass
+// @Author: Jeremy P.
+// 
+// Slightly modified to not target tables, tds and trs
+// We use this so we can specifically set picture groups and 
+// svgs to display hidden. This allows us to efficiently skip them in native JS
+
+// Responsive utilities
+
+//
+// More easily include all the states for responsive-utilities.less.
+// [converter] $parent hack
+@mixin crl2_responsive-visibility($parent) {
+  #{$parent},
+  #{$parent} span[data-picture],
+  #{$parent} span[data-svg] {
+    display: block !important;
+  }
+}
+
+// [converter] $parent hack
+@mixin crl2_responsive-invisibility($parent) {
+  #{$parent},
+  #{$parent} span[data-picture],
+  #{$parent} span[data-svg] {
+    display: none !important;
+  }
+}

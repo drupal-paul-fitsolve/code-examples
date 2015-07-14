@@ -1,0 +1,16 @@
+name = RND15 Site Media
+description = Provides MediaElement JS implementation for Video and Audio
+core = 7.x
+package = RND15
+php = 5.2.4
+version = 7.x-0.06
+project = rnd15_site_media
+scripts[] = js/mediaelement-and-player.custom.min.js
+scripts[] = js/media.min.js
+scripts[] = js/rnd15.siteMedia.min.js
+stylesheets[all][] = css/media.css
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[field_base][] = field_site_video_url
+no autodetect = 1
+project path = sites/rednoseday.com/modules/features/

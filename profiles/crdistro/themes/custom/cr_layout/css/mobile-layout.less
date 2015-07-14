@@ -1,0 +1,367 @@
+/* This file is a recreation of alpha-default-fluid-24.css but with mobile prefixes on the classes
+ * This allows us to apply different proportional widths to elements on mobile viewports only without hacking the Omega grid system.
+ * This is still going against how Omega is supposed to work and isn't hugely reliable because the grid system relies on row containers.
+ * We need to figure out the best way to load this performantly. We can't add this file to cr_layout-default-narrow.css because it will not get loaded for sub themes
+ */
+
+
+/*
+ * This is a special class that undoes equal heights on mobile... This is the best solution without replacing the equal heights library with our own
+ */
+.responsive-layout-mobile .mobile-no-equality {
+  height: auto!important;
+}
+/*
+ * ==========================================================
+ * Grid
+ * ==========================================================
+ */
+
+.responsive-layout-mobile {
+  .mobile-grid-1, .mobile-grid-2, .mobile-grid-3, .mobile-grid-4, .mobile-grid-5, .mobile-grid-6, .mobile-grid-7, .mobile-grid-8, .mobile-grid-9, .mobile-grid-10,
+  .mobile-grid-11, .mobile-grid-12, .mobile-grid-13, .mobile-grid-14, .mobile-grid-15, .mobile-grid-16, .mobile-grid-17, .mobile-grid-18, .mobile-grid-19,
+  .mobile-grid-20, .mobile-grid-21, .mobile-grid-22, .mobile-grid-23, .mobile-grid-24 {
+    display: inline;
+    float: left;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}
+
+/*
+ * ==========================================================
+ * Alpha - Omega
+ * ==========================================================
+ */
+.responsive-layout-mobile [class*='mobile-grid-'].alpha {
+  margin-left: 1%;
+}
+.responsive-layout-mobile [class*='mobile-grid-'].omega {
+  margin-right: 1%;
+}
+.responsive-layout-mobile .container-24 .mobile-alpha {
+  margin-left: 0;
+}
+.responsive-layout-mobile .container-24 .mobile-omega {
+  margin-right: 0;
+}
+
+
+/*
+ * ==========================================================
+ * Container
+ * ==========================================================
+ */
+
+.responsive-layout-mobile .container-24 {
+}
+
+/*
+ * ==========================================================
+ * Rows
+ * ==========================================================
+ */
+.responsive-layout-mobile .mobile-row {
+  margin-top: 10px;
+}
+
+/*
+ * ==========================================================
+ * Columns
+ * Based on alphas fluid grid
+ * Recalculated for 1% inner borders on each side of a column
+ * E.g. 3 columns: 2 gaps @ 1% = 4%. 100%-4% = 96%/3 = 32% for each column
+ * See utilities for less function
+ * ==========================================================
+ */
+.responsive-layout-mobile .container-24 .mobile-grid-1 {
+  .fluid-grid-width(1);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-2 {
+  .fluid-grid-width(2);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-3 {
+  .fluid-grid-width(3);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-4 {
+  .fluid-grid-width(4);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-5 {
+  .fluid-grid-width(5);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-6 {
+  .fluid-grid-width(6);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-7 {
+  .fluid-grid-width(7);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-8 {
+  .fluid-grid-width(8);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-9 {
+  .fluid-grid-width(9);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-10 {
+  .fluid-grid-width(10);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-11 {
+  .fluid-grid-width(11);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-12 {
+  .fluid-grid-width(12);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-13 {
+  .fluid-grid-width(13);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-14 {
+  .fluid-grid-width(14);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-15 {
+  .fluid-grid-width(15);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-16 {
+  .fluid-grid-width(16);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-17 {
+  .fluid-grid-width(17);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-18 {
+  .fluid-grid-width(18);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-19 {
+  .fluid-grid-width(19);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-20 {
+  .fluid-grid-width(20);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-21 {
+  .fluid-grid-width(21);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-22 {
+  .fluid-grid-width(22);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-23 {
+  .fluid-grid-width(23);
+}
+
+.responsive-layout-mobile .container-24 .mobile-grid-24 {
+  .fluid-grid-width(24);
+}
+
+/*
+ * ==========================================================
+ * Prefix
+ * ==========================================================
+
+.responsive-layout-mobile .container-24 .mobile-prefix-1 {
+  padding-left: 4.167%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-2 {
+  padding-left: 8.333%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-3 {
+  padding-left: 12.5%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-4 {
+  padding-left: 16.667%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-5 {
+  padding-left: 20.833%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-6 {
+  padding-left: 25.0%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-7 {
+  padding-left: 29.167%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-8 {
+  padding-left: 33.333%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-9 {
+  padding-left: 37.5%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-10 {
+  padding-left: 41.667%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-11 {
+  padding-left: 45.833%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-12 {
+  padding-left: 50.0%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-13 {
+  padding-left: 54.167%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-14 {
+  padding-left: 58.333%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-15 {
+  padding-left: 62.5%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-16 {
+  padding-left: 66.667%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-17 {
+  padding-left: 70.833%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-18 {
+  padding-left: 75.0%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-19 {
+  padding-left: 79.167%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-20 {
+  padding-left: 83.333%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-21 {
+  padding-left: 87.5%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-22 {
+  padding-left: 91.667%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-prefix-23 {
+  padding-left: 95.833%;
+}
+*/
+/*
+ * ==========================================================
+ * Suffix
+ * ==========================================================
+
+.responsive-layout-mobile .container-24 .mobile-suffix-1 {
+  padding-right: 4.167%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-2 {
+  padding-right: 8.333%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-3 {
+  padding-right: 12.5%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-4 {
+  padding-right: 16.667%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-5 {
+  padding-right: 20.833%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-6 {
+  padding-right: 25.0%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-7 {
+  padding-right: 29.167%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-8 {
+  padding-right: 33.333%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-9 {
+  padding-right: 37.5%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-10 {
+  padding-right: 41.667%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-11 {
+  padding-right: 45.833%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-12 {
+  padding-right: 50.0%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-13 {
+  padding-right: 54.167%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-14 {
+  padding-right: 58.333%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-15 {
+  padding-right: 62.5%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-16 {
+  padding-right: 66.667%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-17 {
+  padding-right: 70.833%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-18 {
+  padding-right: 75.0%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-19 {
+  padding-right: 79.167%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-20 {
+  padding-right: 83.333%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-21 {
+  padding-right: 87.5%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-22 {
+  padding-right: 91.667%;
+}
+
+.responsive-layout-mobile .container-24 .mobile-suffix-23 {
+  padding-right: 95.833%;
+}
+*/

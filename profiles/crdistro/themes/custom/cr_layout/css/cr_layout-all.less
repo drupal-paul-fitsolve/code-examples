@@ -1,0 +1,126 @@
+ /**
+  * @file
+  * Pull in all style sheets, for ease of development
+  */
+
+@import "utilities/all-utilities.less";
+@import "narrow-layout.less";
+@import "mobile-layout.less";
+@import "components/all-components.less";
+
+// Recreation of .clearfix
+.container-24:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.promo-wrapper {
+  padding-bottom: 40px;
+}
+
+.front .promo-wrapper {
+  padding-bottom: 0px;
+}
+
+.main-content {
+  padding-bottom: 40px;
+}
+
+.subpod-wrapper,
+.ubersubpod-wrapper {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.ubersubpod-wrapper {
+  padding-top: 0px;
+}
+
+.responsive-layout-mobile {
+  .row {
+    margin-top: 10px;
+  }
+
+  .promo-wrapper {
+    padding-bottom: 0;
+  }
+
+  .main-content {
+    padding: 0 10px;
+
+    .column {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .promo-wrapper .pod .alpha .pod__title,
+  .promo-wrapper .pod .omega .pod__title,
+  .promo-wrapper .pod .pod__title {
+    padding: 30px 15px 20px;
+  }
+  .promo-wrapper .pod .alpha .pod__body,
+  .promo-wrapper .pod .omega .pod__body,
+  .promo-wrapper .pod .pod__body {
+    padding: 0 15px 25px;
+  }
+  .subpod-wrapper {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .leader {
+      margin-top: 0;
+      border-top: 1px solid transparent;
+    }
+
+  }
+
+  .subpod-wrapper .pod {
+    margin-top:10px;
+    .pod__title + .pod__body {
+      padding-bottom:30px;
+    }    
+  }
+}
+
+/*
+ * Supod fix: JIRA SRSITE-1344
+*/
+.subpod-wrapper .pod {
+  //TODO: This needs a better approach
+    img {
+      display: none;
+    }
+}
+@media all and @narrowAndGreater {
+  .subpod-wrapper .pod {
+    img {
+      display: block;
+    }
+  }
+}
+.ie8 {
+  .subpod-wrapper .pod {
+    img {
+      display: block;
+    }
+  }
+}
+
+
+// @TODO consider making a base.less?
+img {
+  max-width: 100%;
+  width: auto; // Fix for IE8
+  height: auto;
+  display: block;
+}

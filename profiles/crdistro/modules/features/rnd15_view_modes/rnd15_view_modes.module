@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RND15 View Modes feature.
+ */
+
+include_once 'rnd15_view_modes.features.inc';

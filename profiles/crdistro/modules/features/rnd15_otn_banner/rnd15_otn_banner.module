@@ -1,0 +1,125 @@
+<?php
+/**
+ * @file
+ * Code for the RND15 OTN Banner feature.
+ */
+
+include_once 'rnd15_otn_banner.features.inc';
+
+/**
+ * Implements hook_menu().
+ */
+function rnd15_otn_banner_menu() {
+  $items['admin/structure/context/otn'] = array(
+    'title' => 'On The Night context switch',
+    'description' => 'Easily switch contexts related to OTN',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('rnd15_otn_banner_context_form'),
+    'access arguments' => array('administer nodes'),
+  );
+
+  return $items;
+}
+
+/**
+ * Form builder to allow setting of OTN contexts
+ *
+ * @param array $form
+ *  The form
+ * @param array $form_state
+ *  The form state
+ * @return array
+ *  The form
+ */
+function rnd15_otn_banner_context_form($form, &$form_state) {
+  $context_options = rnd15_otn_banner_get_contexts();
+  $context_keys = array_keys($context_options);
+  $context_status = variable_get('context_status', array());
+
+  // determine the currently enabled context to set as default value
+  // if there are more than one enabled then alert
+  $enabled_context_count = 0;
+  foreach($context_keys as $context_key) {
+    if (!$context_status[$context_key]) {
+      $default_value = $context_key;
+      $enabled_context_count++;
+    }
+  }
+
+  if ($enabled_context_count === 0) {
+    $default_value = 'none';
+  }
+  elseif ($enabled_context_count > 1) {
+    if (!$form_state['input']) {
+      $message = 'Multiple OTN contexts are currently set, submit this form to revert to just the selected context below';
+      drupal_set_message(t($message));
+    }
+  }
+
+  // Add a "none" option
+  $context_options = array('none'  => t('None')) + $context_options;
+
+  $form['context'] = array(
+    '#type' => 'radios',
+    '#title' => t('Contexts'),
+    '#options' => $context_options,
+    '#default_value'  => $default_value,
+    '#description' => t('Select a context to switch to.'),
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit')
+  );
+
+  return $form;
+}
+
+/**
+ * Form submission handler for OTN contexts form
+ *
+ * @param array $form
+ *  The form
+ * @param array $form_state
+ *  The form state
+ * @return array
+ *  The form
+ */
+function rnd15_otn_banner_context_form_submit($form, &$form_state) {
+  $values = $form_state['values'];
+
+  $contexts = array_keys(rnd15_otn_banner_get_contexts());
+
+  $context_status = variable_get('context_status', array());
+
+  foreach($contexts as $context) {
+    if (($context === $values['context'])) {
+      // setting this array key to empty or false enables context!
+      $context_status[$context] = '';
+    }
+    else {
+      // setting this array key to 1 or TRUE disables context!
+      $context_status[$context] = 1;
+    }
+  }
+  variable_set('context_status', $context_status);
+
+  context_invalidate_cache();
+}
+
+/**
+ * Helper function to return the available OTN contexts
+ *
+ * This saves some code duplication as we can configure in one spot
+ *
+ * @return array
+ *  The available contexts
+ */
+function rnd15_otn_banner_get_contexts() {
+  $context_options = array(
+    'otn-banner-1' => t('OTN Banner 1'),
+    'otn-banner-2' => t('OTN Banner 2'),
+    'otn-banner-3' => t('OTN Banner 3'),
+  );
+  return $context_options;
+}

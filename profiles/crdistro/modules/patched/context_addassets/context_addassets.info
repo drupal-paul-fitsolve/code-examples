@@ -1,0 +1,12 @@
+name = Context Add Assets
+description = "Provides a simply way to include JS/CSS files based on context"
+dependencies[] = context
+package = Context
+core = "7.x"
+
+; Information added by drush on 2015-07-09
+version = "7.x-1.0-beta1+7-dev"
+core = "7.x"
+project = "context_addassets"
+datestamp = "1436459480"
+

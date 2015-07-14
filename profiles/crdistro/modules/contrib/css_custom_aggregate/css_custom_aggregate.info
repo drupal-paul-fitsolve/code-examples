@@ -1,0 +1,9 @@
+name = Custom css aggregate.
+description = "If one of the css groups has more than 4095 selectors aggregate will split the css in multiple files."
+core = 7.x
+; Information added by drupal.org packaging script on 2013-05-02
+version = "7.x-1.0-alpha1"
+core = "7.x"
+project = "css_custom_aggregate"
+datestamp = "1367485212"
+

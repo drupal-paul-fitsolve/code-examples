@@ -1,0 +1,36 @@
+/**
+ * @file
+ * Contains variables, mixins, and helper functions. There should be no element styling inside this folder.
+ */
+
+@import "variables.less";
+@import "mixins.less";
+
+/**
+ * Vertical spacing/alignment utilities
+ *
+ * Add vertical whitespace above or below the element in fractions of the
+ * baseline grid. Helps maintain a consistent (optimally readable)
+ * vertical rhythm down the page.
+ *
+ */
+.leader,
+.leader-major {
+  margin-top: @major-vertical-unit--desktop;
+}
+.leader .admin-only { margin-top: 0;}
+.leader-minor {
+  margin-top: @minor-vertical-unit--desktop;
+}
+.trailer,
+.trailer-major {
+  margin-bottom: @major-vertical-unit--desktop;
+}
+.trailer-minor {
+  margin-bottom: @minor-vertical-unit--desktop;
+}
+
+// Required for CSS slide
+.js-transitions {
+  .transition(all 0.5s ease-in-out);
+}

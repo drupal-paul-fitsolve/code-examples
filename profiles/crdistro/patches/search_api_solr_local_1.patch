@@ -1,0 +1,12 @@
+diff -u --recursive stub/docroot/profiles/crdistro/modules/contrib/search_api_solr/search_api_solr.views.inc /usr/local/zend/var/apps/http/rnd15-local/80/public/sites/all/modules/contrib/search_api_solr/search_api_solr.views.inc
+--- stub/docroot/profiles/crdistro/modules/contrib/search_api_solr/search_api_solr.views.inc	2014-05-23 10:36:45.000000000 +0100
++++ /usr/local/zend/var/apps/http/rnd15-local/80/public/sites/all/modules/contrib/search_api_solr/search_api_solr.views.inc	2015-04-17 15:03:40.619349949 +0100
+@@ -56,7 +56,7 @@
+       foreach ($wrapper as $key => $property) {
+         if (empty($normal_fields[$key])) {
+           $info = $property->info();
+-          if ($info) {
++          if ($info && is_array($table)) {
+             entity_views_field_definition($key, $info, $table);
+           }
+         }
